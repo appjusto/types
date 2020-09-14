@@ -44,7 +44,7 @@ export interface OrderRequest {
 }
 
 export interface Order {
-  id: string;
+  id?: string;
   consumerId: string;
   consumerName?: string;
   status: OrderStatus;
