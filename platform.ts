@@ -1,7 +1,7 @@
 export interface PlatformParameters {
   maxDistance: number; // in meters
   deliveryFee: number; // in cents
-  transactionFee: number; // decimal number; ex: 0,01 corresponds to 1% transaction fee
+  financialFee: number; // decimal number; ex: 0,01 corresponds to 1% transaction fee
   taxes: number; // also as a decimal number
 }
 

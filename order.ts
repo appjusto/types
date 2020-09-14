@@ -31,9 +31,10 @@ export interface Fare {
 }
 
 export interface Place {
-  address: string;
+  address?: string;
   additionalInfo?: string;
-  description?: string;
+  intructions?: string;
+  googlePlaceId?: string;
   location: firebase.firestore.GeoPoint;
 }
 
@@ -43,6 +44,7 @@ export interface OrderRequest {
 }
 
 export interface Order {
+  id: string;
   consumerId: string;
   consumerName?: string;
   status: OrderStatus;
