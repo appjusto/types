@@ -6,6 +6,7 @@ export {
   Order,
   OrderRequest,
   Place,
+  Address,
   Fare,
   OrderStatus,
   PaymentStatus,

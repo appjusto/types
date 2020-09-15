@@ -30,12 +30,18 @@ export interface Fare {
   total: number; // in cents
 }
 
+export interface Address {
+  main: string;
+  secondary: string;
+  description: string;
+  googlePlaceId?: string;
+}
+
 export interface Place {
-  address?: string;
+  address?: Address;
   additionalInfo?: string;
   intructions?: string;
-  googlePlaceId?: string;
-  location: firebase.firestore.GeoPoint;
+  location?: firebase.firestore.GeoPoint;
 }
 
 export interface OrderRequest {
