@@ -1,3 +1,5 @@
+export type FleetSituation = 'pending' | 'approved' | 'rejected' | 'blocked';
+
 export interface FleetFareParams {
   minimumFee: number; // (in cents) minimum fee charged by couriers
   distanceThreshold: number; // (in meters) distanced covered by the minimumFee
@@ -10,12 +12,12 @@ export interface FleetFareParams {
 
 export interface Fleet extends FleetFareParams {
   // user defined
-  id: string;
+  id?: string;
   name: string;
   description: string;
-  createdBy: string; // id of user who created the fleet
+  createdBy?: string; // id of user who created the fleet
   // managed by the platform
-  situation: string;
-  platformFee: string;
-  participantsOnline: number;
+  situation: FleetSituation;
+  platformFee?: string;
+  participantsOnline?: number;
 }

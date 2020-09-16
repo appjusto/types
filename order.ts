@@ -1,4 +1,5 @@
 import { Fleet } from './fleet';
+import { LatLng } from './platform';
 
 export type OrderStatus =
   | 'quote'
@@ -41,7 +42,7 @@ export interface Place {
   address?: Address;
   additionalInfo?: string;
   intructions?: string;
-  location?: firebase.firestore.GeoPoint;
+  location?: LatLng;
 }
 
 export interface OrderRequest {
@@ -64,7 +65,6 @@ export interface Order {
   quotes?: Fare[];
   courierId?: string;
   courierName?: string;
-  courierLocation?: firebase.firestore.GeoPoint;
   dispatchingState?: DispatchingState;
   createdOn: firebase.firestore.FieldValue;
   updateOn?: firebase.firestore.FieldValue;
