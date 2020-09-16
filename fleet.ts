@@ -12,11 +12,11 @@ export interface FleetFareParams {
 
 export interface Fleet extends FleetFareParams {
   // user defined
-  id?: string;
   name: string;
   description: string;
-  createdBy?: string; // id of user who created the fleet
+  createdBy: string; // id of user who created the fleet
   // managed by the platform
+  createdOn: firebase.firestore.FieldValue;
   situation: FleetSituation;
   platformFee?: string;
   participantsOnline?: number;

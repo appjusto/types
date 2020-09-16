@@ -8,7 +8,8 @@ export type ProfileSituation =
   | 'blocked';
 
 export interface UserProfile {
-  id?: string;
+  situation: ProfileSituation;
+  createdOn: firebase.firestore.Timestamp;
   name?: string;
   surname?: string;
   cpf?: string;
@@ -17,7 +18,5 @@ export interface UserProfile {
     number: string;
   };
   notificationToken?: string | null;
-  situation?: ProfileSituation;
   coordinates?: firebase.firestore.GeoPoint;
-  createdOn?: firebase.firestore.Timestamp;
 }

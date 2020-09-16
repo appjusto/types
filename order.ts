@@ -1,5 +1,5 @@
 import { Fleet } from './fleet';
-import { LatLng } from './platform';
+import { LatLng, WithId } from './platform';
 
 export type OrderStatus =
   | 'quote'
@@ -22,7 +22,7 @@ export type PaymentStatus =
   | 'not_authorized';
 
 export interface Fare {
-  fleet: Fleet;
+  fleet: WithId<Fleet>;
   courierFee: number; // in cents
   courierTip: number; // in cents
   platformFee: number; // in cents
@@ -39,10 +39,10 @@ export interface Address {
 }
 
 export interface Place {
-  address?: Address;
+  address: Address;
   additionalInfo?: string;
   intructions?: string;
-  location?: LatLng;
+  location: LatLng;
 }
 
 export interface OrderRequest {
@@ -51,21 +51,27 @@ export interface OrderRequest {
 }
 
 export interface Order {
-  id?: string;
   consumerId: string;
-  consumerName?: string;
   status: OrderStatus;
-  paymentStatus?: PaymentStatus;
+  createdOn: firebase.firestore.FieldValue;
   origin: Place;
   destination: Place;
-  routePolyline: string;
   distance: number; // in meters
   duration: number; // in seconds
+  routePolyline: string;
+  consumerName?: string;
+  paymentStatus?: PaymentStatus;
   fare?: Fare;
   quotes?: Fare[];
   courierId?: string;
   courierName?: string;
   dispatchingState?: DispatchingState;
-  createdOn: firebase.firestore.FieldValue;
   updateOn?: firebase.firestore.FieldValue;
+}
+
+export interface ChatMessage {
+  from: string;
+  to: string;
+  message: string;
+  timestamp: firebase.firestore.Timestamp;
 }
