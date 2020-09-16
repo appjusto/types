@@ -62,7 +62,6 @@ export interface Order {
   consumerName?: string;
   paymentStatus?: PaymentStatus;
   fare?: Fare;
-  quotes?: Fare[];
   courierId?: string;
   courierName?: string;
   dispatchingState?: DispatchingState;
