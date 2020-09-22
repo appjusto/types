@@ -8,9 +8,16 @@ export interface Bank {
 }
 
 export type CourierStatus = 'unavailable' | 'available' | 'dispatching';
+export type CourierMode =
+  | 'motocycle'
+  | 'bicycle'
+  | 'scooter'
+  | 'car'
+  | 'walking';
 
 export interface CourierProfile extends UserProfile {
   status: CourierStatus;
+  mode?: CourierMode;
   fleet?: WithId<Fleet>;
   bankAccount?: Bank & {
     agency: string;

@@ -12,10 +12,8 @@ export {
   OrderStatus,
   PaymentStatus,
   DispatchingState,
+  OrderMatchPushMessageData,
+  ChatPushMessageData,
 } from './order';
 export { Fleet, FleetFareParams } from './fleet';
-export {
-  PushMessageActionType,
-  PushMessageData,
-  OrderMatchPushMessageData,
-} from './messages';
+export { PushMessageActionType, PushMessageData } from './messages';

@@ -1,4 +1,5 @@
 import { Fleet } from './fleet';
+import { PushMessageData } from './messages';
 import { LatLng, WithId } from './platform';
 
 export type OrderStatus =
@@ -72,5 +73,19 @@ export interface ChatMessage {
   from: string;
   to: string;
   message: string;
+  destination: 'consumers' | 'couriers';
   timestamp: firebase.firestore.Timestamp;
+}
+
+export interface OrderMatchPushMessageData extends PushMessageData {
+  orderId: string;
+  courierFee: number;
+  distanceToOrigin: number;
+  totalDistance: number;
+  originAddress: string;
+  destinationAddress: string;
+}
+
+export interface ChatPushMessageData extends PushMessageData {
+  orderId: string;
 }
