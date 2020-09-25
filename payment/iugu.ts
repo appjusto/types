@@ -3,6 +3,33 @@ export interface IuguConfig {
   accountid: string;
 }
 
+export type IuguBankName =
+  | 'Itaú'
+  | 'Bradesco'
+  | 'Caixa Econômica'
+  | 'Banco do Brasil'
+  | 'Santander'
+  | 'Banrisul'
+  | 'Sicredi'
+  | 'Sicoob'
+  | 'Inter'
+  | 'BRB'
+  | 'Via Credi'
+  | 'Neon'
+  | 'Votorantim'
+  | 'Nubank'
+  | 'Pagseguro'
+  | 'Banco Original'
+  | 'Safra'
+  | 'Modal'
+  | 'Banestes'
+  | 'Unicred'
+  | 'Gerencianet Pagamentos do Brasil'
+  | 'C6 Bank'
+  | 'BS2'
+  | 'Banco Topazio'
+  | 'Uniprime';
+
 export interface IuguCreateMarketplaceAccount {
   commissions: {
     cents: number; // int
@@ -25,11 +52,22 @@ export interface IuguMarketplaceAccountVerificationRequest {
     business_type: string;
     person_type: 'Pessoa Física' | 'Pessoa Jurídica';
     automatic_transfer: boolean;
+    address: string;
+    cep: string;
+    city: string;
+    state: string;
+    telephone: string;
+    // PF
     name?: string;
     cpf?: string;
-    address: string;
+    // PJ
     cnpj?: string;
     company_name?: string;
+    resp_name?: string;
+    // bank information
+    bank: IuguBankName;
+    bank_ag: string;
+    bank_acc: string;
   };
 }
 

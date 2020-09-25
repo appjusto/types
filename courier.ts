@@ -1,11 +1,11 @@
 import { UserProfile } from './profile';
 import { Fleet } from './fleet';
 import { WithId } from './platform';
-import { MarketplaceAccount } from './payment';
+import { IuguBankName, IuguMarketplaceAccount } from './payment/iugu';
 
 export interface Bank {
   id: string;
-  name: string;
+  name: IuguBankName;
 }
 
 export type CourierStatus = 'unavailable' | 'available' | 'dispatching';
@@ -26,7 +26,7 @@ export interface CourierProfile extends UserProfile {
     digit: string;
   };
   marketPlace?: {
-    account: MarketplaceAccount;
+    account: IuguMarketplaceAccount;
     verified: boolean;
   };
 }
