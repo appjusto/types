@@ -1,6 +1,7 @@
 import { UserProfile } from './profile';
 import { Fleet } from './fleet';
 import { WithId } from './platform';
+import { MarketplaceAccount } from './payment';
 
 export interface Bank {
   id: string;
@@ -23,5 +24,9 @@ export interface CourierProfile extends UserProfile {
     agency: string;
     account: string;
     digit: string;
+  };
+  marketPlace?: {
+    account: MarketplaceAccount;
+    verified: boolean;
   };
 }
