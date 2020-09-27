@@ -15,6 +15,11 @@ export type CourierMode =
   | 'car'
   | 'walking';
 
+export interface CourierStatistics {
+  deliveries: number;
+  canceled: number;
+}
+
 export interface CourierProfile extends UserProfile {
   status: CourierStatus;
   mode?: CourierMode;
@@ -24,4 +29,5 @@ export interface CourierProfile extends UserProfile {
     account: string;
     digit: string;
   };
+  statistics: CourierStatistics;
 }
