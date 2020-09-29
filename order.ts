@@ -1,6 +1,7 @@
 import { CourierStatistics } from './courier';
 import { Fleet } from './fleet';
 import { PushMessageData } from './messages';
+import { IuguCharge, IuguInvoice } from './payment/iugu';
 import { LatLng, WithId } from './platform';
 
 export type OrderStatus =
@@ -16,12 +17,12 @@ export type DispatchingState =
   | 'going-destination'
   | 'arrived-destination';
 
-export type PaymentStatus =
-  | 'authorized_pending_capture'
-  | 'captured'
-  | 'refunded'
-  | 'failed'
-  | 'not_authorized';
+// export type PaymentStatus =
+//   | 'authorized_pending_capture'
+//   | 'captured'
+//   | 'refunded'
+//   | 'failed'
+//   | 'not_authorized';
 
 export interface Fare {
   fleet: WithId<Fleet>;
@@ -47,11 +48,6 @@ export interface Place {
   location: LatLng;
 }
 
-export interface OrderRequest {
-  origin: Place;
-  destination: Place;
-}
-
 export interface Order {
   consumerId: string;
   status: OrderStatus;
@@ -62,7 +58,11 @@ export interface Order {
   duration: number; // in seconds
   routePolyline: string;
   consumerName?: string;
-  paymentStatus?: PaymentStatus;
+  payment?: {
+    invoice: IuguInvoice;
+    paymentMethodId: string;
+    charge?: IuguCharge;
+  };
   fare?: Fare;
   courier?: {
     id: string;

@@ -30,6 +30,146 @@ export type IuguBankName =
   | 'Banco Topazio'
   | 'Uniprime';
 
+// payment token
+
+export interface IuguCreatePaymentTokenData {
+  number: string;
+  verification_value: string;
+  first_name: string;
+  last_name: string;
+  month: string;
+  year: string;
+}
+
+export interface IuguCreatePaymentToken {
+  account_id: string;
+  method: 'credit_card';
+  test?: boolean;
+  data: IuguCreatePaymentTokenData;
+}
+
+export interface IuguPaymentToken {
+  id: string;
+  method: 'credit_card';
+  extra_info: {
+    bin?: string;
+    brand: string; // VISA, MASTERCARD, ...
+    display_number: string; // XXXX-XXXX-XXXX-1111
+    holder_name: string;
+    month: number;
+    year: number;
+  };
+}
+
+// customer
+
+export interface IuguCreateCustomer {
+  email: string;
+  name: string;
+  custom_variables?: object[];
+}
+
+export interface IuguCustomer {
+  id: string;
+  email: string;
+  name: string;
+  created_at: string;
+  updated_at: string;
+  custom_variables?: object[];
+}
+
+// payment method
+
+export interface IuguCreateCustomerPaymentMethod {
+  description: string;
+  token: string;
+  set_as_default?: boolean;
+}
+
+export interface IuguCustomerPaymentMethod {
+  id: string;
+  description: string;
+  item_type: 'credit_card';
+  data: {
+    brand: string; // VISA, MASTERCARD, ...
+    display_number: string; // XXXX-XXXX-XXXX-1111
+    last_digits: string;
+    holder_name: string;
+    month: number;
+    year: number;
+  };
+}
+
+// invoices
+
+export interface IuguCreateInvoiceItem {
+  description: string;
+  quantity?: number;
+  price_cents: number; // minimum 100
+}
+
+export interface IuguCreateInvoice {
+  email: string;
+  due_date: string; // AAAA-MM-DD
+  ensure_workday_due_date: false;
+  items: IuguCreateInvoiceItem[];
+  notification_url?: string;
+  fines: false;
+  customer_id: string;
+  payable_with: 'credit_card';
+  custom_variables?: object[];
+  order_id?: string;
+  ignore_canceled_email?: boolean;
+  ignore_due_email?: boolean;
+  commissions: {
+    cents: number; // int
+  };
+}
+
+export interface IuguInvoice {
+  id: string;
+  due_date: string; // AAAA-MM-DD
+  currency: string;
+  email: string;
+  status: string; // pending
+  updated_at: string;
+  ensure_workday_due_date: false;
+  total_cents: number;
+  secure_id: string;
+  secure_url: string;
+  customer_id: string;
+  created_at: string;
+  items: [
+    {
+      id: string;
+      description: string;
+      quantity?: number;
+      price_cents: number; // minimum 100
+    }
+  ];
+  notification_url?: string;
+  custom_variables?: object[];
+  commission_cents: number;
+}
+
+// charges
+
+export interface IuguCreateCharge {
+  invoice_id: string;
+  customer_payment_method_id: string;
+}
+
+export interface IuguCharge {
+  message: string;
+  errors: object;
+  url: string;
+  pdf: string;
+  identification: string | null;
+  invoice_id: string;
+}
+
+// marketplace account
+
 export interface IuguCreateMarketplaceAccount {
   commissions: {
     cents: number; // int
@@ -68,32 +208,5 @@ export interface IuguMarketplaceAccountVerificationRequest {
     bank: IuguBankName;
     bank_ag: string;
     bank_acc: string;
-  };
-}
-
-export interface IuguCreatePaymentToken {
-  account_id: string;
-  method: 'credit_card';
-  test?: boolean;
-  data: {
-    number: string;
-    verification_value: string;
-    first_name: string;
-    last_name: string;
-    month: string;
-    year: string;
-  };
-}
-
-export interface IuguPaymentToken {
-  id: string;
-  method: 'credit_card';
-  extra_info: {
-    bin: string;
-    brand: string; // VISA, MASTERCARD, ...
-    display_number: string; // XXXX-XXXX-XXXX-1111
-    holder_name: string;
-    month: number;
-    year: number;
   };
 }
