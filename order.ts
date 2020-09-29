@@ -1,3 +1,4 @@
+import { CourierStatistics } from './courier';
 import { Fleet } from './fleet';
 import { PushMessageData } from './messages';
 import { LatLng, WithId } from './platform';
@@ -63,10 +64,21 @@ export interface Order {
   consumerName?: string;
   paymentStatus?: PaymentStatus;
   fare?: Fare;
-  courierId?: string;
-  courierName?: string;
+  courier?: {
+    id: string;
+    name: string;
+    location: LatLng;
+    joined: firebase.firestore.FieldValue;
+    statistics: CourierStatistics;
+  };
   dispatchingState?: DispatchingState;
   updateOn?: firebase.firestore.FieldValue;
+}
+
+export interface OrderLocationEntry {
+  createdOn: firebase.firestore.FieldValue;
+  coordinates: firebase.firestore.GeoPoint;
+  dispatchingState: DispatchingState;
 }
 
 export interface ChatMessage {
