@@ -1,7 +1,12 @@
 import { UserProfile } from './profile';
 import { Fleet } from './fleet';
 import { WithId } from './platform';
-import { IuguBankName, IuguMarketplaceAccount } from './payment/iugu';
+import {
+  IuguBankName,
+  IuguMarketplaceAccount,
+  IuguMarketplaceAccountTokens,
+  IuguMarketplaceAccountVerification,
+} from './payment/iugu';
 
 export interface Bank {
   id: string;
@@ -21,6 +26,13 @@ export interface CourierStatistics {
   canceled: number;
 }
 
+export interface CourierAddress {
+  address: string;
+  cep: string;
+  city: string;
+  state: string;
+}
+
 export interface CourierProfile extends UserProfile {
   status: CourierStatus;
   mode?: CourierMode;
@@ -29,10 +41,15 @@ export interface CourierProfile extends UserProfile {
     agency: string;
     account: string;
     digit: string;
+    type: 'Corrente' | 'Poupança';
   };
+  cnpj?: string;
   marketPlace?: {
-    account: IuguMarketplaceAccount;
-    verified: boolean;
+    situation: 'created' | 'configured' | 'requested-verification' | 'verified';
+    tokens: IuguMarketplaceAccountTokens;
+    account?: IuguMarketplaceAccount;
+    verification?: IuguMarketplaceAccountVerification;
   };
+  address?: CourierAddress;
   statistics: CourierStatistics;
 }

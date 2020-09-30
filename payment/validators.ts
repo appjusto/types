@@ -1,7 +1,7 @@
-import { IuguMarketplaceAccount, IuguPaymentToken } from './iugu';
+import { IuguMarketplaceAccountTokens, IuguPaymentToken } from './iugu';
 
 export const validateMarketplaceAccount = (
-  value: IuguMarketplaceAccount
+  value: IuguMarketplaceAccountTokens
 ): boolean => {
   if (!value) return false;
   if (!value.account_id) return false;

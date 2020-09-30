@@ -171,13 +171,14 @@ export interface IuguCharge {
 // marketplace account
 
 export interface IuguCreateMarketplaceAccount {
+  name?: string;
   commissions: {
     cents: number; // int
     percent: number; // float
   };
 }
 
-export interface IuguMarketplaceAccount {
+export interface IuguMarketplaceAccountTokens {
   account_id: string;
   name: string;
   live_api_token: string;
@@ -185,28 +186,98 @@ export interface IuguMarketplaceAccount {
   user_token: string;
 }
 
-export interface IuguMarketplaceAccountVerificationRequest {
-  data: {
-    price_range: string; // 'Até R$ 100,00', 'Entre R$ 100,00 e R$ 500,00', 'Mais que R$ 500,00')
-    physical_products: boolean;
-    business_type: string;
-    person_type: 'Pessoa Física' | 'Pessoa Jurídica';
-    automatic_transfer: boolean;
-    address: string;
-    cep: string;
-    city: string;
-    state: string;
-    telephone: string;
-    // PF
-    name?: string;
-    cpf?: string;
-    // PJ
-    cnpj?: string;
-    company_name?: string;
-    resp_name?: string;
-    // bank information
-    bank: IuguBankName;
-    bank_ag: string;
-    bank_acc: string;
+export interface IuguMarketPlaceAccountConfigure {
+  auto_withdraw?: boolean;
+  auto_advance?: boolean;
+  auto_advance_type?: 'daily' | 'weekly' | 'monthly' | 'days_after_payment';
+  auto_advance_option?: number;
+  credit_card?: {
+    active: boolean;
+    soft_descriptor: string; // 12 chars limit
+    installments: false;
+    two_step_transaction: boolean;
   };
+  payment_email_notification?: boolean;
+  payment_email_notification_receiver?: string;
+}
+
+export interface IuguMarketplaceAccount {
+  id: string;
+  name: string;
+  created_at: string;
+  updated_at: string;
+  is_verified: boolean;
+  last_verification_request_status: string;
+  last_verification_request_data: string | null;
+  last_verification_request_feedback: string | null;
+  change_plan_type: number;
+  subscriptions_trial_period: number;
+  disable_emails: boolean;
+  last_withdraw: string | null;
+  total_subscriptions: number;
+  reply_to: string | null;
+  webapp_on_test_mode: boolean;
+  marketplace: boolean;
+  default_return_url: string;
+  auto_withdraw: boolean;
+  balance: string;
+  protected_balance: string;
+  payable_balance: string;
+  receivable_balance: string;
+  commission_balance: string;
+  volume_last_month: string;
+  volume_this_month: string;
+  taxes_paid_last_month: string;
+  taxes_paid_this_month: string;
+  custom_logo_url: string | null;
+  custom_logo_small_url: string | null;
+  informations: [{ key: string; value: string }];
+  configuration: {
+    commission_percent: number;
+    credit_card: {
+      active: boolean;
+      soft_descriptor: string;
+      two_step_transaction: boolean;
+    };
+  };
+}
+
+export interface IuguMarketplaceAccountVerificationData {
+  price_range: string; // 'Até R$ 100,00', 'Entre R$ 100,00 e R$ 500,00', 'Mais que R$ 500,00')
+  physical_products: boolean;
+  business_type: string;
+  person_type: 'Pessoa Física' | 'Pessoa Jurídica';
+  automatic_transfer: boolean;
+  address: string;
+  cep: string;
+  city: string;
+  state: string;
+  telephone: string;
+  // PF
+  name?: string;
+  cpf?: string;
+  // PJ
+  cnpj?: string;
+  company_name?: string;
+  resp_name?: string;
+  // bank information
+  bank: IuguBankName;
+  account_type: 'Corrente' | 'Poupança';
+  bank_ag: string;
+  bank_acc: string;
+}
+
+export interface IuguMarketplaceAccountVerificationRequest {
+  data: IuguMarketplaceAccountVerificationData;
+}
+
+export interface IuguMarketplaceAccountVerification {
+  id: string;
+  data: IuguMarketplaceAccountVerificationData & {
+    document_id: number;
+    document_cpf: number;
+    document_activity: number;
+  };
+  account_id: string;
+  created_at: string;
 }
