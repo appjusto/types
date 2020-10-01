@@ -26,9 +26,13 @@ export interface CourierStatistics {
   canceled: number;
 }
 
-export interface CourierAddress {
-  address: string;
+export interface CourierCompany {
+  cnpj: string;
+  name: string;
   cep: string;
+  address: string;
+  number?: string;
+  additional?: string;
   city: string;
   state: string;
 }
@@ -43,13 +47,12 @@ export interface CourierProfile extends UserProfile {
     digit: string;
     type: 'Corrente' | 'Poupança';
   };
-  cnpj?: string;
   marketPlace?: {
     situation: 'created' | 'configured' | 'requested-verification' | 'verified';
     tokens: IuguMarketplaceAccountTokens;
     account?: IuguMarketplaceAccount;
     verification?: IuguMarketplaceAccountVerification;
   };
-  address?: CourierAddress;
+  company?: CourierCompany;
   statistics: CourierStatistics;
 }
