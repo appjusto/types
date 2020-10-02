@@ -175,6 +175,7 @@ export interface IuguCreateMarketplaceAccount {
   commissions: {
     cents: number; // int
     percent: number; // float
+    permit_aggregated: boolean;
   };
 }
 
