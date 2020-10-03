@@ -102,7 +102,7 @@ export interface IuguCustomerPaymentMethod {
 
 // invoices
 
-export interface IuguCreateInvoiceItem {
+export interface IuguChargeItem {
   description: string;
   quantity?: number;
   price_cents: number; // minimum 100
@@ -112,7 +112,7 @@ export interface IuguCreateInvoice {
   email: string;
   due_date: string; // AAAA-MM-DD
   ensure_workday_due_date: false;
-  items: IuguCreateInvoiceItem[];
+  items: IuguChargeItem[];
   notification_url?: string;
   fines: false;
   customer_id: string;
@@ -154,10 +154,18 @@ export interface IuguInvoice {
 
 // charges
 
-export interface IuguCreateCharge {
+export interface IuguInvoiceCharge {
   invoice_id: string;
-  customer_payment_method_id: string;
 }
+
+export interface IuguAdhocCharge {
+  email: string;
+  items: IuguChargeItem[];
+}
+
+export type IuguCreateCharge = {
+  customer_payment_method_id: string;
+} & (IuguAdhocCharge | IuguInvoiceCharge);
 
 export interface IuguCharge {
   message: string;

@@ -27,7 +27,6 @@ export type DispatchingState =
 export interface Fare {
   fleet: WithId<Fleet>;
   courierFee: number; // in cents
-  courierTip: number; // in cents
   platformFee: number; // in cents
   taxes: number; // (percent as decimal; ex: for 2%, set 2.0)
   financialFee: number; // (percent as decimal; ex: for 2.31%, set 2.31)
@@ -49,7 +48,10 @@ export interface Place {
 }
 
 export interface Order {
-  consumerId: string;
+  consumer: {
+    id: string;
+    name: string;
+  };
   status: OrderStatus;
   createdOn: firebase.firestore.FieldValue;
   origin: Place;
@@ -57,10 +59,13 @@ export interface Order {
   distance: number; // in meters
   duration: number; // in seconds
   routePolyline: string;
-  consumerName?: string;
   payment?: {
     invoice: IuguInvoice;
     paymentMethodId: string;
+    charge?: IuguCharge;
+  };
+  tip?: {
+    value: number; // in cents;
     charge?: IuguCharge;
   };
   fare?: Fare;
