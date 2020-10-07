@@ -24,6 +24,8 @@ export type CourierMode =
 export interface CourierStatistics {
   deliveries: number;
   canceled: number;
+  avgDeliveryTime: number;
+  avgTipReceived: number;
 }
 
 export interface CourierCompany {
