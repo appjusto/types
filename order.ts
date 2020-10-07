@@ -47,6 +47,14 @@ export interface Place {
   location: LatLng;
 }
 
+export interface OrderCourier {
+  id: string;
+  name: string;
+  location: LatLng;
+  joined: firebase.firestore.FieldValue;
+  statistics: CourierStatistics;
+}
+
 export interface Order {
   consumer: {
     id: string;
@@ -69,13 +77,7 @@ export interface Order {
     charge?: IuguCharge;
   };
   fare?: Fare;
-  courier?: {
-    id: string;
-    name: string;
-    location: LatLng;
-    joined: firebase.firestore.FieldValue;
-    statistics: CourierStatistics;
-  };
+  courier?: OrderCourier;
   dispatchingState?: DispatchingState;
   updateOn?: firebase.firestore.FieldValue;
 }
