@@ -12,6 +12,7 @@ export type OrderStatus =
   | 'canceled';
 
 export type DispatchingState =
+  | null
   | 'going-pickup'
   | 'arrived-pickup'
   | 'going-destination'
@@ -55,12 +56,39 @@ export interface OrderCourier {
   statistics: CourierStatistics;
 }
 
+export interface OrderCancellationReason {
+  title: {
+    pt: string;
+  };
+}
+
+export interface OrderCancellation {
+  reason: OrderCancellationReason;
+  comment?: string;
+}
+
+export type OrderRejectionType = 'refuse' | 'cancel';
+
+export interface OrderRejectionReason {
+  type: OrderRejectionType;
+  title: {
+    pt: string;
+  };
+}
+
+export interface OrderRejection {
+  reason: OrderRejectionReason;
+  courierId: string;
+  comment?: string;
+}
+
 export interface Order {
   consumer: {
     id: string;
     name: string;
   };
   status: OrderStatus;
+  cancellation?: OrderCancellation;
   createdOn: firebase.firestore.FieldValue;
   origin: Place;
   destination: Place;
@@ -78,6 +106,7 @@ export interface Order {
   };
   fare?: Fare;
   courier?: OrderCourier;
+  rejectionHistory?: WithId<OrderRejection>[];
   dispatchingState?: DispatchingState;
   updateOn?: firebase.firestore.FieldValue;
 }
