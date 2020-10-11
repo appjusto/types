@@ -58,3 +58,7 @@ export interface CourierProfile extends UserProfile {
   company?: CourierCompany;
   statistics: CourierStatistics;
 }
+
+export interface AvailableCourier extends CourierProfile {
+  distance: number;
+}
