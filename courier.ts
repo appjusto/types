@@ -22,10 +22,9 @@ export type CourierMode =
   | 'walking';
 
 export interface CourierStatistics {
-  deliveries: number;
-  canceled: number;
-  avgDeliveryTime: number;
-  avgTipReceived: number;
+  deliveries?: number;
+  canceled?: number;
+  rejected?: number;
 }
 
 export interface CourierCompany {
@@ -56,9 +55,10 @@ export interface CourierProfile extends UserProfile {
     verification?: IuguMarketplaceAccountVerification;
   };
   company?: CourierCompany;
-  statistics: CourierStatistics;
+  statistics?: CourierStatistics;
 }
 
 export interface AvailableCourier extends CourierProfile {
+  id: string;
   distance: number;
 }

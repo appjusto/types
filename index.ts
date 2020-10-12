@@ -1,7 +1,14 @@
 export { PlatformParameters, Flavor, City, WithId, LatLng } from './platform';
 export { UserProfile, ProfileSituation } from './profile';
-export { CourierProfile, CourierStatus, Bank } from './courier';
-export { ConsumerProfile } from './consumer';
+export {
+  CourierProfile,
+  CourierStatus,
+  CourierStatistics,
+  CourierCompany,
+  CourierMode,
+  Bank,
+} from './courier';
+export { ConsumerProfile, PaymentChannel } from './consumer';
 export {
   Order,
   ChatMessage,
@@ -16,6 +23,9 @@ export {
   OrderCancellation,
   OrderRejectionReason,
   OrderRejection,
+  OrderCourier,
+  OrderLocationEntry,
+  OrderRejectionType,
 } from './order';
-export { Fleet, FleetFareParams } from './fleet';
+export { Fleet, FleetFareParams, FleetSituation } from './fleet';
 export { PushMessageActionType, PushMessageData } from './messages';

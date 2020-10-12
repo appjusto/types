@@ -53,7 +53,7 @@ export interface OrderCourier {
   name: string;
   location: LatLng;
   joined: firebase.firestore.FieldValue;
-  statistics: CourierStatistics;
+  statistics?: CourierStatistics;
 }
 
 export interface OrderCancellationReason {
