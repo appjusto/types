@@ -5,11 +5,13 @@ export type ProfileSituation =
   | 'submitted'
   | 'approved'
   | 'rejected'
-  | 'blocked';
+  | 'blocked'
+  | 'deleted';
 
 export interface UserProfile {
   situation: ProfileSituation;
   createdOn: firebase.firestore.Timestamp;
+  updatedOn?: firebase.firestore.Timestamp;
   name?: string;
   surname?: string;
   cpf?: string;
