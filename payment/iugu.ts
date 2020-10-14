@@ -66,6 +66,7 @@ export interface IuguPaymentToken {
 export interface IuguCreateCustomer {
   email: string;
   name: string;
+  cpf_cnpj?: string;
   custom_variables?: object[];
 }
 
@@ -98,6 +99,10 @@ export interface IuguCustomerPaymentMethod {
     month: number;
     year: number;
   };
+}
+
+export interface CustomerPaymentMethod extends IuguCustomerPaymentMethod {
+  cpf: string | null;
 }
 
 // invoices
