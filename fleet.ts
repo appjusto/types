@@ -19,5 +19,5 @@ export interface Fleet extends FleetFareParams {
   createdOn: firebase.firestore.FieldValue;
   situation: FleetSituation;
   platformFee?: string;
-  participantsOnline?: number;
+  participantsOnline: number;
 }
