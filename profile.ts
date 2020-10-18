@@ -10,6 +10,7 @@ export type ProfileSituation =
 
 export interface UserProfile {
   situation: ProfileSituation;
+  profileIssues?: string[];
   createdOn: firebase.firestore.Timestamp;
   updatedOn?: firebase.firestore.Timestamp;
   name?: string;
