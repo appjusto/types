@@ -98,6 +98,7 @@ export interface Order {
   };
   status: OrderStatus;
   cancellation?: OrderCancellation;
+  problem?: OrderProblemSurvey;
   createdOn: firebase.firestore.FieldValue;
   origin: Place;
   destination: Place;
