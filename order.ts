@@ -83,9 +83,7 @@ export interface OrderRejection {
 }
 
 export interface ComplaintDescription {
-  description: {
-    pt: string;
-  }
+  description: string;
 }
 
 export interface OrderComplaintSurvey {
