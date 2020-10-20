@@ -82,13 +82,13 @@ export interface OrderRejection {
   comment?: string;
 }
 
-export interface ComplaintDescription {
-  description: string;
-}
+// export interface ProblemDescription {
+//   description: string;
+// }
 
-export interface OrderComplaintSurvey {
+export interface OrderProblemSurvey {
   title: string;
-  description?: ComplaintDescription;
+  description?: string;
 }
 
 export interface Order {
