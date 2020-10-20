@@ -82,6 +82,17 @@ export interface OrderRejection {
   comment?: string;
 }
 
+export interface ComplaintDescription {
+  description: {
+    pt: string;
+  }
+}
+
+export interface OrderComplaintSurvey {
+  title: string;
+  description?: ComplaintDescription;
+}
+
 export interface Order {
   consumer: {
     id: string;
