@@ -26,6 +26,8 @@ export {
   OrderCourier,
   OrderLocationEntry,
   OrderRejectionType,
+  ComplaintDescription,
+  OrderComplaintSurvey,
 } from './order';
 export { Fleet, FleetFareParams, FleetSituation } from './fleet';
 export {

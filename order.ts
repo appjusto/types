@@ -82,6 +82,15 @@ export interface OrderRejection {
   comment?: string;
 }
 
+// export interface ProblemDescription {
+//   description: string;
+// }
+
+export interface OrderProblemSurvey {
+  title: string;
+  description?: string;
+}
+
 export interface Order {
   consumer: {
     id: string;
@@ -89,6 +98,7 @@ export interface Order {
   };
   status: OrderStatus;
   cancellation?: OrderCancellation;
+  problem?: OrderProblemSurvey;
   createdOn: firebase.firestore.FieldValue;
   origin: Place;
   destination: Place;
