@@ -57,13 +57,11 @@ export interface OrderCourier {
 }
 
 export interface OrderCancellationReason {
-  title: {
-    pt: string;
-  };
+  title: string;
 }
 
 export interface OrderCancellation {
-  reason: OrderCancellationReason;
+  reason: WithId<OrderCancellationReason>;
   comment?: string;
 }
 
@@ -71,9 +69,7 @@ export type OrderRejectionType = 'refuse' | 'cancel';
 
 export interface OrderRejectionReason {
   type: OrderRejectionType;
-  title: {
-    pt: string;
-  };
+  title: string;
 }
 
 export interface OrderRejection {
@@ -82,13 +78,13 @@ export interface OrderRejection {
   comment?: string;
 }
 
-// export interface ProblemDescription {
-//   description: string;
-// }
+export interface OrderProblemReason {
+  title: string;
+}
 
 export interface OrderProblemSurvey {
-  title: string;
-  description?: string;
+  reason: OrderProblemReason;
+  comment?: string;
 }
 
 export interface Order {
