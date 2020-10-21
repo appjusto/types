@@ -28,4 +28,8 @@ export {
   OrderRejectionType,
 } from './order';
 export { Fleet, FleetFareParams, FleetSituation } from './fleet';
-export { PushMessageActionType, PushMessageData } from './messages';
+export {
+  PushMessage,
+  PushMessageActionType,
+  PushMessageData,
+} from './messages';
