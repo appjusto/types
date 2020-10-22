@@ -87,6 +87,13 @@ export interface OrderProblemSurvey {
   comment?: string;
 }
 
+export type ReviewCourierType = 'positive' | 'negative';
+
+export interface ReviewCourier {
+  type: ReviewCourierType;
+  comment?: string;
+}
+
 export interface Order {
   consumer: {
     id: string;
@@ -95,6 +102,7 @@ export interface Order {
   status: OrderStatus;
   cancellation?: OrderCancellation;
   problem?: OrderProblemSurvey;
+  review?: ReviewCourier;
   createdOn: firebase.firestore.FieldValue;
   origin: Place;
   destination: Place;
