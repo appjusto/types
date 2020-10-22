@@ -38,6 +38,8 @@ export interface CourierCompany {
   state: string;
 }
 
+export type BankAccountType = 'Corrente' | 'Poupança';
+
 export interface CourierProfile extends UserProfile {
   status: CourierStatus;
   mode?: CourierMode;
@@ -46,7 +48,7 @@ export interface CourierProfile extends UserProfile {
     agency: string;
     account: string;
     digit: string;
-    type: 'Corrente' | 'Poupança';
+    type: BankAccountType
   };
   marketPlace?: {
     situation: 'created' | 'configured' | 'requested-verification' | 'verified';

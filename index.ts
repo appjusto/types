@@ -7,6 +7,7 @@ export {
   CourierCompany,
   CourierMode,
   Bank,
+  BankAccountType
 } from './courier';
 export { ConsumerProfile, PaymentChannel } from './consumer';
 export {
