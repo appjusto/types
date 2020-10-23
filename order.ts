@@ -88,6 +88,15 @@ export interface OrderProblemSurvey {
   comment?: string;
 }
 
+export interface CourierProblemReason {
+  title: string;
+}
+
+export interface CourierProblemSurvey {
+  reason: CourierProblemReason;
+  comment?: string;
+}
+
 export interface Order {
   consumer: {
     id: string;

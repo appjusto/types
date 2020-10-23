@@ -29,6 +29,8 @@ export {
   OrderRejectionType,
   OrderProblemReason,
   OrderProblemSurvey,
+  CourierProblemReason,
+  CourierProblemSurvey,
 } from './order';
 export { Fleet, FleetFareParams, FleetSituation } from './fleet';
 export {
