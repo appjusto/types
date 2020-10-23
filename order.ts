@@ -106,6 +106,7 @@ export interface Order {
   cancellation?: OrderCancellation;
   problem?: OrderProblemSurvey;
   courierReview?: Review;
+  courierProblem?: CourierProblemReason;
   createdOn: firebase.firestore.FieldValue;
   origin: Place;
   destination: Place;
