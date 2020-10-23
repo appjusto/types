@@ -7,7 +7,7 @@ export {
   CourierCompany,
   CourierMode,
   Bank,
-  BankAccountType
+  BankAccountType,
 } from './courier';
 export { ConsumerProfile, PaymentChannel } from './consumer';
 export {
@@ -29,8 +29,6 @@ export {
   OrderRejectionType,
   OrderProblemReason,
   OrderProblemSurvey,
-  ReviewCourierType,
-  ReviewCourier,
 } from './order';
 export { Fleet, FleetFareParams, FleetSituation } from './fleet';
 export {
@@ -38,3 +36,4 @@ export {
   PushMessageActionType,
   PushMessageData,
 } from './messages';
+export { Review, ReviewType } from './reviews';

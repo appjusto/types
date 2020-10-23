@@ -3,6 +3,7 @@ import { Fleet } from './fleet';
 import { PushMessageData } from './messages';
 import { IuguCharge, IuguInvoice } from './payment/iugu';
 import { LatLng, WithId } from './platform';
+import { Review } from './reviews';
 
 export type OrderStatus =
   | 'quote'
@@ -87,13 +88,6 @@ export interface OrderProblemSurvey {
   comment?: string;
 }
 
-export type ReviewCourierType = 'positive' | 'negative';
-
-export interface ReviewCourier {
-  type: ReviewCourierType;
-  comment?: string;
-}
-
 export interface Order {
   consumer: {
     id: string;
@@ -102,7 +96,7 @@ export interface Order {
   status: OrderStatus;
   cancellation?: OrderCancellation;
   problem?: OrderProblemSurvey;
-  review?: ReviewCourier;
+  courierReview?: Review;
   createdOn: firebase.firestore.FieldValue;
   origin: Place;
   destination: Place;
