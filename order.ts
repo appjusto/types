@@ -10,6 +10,7 @@ export type OrderStatus =
   | 'matching'
   | 'dispatching'
   | 'delivered'
+  | 'unmatched'
   | 'canceled';
 
 export type DispatchingState =
