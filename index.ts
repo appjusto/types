@@ -40,3 +40,4 @@ export {
 } from './messages';
 export { Review, ReviewType } from './reviews';
 export { Business, BusinessManagerProfile } from './business'
+export { Category } from './menu';
