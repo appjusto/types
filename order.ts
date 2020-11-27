@@ -70,7 +70,7 @@ export interface OrderCancellation {
 export type OrderRejectionType = 'refuse' | 'cancel';
 
 export type IssueType =
-  | ' courier-refuse'
+  | 'courier-refuse'
   | 'courier-cancel'
   | 'courier-delivery-problem'
   | 'consumer-cancel'
