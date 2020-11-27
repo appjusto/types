@@ -69,6 +69,13 @@ export interface OrderCancellation {
 
 export type OrderRejectionType = 'refuse' | 'cancel';
 
+export type IssueType =
+  | ' courier-refuse'
+  | 'courier-cancel'
+  | 'courier-delivery-problem'
+  | 'consumer-cancel'
+  | 'consumer-delivery-problem';
+
 export interface OrderRejectionReason {
   type: OrderRejectionType;
   title: string;
