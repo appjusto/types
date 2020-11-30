@@ -7,6 +7,7 @@ import { Review } from './reviews';
 
 export type OrderStatus =
   | 'quote'
+  | 'confirming'
   | 'matching'
   | 'dispatching'
   | 'delivered'
@@ -105,35 +106,40 @@ export interface CourierProblemSurvey {
   comment?: string;
 }
 
+export type OrderType = 'p2p' | 'food';
+
 export interface Order {
   consumer: {
     id: string;
     name: string;
   };
+  type?: OrderType;
   status: OrderStatus;
-  cancellation?: OrderCancellation;
-  problem?: OrderProblemSurvey;
-  courierReview?: Review;
-  courierProblem?: CourierProblemReason;
-  createdOn: firebase.firestore.FieldValue;
+  dispatchingState?: DispatchingState;
   origin: Place;
   destination: Place;
   distance: number; // in meters
   duration: number; // in seconds
   routePolyline: string;
+  fare?: Fare;
+  tip?: {
+    value: number; // in cents;
+    charge?: IuguCharge;
+  };
   payment?: {
     invoice: IuguInvoice;
     paymentMethodId: string;
     charge?: IuguCharge;
   };
-  tip?: {
-    value: number; // in cents;
-    charge?: IuguCharge;
-  };
-  fare?: Fare;
   courier?: OrderCourier;
+  // issues, reviews, etc.
   rejectionHistory?: WithId<OrderRejection>[];
-  dispatchingState?: DispatchingState;
+  cancellation?: OrderCancellation;
+  problem?: OrderProblemSurvey;
+  courierReview?: Review;
+  courierProblem?: CourierProblemReason;
+  // metadata
+  createdOn: firebase.firestore.FieldValue;
   updateOn?: firebase.firestore.FieldValue;
 }
 

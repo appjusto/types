@@ -12,11 +12,12 @@ export {
 export { ConsumerProfile, PaymentChannel } from './consumer';
 export {
   Order,
+  OrderStatus,
+  OrderType,
   ChatMessage,
   Place,
   Address,
   Fare,
-  OrderStatus,
   DispatchingState,
   OrderMatchPushMessageData,
   ChatPushMessageData,
@@ -32,6 +33,7 @@ export {
   CourierProblemReason,
   CourierProblemSurvey,
 } from './order';
+export { FoodOrder, FoodItem } from './food';
 export { Fleet, FleetFareParams, FleetSituation } from './fleet';
 export {
   PushMessage,
