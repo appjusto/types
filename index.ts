@@ -41,6 +41,6 @@ export {
   PushMessageData,
 } from './messages';
 export { Review, ReviewType } from './reviews';
-export { ManagerProfile as BusinessManagerProfile } from './managers'
+export { ManagerProfile } from './managers'
 export { Business } from './business'
 export { Category, Product, MenuConfig } from './menu';
