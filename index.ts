@@ -43,4 +43,4 @@ export {
 export { Review, ReviewType } from './reviews';
 export { ManagerProfile } from './managers'
 export { Business } from './business'
-export { Category, Product, MenuConfig, ProductsByCategory } from './menu';
+export { Category, Product, MenuConfig, ProductsByCategory, CategoryWithProducts } from './menu';

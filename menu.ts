@@ -1,3 +1,5 @@
+import { WithId } from "./platform";
+
 export type ProductsByCategory = { [categoryId: string]: string[] };
 
 export interface MenuConfig {
@@ -16,5 +18,9 @@ export interface Product {
   price?: number;
   externalId?: string;
   enabled: boolean;
+}
+
+export interface CategoryWithProducts extends WithId<Category> {
+  products: WithId<Product>[];
 }
 
