@@ -1,8 +1,8 @@
+export type ProductsByCategory = { [categoryId: string]: string[] };
+
 export interface MenuConfig {
   categoriesOrder: string[];
-  productsOrderByCategoryId: {
-    [categoryId: string]: string[];
-  }
+  productsOrderByCategoryId: ProductsByCategory;
 }
 
 export interface Category {
