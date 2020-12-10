@@ -1,7 +1,5 @@
-import { IuguBankName } from "./payment/iugu";
-
 export interface Bank {
-  name: IuguBankName;
+  name: string;
 }
 
 export type BankAccountType = 'Corrente' | 'Poupança';
