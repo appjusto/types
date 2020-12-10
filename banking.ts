@@ -1,13 +1,13 @@
 import { IuguBankName } from "./payment/iugu";
 
 export interface Bank {
-  id: string;
   name: IuguBankName;
 }
 
 export type BankAccountType = 'Corrente' | 'Poupança';
 
-export interface BankAccount extends Bank {
+export interface BankAccount {
+  name: string;
   agency: string;
   account: string;
   digit: string;
