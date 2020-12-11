@@ -7,6 +7,7 @@ import {
   IuguMarketplaceAccountVerification,
 } from './payment/iugu';
 import { BankAccount } from './banking';
+import { BusinessAddress } from './business';
 
 export type CourierStatus = 'unavailable' | 'available' | 'dispatching';
 export type CourierMode =
@@ -22,15 +23,9 @@ export interface CourierStatistics {
   rejected?: number;
 }
 
-export interface CourierCompany {
+export interface CourierCompany extends BusinessAddress {
   cnpj: string;
   name: string;
-  cep: string;
-  address: string;
-  number?: string;
-  additional?: string;
-  city: string;
-  state: string;
 }
 
 export interface CourierProfile extends UserProfile {
