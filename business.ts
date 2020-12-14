@@ -29,4 +29,5 @@ export interface Business {
   deliveryRange?: number; // in meters
   createdOn: firebase.firestore.Timestamp;
   updatedOn?: firebase.firestore.Timestamp;
+  type: 'restaurant';
 }
