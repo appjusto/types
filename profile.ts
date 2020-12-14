@@ -15,6 +15,7 @@ export interface UserProfile {
   createdOn: firebase.firestore.Timestamp;
   updatedOn?: firebase.firestore.Timestamp;
   name?: string;
+  email?: string;
   surname?: string;
   cpf?: string;
   phone?: {
