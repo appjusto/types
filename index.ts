@@ -1,13 +1,16 @@
 export { PlatformParameters, Flavor, City, WithId, LatLng } from './platform';
 export { UserProfile, ProfileSituation } from './profile';
 export {
+  Bank,
+  BankAccountType,
+  BankAccount
+} from './banking';
+export {
   CourierProfile,
   CourierStatus,
   CourierStatistics,
   CourierCompany,
   CourierMode,
-  Bank,
-  BankAccountType,
 } from './courier';
 export { ConsumerProfile, PaymentChannel } from './consumer';
 export {
@@ -42,5 +45,5 @@ export {
 } from './messages';
 export { Review, ReviewType } from './reviews';
 export { ManagerProfile } from './managers'
-export { Business } from './business'
+export { Business, Cuisine } from './business'
 export { Category, Product, MenuConfig, ProductsByCategory, CategoryWithProducts } from './menu';
