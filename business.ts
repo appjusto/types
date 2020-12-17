@@ -30,4 +30,5 @@ export interface Business {
   createdOn: firebase.firestore.Timestamp;
   updatedOn?: firebase.firestore.Timestamp;
   type: 'restaurant';
+  onboarding?: string;
 }
