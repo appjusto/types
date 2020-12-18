@@ -8,6 +8,7 @@ import { Review } from './reviews';
 export type OrderStatus =
   | 'quote'
   | 'confirming'
+  | 'confirmed'
   | 'preparing'
   | 'ready'
   | 'dispatching'
@@ -15,7 +16,7 @@ export type OrderStatus =
   | 'canceled';
   
   export type DispatchingState =
-  | null
+  | undefined
   | 'matching'
   | 'unmatched'
   | 'going-pickup'
