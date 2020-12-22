@@ -1,49 +1,54 @@
-export { PlatformParameters, Flavor, City, WithId, LatLng } from './platform';
-export { UserProfile, ProfileSituation } from './profile';
-export {
-  Bank,
-  BankAccountType,
-  BankAccount
-} from './banking';
-export {
-  CourierProfile,
-  CourierStatus,
-  CourierStatistics,
-  CourierCompany,
-  CourierMode,
-} from './courier';
+export { Bank, BankAccount, BankAccountType } from './banking';
+export { Business, BusinessStatistics, Cuisine } from './business';
 export { ConsumerProfile, PaymentChannel } from './consumer';
 export {
-  Order,
-  OrderStatus,
-  OrderType,
-  ChatMessage,
-  Place,
-  Address,
-  Fare,
-  DispatchingState,
-  OrderMatchPushMessageData,
-  ChatPushMessageData,
-  OrderCancellationReason,
-  OrderCancellation,
-  OrderRejectionReason,
-  OrderRejection,
-  OrderCourier,
-  OrderLocationEntry,
-  OrderRejectionType,
-  OrderProblemReason,
-  OrderProblemSurvey,
-  CourierProblemReason,
-  CourierProblemSurvey,
-} from './order';
-export { FoodOrder, FoodItem } from './food';
+  CourierCompany,
+  CourierMode,
+  CourierProfile,
+  CourierStatistics,
+  CourierStatus,
+} from './courier';
 export { Fleet, FleetFareParams, FleetSituation } from './fleet';
+export { ManagerProfile } from './managers';
 export {
+  Category,
+  CategoryWithProducts,
+  MenuConfig,
+  Product,
+  ProductsByCategory,
+} from './menu';
+export {
+  ChatPushMessageData,
+  OrderMatchPushMessageData,
   PushMessage,
   PushMessageActionType,
   PushMessageData,
 } from './messages';
+export { Order, OrderType } from './order';
+export { ChatMessage } from './order/chat';
+export { OrderConsumer } from './order/consumer';
+export { OrderCourier } from './order/courier';
+export { DispatchingState, OrderLocationEntry } from './order/dispatching';
+export { Fare } from './order/fare';
+export { FoodItem, FoodOrder } from './order/food';
+export {
+  Issue,
+  IssueType,
+  OrderIssue,
+  OrderRejection,
+  OrderRejectionType,
+} from './order/issues';
+export { P2POrder } from './order/p2p';
+export { ConfirmOrderPayload, CreateOrderPayload } from './order/payloads';
+export { Address, Place } from './order/place';
+export { OrderStatus } from './order/status';
+export {
+  City,
+  Flavor,
+  LatLng,
+  PlatformParams,
+  PlatformStatistics,
+  WithId,
+} from './platform';
+export { ProfileSituation, UserProfile } from './profile';
 export { Review, ReviewType } from './reviews';
-export { ManagerProfile } from './managers'
-export { Business, Cuisine } from './business'
-export { Category, Product, MenuConfig, ProductsByCategory, CategoryWithProducts } from './menu';

@@ -9,3 +9,16 @@ export interface PushMessage {
   clicked?: boolean;
   data: PushMessageData;
 }
+
+export interface OrderMatchPushMessageData extends PushMessageData {
+  orderId: string;
+  courierFee: number;
+  distanceToOrigin: number;
+  totalDistance: number;
+  originAddress: string;
+  destinationAddress: string;
+}
+
+export interface ChatPushMessageData extends PushMessageData {
+  orderId: string;
+}

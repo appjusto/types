@@ -1,6 +1,6 @@
 import firebase from 'firebase';
-import { LatLng, WithId } from "./platform";
-import { ProfileSituation } from "./profile";
+import { LatLng, WithId } from './platform';
+import { ProfileSituation } from './profile';
 
 export interface Cuisine {
   name: string;
@@ -16,7 +16,12 @@ export interface BusinessAddress {
   latlng?: LatLng;
 }
 
+export interface BusinessStatistics {
+  totalOrders?: number;
+}
+
 export interface Business {
+  type: 'restaurant';
   name?: string;
   cnpj?: string;
   managers?: string[]; // emails
@@ -27,8 +32,9 @@ export interface Business {
   description?: string;
   minimumOrder?: number; // in cents
   deliveryRange?: number; // in meters
-  createdOn: firebase.firestore.Timestamp;
-  updatedOn?: firebase.firestore.Timestamp;
-  type: 'restaurant';
+  statistics?: BusinessStatistics;
   onboarding?: string;
+  // metadata
+  createdOn: firebase.firestore.FieldValue;
+  updatedOn?: firebase.firestore.FieldValue;
 }
