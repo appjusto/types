@@ -20,7 +20,7 @@ export interface CreateFoodOrderPayload extends CreateOrderBasePayload {
 
 export type CreateOrderPayload = CreateP2POrderPayload | CreateFoodOrderPayload;
 
-export interface ConfirmOrderPayload {
+export interface PlaceOrderPayload {
   orderId: string;
   origin: Place;
   destination: Place;

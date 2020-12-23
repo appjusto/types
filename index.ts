@@ -39,7 +39,7 @@ export {
   OrderRejectionType,
 } from './order/issues';
 export { P2POrder } from './order/p2p';
-export { ConfirmOrderPayload, CreateOrderPayload } from './order/payloads';
+export { CreateOrderPayload, PlaceOrderPayload } from './order/payloads';
 export { Address, Place } from './order/place';
 export { OrderStatus } from './order/status';
 export {
