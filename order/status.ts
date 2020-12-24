@@ -5,7 +5,7 @@ export type P2POrderStatus =
   | 'delivered'
   | 'canceled';
 
-export type FoodOrderstatus =
+export type FoodOrderStatus =
   | 'quote'
   | 'confirming'
   | 'confirmed'
@@ -15,4 +15,4 @@ export type FoodOrderstatus =
   | 'delivered'
   | 'canceled';
 
-export type OrderStatus = P2POrderStatus | FoodOrderstatus;
+export type OrderStatus = P2POrderStatus | FoodOrderStatus;

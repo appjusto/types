@@ -41,7 +41,7 @@ export {
 export { P2POrder } from './order/p2p';
 export { CreateOrderPayload, PlaceOrderPayload } from './order/payloads';
 export { Address, Place } from './order/place';
-export { OrderStatus } from './order/status';
+export { FoodOrderStatus, OrderStatus, P2POrderStatus } from './order/status';
 export {
   City,
   Flavor,
