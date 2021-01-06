@@ -98,7 +98,7 @@ export interface IuguCreateInvoice {
   order_id?: string;
   ignore_canceled_email?: boolean;
   ignore_due_email?: boolean;
-  commissions: {
+  commissions?: {
     cents: number; // int
   };
 }
