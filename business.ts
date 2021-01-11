@@ -20,13 +20,16 @@ export interface BusinessStatistics {
   totalOrders?: number;
 }
 
+export type BusinessType = 'restaurant';
+export type BusinessStatus = 'open' | 'closed';
+
 export interface Business {
-  type: 'restaurant';
+  type: BusinessType;
   name?: string;
   cnpj?: string;
   managers?: string[]; // emails
   businessAddress?: BusinessAddress;
-  status: 'open' | 'closed';
+  status: BusinessStatus;
   situation: ProfileSituation;
   cuisine?: WithId<Cuisine>;
   description?: string;
