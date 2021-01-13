@@ -1,5 +1,12 @@
 export { Bank, BankAccount, BankAccountType } from './banking';
-export { Business, BusinessStatistics, Cuisine } from './business';
+export {
+  Business,
+  BusinessAddress,
+  BusinessStatistics,
+  BusinessStatus,
+  BusinessType,
+  Cuisine,
+} from './business';
 export { ConsumerProfile, PaymentChannel } from './consumer';
 export {
   CourierCompany,
