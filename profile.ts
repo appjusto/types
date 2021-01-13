@@ -18,10 +18,7 @@ export interface UserProfile {
   email?: string;
   surname?: string;
   cpf?: string;
-  phone?: {
-    ddd: string;
-    number: string;
-  };
+  phone?: string;
   notificationToken?: string | null;
   coordinates?: firebase.firestore.GeoPoint;
   reviews?: Review[];
