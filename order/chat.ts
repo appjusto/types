@@ -1,7 +1,14 @@
+import { Flavor } from '../platform';
+
 export interface ChatMessage {
-  from: string;
-  to: string;
+  from: {
+    agent: Flavor;
+    id: string;
+  };
+  to: {
+    agent: Flavor;
+    id: string;
+  };
   message: string;
-  destination: 'consumers' | 'couriers' | 'restaurant';
   timestamp: firebase.firestore.Timestamp;
 }

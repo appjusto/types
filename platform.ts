@@ -1,4 +1,4 @@
-export type Flavor = 'courier' | 'consumer';
+export type Flavor = 'courier' | 'consumer' | 'manager';
 
 export interface PlatformParams {
   maxDistanceToOrigin: number; // in meters
