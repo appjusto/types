@@ -14,8 +14,9 @@ export interface Category {
 
 export interface Product {
   name: string;
-  price: number;
   description?: string;
+  image_url?: string;
+  price: number;
   externalId?: string;
   enabled: boolean;
 }
