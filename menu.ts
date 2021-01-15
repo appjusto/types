@@ -1,4 +1,4 @@
-import { WithId } from "./platform";
+import { WithId } from './platform';
 
 export type ProductsByCategory = { [categoryId: string]: string[] };
 
@@ -14,8 +14,8 @@ export interface Category {
 
 export interface Product {
   name: string;
+  price: number;
   description?: string;
-  price?: number;
   externalId?: string;
   enabled: boolean;
 }
@@ -23,4 +23,3 @@ export interface Product {
 export interface CategoryWithProducts extends WithId<Category> {
   products: WithId<Product>[];
 }
-

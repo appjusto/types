@@ -5,26 +5,28 @@ import { OrderConsumer } from './consumer';
 import { OrderCourier } from './courier';
 import { DispatchingState } from './dispatching';
 import { Fare } from './fare';
-import { FoodOrder } from './food';
 import { OrderIssue, OrderRejection } from './issues';
-import { P2POrder } from './p2p';
+import { OrderItem } from './item';
 import { Place } from './place';
 import { OrderStatus } from './status';
 
 export type OrderType = 'p2p' | 'food';
 
-export interface BaseOrder {
+export interface Order {
   type: OrderType;
-  origin: Place;
-  destination: Place;
   status: OrderStatus;
+  consumer: OrderConsumer;
+  courier?: OrderCourier;
+  business?: OrderBusiness;
+  items?: OrderItem[];
   code?: string;
   seq?: string | null;
-  consumer: OrderConsumer;
-  distance: number; // in meters
-  duration: number; // in seconds
-  routePolyline: string;
-  courier?: OrderCourier;
+  // places & route
+  origin?: Place;
+  destination?: Place;
+  distance?: number; // in meters
+  duration?: number; // in seconds
+  routePolyline?: string;
   dispatchingState?: DispatchingState;
   // fare, tip & payment
   fare?: Fare;
@@ -48,4 +50,8 @@ export interface BaseOrder {
   updatedOn?: firebase.firestore.FieldValue;
 }
 
-export type Order = P2POrder | FoodOrder;
+export interface OrderBusiness {
+  id: string;
+  name?: string;
+  // venueId: string;
+}

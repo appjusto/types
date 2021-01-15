@@ -31,13 +31,12 @@ export {
   PushMessageActionType,
   PushMessageData,
 } from './messages';
-export { Order, OrderType } from './order';
+export { Order, OrderBusiness, OrderType } from './order';
 export { ChatMessage } from './order/chat';
 export { OrderConsumer } from './order/consumer';
 export { OrderCourier } from './order/courier';
 export { DispatchingState, OrderLocationEntry } from './order/dispatching';
 export { Fare } from './order/fare';
-export { FoodItem, FoodOrder } from './order/food';
 export {
   Issue,
   IssueType,
@@ -45,7 +44,7 @@ export {
   OrderRejection,
   OrderRejectionType,
 } from './order/issues';
-export { P2POrder } from './order/p2p';
+export { OrderItem } from './order/item';
 export { CreateOrderPayload, PlaceOrderPayload } from './order/payloads';
 export { Address, Place } from './order/place';
 export { FoodOrderStatus, OrderStatus, P2POrderStatus } from './order/status';

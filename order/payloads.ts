@@ -1,5 +1,5 @@
-import { OrderType } from '.';
-import { FoodItem, OrderBusiness } from './food';
+import { OrderBusiness, OrderType } from '.';
+import { OrderItem } from './item';
 import { Place } from './place';
 
 export interface CreateOrderBasePayload {
@@ -15,7 +15,7 @@ export interface CreateP2POrderPayload extends CreateOrderBasePayload {
 export interface CreateFoodOrderPayload extends CreateOrderBasePayload {
   type: 'food';
   business: OrderBusiness;
-  items: FoodItem[];
+  items: OrderItem[];
 }
 
 export type CreateOrderPayload = CreateP2POrderPayload | CreateFoodOrderPayload;
