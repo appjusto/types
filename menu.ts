@@ -19,6 +19,8 @@ export interface Product {
   price: number;
   externalId?: string;
   enabled: boolean;
+  pdv?: string;
+  classifications: string[];
 }
 
 export interface CategoryWithProducts extends WithId<Category> {
