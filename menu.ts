@@ -33,7 +33,7 @@ export interface ComplementGroup {
   minimum: number;
   maximum: number;
   // transient
-  items?: Complement[];
+  items?: WithId<Complement>[];
 }
 
 export interface Complement {
