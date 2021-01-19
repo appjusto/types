@@ -20,7 +20,8 @@ export { ManagerProfile } from './managers';
 export {
   Category,
   Complement,
-  ComplementGroup, MenuConfig,
+  ComplementGroup,
+  MenuConfig,
   Product,
   ProductsByCategory
 } from './menu';
