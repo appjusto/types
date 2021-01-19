@@ -19,7 +19,8 @@ export { Fleet, FleetFareParams, FleetSituation } from './fleet';
 export { ManagerProfile } from './managers';
 export {
   Category,
-  MenuConfig,
+  Complement,
+  ComplementGroup, MenuConfig,
   Product,
   ProductsByCategory
 } from './menu';
