@@ -5,7 +5,7 @@ export {
   BusinessStatistics,
   BusinessStatus,
   BusinessType,
-  Cuisine
+  Cuisine,
 } from './business';
 export { ConsumerProfile, PaymentChannel } from './consumer';
 export {
@@ -13,22 +13,24 @@ export {
   CourierMode,
   CourierProfile,
   CourierStatistics,
-  CourierStatus
+  CourierStatus,
 } from './courier';
 export { Fleet, FleetFareParams, FleetSituation } from './fleet';
 export { ManagerProfile } from './managers';
 export {
   Category,
+  Complement,
+  ComplementGroup,
   MenuConfig,
   Product,
-  ProductsByCategory
+  ProductsByCategory,
 } from './menu';
 export {
   ChatPushMessageData,
   OrderMatchPushMessageData,
   PushMessage,
   PushMessageActionType,
-  PushMessageData
+  PushMessageData,
 } from './messages';
 export { Order, OrderBusiness, OrderType } from './order';
 export { ChatMessage } from './order/chat';
@@ -41,7 +43,7 @@ export {
   IssueType,
   OrderIssue,
   OrderRejection,
-  OrderRejectionType
+  OrderRejectionType,
 } from './order/issues';
 export { OrderItem } from './order/item';
 export { CreateOrderPayload, PlaceOrderPayload } from './order/payloads';
@@ -53,8 +55,7 @@ export {
   LatLng,
   PlatformParams,
   PlatformStatistics,
-  WithId
+  WithId,
 } from './platform';
 export { ProfileSituation, UserProfile } from './profile';
 export { Review, ReviewType } from './reviews';
-

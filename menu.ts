@@ -1,4 +1,4 @@
-import { WithId } from "./platform";
+import { WithId } from './platform';
 
 export type ProductsByCategory = { [categoryId: string]: string[] };
 
@@ -11,7 +11,7 @@ export interface Category {
   name: string;
   enabled: boolean;
   // transient
-  products?: WithId<Product>[];
+  items?: WithId<Product>[];
 }
 
 export interface Product {
@@ -33,7 +33,7 @@ export interface ComplementGroup {
   minimum: number;
   maximum: number;
   // transient
-  complements?: Complement[];
+  items?: Complement[];
 }
 
 export interface Complement {
