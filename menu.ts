@@ -21,7 +21,6 @@ export interface Product {
   price: number;
   externalId?: string;
   enabled: boolean;
-  pdv?: string;
   classifications: string[];
   complementsEnabled?: boolean;
   complementsOrder?: MenuConfig;
