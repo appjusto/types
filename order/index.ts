@@ -12,6 +12,13 @@ import { OrderStatus } from './status';
 
 export type OrderType = 'p2p' | 'food';
 
+export interface OrderRoute {
+  distance: number; // in meters
+  duration: number; // in seconds
+  polyline: string;
+  issue: string | null;
+}
+
 export interface Order {
   type: OrderType;
   status: OrderStatus;
@@ -24,9 +31,7 @@ export interface Order {
   // places & route
   origin?: Place;
   destination?: Place;
-  distance?: number; // in meters
-  duration?: number; // in seconds
-  routePolyline?: string;
+  route?: OrderRoute;
   dispatchingState?: DispatchingState;
   // fare, tip & payment
   fare?: Fare;
@@ -46,7 +51,7 @@ export interface Order {
   courierProblem?: OrderIssue;
   courierReview?: Review;
   // metadata
-  createdOn: firebase.firestore.FieldValue;
+  createdOn?: firebase.firestore.FieldValue;
   updatedOn?: firebase.firestore.FieldValue;
 }
 

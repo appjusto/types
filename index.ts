@@ -2,12 +2,17 @@ export { Bank, BankAccount, BankAccountType } from './banking';
 export {
   Business,
   BusinessAddress,
+  BusinessPrivateStatistics,
   BusinessStatistics,
   BusinessStatus,
   BusinessType,
   Cuisine,
 } from './business';
-export { ConsumerProfile, PaymentChannel } from './consumer';
+export {
+  ConsumerProfile,
+  ConsumerStatistics,
+  PaymentChannel,
+} from './consumer';
 export {
   CourierCompany,
   CourierMode,
@@ -32,7 +37,7 @@ export {
   PushMessageActionType,
   PushMessageData,
 } from './messages';
-export { Order, OrderBusiness, OrderType } from './order';
+export { Order, OrderBusiness, OrderRoute, OrderType } from './order';
 export { ChatMessage } from './order/chat';
 export { OrderConsumer } from './order/consumer';
 export { OrderCourier } from './order/courier';
@@ -46,7 +51,7 @@ export {
   OrderRejectionType,
 } from './order/issues';
 export { OrderItem } from './order/item';
-export { CreateOrderPayload, PlaceOrderPayload } from './order/payloads';
+export { GetOrderQuotesPayload, PlaceOrderPayload } from './order/payloads';
 export { Address, Place } from './order/place';
 export { FoodOrderStatus, OrderStatus, P2POrderStatus } from './order/status';
 export {

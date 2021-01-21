@@ -7,6 +7,11 @@ export interface PaymentChannel {
   mostRecentPaymentMethodId: string;
 }
 
+export interface ConsumerStatistics {
+  totalOrders: number;
+}
+
 export interface ConsumerProfile extends UserProfile {
   paymentChannel?: PaymentChannel;
+  statistics?: ConsumerStatistics;
 }

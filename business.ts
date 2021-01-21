@@ -17,7 +17,11 @@ export interface BusinessAddress {
 }
 
 export interface BusinessStatistics {
-  totalOrders?: number;
+  totalOrders: number;
+}
+
+export interface BusinessPrivateStatistics {
+  averageOrderValue: number; // total revenue by number of orders
 }
 
 export type BusinessType = 'restaurant';

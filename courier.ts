@@ -1,13 +1,13 @@
-import { UserProfile } from './profile';
+import { BankAccount } from './banking';
+import { BusinessAddress } from './business';
 import { Fleet } from './fleet';
-import { WithId } from './platform';
 import {
   IuguMarketplaceAccount,
   IuguMarketplaceAccountTokens,
-  IuguMarketplaceAccountVerification,
+  IuguMarketplaceAccountVerification
 } from './payment/iugu';
-import { BankAccount } from './banking';
-import { BusinessAddress } from './business';
+import { WithId } from './platform';
+import { UserProfile } from './profile';
 
 export type CourierStatus = 'unavailable' | 'available' | 'dispatching';
 export type CourierMode =
@@ -18,9 +18,9 @@ export type CourierMode =
   | 'walking';
 
 export interface CourierStatistics {
-  deliveries?: number;
-  canceled?: number;
-  rejected?: number;
+  deliveries: number;
+  canceled: number;
+  rejected: number;
 }
 
 export interface CourierCompany extends BusinessAddress {
