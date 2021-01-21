@@ -37,6 +37,7 @@ export interface ComplementGroup {
 }
 
 export interface Complement {
+  image_url: string | null;
   name: string;
   description?: string;
   price: number;
