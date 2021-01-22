@@ -16,12 +16,12 @@ export interface Category {
 
 export interface Product {
   name: string;
+  categoryId: string;
   description?: string;
-  image_url?: string;
+  image_url: string | null;
   price: number;
   externalId?: string;
   enabled: boolean;
-  pdv?: string;
   classifications: string[];
   complementsEnabled?: boolean;
   complementsOrder?: MenuConfig;
@@ -37,6 +37,7 @@ export interface ComplementGroup {
 }
 
 export interface Complement {
+  image_url: string | null;
   name: string;
   description?: string;
   price: number;
