@@ -1,3 +1,4 @@
+import { Place } from './order/place';
 import { CustomerPaymentMethod } from './payment/iugu';
 import { UserProfile } from './profile';
 
@@ -14,4 +15,5 @@ export interface ConsumerStatistics {
 export interface ConsumerProfile extends UserProfile {
   paymentChannel?: PaymentChannel;
   statistics?: ConsumerStatistics;
+  favoritePlaces?: Place[];
 }

@@ -5,8 +5,6 @@ export interface Address {
   secondary: string;
   description: string;
   googlePlaceId?: string;
-  state: string;
-  country: string;
 }
 
 export interface Place {

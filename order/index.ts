@@ -31,7 +31,7 @@ export interface Order {
   // places & route
   origin?: Place;
   destination?: Place;
-  route?: OrderRoute;
+  route?: OrderRoute | null;
   dispatchingState?: DispatchingState;
   // fare, tip & payment
   fare?: Fare;
