@@ -16,7 +16,6 @@ export interface Category {
 
 export interface Product {
   name: string;
-  categoryId: string;
   description?: string;
   image_url: string | null;
   price: number;
