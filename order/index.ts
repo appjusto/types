@@ -30,7 +30,7 @@ export interface Order {
   seq?: string | null;
   // places & route
   origin?: Place;
-  destination?: Place;
+  destination?: Place | null;
   route?: OrderRoute | null;
   dispatchingState?: DispatchingState;
   // fare, tip & payment

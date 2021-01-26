@@ -1,9 +1,9 @@
 import { LatLng } from '../platform';
 
 export interface Address {
-  main: string;
-  secondary: string;
-  description: string;
+  main?: string; // street, number
+  secondary?: string; // neighborhood, city - state, country
+  description: string; // main - secondary
   googlePlaceId?: string;
 }
 
