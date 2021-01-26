@@ -41,8 +41,8 @@ export interface Business {
   deliveryRange?: number; // in meters
   statistics?: BusinessStatistics;
   onboarding?: string;
-  logo_url?: string | null;
-  cover_url?: string | null;
+  logoExists: boolean;
+  coverImageExists: boolean;
   // metadata
   createdOn: firebase.firestore.FieldValue;
   updatedOn?: firebase.firestore.FieldValue;

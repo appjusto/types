@@ -16,9 +16,8 @@ export interface Category {
 
 export interface Product {
   name: string;
-  categoryId: string;
   description?: string;
-  image_url: string | null;
+  imageExists?: boolean;
   price: number;
   externalId?: string;
   enabled: boolean;
@@ -37,7 +36,7 @@ export interface ComplementGroup {
 }
 
 export interface Complement {
-  image_url: string | null;
+  imageExists?: boolean;
   name: string;
   description?: string;
   price: number;
