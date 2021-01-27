@@ -23,7 +23,7 @@ export interface Product {
   enabled: boolean;
   classifications: string[];
   complementsEnabled?: boolean;
-  complementsOrder?: MenuConfig;
+  complementsOrder?: Ordering;
 }
 
 export interface ComplementGroup {
