@@ -26,9 +26,8 @@ export {
   Category,
   Complement,
   ComplementGroup,
-  MenuConfig,
+  Ordering,
   Product,
-  ProductsByCategory,
 } from './menu';
 export {
   ChatPushMessageData,

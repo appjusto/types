@@ -1,10 +1,10 @@
 import { WithId } from './platform';
 
-export type ProductsByCategory = { [categoryId: string]: string[] };
-
-export interface MenuConfig {
-  categoriesOrder: string[];
-  productsOrderByCategoryId: ProductsByCategory;
+export interface Ordering {
+  firstLevelIds: string[];
+  secondLevelIdsByFirstLevelId: {
+    [firstLevelId: string]: string[];
+  };
 }
 
 export interface Category {
