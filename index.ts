@@ -49,7 +49,7 @@ export {
   OrderRejection,
   OrderRejectionType,
 } from './order/issues';
-export { OrderItem } from './order/item';
+export { OrderItem, OrderItemComplement } from './order/item';
 export { GetOrderQuotesPayload, PlaceOrderPayload } from './order/payloads';
 export { Address, Place } from './order/place';
 export { FoodOrderStatus, OrderStatus, P2POrderStatus } from './order/status';

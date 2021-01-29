@@ -24,6 +24,8 @@ export interface Product {
   classifications: string[];
   complementsEnabled?: boolean;
   complementsOrder?: Ordering;
+  // transient
+  complementsGroups?: WithId<ComplementGroup>[];
 }
 
 export interface ComplementGroup {

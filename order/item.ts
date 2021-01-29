@@ -7,8 +7,10 @@ export interface OrderItem {
   };
   quantity: number;
   notes?: string;
+  complements?: OrderItemComplement[];
 }
 
-export interface FoodOrderItem extends OrderItem {
-  stock?: boolean; // stock items are added up instead of being separated items
+export interface OrderItemComplement {
+  complementId: string;
+  price: number;
 }
