@@ -41,7 +41,7 @@ export { ChatMessage } from './order/chat';
 export { OrderConsumer } from './order/consumer';
 export { OrderCourier } from './order/courier';
 export { DispatchingState, OrderLocationEntry } from './order/dispatching';
-export { Fare } from './order/fare';
+export { Fare, FareDetails } from './order/fare';
 export {
   Issue,
   IssueType,
@@ -57,8 +57,10 @@ export {
   City,
   Flavor,
   LatLng,
+  PlatformFees,
   PlatformParams,
   PlatformStatistics,
+  ServiceFee,
   WithId,
 } from './platform';
 export { ProfileSituation, UserProfile } from './profile';

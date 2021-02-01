@@ -157,11 +157,11 @@ export interface IuguCharge {
 
 export interface IuguCreateMarketplaceAccount {
   name?: string;
-  commissions: {
-    cents: number; // int
-    percent: number; // float
-    permit_aggregated: boolean;
-  };
+  // commissions: {
+  //   cents: number; // int
+  //   percent: number; // float
+  //   permit_aggregated: boolean;
+  // };
 }
 
 export interface IuguMarketplaceAccountTokens {
