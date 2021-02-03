@@ -1,8 +1,9 @@
 export interface OrderItem {
+  id: string;
   product: {
     name: string;
     price: number; // in cents
-    id?: string;
+    id: string;
     externalId?: string;
   };
   quantity: number;
