@@ -7,7 +7,8 @@ export type IssueType =
   | 'courier-cancel'
   | 'courier-delivery-problem'
   | 'consumer-cancel'
-  | 'consumer-delivery-problem';
+  | 'consumer-delivery-problem'
+  | 'restaurant-cancel';
 
 export interface Issue {
   type: IssueType;
