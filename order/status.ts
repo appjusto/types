@@ -1,6 +1,6 @@
 export type P2POrderStatus =
   | 'quote'
-  | 'ready'
+  | 'confirmed'
   | 'dispatching'
   | 'delivered'
   | 'canceled';
