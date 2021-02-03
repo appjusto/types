@@ -12,5 +12,6 @@ export interface OrderItem {
 
 export interface OrderItemComplement {
   complementId: string;
+  name: string;
   price: number;
 }
