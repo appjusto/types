@@ -1,5 +1,6 @@
 export type DispatchingState =
   | undefined
+  | 'idle'
   | 'matching'
   | 'unmatched'
   | 'going-pickup'
