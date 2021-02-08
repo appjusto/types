@@ -2,16 +2,18 @@ export type PushMessageActionType = 'matching' | 'order-chat';
 
 export interface PushMessageData {
   action: PushMessageActionType;
+  orderId: string;
 }
 
 export interface PushMessage {
   id: string;
-  clicked?: boolean;
   data: PushMessageData;
+  // transient
+  clicked?: boolean;
+  read?: boolean;
 }
 
 export interface OrderMatchPushMessageData extends PushMessageData {
-  orderId: string;
   courierFee: number;
   distanceToOrigin: number;
   totalDistance: number;
@@ -19,6 +21,4 @@ export interface OrderMatchPushMessageData extends PushMessageData {
   destinationAddress: string;
 }
 
-export interface ChatPushMessageData extends PushMessageData {
-  orderId: string;
-}
+export interface ChatPushMessageData extends PushMessageData {}
