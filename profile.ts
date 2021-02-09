@@ -10,6 +10,7 @@ export type ProfileSituation =
   | 'deleted';
 
 export interface UserProfile {
+  code?: string;
   situation: ProfileSituation;
   profileIssues?: string[];
   createdOn: firebase.firestore.Timestamp;
