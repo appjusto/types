@@ -21,6 +21,8 @@ export interface CourierStatistics {
   deliveries: number;
   canceled: number;
   rejected: number;
+  positiveReviews: number;
+  negativeReviews: number;
 }
 
 export interface CourierCompany extends BusinessAddress {
