@@ -19,10 +19,12 @@ export interface BusinessAddress {
 
 export interface BusinessStatistics {
   totalOrders: number;
+  averagePreparationTime: number; // in seconds
+  averageTicketPrice: number;
 }
 
 export interface BusinessPrivateStatistics {
-  averageOrderValue: number; // total revenue by number of orders
+  // averageOrderValue: number; // total revenue by number of orders
 }
 
 export type BusinessType = 'restaurant';

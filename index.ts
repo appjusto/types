@@ -36,7 +36,13 @@ export {
   PushMessageActionType,
   PushMessageData,
 } from './messages';
-export { Order, OrderBusiness, OrderRoute, OrderType } from './order';
+export {
+  Order,
+  OrderBusiness,
+  OrderChange,
+  OrderRoute,
+  OrderType,
+} from './order';
 export { ChatMessage } from './order/chat';
 export { OrderConsumer } from './order/consumer';
 export { OrderCourier } from './order/courier';

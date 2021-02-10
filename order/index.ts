@@ -55,6 +55,12 @@ export interface Order {
   updatedOn?: firebase.firestore.FieldValue;
 }
 
+export interface OrderChange {
+  before: Partial<Order>;
+  after: Partial<Order>;
+  timestamp: firebase.firestore.FieldValue;
+}
+
 export interface OrderBusiness {
   id: string;
   name?: string;
