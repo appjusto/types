@@ -4,7 +4,7 @@ import { Fleet } from './fleet';
 import {
   IuguMarketplaceAccount,
   IuguMarketplaceAccountTokens,
-  IuguMarketplaceAccountVerification
+  IuguMarketplaceAccountVerification,
 } from './payment/iugu';
 import { WithId } from './platform';
 import { UserProfile } from './profile';
@@ -12,7 +12,7 @@ import { UserProfile } from './profile';
 export type CourierStatus = 'unavailable' | 'available' | 'dispatching';
 export type CourierMode =
   | 'motocycle'
-  | 'bicycle'
+  | 'bicycling'
   | 'scooter'
   | 'car'
   | 'walking';

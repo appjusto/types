@@ -1,4 +1,4 @@
-import { CourierStatistics } from '../courier';
+import { CourierMode, CourierStatistics } from '../courier';
 import { LatLng } from '../platform';
 
 export interface OrderCourier {
@@ -6,5 +6,6 @@ export interface OrderCourier {
   name: string;
   location: LatLng;
   joined: firebase.firestore.FieldValue;
+  mode: CourierMode;
   statistics?: CourierStatistics;
 }

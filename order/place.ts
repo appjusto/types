@@ -12,4 +12,6 @@ export interface Place {
   additionalInfo?: string;
   intructions?: string;
   location?: LatLng;
+  estimatedTimeOfArrival?: firebase.firestore.FieldValue;
+  timeOfArrival?: firebase.firestore.FieldValue;
 }
