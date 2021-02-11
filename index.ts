@@ -40,6 +40,7 @@ export {
   Order,
   OrderBusiness,
   OrderChange,
+  OrderPrivatePlatform,
   OrderRoute,
   OrderType,
 } from './order';

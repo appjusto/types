@@ -73,10 +73,6 @@ export interface IuguCustomerPaymentMethod {
   };
 }
 
-export interface CustomerPaymentMethod extends IuguCustomerPaymentMethod {
-  cpf: string | null;
-}
-
 // invoices
 
 export interface IuguChargeItem {

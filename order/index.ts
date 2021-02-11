@@ -66,3 +66,8 @@ export interface OrderBusiness {
   name?: string;
   // venueId: string;
 }
+
+export interface OrderPrivatePlatform {
+  handshakeChallenge?: string;
+  handshakeResponse?: string;
+}
