@@ -1,11 +1,10 @@
 import { IuguCharge, IuguInvoice } from '../payment/iugu';
 import { WithId } from '../platform';
-import { Review } from '../reviews';
 import { OrderConsumer } from './consumer';
 import { OrderCourier } from './courier';
 import { DispatchingState } from './dispatching';
 import { Fare } from './fare';
-import { OrderIssue, OrderRejection } from './issues';
+import { OrderRejection } from './issues';
 import { OrderItem } from './item';
 import { Place } from './place';
 import { OrderStatus } from './status';
@@ -39,6 +38,7 @@ export interface Order {
     value: number; // in cents;
     charge?: IuguCharge;
   };
+  // TODO: move to private subcollection
   payment?: {
     invoice: IuguInvoice;
     paymentMethodId: string;
@@ -46,10 +46,6 @@ export interface Order {
   };
   // issues, reviews, etc.
   rejectionHistory?: WithId<OrderRejection>[];
-  cancellation?: OrderIssue;
-  problem?: OrderIssue;
-  courierProblem?: OrderIssue;
-  courierReview?: Review;
   // metadata
   createdOn?: firebase.firestore.FieldValue;
   updatedOn?: firebase.firestore.FieldValue;

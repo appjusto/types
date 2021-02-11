@@ -17,8 +17,9 @@ export interface Issue {
 }
 
 export interface OrderIssue {
-  reason: WithId<Issue>;
+  issue: WithId<Issue>;
   comment?: string;
+  createdOn?: firebase.firestore.FieldValue;
 }
 
 export interface OrderRejection extends OrderIssue {
