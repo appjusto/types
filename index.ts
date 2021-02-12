@@ -24,6 +24,7 @@ export { Fleet, FleetFareParams, FleetSituation } from './fleet';
 export { ManagerProfile } from './managers';
 export {
   Category,
+  Classification,
   Complement,
   ComplementGroup,
   Ordering,

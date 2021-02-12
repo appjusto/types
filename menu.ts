@@ -14,6 +14,10 @@ export interface Category {
   items?: WithId<Product>[];
 }
 
+export interface Classification {
+  name: string;
+}
+
 export interface Product {
   name: string;
   description?: string;
