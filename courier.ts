@@ -32,6 +32,7 @@ export interface CourierCompany extends BusinessAddress {
 
 export interface CourierProfile extends UserProfile {
   status: CourierStatus;
+  ongoingOrderId?: string | null;
   mode?: CourierMode;
   fleet?: WithId<Fleet>;
   bankAccount?: BankAccount;

@@ -3,6 +3,7 @@ export type DispatchingState =
   | 'idle'
   | 'matching'
   | 'unmatched'
+  | 'no-match'
   | 'going-pickup'
   | 'arrived-pickup'
   | 'going-destination'
