@@ -1,5 +1,4 @@
 import firebase from 'firebase';
-import { Review } from './reviews';
 
 export type ProfileSituation =
   | 'pending'
@@ -22,5 +21,4 @@ export interface UserProfile {
   phone?: string;
   notificationToken?: string | null;
   coordinates?: firebase.firestore.GeoPoint;
-  reviews?: Review[];
 }
