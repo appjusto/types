@@ -22,14 +22,10 @@ export {
 } from './courier';
 export { Fleet, FleetFareParams, FleetSituation } from './fleet';
 export { ManagerProfile } from './managers';
-export {
-  Category,
-  Classification,
-  Complement,
-  ComplementGroup,
-  Ordering,
-  Product,
-} from './menu';
+export { Ordering } from './menu';
+export { Category } from './menu/category';
+export { Complement, ComplementGroup } from './menu/complements';
+export { Classification, Product, ProductStatistics } from './menu/product';
 export {
   ChatPushMessageData,
   OrderMatchPushMessageData,
