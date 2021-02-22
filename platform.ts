@@ -3,6 +3,7 @@ export type Flavor = 'courier' | 'consumer' | 'manager';
 export interface PlatformParams {
   maxDistanceToOrigin: number; // in meters
   maxDistance: number; // in meters
+  averageWaitingTime: number; // in seconds
 }
 
 export interface ServiceFee {
