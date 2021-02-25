@@ -27,6 +27,7 @@ export interface ProductAlgolia {
   price: number;
   statistics: ProductStatistics;
   business: {
+    id: string;
     name: string;
     statistics: BusinessStatistics;
   };
