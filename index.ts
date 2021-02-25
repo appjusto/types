@@ -1,3 +1,4 @@
+export { BusinessAlgolia, ProductAlgolia } from './algolia';
 export { Bank, BankAccount, BankAccountType } from './banking';
 export {
   Business,
@@ -61,6 +62,7 @@ export {
   City,
   Flavor,
   LatLng,
+  LatLng2,
   PlatformFees,
   PlatformParams,
   PlatformStatistics,

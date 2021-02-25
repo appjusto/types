@@ -34,6 +34,11 @@ export interface LatLng {
   longitude: number;
 }
 
+export interface LatLng2 {
+  lat: number;
+  lng: number;
+}
+
 export type WithId<T extends object> = T & {
   id: string;
 };
