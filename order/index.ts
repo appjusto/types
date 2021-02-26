@@ -27,6 +27,7 @@ export interface Order {
   items?: OrderItem[];
   code?: string;
   seq?: string | null;
+  cookingTime?: number; // in seconds
   // places & route
   origin?: Place;
   destination?: Place | null;
