@@ -41,7 +41,7 @@ export interface Business {
   cuisine?: WithId<Cuisine>;
   description?: string;
   minimumOrder?: number; // in cents
-  orderAcceptanceTime?: number; // in minutes
+  orderAcceptanceTime?: number | null; // in minutes
   deliveryRange?: number; // in meters
   statistics?: BusinessStatistics;
   onboarding?: string;
