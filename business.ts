@@ -1,4 +1,5 @@
 import firebase from 'firebase';
+import { IuguMarketplaceAccountInfo } from './payment/iugu';
 import { LatLng } from './platform';
 import { ProfileSituation } from './profile';
 
@@ -38,6 +39,7 @@ export interface Business {
   businessAddress?: BusinessAddress;
   status: BusinessStatus;
   situation: ProfileSituation;
+  marketplaceInfo?: IuguMarketplaceAccountInfo;
   cuisine?: string; // cuisine's name
   description?: string;
   minimumOrder?: number; // in cents

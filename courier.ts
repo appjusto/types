@@ -1,11 +1,7 @@
 import { BankAccount } from './banking';
 import { BusinessAddress } from './business';
 import { Fleet } from './fleet';
-import {
-  IuguMarketplaceAccount,
-  IuguMarketplaceAccountTokens,
-  IuguMarketplaceAccountVerification,
-} from './payment/iugu';
+import { IuguMarketplaceAccountInfo } from './payment/iugu';
 import { WithId } from './platform';
 import { UserProfile } from './profile';
 
@@ -36,12 +32,7 @@ export interface CourierProfile extends UserProfile {
   mode?: CourierMode;
   fleet?: WithId<Fleet>;
   bankAccount?: BankAccount;
-  marketPlace?: {
-    situation: 'created' | 'configured' | 'requested-verification' | 'verified';
-    tokens: IuguMarketplaceAccountTokens;
-    account?: IuguMarketplaceAccount;
-    verification?: IuguMarketplaceAccountVerification;
-  };
+  marketPlace?: IuguMarketplaceAccountInfo;
   company?: CourierCompany;
   statistics?: CourierStatistics;
 }

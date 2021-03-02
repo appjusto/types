@@ -81,6 +81,14 @@ export interface IuguChargeItem {
   price_cents: number; // minimum 100
 }
 
+export interface IuguInvoiceSplit {
+  recipient_account_id: string;
+  cents?: number;
+  percent?: number;
+}
+
+export type IuguPayableWith = 'credit_card' | 'pix';
+
 export interface IuguCreateInvoice {
   email: string;
   due_date: string; // AAAA-MM-DD
@@ -89,7 +97,7 @@ export interface IuguCreateInvoice {
   notification_url?: string;
   fines: false;
   customer_id: string;
-  payable_with: 'credit_card';
+  payable_with: IuguPayableWith;
   custom_variables?: object[];
   order_id?: string;
   ignore_canceled_email?: boolean;
@@ -97,6 +105,7 @@ export interface IuguCreateInvoice {
   commissions?: {
     cents: number; // int
   };
+  splits?: IuguInvoiceSplit[];
 }
 
 export interface IuguInvoice {
@@ -151,13 +160,15 @@ export interface IuguCharge {
 
 // marketplace account
 
+export interface IuguMarketplaceAccountInfo {
+  situation: 'created' | 'configured' | 'requested-verification' | 'verified';
+  tokens: IuguMarketplaceAccountTokens;
+  account?: IuguMarketplaceAccount;
+  verification?: IuguMarketplaceAccountVerification;
+}
+
 export interface IuguCreateMarketplaceAccount {
   name?: string;
-  // commissions: {
-  //   cents: number; // int
-  //   percent: number; // float
-  //   permit_aggregated: boolean;
-  // };
 }
 
 export interface IuguMarketplaceAccountTokens {

@@ -1,4 +1,4 @@
-import { IuguCharge, IuguInvoice } from '../payment/iugu';
+import { IuguCharge } from '../payment/iugu';
 import { WithId } from '../platform';
 import { OrderConsumer } from './consumer';
 import { OrderCourier } from './courier';
@@ -39,12 +39,6 @@ export interface Order {
     value: number; // in cents;
     charge?: IuguCharge;
   };
-  // TODO: move to private subcollection
-  payment?: {
-    invoice: IuguInvoice;
-    paymentMethodId: string;
-    charge?: IuguCharge;
-  };
   // issues, reviews, etc.
   rejectionHistory?: WithId<OrderRejection>[];
   // metadata
@@ -62,9 +56,4 @@ export interface OrderBusiness {
   id: string;
   name?: string;
   // venueId: string;
-}
-
-export interface OrderPrivatePlatform {
-  handshakeChallenge?: string;
-  handshakeResponse?: string;
 }

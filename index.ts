@@ -38,7 +38,6 @@ export {
   Order,
   OrderBusiness,
   OrderChange,
-  OrderPrivatePlatform,
   OrderRoute,
   OrderType,
 } from './order';
@@ -57,6 +56,7 @@ export {
 export { OrderItem, OrderItemComplement } from './order/item';
 export { GetOrderQuotesPayload, PlaceOrderPayload } from './order/payloads';
 export { Address, Place } from './order/place';
+export { OrderPrivatePlatform } from './order/private';
 export { FoodOrderStatus, OrderStatus, P2POrderStatus } from './order/status';
 export {
   City,
