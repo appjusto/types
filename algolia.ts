@@ -9,10 +9,7 @@ export interface BusinessAlgolia {
   description: string;
   status: string;
   businessAddress: BusinessAddress;
-  cuisine: {
-    id: string;
-    name: string;
-  };
+  cuisine: string;
   deliveryRange: number;
   statistics: BusinessStatistics;
 }
