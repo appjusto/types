@@ -1,5 +1,5 @@
 import firebase from 'firebase';
-import { LatLng, WithId } from './platform';
+import { LatLng } from './platform';
 import { ProfileSituation } from './profile';
 
 export interface Cuisine {
@@ -38,7 +38,7 @@ export interface Business {
   businessAddress?: BusinessAddress;
   status: BusinessStatus;
   situation: ProfileSituation;
-  cuisine?: WithId<Cuisine>;
+  cuisine?: string;
   description?: string;
   minimumOrder?: number; // in cents
   orderAcceptanceTime?: number | null; // in minutes
