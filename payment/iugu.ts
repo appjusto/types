@@ -1,5 +1,6 @@
 export interface IuguConfig {
   token: string;
+  marketplacetoken: string;
   accountid: string;
 }
 
@@ -257,7 +258,7 @@ export interface IuguMarketplaceAccountVerificationData {
   bank: string;
   account_type: 'Corrente' | 'Poupança';
   bank_ag: string;
-  bank_acc: string;
+  bank_cc: string;
 }
 
 export interface IuguMarketplaceAccountVerificationRequest {
