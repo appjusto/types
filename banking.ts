@@ -1,4 +1,5 @@
 export interface Bank {
+  code: string;
   name: string;
   agencyPattern: string;
   accountPattern: string;
@@ -7,9 +8,8 @@ export interface Bank {
 export type BankAccountType = 'Corrente' | 'Poupança';
 
 export interface BankAccount {
+  type: BankAccountType;
   name: string;
   agency: string;
   account: string;
-  digit: string;
-  type: BankAccountType;
 }
