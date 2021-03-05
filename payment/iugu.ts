@@ -275,7 +275,7 @@ export interface IuguMarketplaceAccountInfo {
   created_at: string;
   updated_at: string;
   can_receive: boolean;
-  is_verified: boolean;
+  'is_verified?': boolean; // WTF iugu?
   last_verification_request_status: string;
   last_verification_request_data: string;
   last_verification_request_feedback: string;
