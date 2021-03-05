@@ -11,5 +11,7 @@ export interface BankAccount {
   type: BankAccountType;
   name: string;
   agency: string;
+  agencyFormatted: string;
   account: string;
+  accountFormatted: string;
 }

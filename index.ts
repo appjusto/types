@@ -17,6 +17,7 @@ export {
 export {
   CourierCompany,
   CourierMode,
+  CourierPrivatePlatform,
   CourierProfile,
   CourierStatistics,
   CourierStatus,

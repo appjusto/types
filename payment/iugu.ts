@@ -161,13 +161,6 @@ export interface IuguCharge {
 
 // marketplace account
 
-export interface IuguMarketplaceAccountInfo {
-  situation: 'created' | 'configured' | 'requested-verification' | 'verified';
-  tokens: IuguMarketplaceAccountTokens;
-  account?: IuguMarketplaceAccount;
-  verification?: IuguMarketplaceAccountVerification;
-}
-
 export interface IuguCreateMarketplaceAccount {
   name?: string;
 }
@@ -274,4 +267,17 @@ export interface IuguMarketplaceAccountVerification {
   };
   account_id: string;
   created_at: string;
+}
+
+export interface IuguMarketplaceAccountInfo {
+  id: string;
+  name: string;
+  created_at: string;
+  updated_at: string;
+  can_receive: boolean;
+  is_verified: boolean;
+  last_verification_request_status: string;
+  last_verification_request_data: string;
+  last_verification_request_feedback: string;
+  // ...
 }
