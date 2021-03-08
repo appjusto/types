@@ -35,10 +35,12 @@ export interface Business {
   type: BusinessType;
   name?: string;
   cnpj?: string;
+  phone?: string;
   managers?: string[]; // emails
   businessAddress?: BusinessAddress;
   status: BusinessStatus;
   situation: ProfileSituation;
+  profileIssues?: string[];
   marketplaceInfo?: MarketplaceAccountInfo;
   cuisine?: string; // cuisine's name
   description?: string;
