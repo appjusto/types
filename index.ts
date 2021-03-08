@@ -3,7 +3,7 @@ export { Bank, BankAccount, BankAccountType } from './banking';
 export {
   Business,
   BusinessAddress,
-  BusinessPrivateStatistics,
+  BusinessPrivatePlatform,
   BusinessStatistics,
   BusinessStatus,
   BusinessType,

@@ -1,5 +1,5 @@
 import firebase from 'firebase';
-import { MarketplaceAccountInfo } from './courier';
+import { MarketplaceAccountInfo } from './payment/marketplace';
 import { LatLng } from './platform';
 import { ProfileSituation } from './profile';
 
@@ -24,8 +24,8 @@ export interface BusinessStatistics {
   averageTicketPrice: number;
 }
 
-export interface BusinessPrivateStatistics {
-  // averageOrderValue: number; // total revenue by number of orders
+export interface BusinessPrivatePlatform {
+  marketPlace?: MarketplaceAccountInfo;
 }
 
 export type BusinessType = 'restaurant';
