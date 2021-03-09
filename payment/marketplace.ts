@@ -10,7 +10,6 @@ export interface MarketplaceAccountInfo {
     | 'pending'
     | 'created'
     | 'configured'
-    | 'request-verification'
     | 'waiting-verification'
     | 'verified'
     | 'rejected';
