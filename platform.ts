@@ -21,6 +21,7 @@ export interface PlatformFees {
 }
 
 export interface PlatformStatistics {
+  placedOrders: number;
   totalOrders: number;
 }
 

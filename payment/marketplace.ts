@@ -17,4 +17,5 @@ export interface MarketplaceAccountInfo {
   account?: IuguMarketplaceAccount;
   verification?: IuguMarketplaceAccountVerification;
   info?: IuguMarketplaceAccountInfo;
+  issues?: string[];
 }

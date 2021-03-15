@@ -25,6 +25,7 @@ export interface Order {
   courier?: OrderCourier;
   business?: OrderBusiness;
   items?: OrderItem[];
+  additionalInfo?: string;
   code?: string;
   seq?: string | null;
   cookingTime?: number | null; // in seconds
