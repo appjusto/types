@@ -1,4 +1,9 @@
-import { IuguCharge, IuguInvoice, IuguPayableWith } from '../payment/iugu';
+import {
+  IuguChargeResponse,
+  IuguCreateInvoiceResponse,
+  IuguInvoiceCaptureResponse,
+  IuguPayableWith,
+} from '../payment/iugu';
 
 export interface OrderPayment {
   payableWith: IuguPayableWith;
@@ -7,6 +12,7 @@ export interface OrderPayment {
   customerPaymentMethodId?: string;
   courierMarketplaceAccountId?: string;
   businessMarketplaceAccountId?: string;
-  invoice?: IuguInvoice;
-  charge?: IuguCharge;
+  invoice?: IuguCreateInvoiceResponse;
+  charge?: IuguChargeResponse;
+  capture?: IuguInvoiceCaptureResponse;
 }

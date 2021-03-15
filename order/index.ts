@@ -1,4 +1,4 @@
-import { IuguCharge } from '../payment/iugu';
+import { IuguChargeResponse } from '../payment/iugu';
 import { WithId } from '../platform';
 import { OrderConsumer } from './consumer';
 import { OrderCourier } from './courier';
@@ -38,7 +38,7 @@ export interface Order {
   fare?: Fare;
   tip?: {
     value: number; // in cents;
-    charge?: IuguCharge;
+    charge?: IuguChargeResponse;
   };
   // issues, reviews, etc.
   rejectionHistory?: WithId<OrderRejection>[];

@@ -82,59 +82,6 @@ export interface IuguChargeItem {
   price_cents: number; // minimum 100
 }
 
-export interface IuguInvoiceSplit {
-  recipient_account_id: string;
-  cents?: number;
-  percent?: number;
-}
-
-export type IuguPayableWith = 'credit_card' | 'pix';
-
-export interface IuguCreateInvoice {
-  email: string;
-  due_date: string; // AAAA-MM-DD
-  ensure_workday_due_date: false;
-  items: IuguChargeItem[];
-  notification_url?: string;
-  fines: false;
-  customer_id: string;
-  payable_with: IuguPayableWith;
-  custom_variables?: object[];
-  order_id?: string;
-  ignore_canceled_email?: boolean;
-  ignore_due_email?: boolean;
-  commissions?: {
-    cents: number; // int
-  };
-  splits?: IuguInvoiceSplit[];
-}
-
-export interface IuguInvoice {
-  id: string;
-  due_date: string; // AAAA-MM-DD
-  currency: string;
-  email: string;
-  status: string; // pending
-  updated_at: string;
-  ensure_workday_due_date: false;
-  total_cents: number;
-  secure_id: string;
-  secure_url: string;
-  customer_id: string;
-  created_at: string;
-  items: [
-    {
-      id: string;
-      description: string;
-      quantity?: number;
-      price_cents: number; // minimum 100
-    }
-  ];
-  notification_url?: string;
-  custom_variables?: object[];
-  commission_cents: number;
-}
-
 // charges
 
 export interface IuguInvoiceCharge {
@@ -149,15 +96,6 @@ export interface IuguAdhocCharge {
 export type IuguCreateCharge = {
   customer_payment_method_id: string;
 } & (IuguAdhocCharge | IuguInvoiceCharge);
-
-export interface IuguCharge {
-  message: string;
-  errors: object;
-  url: string;
-  pdf: string;
-  identification: string | null;
-  invoice_id: string;
-}
 
 // marketplace account
 
@@ -281,3 +219,13 @@ export interface IuguMarketplaceAccountInfo {
   last_verification_request_feedback: string;
   // ...
 }
+
+export { IuguChargeResponse } from './charge';
+export {
+  IuguCreateInvoiceRequest,
+  IuguCreateInvoiceResponse,
+  IuguInvoiceCaptureResponse,
+  IuguItem,
+  IuguPayableWith,
+  IuguSplit,
+} from './invoice';
