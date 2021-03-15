@@ -31,6 +31,13 @@ export interface BusinessPrivatePlatform {
 export type BusinessType = 'restaurant';
 export type BusinessStatus = 'open' | 'closed';
 
+export type ScheduleObject = {
+  day: string;
+  checked: boolean;
+  schedule: { from: string; to: string }[];
+};
+export type BusinessSchedule = ScheduleObject[];
+
 export interface Business {
   type: BusinessType;
   name?: string;
@@ -51,6 +58,7 @@ export interface Business {
   onboarding?: string;
   logoExists: boolean;
   coverImageExists: boolean;
+  schedules: BusinessSchedule;
   // metadata
   createdOn: firebase.firestore.FieldValue;
   updatedOn?: firebase.firestore.FieldValue;
