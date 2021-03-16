@@ -21,4 +21,5 @@ export interface UserProfile {
   phone?: string;
   notificationToken?: string | null;
   coordinates?: firebase.firestore.GeoPoint;
+  pix?: string;
 }
