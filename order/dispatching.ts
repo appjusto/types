@@ -4,6 +4,8 @@ export type DispatchingState =
   | 'matching'
   | 'unmatched'
   | 'no-match'
+  | 'matched'
+  // | 'dispatching'
   | 'going-pickup'
   | 'arrived-pickup'
   | 'going-destination'
