@@ -3,7 +3,8 @@ import { IuguPayableWith } from '../payment/iugu';
 export interface PlaceOrderPayload {
   orderId: string;
   payableWith: IuguPayableWith;
-  paymentMethodId: string;
+  paymentMethodId?: string;
+  pixKey?: string;
   fleetId: string;
   // transactionId: string;
 }
