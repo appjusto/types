@@ -1,11 +1,13 @@
-export type DispatchingState =
-  | undefined
+export type DispatchingStatus =
   | 'idle'
   | 'matching'
-  | 'unmatched'
   | 'no-match'
   | 'matched'
-  // | 'dispatching'
+  | 'declined'
+  | 'confirmed'
+  | 'unmatched';
+
+export type DispatchingState =
   | 'going-pickup'
   | 'arrived-pickup'
   | 'going-destination'

@@ -1,8 +1,13 @@
+interface IuguCustomVariable {
+  name: string;
+  value: string;
+}
+
 export interface IuguCreateCustomerRequest {
   email: string;
   name: string;
   cpf_cnpj?: string;
-  custom_variables?: object[];
+  custom_variables?: IuguCustomVariable[];
 }
 
 export interface IuguCustomer {
@@ -11,5 +16,5 @@ export interface IuguCustomer {
   name: string;
   created_at: string;
   updated_at: string;
-  custom_variables?: object[];
+  custom_variables?: IuguCustomVariable[];
 }
