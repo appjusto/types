@@ -5,9 +5,9 @@ import {
 } from '../payment/iugu';
 
 export interface OrderPayment {
-  marketplaceAccountId: string;
-  marketplaceAccountToken: string;
+  marketplaceAccountId?: string;
+  marketplaceAccountToken?: string;
   invoice?: IuguCreateInvoiceResponse;
-  charge?: IuguChargeResponse;
+  charge?: IuguChargeResponse | null;
   capture?: IuguInvoiceCaptureResponse;
 }

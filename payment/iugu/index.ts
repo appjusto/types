@@ -211,6 +211,7 @@ export interface IuguMarketplaceAccountInfo {
 export { IuguChargeResponse } from './charge';
 export { IuguCreateCustomerRequest, IuguCustomer } from './customer';
 export {
+  IuguCommissions,
   IuguCreateInvoiceRequest,
   IuguCreateInvoiceResponse,
   IuguInvoiceCaptureResponse,
