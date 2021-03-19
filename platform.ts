@@ -12,7 +12,10 @@ export interface ServiceFee {
     percent: number;
   };
   taxes: number;
-  processing: number;
+  processing: {
+    fixed: number; // in cents
+    percent: number;
+  };
 }
 
 export interface PlatformFees {
