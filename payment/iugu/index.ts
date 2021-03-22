@@ -4,6 +4,11 @@ export interface IuguConfig {
   accountid: string;
 }
 
+export interface IuguQueryResponse<T> {
+  totalItems: number;
+  items: T[];
+}
+
 // payment token
 export interface IuguCreatePaymentTokenData {
   number: string;
@@ -33,25 +38,6 @@ export interface IuguPaymentToken {
     year: number;
   };
 }
-
-// customer
-
-export interface IuguCreateCustomer {
-  email: string;
-  name: string;
-  cpf_cnpj?: string;
-  custom_variables?: object[];
-}
-
-export interface IuguCustomer {
-  id: string;
-  email: string;
-  name: string;
-  created_at: string;
-  updated_at: string;
-  custom_variables?: object[];
-}
-
 // payment method
 
 export interface IuguCreateCustomerPaymentMethod {
@@ -86,11 +72,13 @@ export interface IuguChargeItem {
 
 export interface IuguInvoiceCharge {
   invoice_id: string;
+  token?: string;
 }
 
 export interface IuguAdhocCharge {
   email: string;
   items: IuguChargeItem[];
+  token?: string;
 }
 
 export type IuguCreateCharge = {
@@ -221,7 +209,9 @@ export interface IuguMarketplaceAccountInfo {
 }
 
 export { IuguChargeResponse } from './charge';
+export { IuguCreateCustomerRequest, IuguCustomer } from './customer';
 export {
+  IuguCommissions,
   IuguCreateInvoiceRequest,
   IuguCreateInvoiceResponse,
   IuguInvoiceCaptureResponse,

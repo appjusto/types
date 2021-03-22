@@ -1,8 +1,8 @@
 export type P2POrderStatus =
   | 'quote'
   | 'confirming'
-  | 'unauthorized'
   | 'confirmed'
+  | 'declined'
   | 'dispatching'
   | 'delivered'
   | 'canceled';
@@ -10,7 +10,7 @@ export type P2POrderStatus =
 export type FoodOrderStatus =
   | 'quote'
   | 'confirming'
-  | 'unauthorized'
+  | 'declined'
   | 'confirmed'
   | 'preparing'
   | 'ready'

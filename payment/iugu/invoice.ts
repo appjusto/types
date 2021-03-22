@@ -22,6 +22,16 @@ export interface IuguSplit {
   cents?: number;
   percent?: number;
 }
+export interface IuguCommissions {
+  cents?: number;
+  percent?: number;
+  credit_card_cents?: number;
+  credit_card_percent?: number;
+  bank_slip_cents?: number;
+  bank_slip_percent?: number;
+  pix_cents?: number;
+  pix_percent?: number;
+}
 // create invoice
 export type IuguPayableWith = 'credit_card' | 'pix';
 export interface IuguCreateInvoiceRequest {
@@ -35,11 +45,10 @@ export interface IuguCreateInvoiceRequest {
   payable_with: IuguPayableWith;
   custom_variables?: object[];
   order_id?: string;
+  external_reference?: string;
   ignore_canceled_email?: boolean;
   ignore_due_email?: boolean;
-  commissions?: {
-    cents: number; // int
-  };
+  commissions?: IuguCommissions;
   splits?: IuguSplit[];
 }
 export interface IuguCreateInvoiceResponse {

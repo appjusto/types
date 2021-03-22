@@ -2,7 +2,7 @@ import { IuguChargeResponse } from '../payment/iugu';
 import { WithId } from '../platform';
 import { OrderConsumer } from './consumer';
 import { OrderCourier } from './courier';
-import { DispatchingState } from './dispatching';
+import { DispatchingState, DispatchingStatus } from './dispatching';
 import { Fare } from './fare';
 import { OrderRejection } from './issues';
 import { OrderItem } from './item';
@@ -33,6 +33,7 @@ export interface Order {
   origin?: Place;
   destination?: Place | null;
   route?: OrderRoute | null;
+  dispatchingStatus?: DispatchingStatus;
   dispatchingState?: DispatchingState;
   // fare, tip & payment
   fare?: Fare;
