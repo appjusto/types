@@ -1,5 +1,4 @@
 import { IuguChargeResponse } from '../payment/iugu';
-import { WithId } from '../platform';
 import { OrderConsumer } from './consumer';
 import { OrderCourier } from './courier';
 import { DispatchingState, DispatchingStatus } from './dispatching';
@@ -42,7 +41,7 @@ export interface Order {
     charge?: IuguChargeResponse;
   };
   // issues, reviews, etc.
-  rejectionHistory?: WithId<OrderRejection>[];
+  rejectionHistory?: OrderRejection[];
   // metadata
   createdOn?: firebase.firestore.FieldValue;
   updatedOn?: firebase.firestore.FieldValue;
