@@ -3,6 +3,7 @@ import firebase from 'firebase';
 export type ProfileSituation =
   | 'pending'
   | 'submitted'
+  | 'verified'
   | 'approved'
   | 'rejected'
   | 'blocked'
