@@ -1,4 +1,7 @@
-export type PushMessageActionType = 'matching' | 'order-chat';
+export type PushMessageActionType =
+  | 'order-request'
+  | 'order-chat'
+  | 'order-update';
 
 export interface PushMessageData {
   action: PushMessageActionType;
