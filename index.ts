@@ -23,7 +23,7 @@ export {
   CourierStatus,
 } from './courier';
 export { Fleet, FleetFareParams, FleetSituation } from './fleet';
-export { ManagerProfile } from './managers';
+export { ManagerPrivatePlatform, ManagerProfile } from './managers';
 export { Ordering } from './menu';
 export { Category } from './menu/category';
 export { Complement, ComplementGroup } from './menu/complements';
