@@ -9,6 +9,7 @@ export type ProfileSituation =
   | 'blocked'
   | 'deleted';
 
+export type UserRole = 'owner' | 'staff' | 'viewer';
 export interface UserProfile {
   code?: string;
   situation: ProfileSituation;
