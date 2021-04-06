@@ -47,6 +47,7 @@ export interface Business {
   businessAddress?: BusinessAddress;
   status: BusinessStatus;
   situation: ProfileSituation;
+  enabled: boolean;
   profileIssues?: string[];
   marketplaceInfo?: MarketplaceAccountInfo;
   cuisine?: string; // cuisine's name
