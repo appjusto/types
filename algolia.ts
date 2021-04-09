@@ -6,6 +6,8 @@ export interface BusinessAlgolia {
   objectID: string;
   _geoloc: LatLng2;
   name: string;
+  code: string;
+  situation: string;
   description: string;
   status: string;
   businessAddress: BusinessAddress;
