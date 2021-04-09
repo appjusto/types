@@ -5,6 +5,7 @@ import { LatLng2 } from './platform';
 export interface BusinessAlgolia {
   objectID: string;
   _geoloc: LatLng2;
+  enabled: boolean;
   name: string;
   code: string;
   situation: string;
