@@ -40,6 +40,7 @@ export type BusinessSchedule = ScheduleObject[];
 
 export interface Business {
   type: BusinessType;
+  code?: string;
   name?: string;
   cnpj?: string;
   phone?: string;
