@@ -15,6 +15,7 @@ export interface BusinessAlgolia {
   cuisine: string;
   deliveryRange: number;
   statistics: BusinessStatistics;
+  createdOn: firebase.firestore.FieldValue;
 }
 
 export interface ProductAlgolia {
