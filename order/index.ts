@@ -1,3 +1,4 @@
+import firebase from 'firebase';
 import { IuguChargeResponse } from '../payment/iugu';
 import { OrderConsumer } from './consumer';
 import { OrderCourier } from './courier';

@@ -1,3 +1,5 @@
+import firebase from 'firebase';
+
 export type DispatchingStatus =
   | 'idle'
   | 'matching'

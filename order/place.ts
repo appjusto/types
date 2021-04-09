@@ -1,3 +1,4 @@
+import firebase from 'firebase';
 import { LatLng } from '../platform';
 
 export interface Address {

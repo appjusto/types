@@ -1,3 +1,4 @@
+import firebase from 'firebase';
 import { Flavor } from '../platform';
 
 export interface ChatMessage {

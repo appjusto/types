@@ -1,3 +1,5 @@
+import firebase from 'firebase';
+
 export type ReviewType = 'positive' | 'negative';
 
 export interface Review {

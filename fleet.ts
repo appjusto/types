@@ -1,3 +1,5 @@
+import firebase from 'firebase';
+
 export type FleetSituation = 'pending' | 'approved' | 'rejected' | 'blocked';
 
 export interface FleetFareParams {

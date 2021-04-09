@@ -1,3 +1,4 @@
+import firebase from 'firebase';
 import { BusinessAddress, BusinessStatistics } from './business';
 import { ProductStatistics } from './menu/product';
 import { LatLng2 } from './platform';
