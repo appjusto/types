@@ -1,4 +1,6 @@
-export { BusinessAlgolia, ProductAlgolia } from './algolia';
+export type Environment = 'dev' | 'staging' | 'live';
+
+export { AlgoliaConfig, BusinessAlgolia, ProductAlgolia } from './algolia';
 export { Bank, BankAccount, BankAccountType } from './banking';
 export {
   Business,

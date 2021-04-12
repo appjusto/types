@@ -3,6 +3,10 @@ import { BusinessAddress, BusinessStatistics } from './business';
 import { ProductStatistics } from './menu/product';
 import { LatLng2 } from './platform';
 
+export interface AlgoliaConfig {
+  appId: string;
+  apiKey: string;
+}
 export interface BusinessAlgolia {
   objectID: string;
   _geoloc: LatLng2;
