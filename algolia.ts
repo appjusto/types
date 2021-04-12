@@ -14,6 +14,7 @@ export interface BusinessAlgolia {
   name: string;
   code: string;
   situation: string;
+  onboarding: string;
   description: string;
   status: string;
   businessAddress: BusinessAddress;
