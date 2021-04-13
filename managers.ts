@@ -1,5 +1,6 @@
 import firebase from 'firebase';
 import { UserProfile } from './profile';
+export type Role = 'owner' | 'staff' | 'viewer';
 
 export interface ManagerProfile extends UserProfile {}
 

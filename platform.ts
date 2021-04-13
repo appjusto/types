@@ -1,4 +1,5 @@
 export type Flavor = 'courier' | 'consumer' | 'manager';
+export type Environment = 'dev' | 'staging' | 'live' | 'local';
 
 export interface PlatformParams {
   maxDistanceToOrigin: number; // in meters

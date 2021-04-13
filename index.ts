@@ -1,5 +1,3 @@
-export type Environment = 'dev' | 'staging' | 'live';
-
 export { AlgoliaConfig, BusinessAlgolia, ProductAlgolia } from './algolia';
 export { Bank, BankAccount, BankAccountType } from './banking';
 export {
@@ -25,7 +23,7 @@ export {
   CourierStatus,
 } from './courier';
 export { Fleet, FleetFareParams, FleetSituation } from './fleet';
-export { ManagerPrivatePlatform, ManagerProfile } from './managers';
+export { ManagerPrivatePlatform, ManagerProfile, Role } from './managers';
 export { Ordering } from './menu';
 export { Category } from './menu/category';
 export { Complement, ComplementGroup } from './menu/complements';
@@ -63,6 +61,7 @@ export { OrderPrivatePlatform } from './order/private';
 export { FoodOrderStatus, OrderStatus, P2POrderStatus } from './order/status';
 export {
   City,
+  Environment,
   Flavor,
   LatLng,
   LatLng2,
