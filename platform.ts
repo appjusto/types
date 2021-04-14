@@ -11,6 +11,9 @@ export interface PlatformParams {
   business: {
     approveAfterVerified: boolean;
   };
+  maintenance: {
+    backupsEnabled: boolean;
+  };
 }
 
 export interface ServiceFee {
