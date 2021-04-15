@@ -3,7 +3,11 @@ import { OrderPayment } from './payment';
 
 export interface OrderPrivatePlatform {
   handshakeChallenge?: string;
-  handshakeResponse?: string;
+  confirmationDetails?: {
+    handshakeResponse?: string | null;
+    deliveredTo?: string | null;
+    comment?: string | null;
+  };
   paymentDetails: {
     payableWith: IuguPayableWith;
     customerId: string;

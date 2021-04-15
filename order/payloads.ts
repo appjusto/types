@@ -1,5 +1,9 @@
 import { IuguPayableWith } from '../payment/iugu';
 
+export interface GetOrderQuotesPayload {
+  orderId: string;
+}
+
 export interface PlaceOrderPayload {
   orderId: string;
   payableWith: IuguPayableWith;
@@ -9,6 +13,9 @@ export interface PlaceOrderPayload {
   // transactionId: string;
 }
 
-export interface GetOrderQuotesPayload {
+export interface CompleteDeliveryPayload {
   orderId: string;
+  handshakeResponse?: string;
+  deliveredTo?: string;
+  comment?: string;
 }
