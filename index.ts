@@ -56,9 +56,18 @@ export {
 } from './order/issues';
 export { OrderItem, OrderItemComplement } from './order/item';
 export {
+  CancelOrderPayload,
   CompleteDeliveryPayload,
+  DeletePaymentMethodPayload,
+  FetchTotalCouriersNearbyPayload,
   GetOrderQuotesPayload,
+  MatchOrderPayload,
+  NextDispatchingStatePayload,
   PlaceOrderPayload,
+  RejectOrderPayload,
+  SavePaymentTokenPayload,
+  TipCourierPayload,
+  VerifyBusinessProfilePayload,
 } from './order/payloads';
 export { Address, Place } from './order/place';
 export { OrderPrivatePlatform } from './order/private';
