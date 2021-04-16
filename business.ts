@@ -6,6 +6,7 @@ import { ProfileSituation } from './profile';
 export interface Cuisine {
   name: string;
   imagePath?: string;
+  order?: number;
 }
 
 export interface BusinessAddress {
