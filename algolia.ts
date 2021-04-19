@@ -44,6 +44,7 @@ export interface ConsumerAlgolia {
 }
 export interface OrderAlgolia {
   objectID: string;
+  type: string;
   code: string;
   consumerName: string;
   courierName: string;
