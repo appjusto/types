@@ -36,6 +36,7 @@ export interface CourierAlgolia {
 export interface ConsumerAlgolia {
   objectID: string;
   name: string;
+  surname: string;
   code: string;
   situation: string;
   totalOrders: number;
