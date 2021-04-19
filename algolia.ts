@@ -51,6 +51,7 @@ export interface OrderAlgolia {
   totalOrder: string;
   status: string;
   createdOn: firebase.firestore.FieldValue;
+  date_timestamp: number;
 }
 
 export interface ProductAlgolia {
