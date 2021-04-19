@@ -33,6 +33,15 @@ export interface CourierAlgolia {
   createdOn: firebase.firestore.FieldValue;
 }
 
+export interface ConsumerAlgolia {
+  objectID: string;
+  name: string;
+  code: string;
+  situation: string;
+  totalOrders: number;
+  createdOn: firebase.firestore.FieldValue;
+}
+
 export interface ProductAlgolia {
   objectID: string;
   _geoloc: LatLng2;

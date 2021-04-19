@@ -1,6 +1,7 @@
 export {
   AlgoliaConfig,
   BusinessAlgolia,
+  ConsumerAlgolia,
   CourierAlgolia,
   ProductAlgolia,
 } from './algolia';
