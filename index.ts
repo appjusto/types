@@ -3,6 +3,7 @@ export {
   BusinessAlgolia,
   ConsumerAlgolia,
   CourierAlgolia,
+  OrderAlgolia,
   ProductAlgolia,
 } from './algolia';
 export { Bank, BankAccount, BankAccountType } from './banking';

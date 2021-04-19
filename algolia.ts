@@ -42,6 +42,15 @@ export interface ConsumerAlgolia {
   totalOrders: number;
   createdOn: firebase.firestore.FieldValue;
 }
+export interface OrderAlgolia {
+  objectID: string;
+  code: string;
+  consumerName: string;
+  courierName: string;
+  totalOrder: string;
+  status: string;
+  createdOn: firebase.firestore.FieldValue;
+}
 
 export interface ProductAlgolia {
   objectID: string;
