@@ -6,6 +6,7 @@ export type PushMessageActionType =
 export interface PushMessageData {
   action: PushMessageActionType;
   orderId: string;
+  from: string;
 }
 
 export interface PushMessage {
