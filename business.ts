@@ -55,7 +55,7 @@ export interface Business {
   cuisine?: string; // cuisine's name
   description?: string;
   minimumOrder?: number; // in cents
-  orderAcceptanceTime?: number | null; // in minutes
+  orderAcceptanceTime?: number | null; // in seconds
   deliveryRange?: number; // in meters
   statistics?: BusinessStatistics;
   onboarding?: string;
