@@ -12,7 +12,7 @@ export interface MarketplaceAccountInfo {
     | 'configured'
     | 'waiting-verification'
     | 'verified'
-    | 'rejected';
+    | 'invalid';
   tokens?: IuguMarketplaceAccountTokens;
   account?: IuguMarketplaceAccount;
   verification?: IuguMarketplaceAccountVerification;
