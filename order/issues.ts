@@ -14,7 +14,7 @@ export type IssueType =
 
 export interface Issue {
   id?: string;
-  order: number;
+  order?: number;
   type: IssueType;
   title: string;
 }
