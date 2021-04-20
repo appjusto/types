@@ -10,9 +10,11 @@ export type IssueType =
   | 'consumer-cancel'
   | 'consumer-delivery-problem'
   | 'restaurant-cancel'
-  | 'no-code-delivery';
+  | 'profile-invalid';
 
 export interface Issue {
+  id?: string;
+  order: number;
   type: IssueType;
   title: string;
 }
