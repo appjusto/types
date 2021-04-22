@@ -9,6 +9,15 @@ export type ProfileSituation =
   | 'rejected'
   | 'blocked'
   | 'deleted';
+
+export interface GenericAddress {
+  cep: string;
+  address: string;
+  number?: string;
+  additional?: string;
+  city: string;
+  state: string;
+}
 export interface UserProfile {
   code?: string;
   situation: ProfileSituation;
@@ -20,6 +29,7 @@ export interface UserProfile {
   surname?: string;
   cpf?: string;
   phone?: string;
+  userAddress?: GenericAddress;
   notificationToken?: string | null;
   coordinates?: firebase.firestore.GeoPoint;
   pix?: string;
