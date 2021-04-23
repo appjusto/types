@@ -4,6 +4,7 @@ export type ProfileSituation =
   | 'pending'
   | 'submitted'
   | 'verified'
+  | 'invalid'
   | 'approved'
   | 'rejected'
   | 'blocked'

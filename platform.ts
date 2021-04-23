@@ -4,6 +4,7 @@ export type Environment = 'dev' | 'staging' | 'live' | 'local';
 export interface PlatformParams {
   maxDistanceToOrigin: number; // in meters
   maxDistance: number; // in meters
+  averageCookingTime: number; // in seconds
   averageWaitingTime: number; // in seconds
   courier: {
     approveAfterVerified: boolean;

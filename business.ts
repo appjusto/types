@@ -51,11 +51,11 @@ export interface Business {
   situation: ProfileSituation;
   enabled: boolean;
   profileIssues?: string[];
-  marketplaceInfo?: MarketplaceAccountInfo;
   cuisine?: string; // cuisine's name
   description?: string;
   minimumOrder?: number; // in cents
-  orderAcceptanceTime?: number | null; // in minutes
+  averageCookingTime?: number; // in seconds
+  orderAcceptanceTime?: number | null; // in seconds
   deliveryRange?: number; // in meters
   statistics?: BusinessStatistics;
   onboarding?: string;
