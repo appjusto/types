@@ -91,5 +91,5 @@ export {
   ServiceFee,
   WithId,
 } from './platform';
-export { GenericAddress, ProfileSituation, UserProfile } from './profile';
+export { ProfileSituation, UserProfile } from './profile';
 export { Review, ReviewType } from './reviews';
