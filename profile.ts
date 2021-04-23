@@ -22,4 +22,5 @@ export interface UserProfile {
   notificationToken?: string | null;
   coordinates?: firebase.firestore.GeoPoint;
   pix?: string;
+  onboarded?: boolean;
 }
