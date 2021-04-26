@@ -6,7 +6,12 @@ export {
   OrderAlgolia,
   ProductAlgolia,
 } from './algolia';
-export { Bank, BankAccount, BankAccountType } from './banking';
+export {
+  Bank,
+  BankAccount,
+  BankAccountPersonType,
+  BankAccountType,
+} from './banking';
 export {
   Business,
   BusinessAddress,
