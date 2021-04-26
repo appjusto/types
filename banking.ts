@@ -9,6 +9,8 @@ export interface Bank {
 
 export type BankAccountType = 'Corrente' | 'Poupança';
 
+export type BankAccountPersonType = 'Pessoa Física' | 'Pessoa Jurídica';
+
 export interface BankAccount {
   type: BankAccountType;
   name: string;
@@ -16,4 +18,5 @@ export interface BankAccount {
   agencyFormatted: string;
   account: string;
   accountFormatted: string;
+  personType?: BankAccountPersonType;
 }
