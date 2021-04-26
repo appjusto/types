@@ -8,9 +8,11 @@ export interface Bank {
 }
 
 export type BankAccountType = 'Corrente' | 'Poupança';
+export type BankAccountHolderType = 'PF' | 'PJ';
 
 export interface BankAccount {
   type: BankAccountType;
+  holder: BankAccountHolderType;
   name: string;
   agency: string;
   agencyFormatted: string;
