@@ -12,7 +12,7 @@ export type BankAccountHolderType = 'PF' | 'PJ';
 
 export interface BankAccount {
   type: BankAccountType;
-  holder: BankAccountHolderType;
+  holderType: BankAccountHolderType;
   name: string;
   agency: string;
   agencyFormatted: string;
