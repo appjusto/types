@@ -70,16 +70,22 @@ export { OrderItem, OrderItemComplement } from './order/item';
 export {
   CancelOrderPayload,
   CompleteDeliveryPayload,
+  CreditCardDetails,
+  DeleteAccountPayload,
   DeletePaymentMethodPayload,
   FetchTotalCouriersNearbyPayload,
   GetOrderQuotesPayload,
   MatchOrderPayload,
   NextDispatchingStatePayload,
+  PayloadMeta,
+  PaymentDetails,
+  PixDetails,
   PlaceOrderPayload,
   RejectOrderPayload,
   SavePaymentTokenPayload,
   TipCourierPayload,
   VerifyBusinessProfilePayload,
+  VerifyCourierProfilePayload,
 } from './order/payloads';
 export { Address, Place } from './order/place';
 export { OrderPrivatePlatform } from './order/private';
