@@ -1,3 +1,4 @@
+import firebase from 'firebase';
 import { BankAccount } from './banking';
 import { BusinessAddress } from './business';
 import { Fleet } from './fleet';
