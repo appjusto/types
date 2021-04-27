@@ -27,6 +27,7 @@ export {
   PaymentChannel,
 } from './consumer';
 export {
+  AvailableCourier,
   CourierCompany,
   CourierMode,
   CourierPrivatePlatform,
@@ -85,9 +86,11 @@ export {
   VerifyBusinessProfilePayload,
   VerifyCourierProfilePayload,
 } from './order/payloads';
+export { OrderPayment } from './order/payment';
 export { Address, Place } from './order/place';
 export { OrderPrivatePlatform } from './order/private';
 export { FoodOrderStatus, OrderStatus, P2POrderStatus } from './order/status';
+export { MarketplaceAccountInfo } from './payment/marketplace';
 export {
   City,
   Environment,
