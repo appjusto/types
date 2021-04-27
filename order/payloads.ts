@@ -1,4 +1,4 @@
-import { IuguPayableWith, IuguPaymentToken } from '../payment/iugu';
+import { IuguPaymentToken } from '../payment/iugu';
 import { LatLng } from '../platform';
 import { OrderIssue, OrderRejection } from './issues';
 
@@ -34,23 +34,25 @@ export interface GetOrderQuotesPayload {
   meta: PayloadMeta;
 }
 
-export interface CreditCardDetails {
+export interface PlaceOrderCreditCardDetails {
+  payableWith: 'credit_card';
   paymentMethodId: string;
 }
 
-export interface PixDetails {
+export interface PlaceOrderPixDetails {
+  payableWith: 'pix';
   key: string;
 }
 
-export type PaymentDetails = CreditCardDetails | PixDetails;
+export type PlaceOrderPaymentDetails =
+  | PlaceOrderCreditCardDetails
+  | PlaceOrderPixDetails;
 
-export interface PlaceOrderPayload {
+export type PlaceOrderPayload = {
   orderId: string;
   fleetId: string;
-  payableWith: IuguPayableWith;
-  paymentDetails: PaymentDetails;
   meta: PayloadMeta;
-}
+} & PlaceOrderPaymentDetails;
 
 export interface MatchOrderPayload {
   orderId: string;

@@ -70,7 +70,6 @@ export { OrderItem, OrderItemComplement } from './order/item';
 export {
   CancelOrderPayload,
   CompleteDeliveryPayload,
-  CreditCardDetails,
   DeleteAccountPayload,
   DeletePaymentMethodPayload,
   FetchTotalCouriersNearbyPayload,
@@ -78,9 +77,8 @@ export {
   MatchOrderPayload,
   NextDispatchingStatePayload,
   PayloadMeta,
-  PaymentDetails,
-  PixDetails,
   PlaceOrderPayload,
+  PlaceOrderPaymentDetails,
   RejectOrderPayload,
   SavePaymentTokenPayload,
   TipCourierPayload,
