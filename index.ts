@@ -68,28 +68,30 @@ export {
   OrderRejectionType,
 } from './order/issues';
 export { OrderItem, OrderItemComplement } from './order/item';
+export { OrderPayment } from './order/payment';
+export { Address, Place } from './order/place';
+export { OrderPrivatePlatform } from './order/private';
+export { FoodOrderStatus, OrderStatus, P2POrderStatus } from './order/status';
+export { FetchTotalCouriersNearbyPayload, PayloadMeta } from './payloads';
 export {
   CancelOrderPayload,
   CompleteDeliveryPayload,
-  DeleteAccountPayload,
   DeletePaymentMethodPayload,
-  FetchTotalCouriersNearbyPayload,
   GetOrderQuotesPayload,
   MatchOrderPayload,
   NextDispatchingStatePayload,
-  PayloadMeta,
   PlaceOrderPayload,
   PlaceOrderPaymentDetails,
   RejectOrderPayload,
   SavePaymentTokenPayload,
   TipCourierPayload,
+} from './payloads/order';
+export {
+  CreateBusinessProfilePayload,
+  DeleteAccountPayload,
   VerifyBusinessProfilePayload,
   VerifyCourierProfilePayload,
-} from './order/payloads';
-export { OrderPayment } from './order/payment';
-export { Address, Place } from './order/place';
-export { OrderPrivatePlatform } from './order/private';
-export { FoodOrderStatus, OrderStatus, P2POrderStatus } from './order/status';
+} from './payloads/profile';
 export { MarketplaceAccountInfo } from './payment/marketplace';
 export {
   City,
