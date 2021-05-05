@@ -10,7 +10,8 @@ export type IssueType =
   | 'consumer-cancel'
   | 'consumer-delivery-problem'
   | 'restaurant-cancel'
-  | 'profile-invalid';
+  | 'courier-profile-invalid'
+  | 'business-profile-invalid';
 
 export interface Issue {
   id?: string;
