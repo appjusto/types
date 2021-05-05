@@ -46,6 +46,7 @@ export interface OrderAlgolia {
   objectID: string;
   type: string;
   code: string;
+  businessId: string;
   consumerName: string;
   courierName: string;
   totalOrder: string;
