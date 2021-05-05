@@ -7,7 +7,8 @@
     "lib": "lib"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "npm version ${VERSION:-patch} && npm publish --access public"
   },
   "author": "AppJusto",
   "license": "Apache-2.0",
