@@ -30,7 +30,7 @@ export interface CourierCompany extends BusinessAddress {
 export interface CourierProfile extends UserProfile {
   status: CourierStatus;
   mode?: CourierMode;
-  fleet?: WithId<Fleet> & {
+  fleet?: Omit<WithId<Fleet>, 'participantsOnline'> & {
     joinedOn: firebase.firestore.FieldValue;
   };
   bankAccount?: BankAccount;
