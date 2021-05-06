@@ -13,6 +13,7 @@ export interface UserProfile {
   code?: string;
   situation: ProfileSituation;
   profileIssues?: string[];
+  profileIssuesMessage?: string;
   createdOn: firebase.firestore.Timestamp;
   updatedOn?: firebase.firestore.Timestamp;
   name?: string;
