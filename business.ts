@@ -51,6 +51,7 @@ export interface Business {
   situation: ProfileSituation;
   enabled: boolean;
   profileIssues?: string[];
+  profileIssuesMessage?: string;
   cuisine?: string; // cuisine's name
   description?: string;
   minimumOrder?: number; // in cents
