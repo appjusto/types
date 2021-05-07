@@ -10,13 +10,14 @@ export interface FleetFareParams {
   maxDistanceToOrigin: number; // (in meters) maximum distance to the pickup place
 }
 
-export interface Fleet extends FleetFareParams {
-  // user defined
+export interface FleetDetails extends FleetFareParams {
+  createdOn: firebase.firestore.FieldValue;
   name: string;
   description: string;
-  createdBy?: string; // id of user who created the fleet
-  // managed by the platform
-  createdOn: firebase.firestore.FieldValue;
+  createdBy?: string;
+}
+
+export interface Fleet extends FleetDetails {
   situation: FleetSituation;
   participantsOnline: number;
 }

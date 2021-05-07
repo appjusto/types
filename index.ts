@@ -29,13 +29,14 @@ export {
 export {
   AvailableCourier,
   CourierCompany,
+  CourierFleet,
   CourierMode,
   CourierPrivatePlatform,
   CourierProfile,
   CourierStatistics,
   CourierStatus,
 } from './courier';
-export { Fleet, FleetFareParams, FleetSituation } from './fleet';
+export { Fleet, FleetDetails, FleetFareParams, FleetSituation } from './fleet';
 export { ManagerPrivatePlatform, ManagerProfile, Role } from './managers';
 export { Ordering } from './menu';
 export { Category } from './menu/category';

@@ -1,8 +1,8 @@
-import { Fleet } from '../fleet';
+import { FleetDetails } from '../fleet';
 import { WithId } from '../platform';
 
 export interface Fare {
-  fleet: WithId<Fleet>;
+  fleet: WithId<FleetDetails>;
   consumer: FareDetails;
   business?: FareDetails;
 }

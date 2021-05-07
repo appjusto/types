@@ -1,7 +1,7 @@
 import firebase from 'firebase';
 import { BankAccount } from './banking';
 import { BusinessAddress } from './business';
-import { Fleet } from './fleet';
+import { FleetDetails } from './fleet';
 import { MarketplaceAccountInfo } from './payment/marketplace';
 import { WithId } from './platform';
 import { UserProfile } from './profile';
@@ -27,12 +27,14 @@ export interface CourierCompany extends BusinessAddress {
   name: string;
 }
 
+export interface CourierFleet extends WithId<FleetDetails> {
+  joinedOn: firebase.firestore.FieldValue;
+}
+
 export interface CourierProfile extends UserProfile {
   status: CourierStatus;
   mode?: CourierMode;
-  fleet?: Omit<WithId<Fleet>, 'participantsOnline'> & {
-    joinedOn: firebase.firestore.FieldValue;
-  };
+  fleet?: CourierFleet;
   bankAccount?: BankAccount;
   company?: CourierCompany;
   statistics?: CourierStatistics; // readonly
