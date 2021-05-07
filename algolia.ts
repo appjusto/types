@@ -13,6 +13,7 @@ export interface BusinessAlgolia {
   enabled: boolean;
   name: string;
   code: string;
+  managerEmail: string;
   situation: string;
   onboarding: string;
   description: string;
@@ -28,6 +29,7 @@ export interface CourierAlgolia {
   objectID: string;
   name: string;
   code: string;
+  email: string;
   situation: string;
   status: string;
   createdOn: firebase.firestore.FieldValue;
@@ -37,6 +39,7 @@ export interface ConsumerAlgolia {
   objectID: string;
   name: string;
   surname: string;
+  email: string;
   code: string;
   situation: string;
   totalOrders: number;
