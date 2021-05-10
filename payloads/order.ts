@@ -38,6 +38,10 @@ export type PlaceOrderPayload = {
   meta: PayloadMeta;
 } & PlaceOrderPaymentDetails;
 
+export interface MatchingTaskPayload {
+  orderId: string;
+}
+
 export interface MatchOrderPayload {
   orderId: string;
   meta: PayloadMeta;

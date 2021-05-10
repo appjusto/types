@@ -79,6 +79,7 @@ export {
   CompleteDeliveryPayload,
   DeletePaymentMethodPayload,
   GetOrderQuotesPayload,
+  MatchingTaskPayload,
   MatchOrderPayload,
   NextDispatchingStatePayload,
   PlaceOrderPayload,

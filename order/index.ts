@@ -41,7 +41,12 @@ export interface Order {
     value: number; // in cents;
     charge?: IuguChargeResponse;
   };
-  // issues, reviews, etc.
+  // ids of couriers who were notified of requests
+  matching?: {
+    task: string;
+    couriersNotified?: string[];
+  };
+  // list of rejections
   rejectionHistory?: OrderRejection[];
   // metadata
   createdOn?: firebase.firestore.FieldValue;
