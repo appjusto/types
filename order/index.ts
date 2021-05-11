@@ -4,7 +4,7 @@ import { OrderConsumer } from './consumer';
 import { OrderCourier } from './courier';
 import { DispatchingState, DispatchingStatus } from './dispatching';
 import { Fare } from './fare';
-import { OrderRejection } from './issues';
+import { Issue, OrderRejection } from './issues';
 import { OrderItem } from './item';
 import { Place } from './place';
 import { OrderStatus } from './status';
@@ -45,6 +45,15 @@ export interface Order {
   matching?: {
     task: string;
     couriersNotified?: string[];
+  };
+  cancellation?: {
+    canceledBy: {
+      id: string;
+      name: string;
+    };
+    issue: Issue;
+    comment?: string | null;
+    timestamp: firebase.firestore.FieldValue;
   };
   // list of rejections
   rejectionHistory?: OrderRejection[];
