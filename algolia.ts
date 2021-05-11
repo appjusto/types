@@ -71,5 +71,6 @@ export interface ProductAlgolia {
     id: string;
     name: string;
     statistics: BusinessStatistics;
+    enabled: boolean;
   };
 }
