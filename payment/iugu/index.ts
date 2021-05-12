@@ -9,6 +9,10 @@ export interface IuguQueryResponse<T> {
   items: T[];
 }
 
+export interface IuguSuccessResponse {
+  success: boolean;
+}
+
 // payment token
 export interface IuguCreatePaymentTokenData {
   number: string;
