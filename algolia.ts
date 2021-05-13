@@ -32,6 +32,15 @@ export interface CourierAlgolia {
   email: string;
   situation: string;
   status: string;
+  courierAddress: {
+    cep: string;
+    address: string;
+    number: string;
+    additional: string;
+    city: string;
+    state: string;
+    _geoloc: LatLng2;
+  };
   createdOn: firebase.firestore.FieldValue;
 }
 
