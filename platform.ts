@@ -6,6 +6,7 @@ export interface PlatformParams {
   maxDistance: number; // in meters
   averageCookingTime: number; // in seconds
   averageWaitingTime: number; // in seconds
+  matchingTimeBeforeReady: number; // amount of time (in seconds) before expected readiness to start matching;
   courier: {
     approveAfterVerified: boolean;
   };
