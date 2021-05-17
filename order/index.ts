@@ -44,6 +44,8 @@ export interface Order {
   // ids of couriers who were notified of requests
   matching?: {
     task: string;
+    attempt?: number;
+    startAt?: firebase.firestore.FieldValue;
     couriersNotified?: string[];
   };
   cancellation?: {
