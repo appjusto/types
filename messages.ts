@@ -1,3 +1,5 @@
+import { ExpoPushMessage } from './external/expo';
+
 export type PushMessageActionType =
   | 'order-request'
   | 'order-chat'
@@ -26,3 +28,7 @@ export interface OrderMatchPushMessageData extends PushMessageData {
 }
 
 export interface ChatPushMessageData extends PushMessageData {}
+
+export interface NotificationTaskPayload {
+  messages: ExpoPushMessage[];
+}
