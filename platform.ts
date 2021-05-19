@@ -1,4 +1,4 @@
-export type Flavor = 'courier' | 'consumer' | 'manager';
+export type Flavor = 'courier' | 'consumer' | 'business';
 export type Environment = 'dev' | 'staging' | 'live' | 'local';
 
 export interface PlatformParams {
