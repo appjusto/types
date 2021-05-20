@@ -1,4 +1,5 @@
 import firebase from 'firebase';
+import { BankAccount } from './banking';
 import { MarketplaceAccountInfo } from './payment/marketplace';
 import { LatLng } from './platform';
 import { ProfileSituation } from './profile';
@@ -23,6 +24,12 @@ export interface BusinessStatistics {
   totalOrders: number;
   averagePreparationTime: number; // in seconds
   averageTicketPrice: number;
+}
+
+export interface BusinessPrivate {
+  bank?: BankAccount;
+  platform?: BusinessPrivatePlatform;
+  statistics?: BusinessStatistics;
 }
 
 export interface BusinessPrivatePlatform {

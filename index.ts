@@ -95,7 +95,11 @@ export {
   VerifyBusinessProfilePayload,
   VerifyCourierProfilePayload,
 } from './payloads/profile';
-export { MarketplaceAccountInfo } from './payment/marketplace';
+export {
+  MarketplaceAccountInfo,
+  MarketplaceAccountSituation,
+} from './payment/marketplace';
+export { AccountTaskPayload, AccountType } from './payment/tasks';
 export {
   City,
   Environment,
