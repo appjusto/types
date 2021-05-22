@@ -99,7 +99,12 @@ export {
   MarketplaceAccountInfo,
   MarketplaceAccountSituation,
 } from './payment/marketplace';
-export { AccountTaskPayload, AccountType } from './payment/tasks';
+export {
+  AccountTaskPayload,
+  AccountType,
+  InvoiceTaskAction,
+  InvoiceTaskHandler,
+} from './payment/tasks';
 export {
   City,
   Environment,

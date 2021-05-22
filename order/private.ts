@@ -2,21 +2,18 @@ import { IuguPayableWith } from '../payment/iugu';
 import { OrderPayment } from './payment';
 
 export interface OrderPrivatePlatform {
-  handshakeChallenge?: string;
+  handshakeChallenge: string;
+  paymentDetails: {
+    payableWith: IuguPayableWith;
+    customerPaymentMethodId: string | null;
+  };
   confirmationDetails?: {
     handshakeResponse?: string | null;
     deliveredTo?: string | null;
     comment?: string | null;
   };
-  paymentDetails: {
-    payableWith: IuguPayableWith;
-    customerId: string;
-    customerEmail: string;
-    customerName: string;
-    customerCPF: string;
-    customerPaymentMethodId: string | null;
-  };
-  deliveryPayment: OrderPayment | null;
-  productsPayment: OrderPayment | null;
+  deliveryPayment?: OrderPayment | null;
+  productsPayment?: OrderPayment | null;
+  platformPayment?: OrderPayment | null;
   tipPayment?: OrderPayment;
 }

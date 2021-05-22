@@ -23,7 +23,7 @@ export interface Order {
   status: OrderStatus;
   consumer: OrderConsumer;
   courier?: OrderCourier;
-  business?: OrderBusiness;
+  business?: OrderBusiness | null;
   items?: OrderItem[];
   additionalInfo?: string;
   code?: string;

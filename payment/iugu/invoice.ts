@@ -35,21 +35,22 @@ export interface IuguCommissions {
 // create invoice
 export type IuguPayableWith = 'credit_card' | 'pix';
 export interface IuguCreateInvoiceRequest {
-  email: string;
-  due_date: string; // AAAA-MM-DD
-  ensure_workday_due_date: false;
-  items: IuguItem[];
-  notification_url?: string;
-  fines: false;
-  customer_id: string;
-  payable_with: IuguPayableWith;
-  custom_variables?: object[];
-  order_id?: string;
-  external_reference?: string;
-  ignore_canceled_email?: boolean;
-  ignore_due_email?: boolean;
+  email: string; // E-mail do cliente
+  cc_emails?: string; // Endereços de E-mail para cópia separados por ponto e vírgula.
+  due_date: string; // Data do vencimento. (Formato: 'AAAA-MM-DD').
+  ensure_workday_due_date: false; // Se true, garante que a data de vencimento seja apenas em dias de semana, e não em sábados ou domingos.
+  items: IuguItem[]; // Itens da fatura. "price_cents" valor mínimo 100.
+  notification_url?: string; // URL chamada para todas as notificações de Fatura, assim como os webhooks (Gatilhos) são chamados
+  ignore_canceled_email?: boolean; // Desliga o e-mail de cancelamento de fatura
+  fines: false; // Booleano para Habilitar ou Desabilitar multa por atraso de pagamento
+  customer_id: string; // ID do Cliente
+  ignore_due_email?: boolean; // Booleano que ignora o envio do e-mail de cobrança
+  payable_with: IuguPayableWith; // Método de pagamento que será disponibilizado para esta Fatura ("all", "credit_card", "bank_slip" ou "pix"). Obs: Caso esta Fatura esteja atrelada à uma Assinatura, a prioridade é herdar o valor atribuído na Assinatura; caso esta esteja atribuído o valor 'all', o sistema considerará o 'payable_with' da Fatura; se não, o sistema considerará o 'payable_with' da Assinatura.
+  custom_variables?: object[]; // Variáveis Personalizadas
+  order_id?: string; // Número único que identifica o pedido de compra. Opcional, ajuda a evitar o pagamento da mesma fatura.
+  external_reference?: string; // Informação de referência externa, possibilitando a realização de pesquisa.
   commissions?: IuguCommissions;
-  splits?: IuguSplit[];
+  splits?: IuguSplit[]; // Lista de splits a serém aplicado nas faturas pagas.
 }
 export interface IuguCreateInvoiceResponse {
   id: string;
