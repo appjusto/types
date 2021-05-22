@@ -6,6 +6,7 @@ export interface Fare {
   courier: FareDetails;
   business: FareDetails | null;
   platform: FareDetails | null;
+  total: number;
 }
 
 export interface FareDetails {
