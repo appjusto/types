@@ -9,7 +9,8 @@ export interface AccountTaskPayload {
 export type InvoiceTaskAction =
   | 'create-invoices'
   | 'update-delivery-invoice'
-  | 'capture-invoices';
+  | 'capture-invoices'
+  | 'cancel-invoices';
 
 export interface InvoiceTaskHandler {
   action: InvoiceTaskAction;
