@@ -52,12 +52,13 @@ export interface IuguCreateInvoiceRequest {
   commissions?: IuguCommissions;
   splits?: IuguSplit[]; // Lista de splits a serém aplicado nas faturas pagas.
 }
+
 export interface IuguCreateInvoiceResponse {
   id: string;
   due_date: string; // AAAA-MM-DD
   currency: string;
   email: string;
-  status: string; // pending
+  status: IuguInvoiceStatus;
   updated_at: string;
   ensure_workday_due_date: false;
   total_cents: number;
