@@ -35,6 +35,7 @@ export interface DeletePaymentMethodPayload {
 export type PlaceOrderPayload = {
   orderId: string;
   fleetId: string;
+  additionalInfo?: string;
   meta: PayloadMeta;
 } & PlaceOrderPaymentDetails;
 
