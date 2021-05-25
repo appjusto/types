@@ -57,7 +57,7 @@ export {
   OrderRoute,
   OrderType,
 } from './order';
-export { ChatMessage } from './order/chat';
+export { ChatMessage, ChatMessageUser } from './order/chat';
 export { OrderConsumer } from './order/consumer';
 export { OrderCourier } from './order/courier';
 export { DispatchingState, OrderLocationEntry } from './order/dispatching';

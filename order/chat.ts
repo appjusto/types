@@ -1,15 +1,14 @@
 import firebase from 'firebase';
 import { Flavor } from '../platform';
 
+export interface ChatMessageUser {
+  agent: Flavor;
+  id: string;
+}
+
 export interface ChatMessage {
-  from: {
-    agent: Flavor;
-    id: string;
-  };
-  to: {
-    agent: Flavor;
-    id: string;
-  };
+  from: ChatMessageUser;
+  to: ChatMessageUser;
   message: string;
   timestamp: firebase.firestore.Timestamp;
 }

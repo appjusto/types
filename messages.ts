@@ -1,4 +1,5 @@
 import { ExpoPushMessage } from './external/expo';
+import { ChatMessageUser } from './order/chat';
 
 export type PushMessageActionType =
   | 'order-request'
@@ -8,7 +9,7 @@ export type PushMessageActionType =
 export interface PushMessageData {
   action: PushMessageActionType;
   orderId: string;
-  from: string;
+  from: ChatMessageUser;
 }
 
 export interface PushMessage {
