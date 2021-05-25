@@ -11,4 +11,5 @@ export interface ChatMessage {
   to: ChatMessageUser;
   message: string;
   timestamp: firebase.firestore.Timestamp;
+  read?: boolean;
 }
