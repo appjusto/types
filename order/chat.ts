@@ -12,4 +12,5 @@ export interface ChatMessage {
   };
   message: string;
   timestamp: firebase.firestore.Timestamp;
+  read?: boolean;
 }
