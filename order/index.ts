@@ -1,5 +1,4 @@
 import firebase from 'firebase';
-import { IuguChargeResponse } from '../payment/iugu';
 import { OrderConsumer } from './consumer';
 import { OrderCourier } from './courier';
 import { DispatchingState, DispatchingStatus } from './dispatching';
@@ -39,7 +38,6 @@ export interface Order {
   fare?: Fare;
   tip?: {
     value: number; // in cents;
-    charge?: IuguChargeResponse;
   };
   // ids of couriers who were notified of requests
   matching?: {
