@@ -75,6 +75,7 @@ export interface TipCourierPayload {
 
 export interface CancelOrderPayload {
   orderId: string;
-  cancellation?: OrderIssue;
+  acknowledgedCosts: number;
   meta: PayloadMeta;
+  cancellation?: OrderIssue;
 }

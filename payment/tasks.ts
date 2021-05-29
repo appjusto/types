@@ -1,3 +1,5 @@
+import { OrderCancellationParams } from '../order/payment';
+
 export type AccountType = 'courier' | 'business';
 
 export interface AccountTaskPayload {
@@ -17,7 +19,12 @@ export type InvoiceTaskAction =
 export interface InvoiceTaskHandlerTipExtra {
   tip: number;
 }
-export type InvoiceTaskHandlerExtra = InvoiceTaskHandlerTipExtra;
+export interface InvoiceTaskHandlerCancelExtra {
+  params: OrderCancellationParams;
+}
+export type InvoiceTaskHandlerExtra =
+  | InvoiceTaskHandlerTipExtra
+  | InvoiceTaskHandlerCancelExtra;
 export interface InvoiceTaskHandler {
   action: InvoiceTaskAction;
   orderId: string;

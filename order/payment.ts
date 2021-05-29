@@ -11,3 +11,9 @@ export interface OrderPayment {
   charge?: IuguChargeResponse | null;
   capture?: IuguInvoiceCaptureResponse;
 }
+
+export type OrderPaymentType = 'products' | 'delivery' | 'platform';
+
+export interface OrderCancellationParams {
+  refund: OrderPaymentType[];
+}
