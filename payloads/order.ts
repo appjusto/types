@@ -14,6 +14,7 @@ export interface PlaceOrderPayload extends OrderPayload {
   payableWith: 'pix' | 'credit_card';
   key?: string;
   paymentMethodId?: string;
+  wantToShareData?: boolean;
 }
 
 export interface MatchingTaskPayload {
