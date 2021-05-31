@@ -1,24 +1,18 @@
-import { PayloadMeta } from '.';
+import { BasePayload } from '.';
 
-export interface DeleteAccountPayload {
+export interface DeleteAccountPayload extends BasePayload {
   notWorkingOnMyRegion: boolean;
   didntFindWhatINeeded: boolean;
   pricesHigherThanAlternatives: boolean;
   didntLikeApp: boolean;
   didntFeelSafe: boolean;
   ratherUseAnotherApp: boolean;
-  meta: PayloadMeta;
 }
 
-export interface VerifyCourierProfilePayload {
-  meta: PayloadMeta;
-}
+export interface VerifyCourierProfilePayload extends BasePayload {}
 
-export interface CreateBusinessProfilePayload {
-  meta: PayloadMeta;
-}
+export interface CreateBusinessProfilePayload extends BasePayload {}
 
-export interface VerifyBusinessProfilePayload {
+export interface VerifyBusinessProfilePayload extends BasePayload {
   businessId: string;
-  meta: PayloadMeta;
 }

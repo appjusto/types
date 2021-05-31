@@ -1,11 +1,12 @@
 import { LatLng } from '../platform';
 
-export interface PayloadMeta {
-  version: string | null;
+export interface BasePayload {
+  meta: {
+    version: string | null;
+  };
 }
 
-export interface FetchTotalCouriersNearbyPayload {
+export interface FetchTotalCouriersNearbyPayload extends BasePayload {
   location: LatLng;
   distance: number;
-  meta: PayloadMeta;
 }
