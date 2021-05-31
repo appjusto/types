@@ -13,7 +13,3 @@ export interface OrderPayment {
 }
 
 export type OrderPaymentType = 'products' | 'delivery' | 'platform';
-
-export interface OrderCancellationParams {
-  refund: OrderPaymentType[];
-}

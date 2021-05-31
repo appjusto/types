@@ -70,13 +70,13 @@ export {
   OrderRejectionType,
 } from './order/issues';
 export { OrderItem, OrderItemComplement } from './order/item';
-export {
-  OrderCancellationParams,
-  OrderPayment,
-  OrderPaymentType,
-} from './order/payment';
+export { OrderPayment, OrderPaymentType } from './order/payment';
 export { Address, Place } from './order/place';
-export { OrderPrivatePlatform } from './order/private';
+export {
+  OrderCancellation,
+  OrderCancellationParams,
+  OrderPrivatePlatform,
+} from './order/private';
 export { FoodOrderStatus, OrderStatus, P2POrderStatus } from './order/status';
 export { FetchTotalCouriersNearbyPayload, PayloadMeta } from './payloads';
 export {

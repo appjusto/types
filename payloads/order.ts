@@ -78,4 +78,5 @@ export interface CancelOrderPayload {
   acknowledgedCosts: number;
   meta: PayloadMeta;
   cancellation?: OrderIssue;
+  comment?: string;
 }
