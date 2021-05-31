@@ -1,10 +1,9 @@
 import firebase from 'firebase';
-import { IuguChargeResponse } from '../payment/iugu';
 import { OrderConsumer } from './consumer';
 import { OrderCourier } from './courier';
 import { DispatchingState, DispatchingStatus } from './dispatching';
 import { Fare } from './fare';
-import { Issue, OrderRejection } from './issues';
+import { OrderRejection } from './issues';
 import { OrderItem } from './item';
 import { Place } from './place';
 import { OrderStatus } from './status';
@@ -12,9 +11,9 @@ import { OrderStatus } from './status';
 export type OrderType = 'p2p' | 'food';
 
 export interface OrderRoute {
-  distance: number; // in meters
-  duration: number; // in seconds
-  polyline: string;
+  distance?: number; // in meters
+  duration?: number; // in seconds
+  polyline?: string;
   issue: string | null;
 }
 
@@ -39,7 +38,6 @@ export interface Order {
   fare?: Fare;
   tip?: {
     value: number; // in cents;
-    charge?: IuguChargeResponse;
   };
   // ids of couriers who were notified of requests
   matching?: {
@@ -47,15 +45,6 @@ export interface Order {
     attempt?: number;
     startAt?: firebase.firestore.FieldValue;
     couriersNotified?: string[];
-  };
-  cancellation?: {
-    canceledBy: {
-      id: string;
-      name: string;
-    };
-    issue: Issue;
-    comment?: string | null;
-    timestamp: firebase.firestore.FieldValue;
   };
   // list of rejections
   rejectionHistory?: OrderRejection[];

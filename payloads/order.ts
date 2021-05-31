@@ -1,81 +1,47 @@
-import { PayloadMeta } from '.';
+import { BasePayload } from '.';
 import { OrderIssue, OrderRejection } from '../order/issues';
-import { IuguPaymentToken } from '../payment/iugu';
 
-export interface GetOrderQuotesPayload {
+export interface OrderPayload extends BasePayload {
   orderId: string;
-  meta: PayloadMeta;
 }
 
-export interface PlaceOrderCreditCardDetails {
-  payableWith: 'credit_card';
-  paymentMethodId: string;
-}
+export interface GetOrderQuotesPayload extends OrderPayload {}
 
-export interface PlaceOrderPixDetails {
-  payableWith: 'pix';
-  key: string;
-}
-
-export type PlaceOrderPaymentDetails =
-  | PlaceOrderCreditCardDetails
-  | PlaceOrderPixDetails;
-
-export interface SavePaymentTokenPayload {
-  cpf?: string;
-  paymentToken: IuguPaymentToken;
-  meta: PayloadMeta;
-}
-
-export interface DeletePaymentMethodPayload {
-  paymentMethodId: string;
-  meta: PayloadMeta;
-}
-
-export type PlaceOrderPayload = {
-  orderId: string;
+export interface PlaceOrderPayload extends OrderPayload {
   fleetId: string;
   invoiceWithCPF: boolean;
   additionalInfo?: string;
-  meta: PayloadMeta;
-} & PlaceOrderPaymentDetails;
+  payableWith: 'pix' | 'credit_card';
+  key?: string;
+  paymentMethodId?: string;
+}
 
 export interface MatchingTaskPayload {
   orderId: string;
 }
 
-export interface MatchOrderPayload {
-  orderId: string;
-  meta: PayloadMeta;
-}
+export interface MatchOrderPayload extends OrderPayload {}
 
-export interface RejectOrderPayload {
-  orderId: string;
+export interface RejectOrderPayload extends OrderPayload {
   rejection: OrderRejection;
-  meta: PayloadMeta;
 }
 
-export interface NextDispatchingStatePayload {
-  orderId: string;
-  meta: PayloadMeta;
-}
+export interface NextDispatchingStatePayload extends OrderPayload {}
 
-export interface CompleteDeliveryPayload {
-  orderId: string;
+export interface CompleteDeliveryPayload extends OrderPayload {
   handshakeResponse?: string;
   deliveredTo?: string;
   comment?: string;
-  meta: PayloadMeta;
 }
 
-export interface TipCourierPayload {
-  orderId: string;
+export interface TipCourierPayload extends OrderPayload {
   tip: number; // in cents;
-  meta: PayloadMeta;
 }
 
-export interface CancelOrderPayload {
-  orderId: string;
+export interface CalculateCancelingCostsPayload extends OrderPayload {}
+
+export interface CancelOrderPayload extends OrderPayload {
+  acknowledgedCosts: number;
   cancellation?: OrderIssue;
-  meta: PayloadMeta;
+  comment?: string;
 }
