@@ -4,5 +4,5 @@ export interface OrderConsumer {
   cpf?: string;
   email?: string;
   notificationToken?: string | null;
-  invoiceWithCpf?: boolean;
+  invoiceWithCPF?: boolean;
 }

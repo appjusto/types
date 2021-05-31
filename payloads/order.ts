@@ -35,7 +35,7 @@ export interface DeletePaymentMethodPayload {
 export type PlaceOrderPayload = {
   orderId: string;
   fleetId: string;
-  invoiceWithCpf: boolean;
+  invoiceWithCPF: boolean;
   additionalInfo?: string;
   meta: PayloadMeta;
 } & PlaceOrderPaymentDetails;
