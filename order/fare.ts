@@ -1,8 +1,8 @@
-import { FleetDetails } from '../fleet';
+import { Fleet } from '../fleet';
 import { WithId } from '../platform';
 
 export interface Fare {
-  fleet: WithId<FleetDetails>;
+  fleet: WithId<Fleet>;
   courier: FareDetails;
   business: FareDetails | null;
   platform: FareDetails | null;
