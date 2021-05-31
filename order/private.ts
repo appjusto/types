@@ -1,3 +1,4 @@
+import firebase from 'firebase';
 import { IuguPayableWith } from '../payment/iugu';
 import { Issue } from './issues';
 import { OrderPayment, OrderPaymentType } from './payment';
