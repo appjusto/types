@@ -6,7 +6,8 @@ export interface PlatformParams {
   maxDistance: number; // in meters
   averageCookingTime: number; // in seconds
   averageWaitingTime: number; // in seconds
-  estimationFactor: number; // multipler used to calculate maxTimeOfArrival
+  maxTimeOfArrivalFactor: number; // multipler used to calculate maxTimeOfArrival
+  bicyclingDurationFactor: number; // multipler used to calculate duration for byciling
   matchingTimeBeforeReady: number; // amount of time (in seconds) before expected readiness to start matching;
   courier: {
     approveAfterVerified: boolean;
