@@ -1,5 +1,6 @@
 import firebase from 'firebase';
 import { IuguPayableWith } from '../payment/iugu';
+import { WithId } from '../platform';
 import { Issue } from './issues';
 import { OrderPayment, OrderPaymentType } from './payment';
 
@@ -13,6 +14,21 @@ export interface OrderCancellation {
   issue: Issue | null;
   comment: string | null;
   timestamp: firebase.firestore.FieldValue;
+}
+
+export interface OrderMatchingRejection {
+  courierId: string;
+  timestamp: Date;
+  issue: WithId<Issue>;
+  comment?: string | null;
+}
+
+export interface OrderMatching {
+  task: string;
+  attempt: number;
+  startAt: firebase.firestore.FieldValue;
+  couriersNotified: string[];
+  rejections: OrderMatchingRejection[];
 }
 
 export interface OrderPrivatePlatform {
