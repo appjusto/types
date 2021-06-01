@@ -84,8 +84,10 @@ export {
   SavePaymentTokenPayload,
 } from './payloads/marketplace';
 export {
+  CalculateCancelingCostsPayload,
   CancelOrderPayload,
   CompleteDeliveryPayload,
+  DropOrderPayload,
   GetOrderQuotesPayload,
   MatchingTaskPayload,
   MatchOrderPayload,

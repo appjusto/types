@@ -23,7 +23,7 @@ export interface Issue {
 
 export interface OrderIssue {
   issue: WithId<Issue>;
-  comment?: string;
+  comment?: string | null;
   createdOn?: firebase.firestore.FieldValue;
 }
 

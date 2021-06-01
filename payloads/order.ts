@@ -1,5 +1,6 @@
 import { BasePayload } from '.';
-import { OrderIssue, OrderRejection } from '../order/issues';
+import { Issue, OrderIssue } from '../order/issues';
+import { WithId } from '../platform';
 
 export interface OrderPayload extends BasePayload {
   orderId: string;
@@ -17,15 +18,17 @@ export interface PlaceOrderPayload extends OrderPayload {
   wantToShareData?: boolean;
 }
 
-export interface MatchingTaskPayload {
-  orderId: string;
-}
+export interface MatchingTaskPayload extends OrderPayload {}
 
 export interface MatchOrderPayload extends OrderPayload {}
 
-export interface RejectOrderPayload extends OrderPayload {
-  rejection: OrderRejection;
+export interface OrderIssuePayload extends OrderPayload {
+  issue: WithId<Issue>;
+  comment?: string;
 }
+
+export interface RejectOrderPayload extends OrderIssuePayload {}
+export interface DropOrderPayload extends OrderIssuePayload {}
 
 export interface NextDispatchingStatePayload extends OrderPayload {}
 
