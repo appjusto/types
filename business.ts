@@ -24,6 +24,7 @@ export interface BusinessStatistics {
   totalOrders: number;
   averagePreparationTime: number; // in seconds
   averageTicketPrice: number;
+  averageWaitingTime: number;
 }
 
 export interface BusinessPrivate {
