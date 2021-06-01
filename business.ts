@@ -73,6 +73,7 @@ export interface Business {
   coverImageExists: boolean;
   schedules: BusinessSchedule;
   // metadata
+  keepAlive?: firebase.firestore.FieldValue;
   createdOn: firebase.firestore.FieldValue;
   updatedOn?: firebase.firestore.FieldValue;
 }
