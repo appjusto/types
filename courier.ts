@@ -8,7 +8,7 @@ import { UserProfile } from './profile';
 
 export type CourierStatus = 'unavailable' | 'available' | 'dispatching';
 export type CourierMode =
-  | 'motocycle'
+  | 'motorcycle'
   | 'bicycling'
   | 'scooter'
   | 'car'
