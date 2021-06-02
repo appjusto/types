@@ -75,6 +75,8 @@ export { Address, Place } from './order/place';
 export {
   OrderCancellation,
   OrderCancellationParams,
+  OrderMatching,
+  OrderMatchingRejection,
   OrderPrivatePlatform,
 } from './order/private';
 export { FoodOrderStatus, OrderStatus, P2POrderStatus } from './order/status';
@@ -92,7 +94,12 @@ export {
   MatchingTaskPayload,
   MatchOrderPayload,
   NextDispatchingStatePayload,
+  OrderIssuePayload,
+  OrderPayload,
   PlaceOrderPayload,
+  PlaceOrderPayloadPayment,
+  PlaceOrderPayloadPaymentCreditCard,
+  PlaceOrderPayloadPaymentPix,
   RejectOrderPayload,
   TipCourierPayload,
 } from './payloads/order';
