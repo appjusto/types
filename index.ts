@@ -94,7 +94,12 @@ export {
   MatchingTaskPayload,
   MatchOrderPayload,
   NextDispatchingStatePayload,
+  OrderIssuePayload,
+  OrderPayload,
   PlaceOrderPayload,
+  PlaceOrderPayloadPayment,
+  PlaceOrderPayloadPaymentCreditCard,
+  PlaceOrderPayloadPaymentPix,
   RejectOrderPayload,
   TipCourierPayload,
 } from './payloads/order';
