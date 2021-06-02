@@ -7,10 +7,11 @@ export type IssueType =
   | 'courier-refuse'
   | 'courier-cancel'
   | 'courier-delivery-problem'
+  | 'courier-drops-delivery'
+  | 'courier-profile-invalid'
   | 'consumer-cancel'
   | 'consumer-delivery-problem'
   | 'restaurant-cancel'
-  | 'courier-profile-invalid'
   | 'business-profile-invalid'
   | 'agent-order-cancel';
 
