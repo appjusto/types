@@ -1,5 +1,5 @@
 import { BasePayload } from '.';
-import { Issue, OrderIssue } from '../order/issues';
+import { Issue } from '../order/issues';
 import { WithId } from '../platform';
 
 export interface OrderPayload extends BasePayload {
@@ -59,7 +59,8 @@ export interface CalculateCancelingCostsPayload extends OrderPayload {
 }
 
 export interface CancelOrderPayload extends OrderPayload {
+  orderId: string;
   acknowledgedCosts: number;
-  cancellation?: OrderIssue;
+  cancellation?: WithId<Issue>;
   comment?: string;
 }
