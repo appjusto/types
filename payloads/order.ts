@@ -42,7 +42,9 @@ export interface TipCourierPayload extends OrderPayload {
   tip: number; // in cents;
 }
 
-export interface CalculateCancelingCostsPayload extends OrderPayload {}
+export interface CalculateCancelingCostsPayload extends OrderPayload {
+  orderId: string;
+}
 
 export interface CancelOrderPayload extends OrderPayload {
   acknowledgedCosts: number;
