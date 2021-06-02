@@ -8,13 +8,25 @@ export interface OrderPayload extends BasePayload {
 
 export interface GetOrderQuotesPayload extends OrderPayload {}
 
+export type PlaceOrderPayloadPaymentPix = {
+  payableWith: 'pix';
+  key: string;
+};
+
+export type PlaceOrderPayloadPaymentCreditCard = {
+  payableWith: 'credit_card';
+  paymentMethodId: string;
+};
+
+export type PlaceOrderPayloadPayment =
+  | PlaceOrderPayloadPaymentPix
+  | PlaceOrderPayloadPaymentCreditCard;
+
 export interface PlaceOrderPayload extends OrderPayload {
   fleetId: string;
   invoiceWithCPF: boolean;
   additionalInfo?: string;
-  payableWith: 'pix' | 'credit_card';
-  key?: string;
-  paymentMethodId?: string;
+  payment: PlaceOrderPayloadPayment;
   wantToShareData?: boolean;
 }
 

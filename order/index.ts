@@ -3,7 +3,6 @@ import { OrderConsumer } from './consumer';
 import { OrderCourier } from './courier';
 import { DispatchingState, DispatchingStatus } from './dispatching';
 import { Fare } from './fare';
-import { OrderRejection } from './issues';
 import { OrderItem } from './item';
 import { Place } from './place';
 import { OrderStatus } from './status';
@@ -21,7 +20,7 @@ export interface Order {
   type: OrderType;
   status: OrderStatus;
   consumer: OrderConsumer;
-  courier?: OrderCourier;
+  courier?: OrderCourier | null;
   business?: OrderBusiness | null;
   items?: OrderItem[];
   additionalInfo?: string | null;
@@ -39,15 +38,6 @@ export interface Order {
   tip?: {
     value: number; // in cents;
   };
-  // ids of couriers who were notified of requests
-  matching?: {
-    task: string;
-    attempt?: number;
-    startAt?: firebase.firestore.FieldValue;
-    couriersNotified?: string[];
-  };
-  // list of rejections
-  rejectionHistory?: OrderRejection[];
   // metadata
   createdOn?: firebase.firestore.FieldValue;
   updatedOn?: firebase.firestore.FieldValue;
