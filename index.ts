@@ -37,7 +37,12 @@ export {
   CourierStatus,
 } from './courier';
 export { Fleet, FleetDetails, FleetFareParams, FleetSituation } from './fleet';
-export { ManagerPrivatePlatform, ManagerProfile, Role } from './managers';
+export {
+  AdminRole,
+  ManagerPrivatePlatform,
+  ManagerProfile,
+  Role,
+} from './managers';
 export { Ordering } from './menu';
 export { Category } from './menu/category';
 export { Complement, ComplementGroup } from './menu/complements';
