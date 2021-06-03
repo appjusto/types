@@ -29,6 +29,7 @@ export interface OrderMatching {
   startAt: firebase.firestore.FieldValue;
   couriersNotified: string[];
   rejections: OrderMatchingRejection[];
+  logs: string[];
 }
 
 export interface OrderPrivatePlatform {

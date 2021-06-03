@@ -9,6 +9,9 @@ export interface PlatformParams {
   maxTimeOfArrivalFactor: number; // multipler used to calculate maxTimeOfArrival
   bicyclingDurationFactor: number; // multipler used to calculate duration for byciling
   matchingTimeBeforeReady: number; // amount of time (in seconds) before expected readiness to start matching;
+  matching: {
+    locationFreshnessThreshold: number; // 10 minutes
+  };
   courier: {
     approveAfterVerified: boolean;
   };
