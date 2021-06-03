@@ -110,6 +110,7 @@ export {
 } from './payloads/order';
 export {
   CreateBusinessProfilePayload,
+  CreateManagerPayload,
   DeleteAccountPayload,
   VerifyBusinessProfilePayload,
   VerifyCourierProfilePayload,
