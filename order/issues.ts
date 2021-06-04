@@ -9,6 +9,7 @@ export type IssueType =
   | 'courier-delivery-problem'
   | 'courier-drops-delivery'
   | 'courier-profile-invalid'
+  | 'courier-rejects-matching'
   | 'consumer-cancel'
   | 'consumer-delivery-problem'
   | 'restaurant-cancel'
