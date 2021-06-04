@@ -1,6 +1,4 @@
 import firebase from 'firebase';
-import { BankAccount } from './banking';
-import { MarketplaceAccountInfo } from './payment/marketplace';
 import { LatLng } from './platform';
 import { ProfileSituation } from './profile';
 
@@ -25,12 +23,6 @@ export interface BusinessStatistics {
   averagePreparationTime: number; // in seconds
   averageTicketPrice: number;
   averageWaitingTime: number;
-}
-
-export interface BusinessPrivate {
-  bank?: BankAccount;
-  marketplace?: MarketplaceAccountInfo;
-  statistics?: BusinessStatistics;
 }
 
 export type BusinessType = 'restaurant';

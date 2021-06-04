@@ -11,9 +11,10 @@ export interface FleetFareParams {
 }
 
 export interface FleetDetails extends FleetFareParams {
-  createdOn: firebase.firestore.FieldValue;
   name: string;
   description: string;
+  // metadata
+  createdOn: firebase.firestore.FieldValue;
   createdBy?: string;
 }
 
