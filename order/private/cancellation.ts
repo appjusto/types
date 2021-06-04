@@ -1,3 +1,4 @@
+import firebase from 'firebase';
 import { Issue } from '../issues';
 import { OrderPaymentType } from '../payment';
 
