@@ -20,6 +20,11 @@ export interface CreateManagerPayload extends BasePayload {
   role: AdminRole | Role;
 }
 
+export interface GetUsersPayload extends BasePayload {
+  businessId: string;
+  uids: string[];
+}
+
 export interface VerifyBusinessProfilePayload extends BasePayload {
   businessId: string;
 }
