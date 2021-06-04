@@ -1,3 +1,4 @@
+import firebase from 'firebase';
 import { WithId } from '../../platform';
 import { Issue } from '../issues';
 
