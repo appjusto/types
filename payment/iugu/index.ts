@@ -160,28 +160,29 @@ export interface IuguMarketplaceAccount {
 }
 
 export interface IuguMarketplaceAccountVerificationData {
-  price_range: string; // 'Até R$ 100,00', 'Entre R$ 100,00 e R$ 500,00', 'Mais que R$ 500,00')
-  physical_products: boolean;
-  business_type: string;
+  price_range: string; // Valor máximo da venda ('Até R$ 100,00', 'Entre R$ 100,00 e R$ 500,00', 'Mais que R$ 500,00')
+  physical_products: boolean; // Vende produtos físicos?
+  business_type: string; // Descrição do negócio
   person_type: 'Pessoa Física' | 'Pessoa Jurídica';
-  automatic_transfer: boolean;
+  automatic_transfer: boolean; // Saque automático (Recomendamos que envie 'true')
   address: string;
   cep: string;
   city: string;
   state: string;
   telephone: string;
   // PF
-  name?: string;
-  cpf?: string;
+  cpf?: string; // CPF caso Pessoa Física (apenas números)
+  name?: string; // Nome caso Pessoa Física
   // PJ
-  cnpj?: string;
-  company_name?: string;
-  resp_name?: string;
+  cnpj?: string; // CNPJ caso Pessoa Jurídica (apenas números)
+  company_name?: string; // Nome da Empresa, caso Pessoa Jurídica
+  resp_name?: string; // Nome do Responsável, caso Pessoa Jurídica
+  resp_cpf?: string; // CPF do Responsável, caso Pessoa Jurídica
   // bank information
-  bank: string;
-  account_type: 'Corrente' | 'Poupança';
+  bank: string; // 'Itaú', 'Bradesco', 'Caixa Econômica', 'Banco do Brasil', 'Santander', 'Banrisul', 'Sicredi', 'Sicoob', 'Inter', 'BRB', 'Via Credi', 'Neon', 'Votorantim', 'Nubank', 'Pagseguro', 'Banco Original', 'Safra', 'Modal', 'Banestes','Unicred','Money Plus','Mercantil do Brasil','JP Morgan','Gerencianet Pagamentos do Brasil', 'Banco C6', 'BS2', 'Banco Topazio', 'Uniprime', 'Stone', 'Banco Daycoval', 'Rendimento', 'Banco do Nordeste', 'Citibank', 'PJBank', 'Cooperativa Central de Credito Noroeste Brasileiro', 'Uniprime Norte do Paraná', 'Global SCM', 'Next', 'Cora', 'Mercado Pago', 'Banco da Amazonia', 'BNP Paribas Brasil', 'Juno','Cresol','BRL Trust DTVM','Banco Banese','Banco BTG Pactual','Banco Omni'
   bank_ag: string;
   bank_cc: string;
+  account_type: 'Corrente' | 'Poupança';
 }
 
 export interface IuguMarketplaceAccountVerificationRequest {

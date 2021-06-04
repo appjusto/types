@@ -29,12 +29,8 @@ export interface BusinessStatistics {
 
 export interface BusinessPrivate {
   bank?: BankAccount;
-  platform?: BusinessPrivatePlatform;
+  marketplace?: MarketplaceAccountInfo;
   statistics?: BusinessStatistics;
-}
-
-export interface BusinessPrivatePlatform {
-  marketPlace?: MarketplaceAccountInfo;
 }
 
 export type BusinessType = 'restaurant';

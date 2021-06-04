@@ -15,7 +15,6 @@ export {
 export {
   Business,
   BusinessAddress,
-  BusinessPrivatePlatform,
   BusinessStatistics,
   BusinessStatus,
   BusinessType,
@@ -31,7 +30,6 @@ export {
   CourierCompany,
   CourierFleet,
   CourierMode,
-  CourierPrivatePlatform,
   CourierProfile,
   CourierStatistics,
   CourierStatus,
