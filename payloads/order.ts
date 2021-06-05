@@ -30,7 +30,9 @@ export interface PlaceOrderPayload extends OrderPayload {
   wantToShareData?: boolean;
 }
 
-export interface MatchingTaskPayload extends OrderPayload {}
+export interface MatchingTaskPayload extends OrderPayload {
+  readyAt?: Date;
+}
 
 export interface MatchOrderPayload extends OrderPayload {}
 

@@ -26,6 +26,7 @@ export interface OrderMatchPushMessageData extends PushMessageData {
   totalDistance: number;
   originAddress: string;
   destinationAddress: string;
+  readyAt?: Date;
 }
 
 export interface ChatPushMessageData extends PushMessageData {}
