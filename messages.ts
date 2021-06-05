@@ -2,6 +2,7 @@ import { ExpoPushMessage } from './external/expo';
 import { ChatMessageUser } from './order/chat';
 
 export type PushMessageActionType =
+  | 'profile-update'
   | 'order-request'
   | 'order-chat'
   | 'order-update';
