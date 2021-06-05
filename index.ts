@@ -75,15 +75,16 @@ export {
 export { OrderItem, OrderItemComplement } from './order/item';
 export { OrderPayment, OrderPaymentType } from './order/payment';
 export { Address, Place } from './order/place';
-export { OrderPrivatePlatform } from './order/private';
 export {
   OrderCancellation,
   OrderCancellationParams,
 } from './order/private/cancellation';
+export { OrderConfirmation } from './order/private/confirmation';
 export {
   OrderMatching,
   OrderMatchingRejection,
 } from './order/private/matching';
+export { OrderPayments } from './order/private/payment';
 export { FoodOrderStatus, OrderStatus, P2POrderStatus } from './order/status';
 export { BasePayload, FetchTotalCouriersNearbyPayload } from './payloads';
 export {
