@@ -43,7 +43,10 @@ export interface PlatformFees {
 
 export interface PlatformStatistics {
   placedOrders: number;
-  totalOrders: number;
+  totalFoodOrders: number;
+  totalP2POrders: number;
+  averageFoodTicketPrice: number;
+  averageCourierFare: number;
 }
 
 export interface City {

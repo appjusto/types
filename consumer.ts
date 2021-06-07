@@ -14,6 +14,7 @@ export interface PaymentChannel {
 
 export interface ConsumerStatistics {
   totalOrders: number;
+  averageTicketPrice: number;
 }
 
 export interface ConsumerProfile extends UserProfile {

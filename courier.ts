@@ -19,6 +19,7 @@ export interface CourierStatistics {
   rejected: number;
   positiveReviews: number;
   negativeReviews: number;
+  averageFee: number;
 }
 
 export interface CourierCompany extends BusinessAddress {
