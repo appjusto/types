@@ -34,6 +34,7 @@ export {
   CourierStatistics,
   CourierStatus,
 } from './courier';
+export { EmailTaskPayload } from './emails';
 export { Fleet, FleetDetails, FleetFareParams, FleetSituation } from './fleet';
 export {
   AdminRole,
@@ -127,17 +128,10 @@ export {
   InvoiceTaskAction,
   InvoiceTaskHandler,
 } from './payment/tasks';
-export {
-  City,
-  Environment,
-  Flavor,
-  LatLng,
-  LatLng2,
-  PlatformFees,
-  PlatformParams,
-  PlatformStatistics,
-  ServiceFee,
-  WithId,
-} from './platform';
+export { City, Environment, Flavor, LatLng, LatLng2, WithId } from './platform';
+export { PlatformFees, ServiceFee } from './platform/fees';
+export { LoginLog } from './platform/logs';
+export { PlatformParams } from './platform/params';
+export { PlatformStatistics } from './platform/statistics';
 export { ProfileSituation, UserProfile } from './profile';
 export { Review, ReviewType } from './reviews';
