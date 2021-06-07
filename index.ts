@@ -113,7 +113,7 @@ export {
   CreateBusinessProfilePayload,
   CreateManagerPayload,
   DeleteAccountPayload,
-  GetUsersPayload,
+  GetBusinessManagersPayload,
   VerifyBusinessProfilePayload,
   VerifyCourierProfilePayload,
 } from './payloads/profile';
