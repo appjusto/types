@@ -10,19 +10,21 @@ export type ProfileSituation =
   | 'blocked'
   | 'deleted';
 export interface UserProfile {
-  code?: string;
   situation: ProfileSituation;
-  profileIssues?: string[];
-  profileIssuesMessage?: string;
-  createdOn: firebase.firestore.Timestamp;
-  updatedOn?: firebase.firestore.Timestamp;
-  name?: string;
   email?: string;
+  name?: string;
   surname?: string;
   cpf?: string;
   phone?: string;
+  code?: string;
+  profileIssues?: string[];
+  profileIssuesMessage?: string;
   notificationToken?: string | null;
-  coordinates?: firebase.firestore.GeoPoint;
   pix?: string;
   onboarded?: boolean;
+  coordinates?: firebase.firestore.GeoPoint;
+  city?: string;
+  // metadata
+  createdOn: firebase.firestore.Timestamp;
+  updatedOn?: firebase.firestore.Timestamp;
 }
