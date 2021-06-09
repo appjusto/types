@@ -10,7 +10,7 @@ export interface PlatformStatistics {
 export interface CityStatistics {
   consumers: number;
   couriers: number;
-  restaurants: number;
+  businesses: number;
   placedOrders: number;
   totalFoodOrders: number;
   totalP2POrders: number;
