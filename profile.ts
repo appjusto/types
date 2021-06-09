@@ -23,6 +23,7 @@ export interface UserProfile {
   pix?: string;
   onboarded?: boolean;
   coordinates?: firebase.firestore.GeoPoint;
+  state?: string;
   city?: string;
   // metadata
   createdOn: firebase.firestore.Timestamp;
