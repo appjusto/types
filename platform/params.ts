@@ -16,6 +16,9 @@ export interface PlatformParams {
     keepAliveThreshold: number; // number of seconds to start refusing orders
     averageCookingTime: number; // in seconds
   };
+  consumer: {
+    approveAfterSubmitted: boolean;
+  };
   maintenance: {
     backupsEnabled: boolean;
   };
