@@ -5,5 +5,5 @@ export interface FreshworksTicket {
   name: string;
   priority: number;
   subject: string;
-  description_text: string;
+  description: string;
 }
