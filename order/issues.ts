@@ -1,5 +1,5 @@
 import firebase from 'firebase';
-import { WithId } from '../platform';
+import { Flavor, WithId } from '../platform';
 
 export type OrderRejectionType = 'refuse' | 'cancel';
 
@@ -25,6 +25,8 @@ export interface Issue {
 
 export interface OrderIssue {
   issue: WithId<Issue>;
+  createdBy: string;
+  flavor: Flavor;
   comment?: string | null;
   createdOn?: firebase.firestore.FieldValue;
 }
