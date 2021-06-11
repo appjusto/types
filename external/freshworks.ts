@@ -6,4 +6,5 @@ export interface FreshworksTicket {
   priority: number;
   subject: string;
   description: string;
+  status: number;
 }
