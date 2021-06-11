@@ -1,5 +1,6 @@
 import { BasePayload } from '.';
 import { Issue } from '../order/issues';
+import { OrderCancellationParams } from '../order/private/cancellation';
 import { WithId } from '../platform';
 
 export interface OrderPayload extends BasePayload {
@@ -56,8 +57,13 @@ export interface TipCourierPayload extends OrderPayload {
   tip: number; // in cents;
 }
 
-export interface CalculateCancelingCostsPayload extends OrderPayload {
+export interface GetCancellationInfoPayload extends OrderPayload {
   orderId: string;
+}
+
+export interface GetCancellationInfoResult {
+  params: OrderCancellationParams;
+  costs: number;
 }
 
 export interface CancelOrderPayload extends OrderPayload {

@@ -93,10 +93,11 @@ export {
   SavePaymentTokenPayload,
 } from './payloads/marketplace';
 export {
-  CalculateCancelingCostsPayload,
   CancelOrderPayload,
   CompleteDeliveryPayload,
   DropOrderPayload,
+  GetCancellationInfoPayload,
+  GetCancellationInfoResult,
   GetOrderQuotesPayload,
   MatchingTaskPayload,
   MatchOrderPayload,
