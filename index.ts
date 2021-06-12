@@ -22,6 +22,7 @@ export {
 } from './business';
 export {
   ConsumerProfile,
+  ConsumerServiceStatistics,
   ConsumerStatistics,
   PaymentChannel,
 } from './consumer';
@@ -31,6 +32,7 @@ export {
   CourierFleet,
   CourierMode,
   CourierProfile,
+  CourierServiceStatistics,
   CourierStatistics,
   CourierStatus,
 } from './courier';
@@ -133,6 +135,10 @@ export { City, Environment, Flavor, LatLng, LatLng2, WithId } from './platform';
 export { PlatformFees, ServiceFee } from './platform/fees';
 export { LoginLog } from './platform/logs';
 export { PlatformParams } from './platform/params';
-export { CityStatistics, PlatformStatistics } from './platform/statistics';
+export {
+  CityStatistics,
+  PlatformStatistics,
+  ServiceStatistics,
+} from './platform/statistics';
 export { ProfileSituation, UserProfile } from './profile';
 export { Review, ReviewType } from './reviews';

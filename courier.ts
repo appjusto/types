@@ -13,13 +13,19 @@ export type CourierMode =
   | 'car'
   | 'walking';
 
+export interface CourierServiceStatistics {
+  deliveries: number;
+  averageTicket: number;
+}
+
 export interface CourierStatistics {
   deliveries: number;
   canceled: number;
   rejected: number;
   positiveReviews: number;
   negativeReviews: number;
-  averageFee: number;
+  p2p: CourierServiceStatistics;
+  food: CourierServiceStatistics;
 }
 
 export interface CourierCompany extends BusinessAddress {

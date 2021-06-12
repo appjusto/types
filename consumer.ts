@@ -12,9 +12,15 @@ export interface PaymentChannel {
   mostRecentPaymentMethodId: string;
 }
 
-export interface ConsumerStatistics {
+export interface ConsumerServiceStatistics {
   totalOrders: number;
   averageTicketPrice: number;
+}
+
+export interface ConsumerStatistics {
+  totalOrders: number;
+  food: ConsumerServiceStatistics;
+  p2p: ConsumerServiceStatistics;
 }
 
 export interface ConsumerProfile extends UserProfile {

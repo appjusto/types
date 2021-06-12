@@ -1,10 +1,15 @@
+export interface ServiceStatistics {
+  totalOrders: number;
+  totalDeliveries: number;
+  averageTicketPrice: number;
+  averageCourierFare: number;
+  averageDistance: number;
+}
+
 export interface PlatformStatistics {
   placedOrders: number;
-  totalFoodOrders: number;
-  totalP2POrders: number;
-  totalDeliveries: number;
-  averageFoodTicketPrice: number;
-  averageCourierFare: number;
+  food: ServiceStatistics;
+  p2p: ServiceStatistics;
 }
 
 export interface CityStatistics {
