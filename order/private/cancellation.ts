@@ -1,4 +1,5 @@
 import firebase from 'firebase';
+import { Flavor } from '../../platform';
 import { Issue } from '../issues';
 import { OrderPaymentType } from '../payment';
 
@@ -7,6 +8,7 @@ export interface OrderCancellationParams {
 }
 
 export interface OrderCancellation {
+  canceledBy: Flavor;
   canceledById: string;
   params: OrderCancellationParams;
   issue: Issue | null;
