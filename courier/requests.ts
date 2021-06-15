@@ -1,6 +1,8 @@
 import firebase from 'firebase';
+import { OrderType } from '../order';
 
 export interface CourierOrderRequest {
+  type: OrderType;
   situation: 'pending' | 'accepted' | 'rejected' | 'expired';
   orderId: string;
   fee: number;
