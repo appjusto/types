@@ -1,3 +1,5 @@
+import firebase from 'firebase';
+
 export interface CourierOrderRequest {
   situation: 'pending' | 'accepted' | 'rejected' | 'expired';
   orderId: string;
