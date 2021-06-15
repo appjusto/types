@@ -8,7 +8,7 @@ export interface CourierOrderRequest {
   distance: number;
   originAddress: string;
   destinationAddress: string;
-  readyAt?: Date;
+  readyAt: Date | null;
   createdOn: firebase.firestore.FieldValue;
   updatedOn?: firebase.firestore.FieldValue;
 }
