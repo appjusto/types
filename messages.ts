@@ -1,3 +1,4 @@
+import { CourierOrderRequest } from './courier/requests';
 import { ExpoPushMessage } from './external/expo';
 import { ChatMessageUser } from './order/chat';
 
@@ -21,14 +22,9 @@ export interface PushMessage {
   read?: boolean;
 }
 
-export interface OrderMatchPushMessageData extends PushMessageData {
-  courierFee: number;
-  distanceToOrigin: number;
-  totalDistance: number;
-  originAddress: string;
-  destinationAddress: string;
-  readyAt?: Date;
-}
+export interface OrderMatchPushMessageData
+  extends PushMessageData,
+    CourierOrderRequest {}
 
 export interface ChatPushMessageData extends PushMessageData {}
 

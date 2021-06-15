@@ -37,6 +37,7 @@ export {
   CourierStatistics,
   CourierStatus,
 } from './courier';
+export { CourierOrderRequest } from './courier/requests';
 export { EmailTaskPayload, EmailTaskPayloadFrom } from './emails';
 export { Fleet, FleetDetails, FleetFareParams, FleetSituation } from './fleet';
 export {
