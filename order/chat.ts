@@ -10,6 +10,6 @@ export interface ChatMessage {
   from: ChatMessageUser;
   to: ChatMessageUser;
   message: string;
-  timestamp: firebase.firestore.Timestamp;
+  timestamp: firebase.firestore.FieldValue;
   read?: boolean;
 }

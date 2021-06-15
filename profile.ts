@@ -26,6 +26,6 @@ export interface UserProfile {
   state?: string;
   city?: string;
   // metadata
-  createdOn: firebase.firestore.Timestamp;
-  updatedOn?: firebase.firestore.Timestamp;
+  createdOn: firebase.firestore.FieldValue;
+  updatedOn?: firebase.firestore.FieldValue;
 }
