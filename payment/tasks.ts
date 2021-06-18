@@ -11,7 +11,8 @@ export type InvoiceTaskAction =
   | 'update-delivery-invoice'
   | 'capture-invoices'
   | 'charge-tip'
-  | 'cancel-invoices';
+  | 'cancel-invoices'
+  | 'recreate-invoices';
 
 // inovoice tasks
 export interface InvoiceTaskHandlerTipExtra {
