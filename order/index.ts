@@ -41,6 +41,7 @@ export interface Order {
   // metadata
   createdOn?: firebase.firestore.FieldValue;
   updatedOn?: firebase.firestore.FieldValue;
+  confirmedOn?: firebase.firestore.FieldValue;
 }
 
 export interface OrderChange {
