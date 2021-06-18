@@ -35,7 +35,9 @@ export interface MatchingTaskPayload extends OrderPayload {
   readyAt?: Date;
 }
 
-export interface MatchOrderPayload extends OrderPayload {}
+export interface MatchOrderPayload extends OrderPayload {
+  courierId?: string;
+}
 
 export interface OrderIssuePayload extends OrderPayload {
   issue: WithId<Issue>;
@@ -69,6 +71,7 @@ export interface GetCancellationInfoResult {
 export interface CancelOrderPayload extends OrderPayload {
   orderId: string;
   acknowledgedCosts: number;
+  params?: OrderCancellationParams;
   cancellation?: WithId<Issue>;
   comment?: string;
 }
