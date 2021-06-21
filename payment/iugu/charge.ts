@@ -1,4 +1,6 @@
 export interface IuguChargeResponse {
+  success: boolean;
+  status: 'authorized' | 'unauthorized';
   message: string;
   errors: object;
   url: string;
