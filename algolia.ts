@@ -1,5 +1,9 @@
 import firebase from 'firebase';
-import { BusinessAddress, BusinessStatistics } from './business';
+import {
+  BusinessAddress,
+  BusinessStatistics,
+  BusinessStatus,
+} from './business';
 import { ProductStatistics } from './menu/product';
 import { LatLng2 } from './platform';
 
@@ -17,7 +21,7 @@ export interface BusinessAlgolia {
   situation: string;
   onboarding: string;
   description: string;
-  status: string;
+  status: BusinessStatus;
   businessAddress: BusinessAddress;
   cuisine: string;
   deliveryRange: number;
