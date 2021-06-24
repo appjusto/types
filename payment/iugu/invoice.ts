@@ -7,6 +7,7 @@ export type IuguInvoiceStatus =
   | 'partially_paid'
   | 'refunded'
   | 'expired'
+  | 'authorized'
   | 'canceled'
   | 'in_protest'
   | 'chargeback';
@@ -34,6 +35,10 @@ export interface IuguCommissions {
 }
 // create invoice
 export type IuguPayableWith = 'credit_card' | 'pix';
+export interface IuguCustomVariable {
+  name: string;
+  value: string;
+}
 export interface IuguCreateInvoiceRequest {
   email: string; // E-mail do cliente
   cc_emails?: string; // Endereços de E-mail para cópia separados por ponto e vírgula.
@@ -46,7 +51,7 @@ export interface IuguCreateInvoiceRequest {
   customer_id: string; // ID do Cliente
   ignore_due_email?: boolean; // Booleano que ignora o envio do e-mail de cobrança
   payable_with: IuguPayableWith; // Método de pagamento que será disponibilizado para esta Fatura ("all", "credit_card", "bank_slip" ou "pix"). Obs: Caso esta Fatura esteja atrelada à uma Assinatura, a prioridade é herdar o valor atribuído na Assinatura; caso esta esteja atribuído o valor 'all', o sistema considerará o 'payable_with' da Fatura; se não, o sistema considerará o 'payable_with' da Assinatura.
-  custom_variables?: object[]; // Variáveis Personalizadas
+  custom_variables?: IuguCustomVariable[]; // Variáveis Personalizadas
   order_id?: string; // Número único que identifica o pedido de compra. Opcional, ajuda a evitar o pagamento da mesma fatura.
   external_reference?: string; // Informação de referência externa, possibilitando a realização de pesquisa.
   commissions?: IuguCommissions;

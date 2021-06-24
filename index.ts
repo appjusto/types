@@ -40,6 +40,7 @@ export {
 export { CourierOrderRequest } from './courier/requests';
 export { EmailTaskPayload, EmailTaskPayloadFrom } from './emails';
 export { Fleet, FleetDetails, FleetFareParams, FleetSituation } from './fleet';
+export { Invoice, InvoiceFingerprint } from './invoice';
 export {
   AdminRole,
   ManagerPrivatePlatform,
@@ -78,7 +79,7 @@ export {
   OrderRejectionType,
 } from './order/issues';
 export { OrderItem, OrderItemComplement } from './order/item';
-export { OrderPayment, OrderPaymentType } from './order/payment';
+export { OrderPaymentType } from './order/payment';
 export { Address, Place } from './order/place';
 export {
   OrderCancellation,
@@ -132,6 +133,7 @@ export {
   AccountType,
   InvoiceTaskAction,
   InvoiceTaskHandler,
+  InvoiceTaskHandlerTipExtra,
 } from './payment/tasks';
 export { City, Environment, Flavor, LatLng, LatLng2, WithId } from './platform';
 export { PlatformFees, ServiceFee } from './platform/fees';
