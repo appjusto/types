@@ -79,7 +79,7 @@ export {
   OrderRejectionType,
 } from './order/issues';
 export { OrderItem, OrderItemComplement } from './order/item';
-export { OrderPayment, OrderPaymentType } from './order/payment';
+export { OrderPaymentType } from './order/payment';
 export { Address, Place } from './order/place';
 export {
   OrderCancellation,
