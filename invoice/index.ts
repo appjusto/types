@@ -1,13 +1,20 @@
 import firebase from 'firebase';
-import { AccountType } from '../payment/tasks';
+import { IuguInvoiceStatus } from '../payment/iugu';
+
+export interface InvoiceFingerprint {
+  orderId: string;
+  nounce: string;
+}
 
 export interface Invoice {
-  accountType: AccountType | 'platform';
+  invoiceType: 'products' | 'delivery' | 'platform' | 'tip';
+  orderId: string;
   accountId?: string;
   accountExternalId?: string;
-  orderId: string;
+  accountToken?: string;
+  fingerprint: InvoiceFingerprint;
   externalId?: string;
-  status?: string;
+  status?: IuguInvoiceStatus;
   createdOn: firebase.firestore.FieldValue;
   updatedOn?: firebase.firestore.FieldValue;
 }
