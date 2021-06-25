@@ -9,6 +9,7 @@ export interface InvoiceFingerprint {
 export interface Invoice {
   invoiceType: 'products' | 'delivery' | 'platform' | 'tip';
   orderId: string;
+  value: number;
   accountId?: string;
   accountExternalId?: string;
   accountToken?: string;
