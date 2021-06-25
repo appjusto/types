@@ -7,10 +7,10 @@ export interface AccountTaskPayload {
 }
 
 export type InvoiceTaskAction =
-  | 'create-invoices'
-  | 'update-delivery-invoice'
-  | 'capture-invoices'
-  | 'charge-tip'
+  | 'create-service-invoice'
+  | 'create-delivery-invoice'
+  | 'capture-order-invoices'
+  | 'create-tip-invoice'
   | 'cancel-invoices'
   | 'recreate-invoices';
 
@@ -18,7 +18,13 @@ export type InvoiceTaskAction =
 export interface InvoiceTaskHandlerTipExtra {
   tip: number;
 }
-export type InvoiceTaskHandlerExtra = InvoiceTaskHandlerTipExtra;
+export interface InvoiceTaskHandlerInvoicesExtra {
+  invoicesIds: string[];
+}
+export type InvoiceTaskHandlerExtra =
+  | InvoiceTaskHandlerTipExtra
+  | InvoiceTaskHandlerInvoicesExtra;
+
 export interface InvoiceTaskHandler {
   action: InvoiceTaskAction;
   orderId: string;

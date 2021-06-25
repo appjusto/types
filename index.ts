@@ -133,6 +133,7 @@ export {
   AccountType,
   InvoiceTaskAction,
   InvoiceTaskHandler,
+  InvoiceTaskHandlerInvoicesExtra,
   InvoiceTaskHandlerTipExtra,
 } from './payment/tasks';
 export { City, Environment, Flavor, LatLng, LatLng2, WithId } from './platform';
