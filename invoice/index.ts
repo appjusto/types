@@ -10,6 +10,7 @@ export interface Invoice {
   invoiceType: 'products' | 'delivery' | 'platform' | 'tip';
   orderId: string;
   value: number;
+  customerPaymentMethodId: string;
   accountId?: string;
   accountExternalId?: string;
   accountToken?: string;

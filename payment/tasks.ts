@@ -9,6 +9,7 @@ export interface AccountTaskPayload {
 export type InvoiceTaskAction =
   | 'create-service-invoice'
   | 'create-delivery-invoice'
+  | 'charge-order-invoices'
   | 'capture-order-invoices'
   | 'create-tip-invoice'
   | 'cancel-invoices'
