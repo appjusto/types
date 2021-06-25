@@ -14,7 +14,19 @@ export type IssueType =
   | 'consumer-delivery-problem'
   | 'restaurant-cancel'
   | 'business-profile-invalid'
-  | 'agent-order-cancel';
+  | 'agent-order-cancel'
+  | 'courier-drops-food-delivery'
+  | 'courier-drops-p2p-delivery'
+  | 'courier-pickup-food-delivery'
+  | 'courier-pickup-p2p-delivery'
+  | 'courier-delivering-food-order'
+  | 'courier-delivering-p2p-order'
+  | 'courier-destination-food'
+  | 'courier-destination-p2p'
+  | 'courier-rates-restaurant'
+  | 'courier-rates-consumer-food'
+  | 'courier-rates-app'
+  | 'courier-rates-consumer-p2p';
 
 export interface Issue {
   id?: string;
