@@ -20,7 +20,7 @@ export interface InvoiceTaskHandlerTipExtra {
   tip: number;
 }
 export interface InvoiceTaskHandlerInvoicesExtra {
-  invoicesIds: string[];
+  invoicesIds: string[] | undefined;
 }
 export type InvoiceTaskHandlerExtra =
   | InvoiceTaskHandlerTipExtra

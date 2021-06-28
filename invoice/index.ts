@@ -6,8 +6,10 @@ export interface InvoiceFingerprint {
   nounce: string;
 }
 
+export type InvoiceType = 'products' | 'delivery' | 'platform' | 'tip';
+
 export interface Invoice {
-  invoiceType: 'products' | 'delivery' | 'platform' | 'tip';
+  invoiceType: InvoiceType;
   orderId: string;
   value: number;
   customerPaymentMethodId: string;

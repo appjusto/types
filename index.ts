@@ -40,7 +40,7 @@ export {
 export { CourierOrderRequest } from './courier/requests';
 export { EmailTaskPayload, EmailTaskPayloadFrom } from './emails';
 export { Fleet, FleetDetails, FleetFareParams, FleetSituation } from './fleet';
-export { Invoice, InvoiceFingerprint } from './invoice';
+export { Invoice, InvoiceFingerprint, InvoiceType } from './invoice';
 export {
   AdminRole,
   ManagerPrivatePlatform,
@@ -79,7 +79,6 @@ export {
   OrderRejectionType,
 } from './order/issues';
 export { OrderItem, OrderItemComplement } from './order/item';
-export { OrderPaymentType } from './order/payment';
 export { Address, Place } from './order/place';
 export {
   OrderCancellation,

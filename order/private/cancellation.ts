@@ -1,10 +1,10 @@
 import firebase from 'firebase';
+import { InvoiceType } from '../../invoice';
 import { Flavor } from '../../platform';
 import { Issue } from '../issues';
-import { OrderPaymentType } from '../payment';
 
 export interface OrderCancellationParams {
-  refund: OrderPaymentType[];
+  refund: InvoiceType[];
 }
 
 export interface OrderCancellation {
