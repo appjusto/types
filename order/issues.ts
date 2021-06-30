@@ -33,6 +33,7 @@ export interface Issue {
   order?: number;
   type: IssueType;
   title: string;
+  priority?: number;
 }
 
 export interface OrderIssue {
