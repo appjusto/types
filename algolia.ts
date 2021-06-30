@@ -65,7 +65,8 @@ export interface OrderAlgolia {
   businessId: string;
   consumerName: string;
   courierName: string;
-  totalOrder: number;
+  courierValue: number;
+  businessValue: number;
   status: string;
   createdOn: firebase.firestore.FieldValue;
   date_timestamp: number;
