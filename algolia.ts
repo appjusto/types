@@ -62,16 +62,15 @@ export interface OrderAlgolia {
   objectID: string;
   type: string;
   code: string;
-  businessId?: string;
+  businessId: string;
   consumerName: string;
-  courierName?: string;
-  courierValue?: number;
-  businessValue?: number;
-  totalOrder?: number;
+  courierName: string;
+  courierValue: number;
+  businessValue: number;
+  totalOrder: number;
   status: string;
-  createdOn: number;
-  confirmedOn: number;
-  deliveredOn: number;
+  createdOn: firebase.firestore.FieldValue;
+  date_timestamp: number;
 }
 
 export interface ProductAlgolia {
