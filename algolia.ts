@@ -53,6 +53,8 @@ export interface ConsumerAlgolia {
   name: string;
   surname: string;
   email: string;
+  city: string;
+  state: string;
   code: string;
   situation: string;
   totalOrders: number;
