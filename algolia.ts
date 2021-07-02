@@ -72,7 +72,6 @@ export interface OrderAlgolia {
   totalOrder: number;
   status: string;
   createdOn: firebase.firestore.FieldValue;
-  confirmedOn: firebase.firestore.FieldValue | null;
   date_timestamp: number;
 }
 
