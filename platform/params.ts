@@ -19,7 +19,9 @@ export interface PlatformParams {
   consumer: {
     approveAfterSubmitted: boolean;
   };
-  maintenance: {
-    backupsEnabled: boolean;
-  };
+}
+
+export interface PlatformManagement {
+  backupsEnabled: boolean;
+  staffTokens: string[];
 }
