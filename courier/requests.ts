@@ -4,7 +4,7 @@ import { LatLng } from '../platform';
 
 export interface CourierOrderRequest {
   type: OrderType;
-  situation: 'pending' | 'accepted' | 'rejected' | 'expired';
+  situation: 'pending' | 'accepted' | 'viewed' | 'rejected' | 'expired';
   orderId: string;
   fee: number;
   origin: LatLng;
