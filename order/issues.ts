@@ -26,7 +26,17 @@ export type IssueType =
   | 'courier-rates-restaurant'
   | 'courier-rates-consumer-food'
   | 'courier-rates-app'
-  | 'courier-rates-consumer-p2p';
+  | 'courier-rates-consumer-p2p'
+  | 'consumer-going-pickup-food'
+  | 'consumer-going-pickup-p2p'
+  | 'consumer-ongoing-food'
+  | 'consumer-ongoing-p2p'
+  | 'consumer-cancel-food-with-payment'
+  | 'consumer-cancel-p2p-with-payment'
+  | 'consumer-arrived-food-order'
+  | 'consumer-arrived-p2p-order'
+  | 'consumer-delivered-food-order'
+  | 'consumer-delivered-p2p-order';
 
 export interface Issue {
   id?: string;
