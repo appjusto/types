@@ -11,9 +11,11 @@ export type InvoiceType = 'products' | 'delivery' | 'platform' | 'tip';
 export interface Invoice {
   invoiceType: InvoiceType;
   orderId: string;
+  orderCode: string;
   value: number;
   customerPaymentMethodId: string;
   accountId?: string;
+  accountName?: string;
   accountExternalId?: string;
   accountToken?: string;
   fingerprint: InvoiceFingerprint;
