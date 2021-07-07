@@ -25,6 +25,7 @@ export interface UserProfile {
   coordinates?: firebase.firestore.GeoPoint;
   state?: string;
   city?: string;
+  isPasswordActive?: boolean;
   // metadata
   createdOn: firebase.firestore.FieldValue;
   updatedOn?: firebase.firestore.FieldValue;
