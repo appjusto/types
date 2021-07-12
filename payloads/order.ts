@@ -47,7 +47,6 @@ export interface OrderIssuePayload extends OrderPayload {
 
 export interface RejectOrderPayload extends OrderIssuePayload {}
 export interface DropOrderPayload extends OrderIssuePayload {
-  courierId?: string;
   comment?: string;
 }
 
