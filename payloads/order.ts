@@ -37,6 +37,7 @@ export interface MatchingTaskPayload extends OrderPayload {
 
 export interface MatchOrderPayload extends OrderPayload {
   courierId?: string;
+  comment?: string;
 }
 
 export interface OrderIssuePayload extends OrderPayload {
@@ -45,7 +46,10 @@ export interface OrderIssuePayload extends OrderPayload {
 }
 
 export interface RejectOrderPayload extends OrderIssuePayload {}
-export interface DropOrderPayload extends OrderIssuePayload {}
+export interface DropOrderPayload extends OrderIssuePayload {
+  courierId?: string;
+  comment?: string;
+}
 
 export interface NextDispatchingStatePayload extends OrderPayload {}
 
