@@ -137,7 +137,7 @@ export {
 } from './payment/tasks';
 export { City, Environment, Flavor, LatLng, LatLng2, WithId } from './platform';
 export { PlatformFees, ServiceFee } from './platform/fees';
-export { LoginLog } from './platform/logs';
+export { LoginLog, InterferenceLog } from './platform/logs';
 export { PlatformParams, PlatformManagement } from './platform/params';
 export {
   CityStatistics,

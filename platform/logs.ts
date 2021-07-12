@@ -7,3 +7,14 @@ export interface LoginLog {
   signInAt: firebase.firestore.FieldValue;
   createdOn?: firebase.firestore.FieldValue;
 }
+
+export interface InterferenceLog {
+  type: 'match-order' | 'drop-order' | 'outsource-delivery';
+  by: string;
+  orderId: string;
+  extra?: {
+    courierId: string;
+  };
+  comment: string | null;
+  timestamp: firebase.firestore.FieldValue;
+}
