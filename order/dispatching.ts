@@ -6,7 +6,8 @@ export type DispatchingStatus =
   | 'no-match'
   | 'matched'
   | 'declined'
-  | 'confirmed';
+  | 'confirmed'
+  | 'outsourced';
 
 export type DispatchingState =
   | 'going-pickup'

@@ -79,3 +79,7 @@ export interface CancelOrderPayload extends OrderPayload {
   cancellation?: WithId<Issue>;
   comment?: string;
 }
+
+export interface OutsourceDeliveryPayload extends OrderPayload {
+  comment?: string;
+}

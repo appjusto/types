@@ -1,4 +1,4 @@
-export type AccountType = 'courier' | 'business';
+export type AccountType = 'courier' | 'business' | 'platform';
 
 export interface AccountTaskPayload {
   type: AccountType;

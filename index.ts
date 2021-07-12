@@ -114,6 +114,7 @@ export {
   PlaceOrderPayloadPaymentPix,
   RejectOrderPayload,
   TipCourierPayload,
+  OutsourceDeliveryPayload,
 } from './payloads/order';
 export {
   CreateBusinessProfilePayload,
