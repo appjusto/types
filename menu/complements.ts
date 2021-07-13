@@ -5,6 +5,7 @@ export interface ComplementGroup {
   required: boolean;
   minimum: number;
   maximum: number;
+  enabled?: boolean;
   // transient
   items?: WithId<Complement>[];
 }
