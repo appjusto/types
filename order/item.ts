@@ -16,4 +16,5 @@ export interface OrderItemComplement {
   complementId: string;
   name: string;
   price: number;
+  groupName: string;
 }
