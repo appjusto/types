@@ -1,9 +1,10 @@
 export interface OrderItem {
   id: string;
   product: {
+    id: string;
     name: string;
     price: number; // in cents
-    id: string;
+    categoryName: string;
     externalId?: string;
   };
   quantity: number;
