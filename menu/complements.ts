@@ -14,5 +14,6 @@ export interface Complement {
   name: string;
   description?: string;
   price: number;
+  enabled?: boolean;
   externalId?: string;
 }
