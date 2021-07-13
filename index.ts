@@ -108,13 +108,14 @@ export {
   NextDispatchingStatePayload,
   OrderIssuePayload,
   OrderPayload,
+  OutsourceDeliveryPayload,
   PlaceOrderPayload,
   PlaceOrderPayloadPayment,
   PlaceOrderPayloadPaymentCreditCard,
   PlaceOrderPayloadPaymentPix,
   RejectOrderPayload,
   TipCourierPayload,
-  OutsourceDeliveryPayload,
+  UpdateOrderPayload,
 } from './payloads/order';
 export {
   CreateBusinessProfilePayload,
@@ -138,8 +139,8 @@ export {
 } from './payment/tasks';
 export { City, Environment, Flavor, LatLng, LatLng2, WithId } from './platform';
 export { PlatformFees, ServiceFee } from './platform/fees';
-export { LoginLog, InterferenceLog } from './platform/logs';
-export { PlatformParams, PlatformManagement } from './platform/params';
+export { InterferenceLog, LoginLog } from './platform/logs';
+export { PlatformManagement, PlatformParams } from './platform/params';
 export {
   CityStatistics,
   PlatformStatistics,
