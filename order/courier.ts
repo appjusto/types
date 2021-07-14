@@ -9,4 +9,5 @@ export interface OrderCourier {
   joined: firebase.firestore.FieldValue;
   mode: CourierMode;
   statistics?: CourierStatistics;
+  updatedOn: firebase.firestore.FieldValue;
 }
