@@ -138,6 +138,7 @@ export interface IuguMarketplaceAccount {
   default_return_url: string;
   auto_withdraw: boolean;
   balance: string;
+  balance_available_for_withdraw: string;
   protected_balance: string;
   payable_balance: string;
   receivable_balance: string;
