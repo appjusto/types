@@ -211,6 +211,9 @@ export interface IuguMarketplaceAccountInfo {
   last_verification_request_status: string;
   last_verification_request_data: string;
   last_verification_request_feedback: string;
+  balance: string;
+  balance_available_for_withdraw: string;
+  payable_balance: string;
   // ...
 }
 
