@@ -1,5 +1,5 @@
 export type Flavor = 'courier' | 'consumer' | 'business' | 'backoffice';
-export type Environment = 'dev' | 'staging' | 'live' | 'local';
+export type Environment = 'dev' | 'staging' | 'live';
 
 export interface City {
   id: string;
