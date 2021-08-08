@@ -92,7 +92,12 @@ export {
 export { OrderPayments } from './order/private/payment';
 export { FoodOrderStatus, OrderStatus, P2POrderStatus } from './order/status';
 export { BasePayload, FetchTotalCouriersNearbyPayload } from './payloads';
-export { FetchAccountInformationPayload } from './payloads/account';
+export {
+  FetchAccountInformationPayload,
+  FetchAccountInformationResponse,
+  FetchAdvanceSimulationPayload,
+  FetchReceivablesPayload,
+} from './payloads/account';
 export {
   DeletePaymentMethodPayload,
   SavePaymentTokenPayload,
