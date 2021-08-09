@@ -14,6 +14,11 @@ export interface VerifyCourierProfilePayload extends BasePayload {}
 
 export interface CreateBusinessProfilePayload extends BasePayload {}
 
+export interface UpdateBusinessSlugPayload extends BasePayload {
+  businessId: string;
+  slug: string;
+}
+
 export interface CreateManagerPayload extends BasePayload {
   email: string;
   key: string;

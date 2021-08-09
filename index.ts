@@ -123,6 +123,7 @@ export {
   CreateManagerPayload,
   DeleteAccountPayload,
   GetBusinessManagersPayload,
+  UpdateBusinessSlugPayload,
   VerifyBusinessProfilePayload,
   VerifyCourierProfilePayload,
 } from './payloads/profile';
