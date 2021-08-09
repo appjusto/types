@@ -125,7 +125,12 @@ export interface IuguMarketplaceAccount {
 }
 
 export {
+  IuguMarketplaceAccountAdvanceResponse,
   IuguMarketplaceAccountAdvanceSimulation,
   IuguMarketplaceAccountReceivableItem,
   IuguMarketplaceAccountReceivables,
 } from './receivables';
+export {
+  IuguMarketplaceAccountWithdrawRequest,
+  IuguMarketplaceAccountWithdrawResponse,
+} from './withdraw';

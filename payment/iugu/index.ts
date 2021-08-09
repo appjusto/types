@@ -16,6 +16,7 @@ export interface IuguSuccessResponse {
 export {
   IuguCreateMarketplaceAccount,
   IuguMarketplaceAccount,
+  IuguMarketplaceAccountAdvanceResponse,
   IuguMarketplaceAccountAdvanceSimulation,
   IuguMarketPlaceAccountConfigure,
   IuguMarketplaceAccountInfo,
@@ -25,6 +26,8 @@ export {
   IuguMarketplaceAccountVerification,
   IuguMarketplaceAccountVerificationData,
   IuguMarketplaceAccountVerificationRequest,
+  IuguMarketplaceAccountWithdrawRequest,
+  IuguMarketplaceAccountWithdrawResponse,
 } from './account';
 export {
   IuguAdhocCharge,

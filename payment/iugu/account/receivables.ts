@@ -17,7 +17,7 @@ export interface IuguMarketplaceAccountReceivables {
   items: IuguMarketplaceAccountReceivableItem[];
 }
 
-interface IuguMarketplaceAdvanceInfo {
+export interface IuguMarketplaceAdvanceInfo {
   advanced_value: string;
   advance_fee: string;
   received_value: string;
@@ -31,4 +31,9 @@ export interface IuguMarketplaceAccountAdvanceSimulation {
   not_found: number[];
   transactions: IuguMarketplaceAccountTransactionItem[];
   total: IuguMarketplaceAdvanceInfo;
+}
+
+export interface IuguMarketplaceAccountAdvanceResponse {
+  total: IuguMarketplaceAdvanceInfo;
+  transactions: IuguMarketplaceAdvanceInfo[];
 }
