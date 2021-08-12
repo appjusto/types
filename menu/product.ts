@@ -1,4 +1,3 @@
-import { Ordering } from '.';
 import { WithId } from '../platform';
 import { ComplementGroup } from './complements';
 
@@ -20,7 +19,7 @@ export interface Product {
   enabled: boolean;
   classifications: string[];
   complementsEnabled?: boolean;
-  complementsOrder?: Ordering;
+  complementsGroupsIds?: string[];
   statistics?: ProductStatistics;
   // transient
   complementsGroups?: WithId<ComplementGroup>[];
