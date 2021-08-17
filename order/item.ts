@@ -16,6 +16,13 @@ export interface OrderItemComplement {
   complementId: string;
   name: string;
   price: number;
-  quantity?: number;
+  quantity: number;
+  /**
+   * @deprecated
+   */
   groupName: string;
+  group: {
+    id: string;
+    name: string;
+  };
 }
