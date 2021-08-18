@@ -10,6 +10,7 @@ export interface PlatformParams {
   };
   courier: {
     approveAfterVerified: boolean;
+    restrictWithdrawTo: string[];
   };
   business: {
     approveAfterVerified: boolean;
