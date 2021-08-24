@@ -1,5 +1,8 @@
+import { IuguCustomVariable } from '../invoice';
+
 export interface IuguMarketplaceAccountWithdrawRequest {
   amount: number;
+  custom_variables?: IuguCustomVariable[];
 }
 
 export interface IuguMarketplaceAccountWithdrawResponse {
@@ -13,7 +16,7 @@ export interface IuguMarketplaceAccountWithdrawResponse {
     bank_cc: string;
   };
   created_at: string;
-  custom_variables: object[];
+  custom_variables: IuguCustomVariable[];
   feedback: string;
   id: string;
   reference: string;

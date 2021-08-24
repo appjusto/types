@@ -8,6 +8,9 @@ export interface PlatformParams {
     bicyclingDurationFactor: number; // multipler used to calculate duration for byciling
     averageWaitingTime: number; // in seconds
   };
+  marketplace: {
+    maxWithdraws: number;
+  };
   courier: {
     approveAfterVerified: boolean;
     restrictWithdrawTo: string[];

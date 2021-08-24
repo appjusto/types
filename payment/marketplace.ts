@@ -1,8 +1,10 @@
+import firebase from 'firebase';
 import {
   IuguMarketplaceAccount,
   IuguMarketplaceAccountInfo,
   IuguMarketplaceAccountTokens,
   IuguMarketplaceAccountVerification,
+  IuguMarketplaceAccountWithdrawResponse,
 } from './iugu';
 
 export type MarketplaceAccountSituation =
@@ -21,4 +23,16 @@ export interface MarketplaceAccountInfo {
   info?: IuguMarketplaceAccountInfo;
   pixEnabled?: boolean;
   issues?: string[];
+}
+
+export interface AccountWithdraw {
+  accountId: string;
+  accountExternalId: string;
+  amount: string;
+  externalId: string;
+  status: 'pending' | 'processing' | 'accepted' | 'rejected';
+  data: IuguMarketplaceAccountWithdrawResponse;
+  feedback?: string;
+  createdOn: firebase.firestore.FieldValue;
+  updatedOn?: firebase.firestore.FieldValue;
 }
