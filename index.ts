@@ -135,6 +135,7 @@ export {
   VerifyCourierProfilePayload,
 } from './payloads/profile';
 export {
+  AccountAdvance,
   AccountWithdraw,
   MarketplaceAccountInfo,
   MarketplaceAccountSituation,
