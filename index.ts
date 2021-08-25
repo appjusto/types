@@ -131,6 +131,7 @@ export {
   DeleteAccountPayload,
   GetBusinessManagersPayload,
   UpdateBusinessSlugPayload,
+  UpdateEmailPayload,
   VerifyBusinessProfilePayload,
   VerifyCourierProfilePayload,
 } from './payloads/profile';
