@@ -14,6 +14,7 @@ export interface PlatformParams {
   courier: {
     approveAfterVerified: boolean;
     restrictWithdrawTo: string[];
+    delayBeforeAdvancing: number;
   };
   business: {
     approveAfterVerified: boolean;
