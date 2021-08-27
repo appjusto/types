@@ -42,6 +42,10 @@ export interface Order {
   createdOn?: firebase.firestore.FieldValue;
   updatedOn?: firebase.firestore.FieldValue;
   confirmedOn?: firebase.firestore.FieldValue;
+  declinedOn?: firebase.firestore.FieldValue;
+  dispatchingDeclinedOn?: firebase.firestore.FieldValue;
+  dispatchingStartedOn?: firebase.firestore.FieldValue;
+  matchingEndedOn?: firebase.firestore.FieldValue;
   deliveredOn?: firebase.firestore.FieldValue;
 }
 
