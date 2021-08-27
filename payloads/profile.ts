@@ -3,12 +3,12 @@ import { AdminRole, Role } from '../managers';
 
 export interface DeleteAccountPayload extends BasePayload {
   accountId?: string;
-  notWorkingOnMyRegion: boolean;
-  didntFindWhatINeeded: boolean;
-  pricesHigherThanAlternatives: boolean;
-  didntLikeApp: boolean;
-  didntFeelSafe: boolean;
-  ratherUseAnotherApp: boolean;
+  notWorkingOnMyRegion?: boolean;
+  didntFindWhatINeeded?: boolean;
+  pricesHigherThanAlternatives?: boolean;
+  didntLikeApp?: boolean;
+  didntFeelSafe?: boolean;
+  ratherUseAnotherApp?: boolean;
 }
 
 export interface UpdateEmailPayload extends BasePayload {
