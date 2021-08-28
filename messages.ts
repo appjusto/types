@@ -7,7 +7,8 @@ export type PushMessageActionType =
   | 'order-request'
   | 'order-chat'
   | 'order-update'
-  | 'staff-order-update';
+  | 'staff-order-update'
+  | 'none';
 
 export interface PushMessageData {
   action: PushMessageActionType;
