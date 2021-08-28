@@ -69,7 +69,11 @@ export {
 export { ChatMessage, ChatMessageUser } from './order/chat';
 export { OrderConsumer } from './order/consumer';
 export { OrderCourier } from './order/courier';
-export { DispatchingState, OrderLocationEntry } from './order/dispatching';
+export {
+  DispatchingState,
+  DispatchingStatus,
+  OrderLocationEntry,
+} from './order/dispatching';
 export { Fare, FareDetails } from './order/fare';
 export {
   Issue,

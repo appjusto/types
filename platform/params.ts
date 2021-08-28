@@ -13,6 +13,8 @@ export interface PlatformParams {
       quote: number; // in seconds
       confirmed: number; // in seconds
       declined: number; // in seconds
+      dispatching: number; // in seconds
+      nomatch: number; // in seconds
     };
   };
   marketplace: {
