@@ -2,11 +2,20 @@ export interface PlatformParams {
   matching: {
     maxDistance: number; // in meters
     maxDistanceToOrigin: number; // in meters
-    locationFreshnessThreshold: number; // 10 minutes
+    locationFreshnessThreshold: number; // in seconds
     timeBeforeReady: number; // amount of time (in seconds) before expected readiness to start matching;
     maxTimeOfArrivalFactor: number; // multiplier used to calculate maxTimeOfArrival
     bicyclingDurationFactor: number; // multipler used to calculate duration for byciling
     averageWaitingTime: number; // in seconds
+  };
+  orders: {
+    limits: {
+      quote: number; // in seconds
+      confirmed: number; // in seconds
+      declined: number; // in seconds
+      dispatching: number; // in seconds
+      nomatch: number; // in seconds
+    };
   };
   marketplace: {
     maxWithdraws: number;

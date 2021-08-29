@@ -5,7 +5,8 @@ export type P2POrderStatus =
   | 'declined'
   | 'dispatching'
   | 'delivered'
-  | 'canceled';
+  | 'canceled'
+  | 'expired';
 
 export type FoodOrderStatus =
   | 'quote'
@@ -16,6 +17,7 @@ export type FoodOrderStatus =
   | 'ready'
   | 'dispatching'
   | 'delivered'
-  | 'canceled';
+  | 'canceled'
+  | 'expired';
 
 export type OrderStatus = P2POrderStatus | FoodOrderStatus;
