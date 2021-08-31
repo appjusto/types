@@ -9,7 +9,7 @@ export interface LoginLog {
 }
 
 export interface InterferenceLog {
-  type: 'match-order' | 'drop-order' | 'outsource-delivery';
+  type: 'match-order' | 'drop-order' | 'outsource-delivery' | 'release-courier';
   by: string;
   orderId: string;
   extra?: {

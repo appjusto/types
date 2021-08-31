@@ -104,6 +104,7 @@ export {
   FetchReceivablesPayload,
   RequestWithdrawPayload,
 } from './payloads/account';
+export { ReleaseCourierPayload } from './payloads/courier';
 export {
   DeletePaymentMethodPayload,
   SavePaymentTokenPayload,
