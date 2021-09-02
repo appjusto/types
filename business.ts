@@ -39,6 +39,7 @@ export interface Business {
   type: BusinessType;
   code?: string;
   name?: string;
+  companyName?: string;
   cnpj?: string;
   phone?: string;
   managers?: string[]; // emails
