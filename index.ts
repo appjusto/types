@@ -104,6 +104,7 @@ export {
   FetchReceivablesPayload,
   RequestWithdrawPayload,
 } from './payloads/account';
+export { CloneBusinessPayload } from './payloads/business';
 export { ReleaseCourierPayload } from './payloads/courier';
 export {
   DeletePaymentMethodPayload,
