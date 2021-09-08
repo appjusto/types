@@ -1,4 +1,10 @@
-export type Flavor = 'courier' | 'consumer' | 'business' | 'backoffice';
+export type Flavor =
+  | 'courier'
+  | 'consumer'
+  | 'business'
+  | 'backoffice'
+  | 'platform';
+
 export type Environment = 'dev' | 'staging' | 'live';
 
 export interface City {
