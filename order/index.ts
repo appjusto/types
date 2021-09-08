@@ -47,6 +47,7 @@ export interface Order {
   dispatchingStartedOn?: firebase.firestore.FieldValue;
   matchingEndedOn?: firebase.firestore.FieldValue;
   deliveredOn?: firebase.firestore.FieldValue;
+  canceledOn?: firebase.firestore.FieldValue;
 }
 
 export interface OrderChange {
