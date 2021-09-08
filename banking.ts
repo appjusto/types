@@ -7,7 +7,11 @@ export interface Bank {
   order?: number;
 }
 
-export type BankAccountType = 'Corrente' | 'Poupança';
+export type BankAccountType =
+  | 'Corrente'
+  | 'Poupança'
+  | 'Simples'
+  | 'Nova Poupança';
 export type BankAccountPersonType = 'Pessoa Física' | 'Pessoa Jurídica';
 
 export interface BankAccount {
