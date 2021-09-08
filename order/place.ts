@@ -13,7 +13,16 @@ export interface Place {
   additionalInfo?: string;
   intructions?: string;
   location?: LatLng;
+  /**
+   * @deprecated
+   */
   estimatedTimeOfArrival?: firebase.firestore.FieldValue;
+  /**
+   * @deprecated
+   */
   maxTimeOfArrival?: firebase.firestore.FieldValue;
+  /**
+   * @deprecated
+   */
   timeOfArrival?: firebase.firestore.FieldValue;
 }

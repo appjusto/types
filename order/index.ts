@@ -38,6 +38,17 @@ export interface Order {
   tip?: {
     value: number; // in cents;
   };
+  arrivals?: {
+    origin?: {
+      estimate?: firebase.firestore.FieldValue;
+      arrival?: firebase.firestore.FieldValue;
+    };
+    destination?: {
+      estimate?: firebase.firestore.FieldValue;
+      arrival?: firebase.firestore.FieldValue;
+      arrivalLimit?: firebase.firestore.FieldValue;
+    };
+  };
   // metadata
   createdOn?: firebase.firestore.FieldValue;
   updatedOn?: firebase.firestore.FieldValue;
