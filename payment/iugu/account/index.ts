@@ -129,7 +129,12 @@ export {
   IuguMarketplaceAccountAdvanceSimulation,
   IuguMarketplaceAccountReceivableItem,
   IuguMarketplaceAccountReceivables,
+  IuguMarketplaceAdvanceInfo,
 } from './receivables';
+export {
+  IuguMarketplaceTransferRequest,
+  IuguMarketplaceTransferResponse,
+} from './transfer';
 export {
   IuguMarketplaceAccountWithdrawRequest,
   IuguMarketplaceAccountWithdrawResponse,

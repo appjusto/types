@@ -6,6 +6,7 @@ import {
   IuguMarketplaceAccountTokens,
   IuguMarketplaceAccountVerification,
   IuguMarketplaceAccountWithdrawResponse,
+  IuguMarketplaceTransferResponse,
 } from './iugu';
 import { AccountType } from './tasks';
 
@@ -45,5 +46,13 @@ export interface AccountAdvance {
   accountType: AccountType;
   accountExternalId: string;
   data: IuguMarketplaceAccountAdvanceResponse;
+  createdOn: firebase.firestore.FieldValue;
+}
+
+export interface AccountTransfer {
+  accountType: AccountType;
+  accountId: string | null;
+  accountExternalId: string;
+  data: IuguMarketplaceTransferResponse;
   createdOn: firebase.firestore.FieldValue;
 }

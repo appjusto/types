@@ -28,6 +28,9 @@ export {
   IuguMarketplaceAccountVerificationRequest,
   IuguMarketplaceAccountWithdrawRequest,
   IuguMarketplaceAccountWithdrawResponse,
+  IuguMarketplaceAdvanceInfo,
+  IuguMarketplaceTransferRequest,
+  IuguMarketplaceTransferResponse,
 } from './account';
 export {
   IuguAdhocCharge,

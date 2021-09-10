@@ -143,6 +143,7 @@ export {
 } from './payloads/profile';
 export {
   AccountAdvance,
+  AccountTransfer,
   AccountWithdraw,
   MarketplaceAccountInfo,
   MarketplaceAccountSituation,
