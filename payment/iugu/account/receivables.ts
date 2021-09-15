@@ -21,11 +21,15 @@ export interface IuguMarketplaceAdvanceInfo {
   advanced_value: string;
   advance_fee: string;
   received_value: string;
+  id: number;
 }
 
 interface IuguMarketplaceAccountTransactionItem
-  extends IuguMarketplaceAccountReceivableItem,
-    IuguMarketplaceAdvanceInfo {}
+  extends IuguMarketplaceAccountReceivableItem {
+  advanced_value: string;
+  advance_fee: string;
+  received_value: string;
+}
 
 export interface IuguMarketplaceAccountAdvanceSimulation {
   not_found: number[];
