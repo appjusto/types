@@ -1,4 +1,5 @@
 import firebase from 'firebase';
+import { Place } from '.';
 import { LatLng } from './platform';
 import { ProfileSituation } from './profile';
 
@@ -66,4 +67,11 @@ export interface Business {
   keepAlive?: firebase.firestore.FieldValue;
   createdOn: firebase.firestore.FieldValue;
   updatedOn?: firebase.firestore.FieldValue;
+}
+
+export interface BusinessRecommendation {
+  recommendedBusiness: Place;
+  instagram?: string;
+  phone?: string;
+  createdOn: firebase.firestore.FieldValue;
 }
