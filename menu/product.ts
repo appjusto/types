@@ -1,3 +1,4 @@
+import { BusinessSchedule } from '..';
 import { WithId } from '../platform';
 import { ComplementGroup } from './complements';
 
@@ -21,6 +22,7 @@ export interface Product {
   complementsEnabled?: boolean;
   complementsGroupsIds?: string[];
   statistics?: ProductStatistics;
+  availability?: BusinessSchedule;
   // transient
   complementsGroups?: WithId<ComplementGroup>[];
 }
