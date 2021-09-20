@@ -14,6 +14,7 @@ export interface Invoice {
   orderId: string;
   orderCode: string;
   value: number;
+  commission: number | null;
   customerPaymentMethodId: string;
   accountId?: string;
   accountName?: string;
