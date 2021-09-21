@@ -49,6 +49,7 @@ export interface Order {
       arrivalLimit?: firebase.firestore.FieldValue;
     };
   };
+  issue?: string | null;
   // metadata
   createdOn?: firebase.firestore.FieldValue;
   updatedOn?: firebase.firestore.FieldValue;
