@@ -20,6 +20,7 @@ export {
   BusinessStatus,
   BusinessType,
   Cuisine,
+  ScheduleObject,
 } from './business';
 export {
   ConsumerProfile,

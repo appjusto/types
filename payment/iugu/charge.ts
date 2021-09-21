@@ -1,11 +1,18 @@
 export interface IuguChargeResponse {
   success: boolean;
-  message: string;
-  errors: object;
   url: string;
   pdf: string;
-  identification: string | null;
   invoice_id: string;
+  message?: string;
+  errors?: object;
+  LR?: string;
+  reversible?: boolean;
+  token?: string;
+  brand?: string;
+  bin?: string;
+  last4?: string;
+  // bank slip
+  identification?: string | null;
 }
 
 export interface IuguInvoiceCharge {
