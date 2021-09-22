@@ -168,3 +168,4 @@ export {
 } from './platform/statistics';
 export { ProfileSituation, UserProfile } from './profile';
 export { Review, ReviewType } from './reviews';
+export { User } from './users';
