@@ -1,3 +1,5 @@
+import firebase from 'firebase';
+
 export interface User {
   lastSignInRequest: firebase.firestore.FieldValue;
   id: string | null;
