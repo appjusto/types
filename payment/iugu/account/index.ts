@@ -21,6 +21,11 @@ export interface IuguMarketPlaceAccountConfigure {
     installments: false;
     two_step_transaction: boolean;
   };
+  bank_slip?: {
+    active: boolean;
+    extra_due?: number;
+    reprint_extra_due?: number;
+  };
   payment_email_notification?: boolean;
   payment_email_notification_receiver?: string;
 }
