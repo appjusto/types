@@ -22,7 +22,7 @@ export interface IuguMarketPlaceAccountConfigure {
     two_step_transaction: boolean;
   };
   bank_slip?: {
-    active: boolean;
+    active: 'true' | 'false';
     extra_due?: number;
     reprint_extra_due?: number;
   };
