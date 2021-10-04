@@ -132,6 +132,7 @@ export {
   RejectOrderPayload,
   TipCourierPayload,
   UpdateOrderPayload,
+  UpdateOrderPlacePayload,
 } from './payloads/order';
 export {
   CreateBusinessProfilePayload,

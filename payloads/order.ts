@@ -1,4 +1,5 @@
 import { BasePayload } from '.';
+import { Place } from '..';
 import { Issue } from '../order/issues';
 import { OrderCancellationParams } from '../order/private/cancellation';
 import { WithId } from '../platform';
@@ -33,6 +34,11 @@ export interface PlaceOrderPayload extends OrderPayload {
 
 export interface UpdateOrderPayload extends OrderPayload {
   payment: PlaceOrderPayloadPayment;
+}
+
+export interface UpdateOrderPlacePayload extends OrderPayload {
+  destination: Place;
+  acknowledgedCosts: number;
 }
 
 export interface MatchingTaskPayload extends OrderPayload {
