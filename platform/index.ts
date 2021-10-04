@@ -5,7 +5,7 @@ export type Flavor =
   | 'backoffice'
   | 'platform';
 
-export type Environment = 'dev' | 'staging' | 'live';
+export type Environment = 'dev' | 'staging' | 'live' | 'community';
 
 export interface City {
   id: string;
