@@ -119,6 +119,8 @@ export {
   GetCancellationInfoPayload,
   GetCancellationInfoResult,
   GetOrderQuotesPayload,
+  GetPlaceChangeInfoPayload,
+  GetPlaceChangeInfoResult,
   MatchingTaskPayload,
   MatchOrderPayload,
   NextDispatchingStatePayload,

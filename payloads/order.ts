@@ -81,6 +81,11 @@ export interface GetCancellationInfoResult {
   costs: number;
 }
 
+export interface GetPlaceChangeInfoResult {
+  // which params???
+  costs: number;
+}
+
 export interface CancelOrderPayload extends OrderPayload {
   orderId: string;
   acknowledgedCosts: number;
@@ -88,6 +93,8 @@ export interface CancelOrderPayload extends OrderPayload {
   cancellation?: WithId<Issue>;
   comment?: string;
 }
+
+export interface GetPlaceChangeInfoPayload extends OrderPayload {}
 
 export interface OutsourceDeliveryPayload extends OrderPayload {
   comment?: string;
