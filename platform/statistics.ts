@@ -10,6 +10,11 @@ export interface PlatformStatistics {
   placedOrders: number;
   food: ServiceStatistics;
   p2p: ServiceStatistics;
+  couriers: {
+    totalVerified: number;
+    totalApproved: number;
+  };
+  createdOn?: firebase.firestore.FieldValue;
 }
 
 export interface CityStatistics {
