@@ -1,3 +1,5 @@
+import firebase from 'firebase';
+
 export interface ServiceStatistics {
   totalOrders: number;
   totalDeliveries: number;
