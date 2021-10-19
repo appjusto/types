@@ -11,6 +11,10 @@ export interface Fare {
 
 export interface FareDetails {
   value: number; // in cents
+  /**
+   * @deprecated
+   */
+  comission?: number; // in cents
   commission: number; // in cents
   financialFee: number; // in cents
 }
