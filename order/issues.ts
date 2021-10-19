@@ -36,7 +36,8 @@ export type IssueType =
   | 'consumer-arrived-food-order'
   | 'consumer-arrived-p2p-order'
   | 'consumer-delivered-food-order'
-  | 'consumer-delivered-p2p-order';
+  | 'consumer-delivered-p2p-order'
+  | 'consumer-profile-invalid';
 
 export interface Issue {
   id?: string;
