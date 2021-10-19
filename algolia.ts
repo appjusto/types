@@ -1,4 +1,5 @@
 import firebase from 'firebase';
+import { BusinessSchedule } from '.';
 import {
   BusinessAddress,
   BusinessStatistics,
@@ -26,6 +27,7 @@ export interface BusinessAlgolia {
   cuisine: string;
   deliveryRange: number;
   statistics: BusinessStatistics;
+  schedules: BusinessSchedule;
   createdOn: firebase.firestore.FieldValue;
 }
 
