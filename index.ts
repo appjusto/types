@@ -85,6 +85,7 @@ export {
   OrderRejectionType,
 } from './order/issues';
 export { OrderItem, OrderItemComplement } from './order/item';
+export { OrderMeta } from './order/meta';
 export { Address, Place } from './order/place';
 export {
   OrderCancellation,
