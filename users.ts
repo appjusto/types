@@ -15,4 +15,8 @@ export interface User {
     createdAt: firebase.firestore.FieldValue;
     deletedAt?: firebase.firestore.FieldValue | null;
   } | null;
+  cpf?: string;
+  phone?: string;
+  blocked?: boolean;
+  comment?: string;
 }
