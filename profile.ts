@@ -11,7 +11,7 @@ export type ProfileSituation =
   | 'deleted';
 export interface UserProfile {
   situation: ProfileSituation;
-  email?: string;
+  email: string;
   name?: string;
   surname?: string;
   cpf?: string;
