@@ -9,6 +9,7 @@ export type ProfileSituation =
   | 'rejected'
   | 'blocked'
   | 'deleted';
+
 export interface UserProfile {
   situation: ProfileSituation;
   email: string;
