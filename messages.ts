@@ -1,3 +1,4 @@
+import firebase from 'firebase';
 import { CourierOrderRequest } from './courier/requests';
 import { ExpoPushMessage } from './external/expo';
 import { ChatMessageUser } from './order/chat';
@@ -22,6 +23,12 @@ export interface PushMessage {
   // transient
   clicked?: boolean;
   read?: boolean;
+}
+
+export interface PushReceipt {
+  expoToken: string;
+  createdOn: firebase.firestore.FieldValue;
+  verified: boolean;
 }
 
 export interface OrderMatchPushMessageData

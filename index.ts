@@ -60,6 +60,7 @@ export {
   PushMessage,
   PushMessageActionType,
   PushMessageData,
+  PushReceipt,
 } from './messages';
 export {
   Order,
