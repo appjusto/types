@@ -1,5 +1,7 @@
 import firebase from 'firebase';
 
+export type UserType = 'consumer' | 'manager' | 'courier';
+
 export interface User {
   lastSignInRequest: firebase.firestore.FieldValue;
   id: string | null;
