@@ -7,4 +7,6 @@ export interface FreshworksTicket {
   subject: string;
   description: string;
   status: number;
+  custom_fields?: object;
+  tags?: string[];
 }
