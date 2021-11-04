@@ -4,13 +4,21 @@ import { ExpoPushMessage } from './external/expo';
 import { ChatMessageUser } from './order/chat';
 
 export type PushMessageActionType =
+  | 'none'
   | 'profile-update'
   | 'order-request'
   | 'order-chat'
   | 'order-update'
   | 'staff-order-update'
-  | 'navigate-business'
-  | 'none';
+  | 'navigate-business';
+
+export interface GeneralPushData {
+  action: 'none';
+}
+
+export interface ProfileUpdatePushData {
+  action: 'profile-update';
+}
 
 export interface OrderMatchPushMessageData extends CourierOrderRequest {
   action: 'order-request';
@@ -34,6 +42,8 @@ export interface NavigateBusinessPushData {
 }
 
 export type PushMessageData =
+  | GeneralPushData
+  | ProfileUpdatePushData
   | OrderMatchPushMessageData
   | OrderUpdatePushData
   | ChatPushMessageData

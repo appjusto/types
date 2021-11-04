@@ -56,8 +56,12 @@ export { Complement, ComplementGroup } from './menu/complements';
 export { Classification, Product, ProductStatistics } from './menu/product';
 export {
   ChatPushMessageData,
+  GeneralPushData,
+  NavigateBusinessPushData,
   NotificationTaskPayload,
   OrderMatchPushMessageData,
+  OrderUpdatePushData,
+  ProfileUpdatePushData,
   PushMessage,
   PushMessageActionType,
   PushMessageData,
