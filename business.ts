@@ -77,3 +77,9 @@ export interface BusinessRecommendation {
   phone: string | null;
   createdOn: firebase.firestore.FieldValue;
 }
+
+export interface BusinessChange {
+  before: Partial<Business>;
+  after: Partial<Business>;
+  timestamp: firebase.firestore.FieldValue;
+}

@@ -15,6 +15,7 @@ export {
 export {
   Business,
   BusinessAddress,
+  BusinessChange,
   BusinessRecommendation,
   BusinessSchedule,
   BusinessStatistics,

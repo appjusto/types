@@ -14,19 +14,19 @@ export interface AlgoliaConfig {
 }
 export interface BusinessAlgolia {
   objectID: string;
-  _geoloc: LatLng2;
+  _geoloc: LatLng2 | null;
   enabled: boolean;
-  name: string;
-  code: string;
-  managerEmail: string;
+  name?: string;
+  code?: string;
+  managerEmail?: string;
   situation: string;
-  onboarding: string;
-  description: string;
+  onboarding?: string;
+  description?: string;
   status: BusinessStatus;
-  businessAddress: BusinessAddress;
-  cuisine: string;
-  deliveryRange: number;
-  statistics: BusinessStatistics;
+  businessAddress?: BusinessAddress;
+  cuisine?: string;
+  deliveryRange?: number;
+  statistics?: BusinessStatistics;
   schedules: BusinessSchedule;
   createdOn: firebase.firestore.FieldValue;
 }
@@ -52,12 +52,10 @@ export interface CourierAlgolia {
 
 export interface ConsumerAlgolia {
   objectID: string;
-  name: string;
-  surname: string;
+  name?: string;
+  surname?: string;
   email: string;
-  city: string;
-  state: string;
-  code: string;
+  code?: string;
   situation: string;
   totalOrders: number;
   createdOn: firebase.firestore.FieldValue;
