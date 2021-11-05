@@ -18,6 +18,7 @@ export interface BusinessAlgolia {
   enabled: boolean;
   name?: string;
   code?: string;
+  cnpj?: string;
   managerEmail?: string;
   situation: string;
   onboarding?: string;
@@ -36,6 +37,7 @@ export interface CourierAlgolia {
   name: string;
   code: string;
   email: string;
+  cpf?: string;
   situation: string;
   status: string;
   courierAddress: {
@@ -55,6 +57,7 @@ export interface ConsumerAlgolia {
   name?: string;
   surname?: string;
   email: string;
+  cpf?: string;
   code?: string;
   situation: string;
   totalOrders: number;
