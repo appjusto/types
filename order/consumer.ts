@@ -1,3 +1,5 @@
+import { LatLng } from '..';
+
 export interface OrderConsumer {
   id: string;
   name?: string;
@@ -7,4 +9,5 @@ export interface OrderConsumer {
   notificationToken?: string | null;
   invoiceWithCPF?: boolean;
   wantToShareData?: boolean;
+  coordinates?: LatLng;
 }

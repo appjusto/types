@@ -1,5 +1,5 @@
 import { BasePayload } from '.';
-import { Place } from '..';
+import { LatLng, Place } from '..';
 import { Issue } from '../order/issues';
 import { OrderCancellationParams } from '../order/private/cancellation';
 import { WithId } from '../platform';
@@ -27,6 +27,7 @@ export type PlaceOrderPayloadPayment =
 export interface PlaceOrderPayload extends OrderPayload {
   fleetId: string;
   invoiceWithCPF: boolean;
+  coordinates?: LatLng;
   additionalInfo?: string;
   payment: PlaceOrderPayloadPayment;
   wantToShareData?: boolean;
