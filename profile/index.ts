@@ -28,6 +28,7 @@ export interface UserProfile {
   city?: string;
   isPasswordActive?: boolean;
   // metadata
+  appVersion?: string;
   createdOn: firebase.firestore.FieldValue;
   updatedOn?: firebase.firestore.FieldValue;
 }
