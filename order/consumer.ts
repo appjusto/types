@@ -9,5 +9,5 @@ export interface OrderConsumer {
   notificationToken?: string | null;
   invoiceWithCPF?: boolean;
   wantToShareData?: boolean;
-  coordinates?: LatLng;
+  coordinates?: LatLng | null;
 }
