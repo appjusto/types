@@ -34,20 +34,20 @@ export interface BusinessAlgolia {
 
 export interface CourierAlgolia {
   objectID: string;
-  name: string;
-  code: string;
+  name?: string;
+  code?: string;
   email: string;
   cpf?: string;
   situation: string;
   status: string;
   courierAddress: {
-    cep: string;
-    address: string;
-    number: string;
-    additional: string;
-    city: string;
-    state: string;
-    _geoloc: LatLng2;
+    cep?: string;
+    address?: string;
+    number?: string;
+    additional?: string;
+    city?: string;
+    state?: string;
+    _geoloc: LatLng2 | null;
   };
   createdOn: firebase.firestore.FieldValue;
 }
