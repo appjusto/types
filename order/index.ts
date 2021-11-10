@@ -70,6 +70,6 @@ export interface OrderChange {
 
 export interface OrderBusiness {
   id: string;
-  name?: string;
-  // venueId: string;
+  name: string;
+  cusine: string;
 }
