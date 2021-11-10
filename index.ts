@@ -177,7 +177,7 @@ export {
   PlatformStatistics,
   ServiceStatistics,
 } from './platform/statistics';
-export { ProfileSituation, UserProfile } from './profile';
+export { ProfileNote, ProfileSituation, UserProfile } from './profile';
 export { ProfileChange, UserProfileChange } from './profile/change';
 export { Review, ReviewType } from './reviews';
 export { User, UserType } from './users';
