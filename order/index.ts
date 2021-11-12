@@ -50,6 +50,7 @@ export interface Order {
     };
   };
   issue?: string | null;
+  flagged?: boolean;
   // metadata
   createdOn?: firebase.firestore.FieldValue;
   updatedOn?: firebase.firestore.FieldValue;
