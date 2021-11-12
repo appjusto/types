@@ -32,3 +32,12 @@ export interface UserProfile {
   createdOn: firebase.firestore.FieldValue;
   updatedOn?: firebase.firestore.FieldValue;
 }
+
+export interface ProfileNote {
+  note: string;
+  agentId: string;
+  agentEmail: string;
+  agentName?: string;
+  createdOn: firebase.firestore.FieldValue;
+  updatedOn: firebase.firestore.FieldValue;
+}
