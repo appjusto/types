@@ -31,13 +31,7 @@ export interface OrderUpdatePushData {
 }
 
 export interface ChatPushMessageData {
-  action: 'order-chat';
-  orderId: string;
-  from: ChatMessageUser;
-}
-
-export interface AfterDeliveryChatPushData {
-  action: 'after-delivery-chat';
+  action: 'order-chat' | 'after-delivery-chat';
   orderId: string;
   from: ChatMessageUser;
 }
@@ -46,15 +40,13 @@ export interface NavigateBusinessPushData {
   action: 'navigate-business';
   businessId: string;
 }
-
 export type PushMessageData =
   | GeneralPushData
   | ProfileUpdatePushData
   | OrderMatchPushMessageData
   | OrderUpdatePushData
   | ChatPushMessageData
-  | NavigateBusinessPushData
-  | AfterDeliveryChatPushData;
+  | NavigateBusinessPushData;
 
 export interface PushMessage {
   id: string;
