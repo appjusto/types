@@ -55,6 +55,7 @@ export { Category } from './menu/category';
 export { Complement, ComplementGroup } from './menu/complements';
 export { Classification, Product, ProductStatistics } from './menu/product';
 export {
+  AfterDeliveryChatPushData,
   ChatPushMessageData,
   GeneralPushData,
   NavigateBusinessPushData,

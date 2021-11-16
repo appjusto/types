@@ -36,6 +36,12 @@ export interface ChatPushMessageData {
   from: ChatMessageUser;
 }
 
+export interface AfterDeliveryChatPushData {
+  action: 'after-delivery-chat';
+  orderId: string;
+  from: ChatMessageUser;
+}
+
 export interface NavigateBusinessPushData {
   action: 'navigate-business';
   businessId: string;
@@ -47,7 +53,8 @@ export type PushMessageData =
   | OrderMatchPushMessageData
   | OrderUpdatePushData
   | ChatPushMessageData
-  | NavigateBusinessPushData;
+  | NavigateBusinessPushData
+  | AfterDeliveryChatPushData;
 
 export interface PushMessage {
   id: string;
