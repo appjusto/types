@@ -48,6 +48,7 @@ export {
   AdminRole,
   ManagerPrivatePlatform,
   ManagerProfile,
+  NewManagerData,
   Role,
 } from './managers';
 export { Ordering } from './menu';
@@ -145,7 +146,7 @@ export {
 } from './payloads/order';
 export {
   CreateBusinessProfilePayload,
-  CreateManagerPayload,
+  CreateManagersPayload,
   DeleteAccountPayload,
   GetBusinessManagersPayload,
   UpdateBusinessSlugPayload,
