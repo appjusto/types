@@ -1,5 +1,5 @@
 import { BasePayload } from '.';
-import { AdminRole, Role } from '../managers';
+import { NewManagerData } from '..';
 
 export interface DeleteAccountPayload extends BasePayload {
   accountId?: string;
@@ -25,10 +25,9 @@ export interface UpdateBusinessSlugPayload extends BasePayload {
   slug: string;
 }
 
-export interface CreateManagerPayload extends BasePayload {
-  email: string;
+export interface CreateManagersPayload extends BasePayload {
   key: string;
-  role: AdminRole | Role;
+  managers: NewManagerData[];
 }
 
 export interface VerifyBusinessProfilePayload extends BasePayload {
