@@ -83,6 +83,7 @@ export {
   OrderLocationEntry,
 } from './order/dispatching';
 export { Fare, FareDetails } from './order/fare';
+export { OrderFraudPreventionFlags } from './order/fraud';
 export {
   Issue,
   IssueType,
@@ -171,7 +172,7 @@ export {
 } from './payment/tasks';
 export { City, Environment, Flavor, LatLng, LatLng2, WithId } from './platform';
 export { PlatformFees, ServiceFee } from './platform/fees';
-export { FraudPreventionParams } from './platform/fraud';
+export { FlaggedLocation, FraudPreventionParams } from './platform/fraud';
 export { InterferenceLog, LoginLog } from './platform/logs';
 export { PlatformManagement, PlatformParams } from './platform/params';
 export {

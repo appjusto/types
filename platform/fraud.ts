@@ -1,3 +1,6 @@
+import firebase from 'firebase';
+import { Address } from '..';
+
 export interface FraudPreventionParams {
   delayBeforeConfirm: number; // in seconds
   flaggedLocations: {
@@ -7,4 +10,9 @@ export interface FraudPreventionParams {
   ticketPrice: {
     highThreshold: number;
   };
+}
+
+export interface FlaggedLocation {
+  coordinates: firebase.firestore.GeoPoint;
+  address: Address;
 }
