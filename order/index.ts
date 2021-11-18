@@ -54,6 +54,7 @@ export interface Order {
   // metadata
   createdOn?: firebase.firestore.FieldValue;
   updatedOn?: firebase.firestore.FieldValue;
+  chargedOn?: firebase.firestore.FieldValue;
   confirmedOn?: firebase.firestore.FieldValue;
   declinedOn?: firebase.firestore.FieldValue;
   dispatchingDeclinedOn?: firebase.firestore.FieldValue;
