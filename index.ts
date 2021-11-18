@@ -3,7 +3,6 @@ export {
   BusinessAlgolia,
   ConsumerAlgolia,
   CourierAlgolia,
-  OrderAlgolia,
   ProductAlgolia,
 } from './algolia';
 export {
@@ -48,6 +47,7 @@ export {
   AdminRole,
   ManagerPrivatePlatform,
   ManagerProfile,
+  NewManagerData,
   Role,
 } from './managers';
 export { Ordering } from './menu';
@@ -83,6 +83,7 @@ export {
   OrderLocationEntry,
 } from './order/dispatching';
 export { Fare, FareDetails } from './order/fare';
+export { OrderFraudPreventionFlags } from './order/fraud';
 export {
   Issue,
   IssueType,
@@ -142,10 +143,11 @@ export {
   TipCourierPayload,
   UpdateOrderPayload,
   UpdateOrderPlacePayload,
+  UpdateOrderStatusPayload,
 } from './payloads/order';
 export {
   CreateBusinessProfilePayload,
-  CreateManagerPayload,
+  CreateManagersPayload,
   DeleteAccountPayload,
   GetBusinessManagersPayload,
   UpdateBusinessSlugPayload,
@@ -170,6 +172,7 @@ export {
 } from './payment/tasks';
 export { City, Environment, Flavor, LatLng, LatLng2, WithId } from './platform';
 export { PlatformFees, ServiceFee } from './platform/fees';
+export { FlaggedLocation, FraudPreventionParams } from './platform/fraud';
 export { InterferenceLog, LoginLog } from './platform/logs';
 export { PlatformManagement, PlatformParams } from './platform/params';
 export {
