@@ -1,4 +1,5 @@
 import firebase from 'firebase';
+import { OrderStatus } from '.';
 import { CourierOrderRequest } from './courier/requests';
 import { ExpoPushMessage } from './external/expo';
 import { ChatMessageUser } from './order/chat';
@@ -33,6 +34,7 @@ export interface OrderUpdatePushData {
 export interface ChatPushMessageData {
   action: 'order-chat' | 'after-delivery-chat';
   orderId: string;
+  orderStatus: OrderStatus;
   from: ChatMessageUser;
 }
 
