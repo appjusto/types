@@ -16,6 +16,7 @@ export {
   Business,
   BusinessAddress,
   BusinessChange,
+  BusinessMenuMessage,
   BusinessRecommendation,
   BusinessSchedule,
   BusinessStatistics,

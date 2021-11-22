@@ -83,3 +83,8 @@ export interface BusinessChange {
   after: Partial<Business>;
   timestamp: firebase.firestore.FieldValue;
 }
+
+export interface BusinessMenuMessage {
+  title: string;
+  description: string;
+}
