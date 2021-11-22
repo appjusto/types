@@ -3,6 +3,7 @@ export {
   BusinessAlgolia,
   ConsumerAlgolia,
   CourierAlgolia,
+  FlaggedLocationsAlgolia,
   ProductAlgolia,
 } from './algolia';
 export {

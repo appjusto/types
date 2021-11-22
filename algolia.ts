@@ -80,3 +80,9 @@ export interface ProductAlgolia {
     enabled: boolean;
   };
 }
+
+export interface FlaggedLocationsAlgolia {
+  objectID: string;
+  description: string;
+  date_timestamp: number;
+}
