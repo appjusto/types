@@ -1,9 +1,11 @@
 import firebase from 'firebase';
+import { Flavor } from '..';
 
 export type UserType = 'consumer' | 'manager' | 'courier';
 
 export interface User {
   lastSignInRequest: firebase.firestore.FieldValue;
+  lastSignInFlavor?: Flavor;
   id: string | null;
   consumer?: {
     createdAt: firebase.firestore.FieldValue;
