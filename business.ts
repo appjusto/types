@@ -75,6 +75,7 @@ export interface BusinessRecommendation {
   consumerId: string | null;
   instagram: string | null;
   phone: string | null;
+  owner: string | null;
   createdOn: firebase.firestore.FieldValue;
 }
 
