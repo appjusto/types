@@ -52,6 +52,7 @@ export interface Order {
   issue?: string | null;
   flagged?: boolean;
   // metadata
+  timestamps?: { [K in OrderStatus]?: firebase.firestore.FieldValue };
   createdOn?: firebase.firestore.FieldValue;
   updatedOn?: firebase.firestore.FieldValue;
   chargedOn?: firebase.firestore.FieldValue;
