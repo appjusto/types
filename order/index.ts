@@ -52,15 +52,45 @@ export interface Order {
   issue?: string | null;
   flagged?: boolean;
   // metadata
+  timestamps: {
+    [K in
+      | OrderStatus
+      | 'dispatchingDeclined'
+      | 'matchingEnded']?: firebase.firestore.FieldValue;
+  };
   createdOn?: firebase.firestore.FieldValue;
   updatedOn?: firebase.firestore.FieldValue;
+  /**
+   * @deprecated
+   */
   chargedOn?: firebase.firestore.FieldValue;
+  /**
+   * @deprecated
+   */
   confirmedOn?: firebase.firestore.FieldValue;
+  /**
+   * @deprecated
+   */
   declinedOn?: firebase.firestore.FieldValue;
+  /**
+   * @deprecated
+   */
   dispatchingDeclinedOn?: firebase.firestore.FieldValue;
+  /**
+   * @deprecated
+   */
   dispatchingStartedOn?: firebase.firestore.FieldValue;
+  /**
+   * @deprecated
+   */
   matchingEndedOn?: firebase.firestore.FieldValue;
+  /**
+   * @deprecated
+   */
   deliveredOn?: firebase.firestore.FieldValue;
+  /**
+   * @deprecated
+   */
   canceledOn?: firebase.firestore.FieldValue;
 }
 
