@@ -7,6 +7,7 @@ export interface PlatformParams {
     maxTimeOfArrivalFactor: number; // multiplier used to calculate maxTimeOfArrival
     bicyclingDurationFactor: number; // multipler used to calculate duration for byciling
     averageWaitingTime: number; // in seconds
+    minActiveCouriersInFleet: number; // minimum number of couriers that a fleet needs in order to receive an OrderRequest
   };
   orders: {
     limits: {

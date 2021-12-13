@@ -3,6 +3,7 @@ export {
   BusinessAlgolia,
   ConsumerAlgolia,
   CourierAlgolia,
+  FlaggedLocationsAlgolia,
   ProductAlgolia,
 } from './algolia';
 export {
@@ -15,6 +16,7 @@ export {
   Business,
   BusinessAddress,
   BusinessChange,
+  BusinessMenuMessage,
   BusinessRecommendation,
   BusinessSchedule,
   BusinessStatistics,

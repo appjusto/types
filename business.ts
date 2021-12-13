@@ -75,6 +75,7 @@ export interface BusinessRecommendation {
   consumerId: string | null;
   instagram: string | null;
   phone: string | null;
+  owner: string | null;
   createdOn: firebase.firestore.FieldValue;
 }
 
@@ -82,4 +83,9 @@ export interface BusinessChange {
   before: Partial<Business>;
   after: Partial<Business>;
   timestamp: firebase.firestore.FieldValue;
+}
+
+export interface BusinessMenuMessage {
+  title: string;
+  description: string;
 }

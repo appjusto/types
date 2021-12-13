@@ -15,4 +15,5 @@ export interface FraudPreventionParams {
 export interface FlaggedLocation {
   coordinates: firebase.firestore.GeoPoint;
   address: Address;
+  createdOn: firebase.firestore.FieldValue;
 }

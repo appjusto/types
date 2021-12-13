@@ -1,5 +1,6 @@
 export interface OrderFraudPreventionFlags {
-  newUser: boolean;
-  highTicketPrice: boolean;
-  flaggedLocationsNearby: boolean;
+  consumerHasConfirmedPhoneNumber?: boolean;
+  newUser?: boolean;
+  highTicketPrice?: boolean;
+  flaggedLocationsNearby?: boolean;
 }
