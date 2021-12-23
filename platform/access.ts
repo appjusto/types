@@ -1,6 +1,7 @@
 export interface PlatformAccess {
   maintenance: {
     active: boolean;
+    icon?: string | null;
     header?: string | null;
     body?: string[] | null;
   };
