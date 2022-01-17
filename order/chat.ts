@@ -5,6 +5,7 @@ import { Flavor } from '../platform';
 export interface ChatMessageUser {
   agent: Flavor;
   id: string;
+  name?: string;
 }
 
 export interface ChatMessage {
