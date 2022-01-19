@@ -2,7 +2,7 @@ import { BasePayload } from '.';
 import { LatLng, OrderStatus, Place } from '..';
 import { Issue } from '../order/issues';
 import { OrderCancellationParams } from '../order/private/cancellation';
-import { WithId } from '../platform';
+import { OutsourceAccountType, WithId } from '../platform';
 
 export interface OrderPayload extends BasePayload {
   orderId: string;
@@ -98,6 +98,7 @@ export interface CancelOrderPayload extends OrderPayload {
 export interface GetPlaceChangeInfoPayload extends OrderPayload {}
 
 export interface OutsourceDeliveryPayload extends OrderPayload {
+  accountType: OutsourceAccountType;
   comment?: string;
 }
 

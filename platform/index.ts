@@ -5,6 +5,8 @@ export type Flavor =
   | 'backoffice'
   | 'platform';
 
+export type OutsourceAccountType = 'business' | 'platform';
+
 export type Environment = 'dev' | 'staging' | 'live' | 'community';
 
 export interface City {
