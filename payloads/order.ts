@@ -98,7 +98,7 @@ export interface CancelOrderPayload extends OrderPayload {
 export interface GetPlaceChangeInfoPayload extends OrderPayload {}
 
 export interface OutsourceDeliveryPayload extends OrderPayload {
-  accountType: OutsourceAccountType;
+  accountType?: OutsourceAccountType;
   comment?: string;
 }
 
