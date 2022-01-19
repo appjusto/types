@@ -1,4 +1,5 @@
 import firebase from 'firebase';
+import { OutsourceAccountType } from '..';
 import { OrderConsumer } from './consumer';
 import { OrderCourier } from './courier';
 import { DispatchingState, DispatchingStatus } from './dispatching';
@@ -33,6 +34,7 @@ export interface Order {
   route?: OrderRoute | null;
   dispatchingStatus?: DispatchingStatus;
   dispatchingState?: DispatchingState;
+  outsourcedBy?: OutsourceAccountType;
   // fare, tip & payment
   fare?: Fare;
   tip?: {
