@@ -10,6 +10,9 @@ export interface FraudPreventionParams {
   ticketPrice: {
     highThreshold: number;
   };
+  newUser: {
+    hoursAfterDelivery: number;
+  };
 }
 
 export interface FlaggedLocation {
