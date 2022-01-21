@@ -2,6 +2,7 @@ import firebase from 'firebase';
 
 export type DispatchingStatus =
   | 'idle'
+  | 'scheduled'
   | 'matching'
   | 'no-match'
   | 'matched'
