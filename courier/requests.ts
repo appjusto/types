@@ -15,5 +15,4 @@ export interface CourierOrderRequest {
   readyAt: Date | null;
   createdOn: firebase.firestore.FieldValue;
   updatedOn?: firebase.firestore.FieldValue;
-  destination?: LatLng;
 }
