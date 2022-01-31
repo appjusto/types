@@ -14,8 +14,16 @@ export interface OrderMatching {
   attempt: number;
   trials: number;
   startAt: firebase.firestore.FieldValue;
+  /**
+   * @deprecated
+   */
   couriersNotified: string[];
+  /**
+   * @deprecated
+   */
   couriersPreviouslyNotified?: string[];
+  notifiedCouriers: { id: string; name: string }[];
+  previouslyNotifiedCouriers: { id: string; name: string }[];
   rejections: OrderMatchingRejection[];
   logs: string[];
 }
