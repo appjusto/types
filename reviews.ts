@@ -5,12 +5,12 @@ export type ReviewType = 'positive' | 'negative';
 export interface OrderConsumerReview {
   orderId: string;
   courier?: {
-    courierId: string;
+    courierId: string | null;
     rating: ReviewType;
     tags?: string[];
   };
   business?: {
-    businessId: string;
+    businessId: string | null;
     rating: ReviewType;
     tags?: string[];
   };
@@ -18,7 +18,7 @@ export interface OrderConsumerReview {
     rating: ReviewType;
     tags?: string[];
   };
-  nps?: 1 | 2 | 3 | 4 | 5;
+  nps?: number;
   comment?: string;
   createdOn?: firebase.firestore.FieldValue;
 }
