@@ -15,6 +15,7 @@ export type FoodOrderStatus =
   | 'charged'
   | 'confirmed'
   | 'declined'
+  | 'rejected'
   | 'preparing'
   | 'ready'
   | 'dispatching'
