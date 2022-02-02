@@ -26,6 +26,8 @@ export interface BusinessStatistics {
   averagePreparationTime: number; // in seconds
   averageTicketPrice: number;
   averageWaitingTime: number;
+  positiveReviews: number;
+  negativeReviews: number;
 }
 
 export type BusinessType = 'restaurant';
