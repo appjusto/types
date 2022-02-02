@@ -193,5 +193,11 @@ export {
 } from './platform/statistics';
 export { ProfileNote, ProfileSituation, UserProfile } from './profile';
 export { ProfileChange, UserProfileChange } from './profile/change';
-export { OrderConsumerReview, Review, ReviewType } from './reviews';
+export {
+  OrderConsumerReview,
+  Review,
+  ReviewTag,
+  ReviewTagType,
+  ReviewType,
+} from './reviews';
 export { User, UserType } from './users';
