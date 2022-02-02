@@ -29,3 +29,9 @@ export interface OrderConsumerReview {
   comment?: string;
   createdOn?: firebase.firestore.FieldValue;
 }
+
+export interface ReviewTag {
+  type: string;
+  id: string;
+  title: string;
+}
