@@ -30,8 +30,16 @@ export interface OrderConsumerReview {
   createdOn?: firebase.firestore.FieldValue;
 }
 
+export type ReviewTagType =
+  | 'courier-negative'
+  | 'courier-positive'
+  | 'business-negative'
+  | 'business-positive'
+  | 'platform-negative'
+  | 'platform-positive';
+
 export interface ReviewTag {
-  type: string;
+  type: ReviewTagType;
   id: string;
   title: string;
 }
