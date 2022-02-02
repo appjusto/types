@@ -17,6 +17,7 @@ export interface BusinessAddress {
   additional?: string;
   city: string;
   state: string;
+  neighborhood?: string;
   latlng?: LatLng;
 }
 
