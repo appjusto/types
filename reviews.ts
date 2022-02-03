@@ -15,16 +15,16 @@ export interface OrderConsumerReview {
   courier?: {
     id: string | null;
     rating: ReviewType;
-    tags?: string[];
+    tags?: ReviewTag[];
   };
   business?: {
     id: string | null;
     rating: ReviewType;
-    tags?: string[];
+    tags?: ReviewTag[];
   };
   platform?: {
     rating: ReviewType;
-    tags?: string[];
+    tags?: ReviewTag[];
   };
   nps?: number;
   comment?: string;
