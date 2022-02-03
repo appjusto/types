@@ -33,7 +33,7 @@ export interface OrderConsumerReview {
 
 export interface ReviewTag {
   agent: Flavor;
-  type: 'positive' | 'negative';
+  type: ReviewType;
   id: string;
   title: string;
 }
