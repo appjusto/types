@@ -21,7 +21,7 @@ export interface OrderConsumerReview {
     id: string | null;
     rating: ReviewType;
     tags?: ReviewTag[];
-  };
+  } | null;
   platform?: {
     rating: ReviewType;
     tags?: ReviewTag[];
