@@ -28,7 +28,7 @@ export interface OrderConsumerReview {
   };
   nps?: number;
   comment?: string;
-  createdOn?: firebase.firestore.FieldValue;
+  reviewedOn?: firebase.firestore.FieldValue;
 }
 
 export interface ReviewTag {
