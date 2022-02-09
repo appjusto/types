@@ -6,6 +6,7 @@ export interface OrderCourier {
   name: string;
   notificationToken?: string | null;
   location: LatLng;
+  distanceToOrigin: number;
   joined: firebase.firestore.FieldValue;
   mode: CourierMode;
   statistics?: CourierStatistics;
