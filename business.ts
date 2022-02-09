@@ -38,8 +38,8 @@ export type ScheduleObject = {
 export type BusinessSchedule = ScheduleObject[];
 
 export interface Business {
+  code: string;
   type: BusinessType;
-  code?: string;
   name?: string;
   companyName?: string;
   cnpj?: string;
@@ -65,6 +65,9 @@ export interface Business {
   orderPrinting?: boolean;
   slug?: string;
   // metadata
+  timestamps: {
+    [K in ProfileSituation]?: firebase.firestore.FieldValue;
+  };
   keepAlive?: firebase.firestore.FieldValue;
   createdOn: firebase.firestore.FieldValue;
   updatedOn?: firebase.firestore.FieldValue;
