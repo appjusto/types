@@ -2,6 +2,11 @@ import firebase from 'firebase';
 import { OrderStatus } from '..';
 import { Flavor } from '../platform';
 
+export type ChatMessageType =
+  | 'business-consumer'
+  | 'business-courier'
+  | 'consumer-courier';
+
 export interface ChatMessageUser {
   agent: Flavor;
   id: string;
@@ -9,6 +14,9 @@ export interface ChatMessageUser {
 }
 
 export interface ChatMessage {
+  orderId?: string;
+  participantsIds?: string[];
+  type?: ChatMessageType;
   from: ChatMessageUser;
   to: ChatMessageUser;
   message: string;
