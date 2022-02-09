@@ -17,6 +17,7 @@ export interface BusinessAddress {
   additional?: string;
   city: string;
   state: string;
+  neighborhood?: string;
   latlng?: LatLng;
 }
 
@@ -25,6 +26,8 @@ export interface BusinessStatistics {
   averagePreparationTime: number; // in seconds
   averageTicketPrice: number;
   averageWaitingTime: number;
+  positiveReviews: number;
+  negativeReviews: number;
 }
 
 export type BusinessType = 'restaurant';
