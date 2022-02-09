@@ -28,6 +28,7 @@ export interface BusinessAlgolia {
   cuisine?: string;
   deliveryRange?: number;
   statistics?: BusinessStatistics;
+  averageDiscount?: number;
   schedules: BusinessSchedule;
   createdOn: firebase.firestore.FieldValue;
 }
