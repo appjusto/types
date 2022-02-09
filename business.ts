@@ -64,6 +64,7 @@ export interface Business {
   schedules: BusinessSchedule;
   orderPrinting?: boolean;
   slug?: string;
+  averageDiscount?: number;
   // metadata
   timestamps: {
     [K in ProfileSituation]?: firebase.firestore.FieldValue;
