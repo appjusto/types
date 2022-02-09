@@ -24,7 +24,7 @@ export interface ConsumerStatistics {
 }
 
 export interface ConsumerProfile extends UserProfile {
+  statistics: ConsumerStatistics;
+  favoritePlaces: Place[];
   paymentChannel?: PaymentChannel;
-  statistics?: ConsumerStatistics;
-  favoritePlaces?: Place[];
 }

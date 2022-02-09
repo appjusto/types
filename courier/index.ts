@@ -39,14 +39,14 @@ export interface CourierFleet extends WithId<FleetDetails> {
 
 export interface CourierProfile extends UserProfile {
   status: CourierStatus;
+  fleet: CourierFleet;
+  mode: CourierMode;
+  statistics: CourierStatistics; // readonly
   documentType?: string;
   documentNumber?: string;
   documentValidity?: string;
-  mode?: CourierMode;
-  fleet?: CourierFleet;
   bankAccount?: BankAccount;
   company?: CourierCompany;
-  statistics?: CourierStatistics; // readonly
   ongoingOrderId?: string | null; // readonly
 }
 

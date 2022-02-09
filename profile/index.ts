@@ -11,13 +11,13 @@ export type ProfileSituation =
   | 'deleted';
 
 export interface UserProfile {
-  situation: ProfileSituation;
+  code: string;
   email: string;
+  situation: ProfileSituation;
   name?: string;
   surname?: string;
   cpf?: string;
   phone?: string;
-  code?: string;
   profileIssues?: string[];
   profileIssuesMessage?: string;
   notificationToken?: string | null;
@@ -30,6 +30,9 @@ export interface UserProfile {
   tags?: string[];
   // metadata
   appVersion?: string;
+  timestamps: {
+    [K in ProfileSituation]?: firebase.firestore.FieldValue;
+  };
   createdOn: firebase.firestore.FieldValue;
   updatedOn?: firebase.firestore.FieldValue;
 }
