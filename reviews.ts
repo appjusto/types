@@ -1,4 +1,5 @@
 import firebase from 'firebase';
+import { Flavor } from '.';
 
 export type ReviewType = 'positive' | 'negative';
 
@@ -14,32 +15,25 @@ export interface OrderConsumerReview {
   courier?: {
     id: string | null;
     rating: ReviewType;
-    tags?: string[];
+    tags?: ReviewTag[];
   };
   business?: {
     id: string | null;
     rating: ReviewType;
-    tags?: string[];
-  };
+    tags?: ReviewTag[];
+  } | null;
   platform?: {
     rating: ReviewType;
-    tags?: string[];
+    tags?: ReviewTag[];
   };
   nps?: number;
   comment?: string;
-  createdOn?: firebase.firestore.FieldValue;
+  reviewedOn?: firebase.firestore.FieldValue;
 }
 
-export type ReviewTagType =
-  | 'courier-negative'
-  | 'courier-positive'
-  | 'business-negative'
-  | 'business-positive'
-  | 'platform-negative'
-  | 'platform-positive';
-
 export interface ReviewTag {
-  type: ReviewTagType;
+  agent: Flavor;
+  type: ReviewType;
   id: string;
   title: string;
 }
