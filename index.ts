@@ -73,7 +73,10 @@ export {
   Order,
   OrderBusiness,
   OrderChange,
+  OrderDispatchingStateTimestamps,
+  OrderDispatchingTimestamps,
   OrderRoute,
+  OrderStatusTimestamps,
   OrderType,
 } from './order';
 export { ChatMessage, ChatMessageUser } from './order/chat';
@@ -107,6 +110,7 @@ export {
 } from './order/private/matching';
 export { OrderPayments } from './order/private/payment';
 export { FoodOrderStatus, OrderStatus, P2POrderStatus } from './order/status';
+export { OrderWarehouse } from './order/warehouse';
 export { BasePayload, FetchTotalCouriersNearbyPayload } from './payloads';
 export {
   AdvanceReceivablesPayload,
@@ -186,11 +190,7 @@ export { PlatformFees, ServiceFee } from './platform/fees';
 export { FlaggedLocation, FraudPreventionParams } from './platform/fraud';
 export { InterferenceLog, LoginLog } from './platform/logs';
 export { PlatformManagement, PlatformParams } from './platform/params';
-export {
-  CityStatistics,
-  PlatformStatistics,
-  ServiceStatistics,
-} from './platform/statistics';
+export { PlatformStatistics, ServiceStatistics } from './platform/statistics';
 export { ProfileNote, ProfileSituation, UserProfile } from './profile';
 export { ProfileChange, UserProfileChange } from './profile/change';
 export { OrderConsumerReview, Review, ReviewTag, ReviewType } from './reviews';

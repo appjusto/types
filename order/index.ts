@@ -17,9 +17,35 @@ export interface OrderRoute {
   issue: string | null;
 }
 
+export type OrderStatusTimestamps = {
+  [K in OrderStatus]?: firebase.firestore.FieldValue;
+} & {
+  /** @deprecated */
+  dispatchingDeclined?: firebase.firestore.FieldValue;
+  /** @deprecated */
+  matchingEnded?: firebase.firestore.FieldValue;
+};
+
+export type OrderDispatchingStateTimestamps = {
+  goingPickup?: firebase.firestore.FieldValue;
+  arrivedPickup?: firebase.firestore.FieldValue;
+  goingDestination?: firebase.firestore.FieldValue;
+  arrivedDestination?: firebase.firestore.FieldValue;
+};
+
+export type OrderDispatchingTimestamps = Omit<
+  {
+    [K in DispatchingStatus]?: firebase.firestore.FieldValue;
+  },
+  'no-match'
+> & {
+  matchingEnded?: firebase.firestore.FieldValue;
+} & OrderDispatchingStateTimestamps;
+
 export interface Order {
   type: OrderType;
   status: OrderStatus;
+  dispatchingStatus: DispatchingStatus;
   consumer: OrderConsumer;
   courier?: OrderCourier | null;
   business?: OrderBusiness | null;
@@ -32,7 +58,6 @@ export interface Order {
   origin?: Place;
   destination?: Place | null;
   route?: OrderRoute | null;
-  dispatchingStatus?: DispatchingStatus;
   dispatchingState?: DispatchingState;
   outsourcedBy?: OutsourceAccountType;
   // fare, tip & payment
@@ -54,13 +79,9 @@ export interface Order {
   issue?: string | null;
   flagged?: boolean;
   // metadata
-  timestamps: {
-    [K in
-      | OrderStatus
-      | 'dispatchingDeclined'
-      | 'matchingEnded']?: firebase.firestore.FieldValue;
-  };
-  createdOn?: firebase.firestore.FieldValue;
+  timestamps: OrderStatusTimestamps;
+  dispatchingTimestamps: OrderDispatchingTimestamps;
+  createdOn: firebase.firestore.FieldValue;
   updatedOn?: firebase.firestore.FieldValue;
   /**
    * @deprecated
