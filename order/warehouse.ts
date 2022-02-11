@@ -3,7 +3,7 @@ import {
   OrderStatusTimestamps,
   OrderType,
 } from '.';
-import { OrderStatus } from '..';
+import { FareDetails, OrderStatus } from '..';
 
 export interface OrderWarehouse {
   type: OrderType;
@@ -17,6 +17,14 @@ export interface OrderWarehouse {
   business: {
     id: string;
   } | null;
+  fleet: {
+    id: string;
+  };
+  fare: {
+    business: FareDetails | null;
+    courier: FareDetails | null;
+    platform: FareDetails | null;
+  };
   timestamps: OrderStatusTimestamps;
   dispatchingTimestamps: OrderDispatchingTimestamps;
 }
