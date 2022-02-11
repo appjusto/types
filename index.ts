@@ -79,7 +79,7 @@ export {
   OrderStatusTimestamps,
   OrderType,
 } from './order';
-export { ChatMessage, ChatMessageUser } from './order/chat';
+export { ChatMessage, ChatMessageType, ChatMessageUser } from './order/chat';
 export { OrderConsumer } from './order/consumer';
 export { OrderCourier } from './order/courier';
 export {
