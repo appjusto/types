@@ -13,6 +13,7 @@ export interface OrderWarehouse {
   };
   courier: {
     id: string;
+    distanceToOrigin: number;
   } | null;
   business: {
     id: string;
@@ -24,6 +25,10 @@ export interface OrderWarehouse {
     business: FareDetails | null;
     courier: FareDetails | null;
     platform: FareDetails | null;
+    total: number;
+  };
+  route: {
+    distance: number;
   };
   timestamps: OrderStatusTimestamps;
   dispatchingTimestamps: OrderDispatchingTimestamps;
