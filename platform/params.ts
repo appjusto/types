@@ -42,4 +42,7 @@ export interface PlatformParams {
 export interface PlatformManagement {
   backupsEnabled: boolean;
   staffTokens: string[];
+  marketplace: {
+    chargeDelay: number;
+  };
 }
