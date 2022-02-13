@@ -36,6 +36,10 @@ export interface PlatformParams {
   };
   consumer: {
     approveAfterSubmitted: boolean;
+    support: {
+      starts: string;
+      ends: string;
+    };
   };
 }
 

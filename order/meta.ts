@@ -1,8 +1,11 @@
 import { IncomingHttpHeaders } from 'http';
+import { LatLng } from '..';
 
 export interface OrderMeta {
   headers: IncomingHttpHeaders;
-  ip: string;
+  rawRequestIP: string;
+  publicIP?: string;
+  location: LatLng | null;
   app: {
     version: string;
   };

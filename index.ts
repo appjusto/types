@@ -173,6 +173,7 @@ export {
   InvoiceTaskHandlerTipExtra,
 } from './payment/tasks';
 export { City, Environment, Flavor, LatLng, LatLng2, WithId } from './platform';
+export { PlatformAccess } from './platform/access';
 export { PlatformFees, ServiceFee } from './platform/fees';
 export { FlaggedLocation, FraudPreventionParams } from './platform/fraud';
 export { InterferenceLog, LoginLog } from './platform/logs';
