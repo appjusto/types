@@ -23,7 +23,7 @@ export interface Invoice {
   accountType: AccountType;
   fingerprint: InvoiceFingerprint;
   externalId?: string;
-  status?: IuguInvoiceStatus;
+  status?: 'created' | IuguInvoiceStatus;
   createdOn: firebase.firestore.FieldValue;
   updatedOn?: firebase.firestore.FieldValue;
 }
