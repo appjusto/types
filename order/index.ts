@@ -64,6 +64,7 @@ export interface Order {
   fare?: Fare;
   tip?: {
     value: number; // in cents;
+    financialFee: number;
   };
   arrivals?: {
     origin?: {
