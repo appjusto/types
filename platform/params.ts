@@ -49,4 +49,7 @@ export interface PlatformManagement {
   marketplace: {
     chargeDelay: number;
   };
+  location: {
+    useCacheFromDatabase: boolean;
+  };
 }
