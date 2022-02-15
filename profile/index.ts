@@ -10,6 +10,10 @@ export type ProfileSituation =
   | 'blocked'
   | 'deleted';
 
+export type ProfileTimestamps = {
+  [K in ProfileSituation]?: firebase.firestore.FieldValue;
+};
+
 export interface UserProfile {
   code: string;
   email: string;
@@ -30,9 +34,7 @@ export interface UserProfile {
   tags?: string[];
   // metadata
   appVersion?: string;
-  timestamps: {
-    [K in ProfileSituation]?: firebase.firestore.FieldValue;
-  };
+  timestamps: ProfileTimestamps;
   createdOn: firebase.firestore.FieldValue;
   updatedOn?: firebase.firestore.FieldValue;
 }
