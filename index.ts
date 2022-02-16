@@ -48,6 +48,7 @@ export { CourierWarehouse } from './courier/warehouse';
 export { EmailTaskPayload, EmailTaskPayloadFrom } from './emails';
 export { Fleet, FleetDetails, FleetFareParams, FleetSituation } from './fleet';
 export { Invoice, InvoiceFingerprint, InvoiceType } from './invoice';
+export { InvoiceWarehouse } from './invoice/warehouse';
 export {
   AdminRole,
   ManagerPrivatePlatform,
