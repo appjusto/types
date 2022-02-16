@@ -202,5 +202,6 @@ export {
   UserProfile,
 } from './profile';
 export { ProfileChange, UserProfileChange } from './profile/change';
-export { OrderConsumerReview, Review, ReviewTag, ReviewType } from './reviews';
+export { OrderConsumerReview, Review, ReviewTag, ReviewType } from './review';
+export { NPS } from './review/nps';
 export { User, UserType } from './users';

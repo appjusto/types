@@ -1,4 +1,5 @@
 import firebase from 'firebase';
+import { NPS } from '..';
 
 export type ProfileSituation =
   | 'pending'
@@ -32,6 +33,7 @@ export interface UserProfile {
   city?: string;
   isPasswordActive?: boolean;
   tags?: string[];
+  nps: NPS;
   // metadata
   appVersion?: string;
   timestamps: ProfileTimestamps;

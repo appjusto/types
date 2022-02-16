@@ -1,4 +1,5 @@
 import firebase from 'firebase';
+import { NPS } from '..';
 
 export interface ServiceStatistics {
   totalOrders: number;
@@ -16,17 +17,8 @@ export interface PlatformStatistics {
     totalVerified: number;
     totalApproved: number;
   };
+  positiveReviews: number;
+  negativeReviews: number;
+  nps: NPS;
   createdOn?: firebase.firestore.FieldValue;
-}
-
-export interface CityStatistics {
-  consumers: number;
-  couriers: number;
-  businesses: number;
-  placedOrders: number;
-  totalFoodOrders: number;
-  totalP2POrders: number;
-  totalDeliveries: number;
-  averageFoodTicketPrice: number;
-  averageCourierFare: number;
 }

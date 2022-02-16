@@ -1,5 +1,5 @@
 import firebase from 'firebase';
-import { Flavor } from '.';
+import { Flavor } from '..';
 
 export type ReviewType = 'positive' | 'negative';
 
@@ -12,6 +12,9 @@ export interface Review {
 
 export interface OrderConsumerReview {
   orderId: string;
+  consumer: {
+    id: string;
+  };
   courier?: {
     id: string | null;
     rating: ReviewType;
