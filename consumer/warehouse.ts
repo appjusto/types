@@ -1,11 +1,10 @@
 import firebase from 'firebase';
-import { ProfileSituation, ProfileTimestamps } from '..';
+import { ProfileSituation } from '..';
 
-export interface ConsumerWarehouse {
+export type ConsumerWarehouse = {
   situation: ProfileSituation;
-  timestamps: ProfileTimestamps;
   notificationToken: string | null;
   coordinates: firebase.firestore.GeoPoint | null;
   createdOn: firebase.firestore.FieldValue;
   updatedOn?: firebase.firestore.FieldValue;
-}
+} & { [K in ProfileSituation]: string };

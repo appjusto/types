@@ -77,10 +77,7 @@ export {
   Order,
   OrderBusiness,
   OrderChange,
-  OrderDispatchingStateTimestamps,
-  OrderDispatchingTimestamps,
   OrderRoute,
-  OrderStatusTimestamps,
   OrderType,
 } from './order';
 export { ChatMessage, ChatMessageType, ChatMessageUser } from './order/chat';
@@ -114,6 +111,10 @@ export {
 } from './order/private/matching';
 export { OrderPayments } from './order/private/payment';
 export { FoodOrderStatus, OrderStatus, P2POrderStatus } from './order/status';
+export {
+  OrderDispatchingTimestamps,
+  OrderStatusTimestamps,
+} from './order/timestamps';
 export { OrderWarehouse } from './order/warehouse';
 export { BasePayload, FetchTotalCouriersNearbyPayload } from './payloads';
 export {

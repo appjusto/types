@@ -1,8 +1,8 @@
 import firebase from 'firebase';
 import { BusinessSchedule, BusinessStatus } from '.';
-import { ProfileSituation, ProfileTimestamps } from '..';
+import { ProfileSituation } from '..';
 
-export interface BusinessWarehouse {
+export type BusinessWarehouse = {
   situation: ProfileSituation;
   status: BusinessStatus;
   enabled: boolean;
@@ -10,10 +10,9 @@ export interface BusinessWarehouse {
   averageCookingTime: number | null;
   schedules: BusinessSchedule | null;
   averageDiscount: number | null;
-  timestamps: ProfileTimestamps;
   city: string | null;
   state: string | null;
   neighborhood: string | null;
   createdOn: firebase.firestore.FieldValue;
   updatedOn?: firebase.firestore.FieldValue;
-}
+} & { [K in ProfileSituation]: string };

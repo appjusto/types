@@ -1,11 +1,8 @@
-import {
-  OrderDispatchingTimestamps,
-  OrderStatusTimestamps,
-  OrderType,
-} from '.';
+import { OrderType } from '.';
 import { FareDetails, OrderStatus } from '..';
+import { OrderDispatchingTimestampsKeys } from './timestamps';
 
-export interface OrderWarehouse {
+export type OrderWarehouse = {
   type: OrderType;
   status: OrderStatus;
   consumer: {
@@ -30,6 +27,8 @@ export interface OrderWarehouse {
   route: {
     distance: number;
   } | null;
-  timestamps: OrderStatusTimestamps;
-  dispatchingTimestamps: OrderDispatchingTimestamps;
-}
+  // timestamps: OrderStatusTimestamps;
+  // dispatchingTimestamps: OrderDispatchingTimestamps;
+} & { [K in OrderStatus]: string } & {
+  [K in OrderDispatchingTimestampsKeys]: string;
+};

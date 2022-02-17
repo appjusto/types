@@ -1,5 +1,9 @@
 import firebase from 'firebase';
-import { OutsourceAccountType } from '..';
+import {
+  OrderDispatchingTimestamps,
+  OrderStatusTimestamps,
+  OutsourceAccountType,
+} from '..';
 import { OrderConsumer } from './consumer';
 import { OrderCourier } from './courier';
 import { DispatchingState, DispatchingStatus } from './dispatching';
@@ -16,31 +20,6 @@ export interface OrderRoute {
   polyline?: string;
   issue: string | null;
 }
-
-export type OrderStatusTimestamps = {
-  [K in OrderStatus]?: firebase.firestore.FieldValue;
-} & {
-  /** @deprecated */
-  dispatchingDeclined?: firebase.firestore.FieldValue;
-  /** @deprecated */
-  matchingEnded?: firebase.firestore.FieldValue;
-};
-
-export type OrderDispatchingStateTimestamps = {
-  goingPickup?: firebase.firestore.FieldValue;
-  arrivedPickup?: firebase.firestore.FieldValue;
-  goingDestination?: firebase.firestore.FieldValue;
-  arrivedDestination?: firebase.firestore.FieldValue;
-};
-
-export type OrderDispatchingTimestamps = Omit<
-  {
-    [K in DispatchingStatus]?: firebase.firestore.FieldValue;
-  },
-  'no-match'
-> & {
-  matchingEnded?: firebase.firestore.FieldValue;
-} & OrderDispatchingStateTimestamps;
 
 export interface Order {
   type: OrderType;
