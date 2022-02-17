@@ -26,10 +26,10 @@ export interface OrderWarehouse {
     courier: FareDetails | null;
     platform: FareDetails | null;
     total: number;
-  };
+  } | null;
   route: {
     distance: number;
-  };
+  } | null;
   timestamps: OrderStatusTimestamps;
   dispatchingTimestamps: OrderDispatchingTimestamps;
 }

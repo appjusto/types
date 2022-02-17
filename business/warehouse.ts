@@ -11,6 +11,9 @@ export interface BusinessWarehouse {
   schedules: BusinessSchedule | null;
   averageDiscount: number | null;
   timestamps: ProfileTimestamps;
+  city: string | null;
+  state: string | null;
+  neighborhood: string | null;
   createdOn: firebase.firestore.FieldValue;
   updatedOn?: firebase.firestore.FieldValue;
 }
