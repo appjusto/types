@@ -1,3 +1,4 @@
+import firebase from 'firebase';
 import { DispatchingStatus, OrderStatus } from '..';
 
 // status timestamps
