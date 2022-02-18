@@ -1,3 +1,4 @@
+import firebase from 'firebase';
 import { OrderType } from '.';
 import { FareDetails, OrderStatus } from '..';
 import { OrderDispatchingTimestampsKeys } from './timestamps';
@@ -29,6 +30,6 @@ export type OrderWarehouse = {
   } | null;
   // timestamps: OrderStatusTimestamps;
   // dispatchingTimestamps: OrderDispatchingTimestamps;
-} & { [K in OrderStatus]: string } & {
-  [K in OrderDispatchingTimestampsKeys]: string;
+} & { [K in OrderStatus]: firebase.firestore.FieldValue } & {
+  [K in OrderDispatchingTimestampsKeys]: firebase.firestore.FieldValue;
 };

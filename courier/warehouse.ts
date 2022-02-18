@@ -12,4 +12,4 @@ export type CourierWarehouse = {
   mode: CourierMode;
   createdOn: firebase.firestore.FieldValue;
   updatedOn?: firebase.firestore.FieldValue;
-} & { [K in ProfileSituation]: string };
+} & { [K in ProfileSituation]: firebase.firestore.FieldValue };
