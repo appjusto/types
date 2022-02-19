@@ -50,6 +50,12 @@ export interface PlatformManagement {
     chargeDelay: number;
   };
   location: {
-    useCacheFromDatabase: boolean;
+    database: {
+      enabled: boolean;
+    };
+    cache: {
+      enabled: boolean;
+      ttl: number; // minutes
+    };
   };
 }
