@@ -1,6 +1,6 @@
 import firebase from 'firebase';
 import { CourierMode, CourierStatus } from '.';
-import { ProfileSituation } from '..';
+import { ProfileSituation, ProfileTimestamps } from '..';
 
 export type CourierWarehouse = {
   situation: ProfileSituation;
@@ -10,6 +10,7 @@ export type CourierWarehouse = {
   city: string | null;
   state: string | null;
   mode: CourierMode;
+  timestamps: ProfileTimestamps;
   createdOn: firebase.firestore.FieldValue;
   updatedOn?: firebase.firestore.FieldValue;
-} & { [K in ProfileSituation]: firebase.firestore.FieldValue };
+};

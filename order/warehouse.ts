@@ -1,7 +1,10 @@
-import firebase from 'firebase';
 import { OrderType } from '.';
-import { FareDetails, OrderStatus } from '..';
-import { OrderDispatchingTimestampsKeys } from './timestamps';
+import {
+  FareDetails,
+  OrderDispatchingTimestamps,
+  OrderStatus,
+  OrderStatusTimestamps,
+} from '..';
 
 export type OrderWarehouse = {
   type: OrderType;
@@ -28,8 +31,6 @@ export type OrderWarehouse = {
   route: {
     distance: number;
   } | null;
-  // timestamps: OrderStatusTimestamps;
-  // dispatchingTimestamps: OrderDispatchingTimestamps;
-} & { [K in OrderStatus]: firebase.firestore.FieldValue } & {
-  [K in OrderDispatchingTimestampsKeys]: firebase.firestore.FieldValue;
+  timestamps: OrderStatusTimestamps;
+  dispatchingTimestamps: OrderDispatchingTimestamps;
 };
