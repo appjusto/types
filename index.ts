@@ -25,12 +25,14 @@ export {
   Cuisine,
   ScheduleObject,
 } from './business';
+export { BusinessWarehouse } from './business/warehouse';
 export {
   ConsumerProfile,
   ConsumerServiceStatistics,
   ConsumerStatistics,
   PaymentChannel,
 } from './consumer';
+export { ConsumerWarehouse } from './consumer/warehouse';
 export {
   AvailableCourier,
   CourierCompany,
@@ -42,9 +44,11 @@ export {
   CourierStatus,
 } from './courier';
 export { CourierOrderRequest } from './courier/requests';
+export { CourierWarehouse } from './courier/warehouse';
 export { EmailTaskPayload, EmailTaskPayloadFrom } from './emails';
 export { Fleet, FleetDetails, FleetFareParams, FleetSituation } from './fleet';
 export { Invoice, InvoiceFingerprint, InvoiceType } from './invoice';
+export { InvoiceWarehouse } from './invoice/warehouse';
 export {
   GoogleMapsGeocodePayload,
   GoogleMapsPlacesAutocompletePayload,
@@ -79,10 +83,7 @@ export {
   Order,
   OrderBusiness,
   OrderChange,
-  OrderDispatchingStateTimestamps,
-  OrderDispatchingTimestamps,
   OrderRoute,
-  OrderStatusTimestamps,
   OrderType,
 } from './order';
 export { ChatMessage, ChatMessageType, ChatMessageUser } from './order/chat';
@@ -116,6 +117,10 @@ export {
 } from './order/private/matching';
 export { OrderPayments } from './order/private/payment';
 export { FoodOrderStatus, OrderStatus, P2POrderStatus } from './order/status';
+export {
+  OrderDispatchingTimestamps,
+  OrderStatusTimestamps,
+} from './order/timestamps';
 export { OrderWarehouse } from './order/warehouse';
 export { BasePayload, FetchTotalCouriersNearbyPayload } from './payloads';
 export {
@@ -197,7 +202,14 @@ export { FlaggedLocation, FraudPreventionParams } from './platform/fraud';
 export { InterferenceLog, LoginLog } from './platform/logs';
 export { PlatformManagement, PlatformParams } from './platform/params';
 export { PlatformStatistics, ServiceStatistics } from './platform/statistics';
-export { ProfileNote, ProfileSituation, UserProfile } from './profile';
+export {
+  ProfileNote,
+  ProfileSituation,
+  ProfileTimestamps,
+  UserProfile,
+} from './profile';
 export { ProfileChange, UserProfileChange } from './profile/change';
-export { OrderConsumerReview, Review, ReviewTag, ReviewType } from './reviews';
+export { OrderConsumerReview, Review, ReviewTag, ReviewType } from './review';
+export { NPS } from './review/nps';
+export { OrderReviewWarehouse } from './review/warehouse';
 export { User, UserType } from './users';

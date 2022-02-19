@@ -1,6 +1,6 @@
-import { Place } from './order/place';
-import { IuguCustomerPaymentMethod } from './payment/iugu';
-import { UserProfile } from './profile';
+import { Place } from '../order/place';
+import { IuguCustomerPaymentMethod } from '../payment/iugu';
+import { UserProfile } from '../profile';
 
 export interface CustomerPaymentMethod extends IuguCustomerPaymentMethod {
   cpf: string | null;

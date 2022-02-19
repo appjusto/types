@@ -1,11 +1,12 @@
+import { OrderType } from '.';
 import {
+  FareDetails,
   OrderDispatchingTimestamps,
+  OrderStatus,
   OrderStatusTimestamps,
-  OrderType,
-} from '.';
-import { FareDetails, OrderStatus } from '..';
+} from '..';
 
-export interface OrderWarehouse {
+export type OrderWarehouse = {
   type: OrderType;
   status: OrderStatus;
   consumer: {
@@ -26,10 +27,10 @@ export interface OrderWarehouse {
     courier: FareDetails | null;
     platform: FareDetails | null;
     total: number;
-  };
+  } | null;
   route: {
     distance: number;
-  };
+  } | null;
   timestamps: OrderStatusTimestamps;
   dispatchingTimestamps: OrderDispatchingTimestamps;
-}
+};

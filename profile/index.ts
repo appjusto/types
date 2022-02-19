@@ -1,4 +1,5 @@
 import firebase from 'firebase';
+import { NPS } from '..';
 
 export type ProfileSituation =
   | 'pending'
@@ -9,6 +10,10 @@ export type ProfileSituation =
   | 'rejected'
   | 'blocked'
   | 'deleted';
+
+export type ProfileTimestamps = {
+  [K in ProfileSituation]?: firebase.firestore.FieldValue;
+};
 
 export interface UserProfile {
   code: string;
@@ -28,11 +33,10 @@ export interface UserProfile {
   city?: string;
   isPasswordActive?: boolean;
   tags?: string[];
+  nps: NPS;
   // metadata
   appVersion?: string;
-  timestamps: {
-    [K in ProfileSituation]?: firebase.firestore.FieldValue;
-  };
+  timestamps: ProfileTimestamps;
   createdOn: firebase.firestore.FieldValue;
   updatedOn?: firebase.firestore.FieldValue;
 }

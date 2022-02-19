@@ -1,7 +1,7 @@
 import firebase from 'firebase';
-import { Place } from '.';
-import { LatLng } from './platform';
-import { ProfileSituation } from './profile';
+import { Place } from '..';
+import { LatLng } from '../platform';
+import { ProfileSituation, ProfileTimestamps } from '../profile';
 
 export interface Cuisine {
   name: string;
@@ -69,9 +69,7 @@ export interface Business {
   slug?: string;
   averageDiscount?: number;
   // metadata
-  timestamps: {
-    [K in ProfileSituation]?: firebase.firestore.FieldValue;
-  };
+  timestamps: ProfileTimestamps;
   keepAlive?: firebase.firestore.FieldValue;
   createdOn: firebase.firestore.FieldValue;
   updatedOn?: firebase.firestore.FieldValue;

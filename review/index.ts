@@ -1,5 +1,5 @@
 import firebase from 'firebase';
-import { Flavor } from '.';
+import { Flavor } from '..';
 
 export type ReviewType = 'positive' | 'negative';
 
@@ -12,19 +12,22 @@ export interface Review {
 
 export interface OrderConsumerReview {
   orderId: string;
+  consumer: {
+    id: string;
+  };
   courier?: {
     id: string | null;
     rating: ReviewType;
-    tags?: ReviewTag[];
+    tags?: ReviewTag[] | null;
   };
   business?: {
     id: string | null;
     rating: ReviewType;
-    tags?: ReviewTag[];
-  } | null;
+    tags?: ReviewTag[] | null;
+  };
   platform?: {
     rating: ReviewType;
-    tags?: ReviewTag[];
+    tags?: ReviewTag[] | null;
   };
   nps?: number;
   comment?: string;
