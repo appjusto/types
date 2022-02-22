@@ -58,4 +58,9 @@ export interface PlatformManagement {
       ttl: number; // minutes
     };
   };
+  warehouse: {
+    business: {
+      updateAt: string[];
+    };
+  };
 }
