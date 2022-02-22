@@ -49,9 +49,4 @@ export interface PlatformManagement {
   marketplace: {
     chargeDelay: number;
   };
-  warehouse: {
-    business: {
-      updateAt: string[];
-    };
-  };
 }
