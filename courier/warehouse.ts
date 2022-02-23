@@ -5,6 +5,7 @@ import { ProfileSituation, ProfileTimestamps } from '..';
 export type CourierWarehouse = {
   situation: ProfileSituation;
   status: CourierStatus;
+  email: string | null;
   notificationToken: string | null;
   coordinates: firebase.firestore.GeoPoint | null;
   city: string | null;
