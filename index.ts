@@ -49,6 +49,13 @@ export { EmailTaskPayload, EmailTaskPayloadFrom } from './emails';
 export { Fleet, FleetDetails, FleetFareParams, FleetSituation } from './fleet';
 export { Invoice, InvoiceFingerprint, InvoiceType } from './invoice';
 export { InvoiceWarehouse } from './invoice/warehouse';
+export { RouteDetails } from './location/directions';
+export {
+  GoogleMapsGeocodePayload,
+  GoogleMapsPlacesAutocompletePayload,
+  GoogleMapsReverseGeocodePayload,
+  QueryGoogleMapsPayload,
+} from './location/payloads';
 export {
   AdminRole,
   ManagerPrivatePlatform,
