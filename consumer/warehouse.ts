@@ -3,6 +3,7 @@ import { ProfileSituation, ProfileTimestamps } from '..';
 
 export type ConsumerWarehouse = {
   situation: ProfileSituation;
+  email: string | null;
   notificationToken: string | null;
   coordinates: firebase.firestore.GeoPoint | null;
   timestamps: ProfileTimestamps;
