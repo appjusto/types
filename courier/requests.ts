@@ -11,6 +11,7 @@ export interface CourierOrderRequest {
   distanceToOrigin: number;
   distance: number;
   originAddress: string;
+  destination: LatLng;
   destinationAddress: string;
   readyAt: Date | null;
   createdOn: firebase.firestore.FieldValue;
