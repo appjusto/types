@@ -137,6 +137,7 @@ export { ReleaseCourierPayload } from './payloads/courier';
 export {
   DeletePaymentMethodPayload,
   SavePaymentTokenPayload,
+  SavePaymentTokenResponse,
 } from './payloads/marketplace';
 export {
   CancelOrderPayload,

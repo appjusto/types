@@ -6,6 +6,10 @@ export interface SavePaymentTokenPayload extends BasePayload {
   paymentToken: IuguPaymentToken;
 }
 
+export interface SavePaymentTokenResponse {
+  paymentMethodId: string;
+}
+
 export interface DeletePaymentMethodPayload extends BasePayload {
   paymentMethodId: string;
 }
