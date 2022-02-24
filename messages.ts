@@ -1,4 +1,4 @@
-import firebase from 'firebase';
+import { FieldValue } from 'firebase/firestore';
 import { OrderStatus } from '.';
 import { CourierOrderRequest } from './courier/requests';
 import { ExpoPushMessage } from './external/expo';
@@ -60,7 +60,7 @@ export interface PushMessage {
 
 export interface PushReceipt {
   expoToken: string;
-  createdOn: firebase.firestore.FieldValue;
+  createdOn: FieldValue;
   verified: boolean;
 }
 

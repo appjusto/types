@@ -1,4 +1,3 @@
-import firebase from 'firebase';
 import { InvoiceType } from '.';
 import { AccountType } from '..';
 import { IuguInvoiceStatus } from '../payment/iugu';
@@ -11,6 +10,6 @@ export interface InvoiceWarehouse {
   accountType: AccountType;
   accountId: string | null;
   status: IuguInvoiceStatus;
-  createdOn: firebase.firestore.FieldValue;
-  updatedOn: firebase.firestore.FieldValue | null;
+  createdOn: FieldValue;
+  updatedOn: FieldValue | null;
 }

@@ -1,4 +1,3 @@
-import firebase from 'firebase';
 import { BankAccount } from '../banking';
 import { BusinessAddress } from '../business';
 import { FleetDetails } from '../fleet';
@@ -34,7 +33,7 @@ export interface CourierCompany extends BusinessAddress {
 }
 
 export interface CourierFleet extends WithId<FleetDetails> {
-  joinedOn: firebase.firestore.FieldValue;
+  joinedOn: FieldValue;
 }
 
 export interface CourierProfile extends UserProfile {

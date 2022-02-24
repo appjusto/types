@@ -17,7 +17,8 @@
     "type": "git",
     "url": "https://github.com/appjusto/types.git"
   },
-  "devDependencies": {
-    "@types/firebase": "^3.2.1"
+  "devDependencies": {},
+  "dependencies": {
+    "firebase": "^9.6.7"
   }
 }

@@ -1,4 +1,4 @@
-import firebase from 'firebase';
+import { FieldValue, GeoPoint } from 'firebase/firestore';
 import { BusinessStatus } from '.';
 import { ProfileSituation, ProfileTimestamps } from '..';
 
@@ -10,11 +10,11 @@ export type BusinessWarehouse = {
   cuisine: string | null;
   averageCookingTime: number | null;
   averageDiscount: number | null;
-  coordinates: firebase.firestore.GeoPoint | null;
+  coordinates: GeoPoint | null;
   city: string | null;
   state: string | null;
   neighborhood: string | null;
   timestamps: ProfileTimestamps;
-  createdOn: firebase.firestore.FieldValue;
-  updatedOn: firebase.firestore.FieldValue | null;
+  createdOn: FieldValue;
+  updatedOn: FieldValue | null;
 };
