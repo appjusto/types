@@ -7,6 +7,7 @@ import {
 } from '..';
 
 export type OrderWarehouse = {
+  code: string;
   type: OrderType;
   status: OrderStatus;
   consumer: {
