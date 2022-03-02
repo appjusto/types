@@ -1,4 +1,4 @@
-import firebase from 'firebase';
+import { FieldValue, GeoPoint } from 'firebase/firestore';
 import { CourierMode, CourierStatus } from '.';
 import { ProfileSituation, ProfileTimestamps } from '..';
 
@@ -8,12 +8,12 @@ export type CourierWarehouse = {
   situation: ProfileSituation;
   status: CourierStatus;
   notificationToken: string | null;
-  coordinates: firebase.firestore.GeoPoint | null;
+  coordinates: GeoPoint | null;
   city: string | null;
   state: string | null;
   mode: CourierMode;
   appVersion: string | null;
   timestamps: ProfileTimestamps;
-  createdOn: firebase.firestore.FieldValue;
-  updatedOn?: firebase.firestore.FieldValue;
+  createdOn: FieldValue;
+  updatedOn?: FieldValue;
 };

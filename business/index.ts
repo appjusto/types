@@ -1,4 +1,3 @@
-import firebase from 'firebase';
 import { Place } from '..';
 import { LatLng } from '../platform';
 import { ProfileSituation, ProfileTimestamps } from '../profile';
@@ -70,9 +69,9 @@ export interface Business {
   averageDiscount?: number;
   // metadata
   timestamps: ProfileTimestamps;
-  keepAlive?: firebase.firestore.FieldValue;
-  createdOn: firebase.firestore.FieldValue;
-  updatedOn?: firebase.firestore.FieldValue;
+  keepAlive?: FieldValue;
+  createdOn: FieldValue;
+  updatedOn?: FieldValue;
 }
 
 export interface BusinessRecommendation {
@@ -81,13 +80,13 @@ export interface BusinessRecommendation {
   instagram: string | null;
   phone: string | null;
   owner: string | null;
-  createdOn: firebase.firestore.FieldValue;
+  createdOn: FieldValue;
 }
 
 export interface BusinessChange {
   before: Partial<Business>;
   after: Partial<Business>;
-  timestamp: firebase.firestore.FieldValue;
+  timestamp: FieldValue;
 }
 
 export interface BusinessMenuMessage {

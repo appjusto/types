@@ -1,4 +1,4 @@
-import firebase from 'firebase';
+import { FieldValue, GeoPoint } from 'firebase/firestore';
 import { NPS } from '..';
 
 export type ProfileSituation =
@@ -12,7 +12,7 @@ export type ProfileSituation =
   | 'deleted';
 
 export type ProfileTimestamps = {
-  [K in ProfileSituation]?: firebase.firestore.FieldValue;
+  [K in ProfileSituation]?: FieldValue;
 };
 
 export interface UserProfile {
@@ -28,7 +28,7 @@ export interface UserProfile {
   notificationToken?: string | null;
   pix?: string;
   onboarded?: boolean;
-  coordinates?: firebase.firestore.GeoPoint;
+  coordinates?: GeoPoint;
   state?: string;
   city?: string;
   isPasswordActive?: boolean;
@@ -37,8 +37,8 @@ export interface UserProfile {
   // metadata
   appVersion?: string;
   timestamps: ProfileTimestamps;
-  createdOn: firebase.firestore.FieldValue;
-  updatedOn?: firebase.firestore.FieldValue;
+  createdOn: FieldValue;
+  updatedOn?: FieldValue;
 }
 
 export interface ProfileNote {
@@ -46,6 +46,6 @@ export interface ProfileNote {
   agentId: string;
   agentEmail: string;
   agentName?: string;
-  createdOn: firebase.firestore.FieldValue;
-  updatedOn: firebase.firestore.FieldValue;
+  createdOn: FieldValue;
+  updatedOn: FieldValue;
 }

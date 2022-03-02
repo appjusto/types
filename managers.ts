@@ -1,4 +1,4 @@
-import firebase from 'firebase';
+import { FieldValue } from 'firebase/firestore';
 import { UserProfile } from './profile';
 
 export type Role = 'owner' | 'staff' | 'viewer' | 'courier-manager';
@@ -12,5 +12,5 @@ export interface NewManagerData {
 export interface ManagerProfile extends UserProfile {}
 
 export interface ManagerPrivatePlatform {
-  claimsUpdated: firebase.firestore.FieldValue;
+  claimsUpdated: FieldValue;
 }
