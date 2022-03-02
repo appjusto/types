@@ -1,3 +1,4 @@
+import { FieldValue } from 'firebase/firestore';
 import { UserProfile } from '.';
 import { UserType } from '..';
 

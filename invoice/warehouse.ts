@@ -1,3 +1,4 @@
+import { FieldValue } from 'firebase/firestore';
 import { InvoiceType } from '.';
 import { AccountType } from '..';
 import { IuguInvoiceStatus } from '../payment/iugu';

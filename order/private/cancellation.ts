@@ -1,3 +1,4 @@
+import { FieldValue } from 'firebase/firestore';
 import { InvoiceType } from '../../invoice';
 import { Flavor } from '../../platform';
 import { Issue } from '../issues';

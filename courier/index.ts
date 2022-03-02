@@ -1,3 +1,4 @@
+import { FieldValue } from 'firebase/firestore';
 import { BankAccount } from '../banking';
 import { BusinessAddress } from '../business';
 import { FleetDetails } from '../fleet';

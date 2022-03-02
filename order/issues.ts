@@ -1,3 +1,4 @@
+import { FieldValue } from 'firebase/firestore';
 import { Flavor, WithId } from '../platform';
 
 export type OrderRejectionType = 'refuse' | 'cancel';

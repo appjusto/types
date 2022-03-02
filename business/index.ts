@@ -1,3 +1,4 @@
+import { FieldValue } from 'firebase/firestore';
 import { Place } from '..';
 import { LatLng } from '../platform';
 import { ProfileSituation, ProfileTimestamps } from '../profile';

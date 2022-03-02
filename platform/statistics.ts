@@ -1,3 +1,4 @@
+import { FieldValue } from 'firebase/firestore';
 import { NPS } from '..';
 
 export interface ServiceStatistics {

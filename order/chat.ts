@@ -1,3 +1,4 @@
+import { FieldValue } from 'firebase/firestore';
 import { OrderStatus } from '..';
 import { Flavor } from '../platform';
 

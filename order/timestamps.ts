@@ -1,3 +1,4 @@
+import { FieldValue } from 'firebase/firestore';
 import { DispatchingStatus, OrderStatus } from '..';
 
 // status timestamps

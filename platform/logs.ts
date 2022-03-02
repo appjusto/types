@@ -1,3 +1,4 @@
+import { FieldValue } from 'firebase/firestore';
 import { Flavor } from '.';
 
 export interface LoginLog {

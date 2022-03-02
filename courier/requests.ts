@@ -1,3 +1,4 @@
+import { FieldValue } from 'firebase/firestore';
 import { OrderType } from '../order';
 import { LatLng } from '../platform';
 
