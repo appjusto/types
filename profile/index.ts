@@ -23,6 +23,7 @@ export interface UserProfile {
   surname?: string;
   cpf?: string;
   phone?: string;
+  countryCode?: string;
   profileIssues?: string[];
   profileIssuesMessage?: string;
   notificationToken?: string | null;
