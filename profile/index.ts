@@ -22,7 +22,7 @@ export interface UserProfile {
   name?: string;
   surname?: string;
   cpf?: string;
-  phone?: string;
+  phone?: string | null;
   countryCode?: string;
   profileIssues?: string[] | Issue[];
   profileIssuesMessage?: string;
