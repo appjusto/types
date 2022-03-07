@@ -1,5 +1,5 @@
 import { FieldValue, GeoPoint } from 'firebase/firestore';
-import { NPS } from '..';
+import { Issue, NPS } from '..';
 
 export type ProfileSituation =
   | 'pending'
@@ -24,7 +24,7 @@ export interface UserProfile {
   cpf?: string;
   phone?: string;
   countryCode?: string;
-  profileIssues?: string[];
+  profileIssues?: string[] | Issue[];
   profileIssuesMessage?: string;
   notificationToken?: string | null;
   pix?: string;
