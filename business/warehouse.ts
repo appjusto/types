@@ -3,6 +3,7 @@ import { BusinessStatus } from '.';
 import { ProfileSituation, ProfileTimestamps } from '..';
 
 export type BusinessWarehouse = {
+  code: string | null;
   name: string | null;
   cnpj: string | null;
   situation: ProfileSituation;
