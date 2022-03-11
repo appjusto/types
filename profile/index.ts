@@ -37,6 +37,7 @@ export interface UserProfile {
   nps: NPS;
   // metadata
   appVersion?: string;
+  platform?: string;
   timestamps: ProfileTimestamps;
   createdOn: FieldValue;
   updatedOn?: FieldValue;
