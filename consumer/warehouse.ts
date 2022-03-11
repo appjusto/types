@@ -7,6 +7,7 @@ export type ConsumerWarehouse = {
   situation: ProfileSituation;
   notificationToken: string | null;
   appVersion: string | null;
+  platform: string | null;
   coordinates: GeoPoint | null;
   timestamps: ProfileTimestamps;
   createdOn: FieldValue;
