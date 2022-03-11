@@ -40,13 +40,26 @@ export type ScheduleObject = {
 };
 export type BusinessSchedule = ScheduleObject[];
 
+export type BusinessPhoneType = 'owner' | 'manager' | 'desk';
+
+export type BusinessPhone = {
+  type: BusinessPhoneType;
+  number: string;
+  calls: boolean;
+  whatsapp: boolean;
+};
+
 export interface Business {
   code: string;
   type: BusinessType;
   name?: string;
   companyName?: string;
   cnpj?: string;
+  /**
+   * @deprecated
+   */
   phone?: string;
+  phones?: BusinessPhone[];
   managers?: string[]; // emails
   businessAddress?: BusinessAddress;
   status: BusinessStatus;
