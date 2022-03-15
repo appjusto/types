@@ -40,10 +40,8 @@ export type ScheduleObject = {
 };
 export type BusinessSchedule = ScheduleObject[];
 
-export type BusinessPhoneType = 'owner' | 'manager' | 'desk';
-
 export type BusinessPhone = {
-  type: BusinessPhoneType;
+  type: 'owner' | 'manager' | 'desk';
   number: string;
   calls: boolean;
   whatsapp: boolean;
