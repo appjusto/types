@@ -1,8 +1,4 @@
-import { BasePayload } from '.';
-
-export interface CloneBusinessPayload extends BasePayload {
-  businessId: string;
-}
+import { BasePayload } from '../payloads';
 
 export interface CloneComplementsGroupPayload extends BasePayload {
   businessId: string;

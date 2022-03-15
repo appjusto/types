@@ -26,6 +26,12 @@ export {
   Cuisine,
   ScheduleObject,
 } from './business';
+export {
+  BusinessProfilePayload,
+  CloneBusinessPayload,
+  CreateBusinessProfilePayload,
+  UpdateBusinessSlugPayload,
+} from './business/payloads';
 export { BusinessWarehouse } from './business/warehouse';
 export {
   ConsumerProfile,
@@ -67,6 +73,7 @@ export {
 export { Ordering } from './menu';
 export { Category } from './menu/category';
 export { Complement, ComplementGroup } from './menu/complements';
+export { CloneComplementsGroupPayload } from './menu/payloads';
 export { Classification, Product, ProductStatistics } from './menu/product';
 export {
   ChatPushMessageData,
@@ -133,10 +140,6 @@ export {
   FetchReceivablesPayload,
   RequestWithdrawPayload,
 } from './payloads/account';
-export {
-  CloneBusinessPayload,
-  CloneComplementsGroupPayload,
-} from './payloads/business';
 export { ReleaseCourierPayload } from './payloads/courier';
 export {
   DeletePaymentMethodPayload,
@@ -169,13 +172,10 @@ export {
   UpdateOrderStatusPayload,
 } from './payloads/order';
 export {
-  CreateBusinessProfilePayload,
   CreateManagersPayload,
   DeleteAccountPayload,
   GetBusinessManagersPayload,
-  UpdateBusinessSlugPayload,
   UpdateEmailPayload,
-  VerifyBusinessProfilePayload,
   VerifyCourierProfilePayload,
 } from './payloads/profile';
 export {
