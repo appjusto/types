@@ -11,5 +11,5 @@ export interface Place {
   address: Address;
   additionalInfo?: string;
   intructions?: string;
-  location?: LatLng;
+  location?: LatLng | null;
 }
