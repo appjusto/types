@@ -20,4 +20,5 @@ export interface OrderLocationEntry {
   createdOn: FieldValue;
   coordinates: GeoPoint;
   dispatchingState: DispatchingState;
+  courierId: string;
 }
