@@ -39,6 +39,7 @@ export interface CourierAlgolia {
   code?: string;
   email: string;
   cpf?: string;
+  phone?: string | null;
   situation: string;
   status: string;
   courierAddress: {
