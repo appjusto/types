@@ -29,8 +29,10 @@ export interface BusinessStatistics {
   positiveReviews: number;
   negativeReviews: number;
 }
+
+export type CookingTimeMode = 'manual' | 'auto';
 export interface BusinessSettings {
-  cookingTimeMode: 'manual' | 'auto';
+  cookingTimeMode: CookingTimeMode;
 }
 
 export type BusinessType = 'restaurant';
