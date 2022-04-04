@@ -20,9 +20,11 @@ export {
   BusinessPhone,
   BusinessRecommendation,
   BusinessSchedule,
+  BusinessSettings,
   BusinessStatistics,
   BusinessStatus,
   BusinessType,
+  CookingTimeMode,
   Cuisine,
   ScheduleObject,
 } from './business';
