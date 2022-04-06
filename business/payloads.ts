@@ -19,3 +19,15 @@ export type BusinessProfilePayload =
   | CreateBusinessProfilePayload
   | UpdateBusinessSlugPayload
   | CloneBusinessPayload;
+
+export interface DeleteBusinessPayload extends BasePayload {
+  businessId?: string;
+  fewOrders?: boolean;
+  appjustoProblems?: boolean;
+  notFinanciallyViable?: boolean;
+  didntAdaptToTheSystem?: boolean;
+  closingThisRestaurant?: boolean;
+  exclusivityWithAnotherPlatform?: boolean;
+  other?: boolean;
+  comment?: string;
+}

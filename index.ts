@@ -32,6 +32,7 @@ export {
   BusinessProfilePayload,
   CloneBusinessPayload,
   CreateBusinessProfilePayload,
+  DeleteBusinessPayload,
   UpdateBusinessSlugPayload,
 } from './business/payloads';
 export { BusinessWarehouse } from './business/warehouse';
