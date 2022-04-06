@@ -21,7 +21,7 @@ export type BusinessProfilePayload =
   | CloneBusinessPayload;
 
 export interface DeleteBusinessPayload extends BasePayload {
-  businessId?: string;
+  businessId: string;
   fewOrders?: boolean;
   appjustoProblems?: boolean;
   notFinanciallyViable?: boolean;
