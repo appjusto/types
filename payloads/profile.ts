@@ -23,6 +23,7 @@ export interface CreateManagersPayload extends BasePayload {
   managers: NewManagerData[];
 }
 
-export interface GetBusinessManagersPayload extends BasePayload {
-  businessId: string;
+export interface GetManagersPayload extends BasePayload {
+  type: 'managers' | 'agents';
+  businessId?: string;
 }

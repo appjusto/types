@@ -177,7 +177,7 @@ export {
 export {
   CreateManagersPayload,
   DeleteAccountPayload,
-  GetBusinessManagersPayload,
+  GetManagersPayload,
   UpdateEmailPayload,
   VerifyCourierProfilePayload,
 } from './payloads/profile';
