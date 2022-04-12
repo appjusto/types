@@ -29,4 +29,5 @@ export interface CreateManagersPayload extends BasePayload {
 export interface GetManagersPayload extends BasePayload {
   type: 'managers' | 'agents';
   businessId?: string;
+  agentId?: string;
 }
