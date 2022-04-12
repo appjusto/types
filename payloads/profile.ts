@@ -1,5 +1,6 @@
 import { BasePayload } from '.';
 import { NewManagerData } from '..';
+import { NewAgentData } from '../managers';
 
 export interface DeleteAccountPayload extends BasePayload {
   accountId?: string;
@@ -19,8 +20,10 @@ export interface UpdateEmailPayload extends BasePayload {
 export interface VerifyCourierProfilePayload extends BasePayload {}
 
 export interface CreateManagersPayload extends BasePayload {
-  key: string;
-  managers: NewManagerData[];
+  type: 'managers' | 'agents';
+  key?: string;
+  managers?: NewManagerData[];
+  agent?: NewAgentData;
 }
 
 export interface GetManagersPayload extends BasePayload {

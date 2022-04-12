@@ -68,8 +68,11 @@ export {
 } from './location/payloads';
 export {
   AdminRole,
+  BackofficeAccess,
+  BackofficeAccessRules,
   ManagerPrivatePlatform,
   ManagerProfile,
+  NewAgentData,
   NewManagerData,
   Role,
 } from './managers';
