@@ -19,7 +19,7 @@ export interface ManagerPrivatePlatform {
   claimsUpdated: FieldValue;
 }
 
-export type BackofficeAccessRules = ['read'?, 'write'?];
+export type BackofficeAccessRules = ['read'?, 'write'?, 'delete'?];
 
 export type BackofficeAccess = {
   orders: BackofficeAccessRules;
