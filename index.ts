@@ -218,6 +218,7 @@ export {
   UserProfile,
 } from './profile';
 export { ProfileChange, UserProfileChange } from './profile/change';
+export { NotificationPreferences } from './profile/notifications';
 export { OrderConsumerReview, Review, ReviewTag, ReviewType } from './review';
 export { NPS } from './review/nps';
 export { OrderReviewWarehouse } from './review/warehouse';
