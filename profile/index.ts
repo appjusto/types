@@ -45,9 +45,9 @@ export interface UserProfile {
 
 export interface ProfileNote {
   note: string;
-  agentId: string;
-  agentEmail: string;
-  agentName?: string;
+  staffId: string;
+  staffEmail: string;
+  staffName?: string;
   createdOn: FieldValue;
   updatedOn: FieldValue;
 }

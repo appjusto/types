@@ -18,18 +18,3 @@ export interface ManagerProfile extends UserProfile {}
 export interface ManagerPrivatePlatform {
   claimsUpdated: FieldValue;
 }
-
-export type BackofficeAccessRules = ['read'?, 'write'?, 'delete'?];
-
-export type BackofficeAccess = {
-  orders: BackofficeAccessRules;
-  couriers: BackofficeAccessRules;
-  consumers: BackofficeAccessRules;
-  businesses: BackofficeAccessRules;
-  platform: BackofficeAccessRules;
-};
-
-export interface NewAgentData {
-  email: string;
-  access: BackofficeAccess;
-}

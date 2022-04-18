@@ -68,11 +68,8 @@ export {
 } from './location/payloads';
 export {
   AdminRole,
-  BackofficeAccess,
-  BackofficeAccessRules,
   ManagerPrivatePlatform,
   ManagerProfile,
-  NewAgentData,
   NewManagerData,
   Role,
 } from './managers';
@@ -224,4 +221,10 @@ export { ProfileChange, UserProfileChange } from './profile/change';
 export { OrderConsumerReview, Review, ReviewTag, ReviewType } from './review';
 export { NPS } from './review/nps';
 export { OrderReviewWarehouse } from './review/warehouse';
+export {
+  BackofficeAccess,
+  BackofficeAccessRules,
+  NewStaffData,
+  StaffProfile,
+} from './staff';
 export { User, UserType } from './users';
