@@ -222,8 +222,8 @@ export { OrderConsumerReview, Review, ReviewTag, ReviewType } from './review';
 export { NPS } from './review/nps';
 export { OrderReviewWarehouse } from './review/warehouse';
 export {
-  BackofficeAccess,
-  BackofficeAccessRules,
+  BackofficePermissionRules,
+  BackofficePermissions,
   NewStaffData,
   StaffProfile,
 } from './staff';

@@ -2,17 +2,17 @@ import { UserProfile } from './profile';
 
 export interface StaffProfile extends UserProfile {}
 
-export type BackofficeAccessRules = ['read'?, 'write'?, 'delete'?];
+export type BackofficePermissionRules = ['read'?, 'write'?, 'delete'?];
 
-export type BackofficeAccess = {
-  orders: BackofficeAccessRules;
-  couriers: BackofficeAccessRules;
-  consumers: BackofficeAccessRules;
-  businesses: BackofficeAccessRules;
-  platform: BackofficeAccessRules;
+export type BackofficePermissions = {
+  orders: BackofficePermissionRules;
+  couriers: BackofficePermissionRules;
+  consumers: BackofficePermissionRules;
+  businesses: BackofficePermissionRules;
+  platform: BackofficePermissionRules;
 };
 
 export interface NewStaffData {
   email: string;
-  access: BackofficeAccess;
+  permissions: BackofficePermissions;
 }
