@@ -80,12 +80,10 @@ export { CloneComplementsGroupPayload } from './menu/payloads';
 export { Classification, Product, ProductStatistics } from './menu/product';
 export {
   ChatPushMessageData,
-  GeneralPushData,
   NavigateBusinessPushData,
   NotificationTaskPayload,
   OrderMatchPushMessageData,
   OrderUpdatePushData,
-  ProfileUpdatePushData,
   PushMessage,
   PushMessageActionType,
   PushMessageData,
@@ -218,7 +216,10 @@ export {
   UserProfile,
 } from './profile';
 export { ProfileChange, UserProfileChange } from './profile/change';
-export { NotificationPreferences } from './profile/notifications';
+export {
+  NotificationChannel,
+  NotificationPreferences,
+} from './profile/notifications';
 export { OrderConsumerReview, Review, ReviewTag, ReviewType } from './review';
 export { NPS } from './review/nps';
 export { OrderReviewWarehouse } from './review/warehouse';
