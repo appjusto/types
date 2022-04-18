@@ -1,5 +1,6 @@
 import { FieldValue, GeoPoint } from 'firebase/firestore';
 import { Issue, NPS } from '..';
+import { NotificationPreferences } from './notifications';
 
 export type ProfileSituation =
   | 'pending'
@@ -27,6 +28,7 @@ export interface UserProfile {
   profileIssues?: string[] | Issue[];
   profileIssuesMessage?: string;
   notificationToken?: string | null;
+  notificationPreferences?: NotificationPreferences;
   pix?: string;
   onboarded?: boolean;
   coordinates?: GeoPoint;
