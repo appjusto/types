@@ -5,11 +5,7 @@ export interface StaffProfile extends UserProfile {}
 export type BackofficePermissionRules = ['read'?, 'write'?, 'delete'?];
 
 export type BackofficePermissions = {
-  orders: BackofficePermissionRules;
-  couriers: BackofficePermissionRules;
-  consumers: BackofficePermissionRules;
-  businesses: BackofficePermissionRules;
-  platform: BackofficePermissionRules;
+  [key: string]: BackofficePermissionRules;
 };
 
 export interface NewStaffData {
