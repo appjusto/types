@@ -2,12 +2,9 @@ import { UserProfile } from './profile';
 
 export interface StaffProfile extends UserProfile {}
 
-export type BackofficePermissionRules = [
-  'create'?,
-  'read'?,
-  'update'?,
-  'delete'?
-];
+type CRUD = 'create' | 'read' | 'update' | 'delete';
+
+export type BackofficePermissionRules = CRUD[];
 
 export type BackofficePermissions = {
   [key: string]: BackofficePermissionRules;
