@@ -31,7 +31,7 @@ export interface CreateManagersPayload extends BasePayload {
    * @deprecated
    */
   staff?: NewStaffData;
-  userData: NewUserData;
+  usersData: NewUserData[];
 }
 
 export interface GetManagersPayload extends BasePayload {
