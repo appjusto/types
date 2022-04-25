@@ -6,8 +6,11 @@ import { UserProfile } from './profile';
  */
 export type Role = 'owner' | 'staff' | 'viewer' | 'courier-manager';
 
-export type AdminRole = 'manager' | 'collaborator';
+export type AdminRole = 'owner' | 'manager' | 'collaborator';
 
+/**
+ * @deprecated
+ */
 export interface NewManagerData {
   email: string;
   role: Role | AdminRole;

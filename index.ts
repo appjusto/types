@@ -195,6 +195,11 @@ export {
   InvoiceTaskHandlerTipExtra,
 } from './payment/tasks';
 export {
+  NewUserData,
+  UserPermissionRules,
+  UserPermissions,
+} from './permissions';
+export {
   City,
   Environment,
   Flavor,
@@ -223,10 +228,5 @@ export {
 export { OrderConsumerReview, Review, ReviewTag, ReviewType } from './review';
 export { NPS } from './review/nps';
 export { OrderReviewWarehouse } from './review/warehouse';
-export {
-  BackofficePermissionRules,
-  BackofficePermissions,
-  NewStaffData,
-  StaffProfile,
-} from './staff';
+export { NewStaffData, StaffProfile } from './staff';
 export { User, UserType } from './users';
