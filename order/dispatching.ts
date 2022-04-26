@@ -1,4 +1,4 @@
-import firebase from 'firebase';
+import { FieldValue, GeoPoint } from 'firebase/firestore';
 
 export type DispatchingStatus =
   | 'idle'
@@ -17,7 +17,8 @@ export type DispatchingState =
   | 'arrived-destination';
 
 export interface OrderLocationEntry {
-  createdOn: firebase.firestore.FieldValue;
-  coordinates: firebase.firestore.GeoPoint;
+  createdOn: FieldValue;
+  coordinates: GeoPoint;
   dispatchingState: DispatchingState;
+  courierId: string;
 }

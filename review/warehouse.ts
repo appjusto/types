@@ -1,4 +1,4 @@
-import firebase from 'firebase';
+import { FieldValue } from 'firebase/firestore';
 import { ReviewTag, ReviewType } from '.';
 
 export interface OrderReviewWarehouse {
@@ -21,5 +21,5 @@ export interface OrderReviewWarehouse {
     tags: ReviewTag[] | null;
   } | null;
   nps: number | null;
-  createdOn: firebase.firestore.FieldValue;
+  createdOn: FieldValue;
 }

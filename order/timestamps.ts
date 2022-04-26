@@ -1,15 +1,15 @@
-import firebase from 'firebase';
+import { FieldValue } from 'firebase/firestore';
 import { DispatchingStatus, OrderStatus } from '..';
 
 // status timestamps
 
 export type OrderStatusTimestamps = {
-  [K in OrderStatus]?: firebase.firestore.FieldValue;
+  [K in OrderStatus]?: FieldValue;
 } & {
   /** @deprecated */
-  dispatchingDeclined?: firebase.firestore.FieldValue;
+  dispatchingDeclined?: FieldValue;
   /** @deprecated */
-  matchingEnded?: firebase.firestore.FieldValue;
+  matchingEnded?: FieldValue;
 };
 
 // dispatching timestamps
@@ -31,5 +31,5 @@ export type OrderDispatchingTimestampsKeys =
   | OrderDispatchingStateTimestampsKeys;
 
 export type OrderDispatchingTimestamps = {
-  [K in OrderDispatchingTimestampsKeys]?: firebase.firestore.FieldValue;
+  [K in OrderDispatchingTimestampsKeys]?: FieldValue;
 };

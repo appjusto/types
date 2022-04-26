@@ -1,4 +1,4 @@
-import firebase from 'firebase';
+import { FieldValue } from 'firebase/firestore';
 import { WithId } from '../../platform';
 import { Issue } from '../issues';
 
@@ -13,7 +13,7 @@ export interface OrderMatching {
   task: string;
   attempt: number;
   trials: number;
-  startAt: firebase.firestore.FieldValue;
+  startAt: FieldValue;
   /**
    * @deprecated
    */

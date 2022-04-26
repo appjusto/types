@@ -49,4 +49,18 @@ export interface PlatformManagement {
   marketplace: {
     chargeDelay: number;
   };
+  location: {
+    database: {
+      enabled: boolean;
+    };
+    cache: {
+      enabled: boolean;
+      ttl: number; // minutes
+    };
+  };
+  warehouse: {
+    business: {
+      updateAt: string[];
+    };
+  };
 }

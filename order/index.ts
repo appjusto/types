@@ -1,4 +1,4 @@
-import firebase from 'firebase';
+import { FieldValue } from 'firebase/firestore';
 import {
   OrderDispatchingTimestamps,
   OrderStatusTimestamps,
@@ -47,13 +47,13 @@ export interface Order {
   };
   arrivals?: {
     origin?: {
-      estimate?: firebase.firestore.FieldValue;
-      arrival?: firebase.firestore.FieldValue;
+      estimate?: FieldValue;
+      arrival?: FieldValue;
     };
     destination?: {
-      estimate?: firebase.firestore.FieldValue;
-      arrival?: firebase.firestore.FieldValue;
-      arrivalLimit?: firebase.firestore.FieldValue;
+      estimate?: FieldValue;
+      arrival?: FieldValue;
+      arrivalLimit?: FieldValue;
     };
   };
   issue?: string | null;
@@ -61,46 +61,46 @@ export interface Order {
   // metadata
   timestamps: OrderStatusTimestamps;
   dispatchingTimestamps: OrderDispatchingTimestamps;
-  createdOn: firebase.firestore.FieldValue;
-  updatedOn?: firebase.firestore.FieldValue;
+  createdOn: FieldValue;
+  updatedOn?: FieldValue;
   /**
    * @deprecated
    */
-  chargedOn?: firebase.firestore.FieldValue;
+  chargedOn?: FieldValue;
   /**
    * @deprecated
    */
-  confirmedOn?: firebase.firestore.FieldValue;
+  confirmedOn?: FieldValue;
   /**
    * @deprecated
    */
-  declinedOn?: firebase.firestore.FieldValue;
+  declinedOn?: FieldValue;
   /**
    * @deprecated
    */
-  dispatchingDeclinedOn?: firebase.firestore.FieldValue;
+  dispatchingDeclinedOn?: FieldValue;
   /**
    * @deprecated
    */
-  dispatchingStartedOn?: firebase.firestore.FieldValue;
+  dispatchingStartedOn?: FieldValue;
   /**
    * @deprecated
    */
-  matchingEndedOn?: firebase.firestore.FieldValue;
+  matchingEndedOn?: FieldValue;
   /**
    * @deprecated
    */
-  deliveredOn?: firebase.firestore.FieldValue;
+  deliveredOn?: FieldValue;
   /**
    * @deprecated
    */
-  canceledOn?: firebase.firestore.FieldValue;
+  canceledOn?: FieldValue;
 }
 
 export interface OrderChange {
   before: Partial<Order>;
   after: Partial<Order>;
-  timestamp: firebase.firestore.FieldValue;
+  timestamp: FieldValue;
 }
 
 export interface OrderBusiness {

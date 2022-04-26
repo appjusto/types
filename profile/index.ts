@@ -1,5 +1,5 @@
-import firebase from 'firebase';
-import { NPS } from '..';
+import { FieldValue, GeoPoint } from 'firebase/firestore';
+import { Issue, NPS } from '..';
 
 export type ProfileSituation =
   | 'pending'
@@ -12,7 +12,7 @@ export type ProfileSituation =
   | 'deleted';
 
 export type ProfileTimestamps = {
-  [K in ProfileSituation]?: firebase.firestore.FieldValue;
+  [K in ProfileSituation]?: FieldValue;
 };
 
 export interface UserProfile {
@@ -22,13 +22,14 @@ export interface UserProfile {
   name?: string;
   surname?: string;
   cpf?: string;
-  phone?: string;
-  profileIssues?: string[];
+  phone?: string | null;
+  countryCode?: string;
+  profileIssues?: string[] | Issue[];
   profileIssuesMessage?: string;
   notificationToken?: string | null;
   pix?: string;
   onboarded?: boolean;
-  coordinates?: firebase.firestore.GeoPoint;
+  coordinates?: GeoPoint;
   state?: string;
   city?: string;
   isPasswordActive?: boolean;
@@ -36,9 +37,10 @@ export interface UserProfile {
   nps: NPS;
   // metadata
   appVersion?: string;
+  platform?: string;
   timestamps: ProfileTimestamps;
-  createdOn: firebase.firestore.FieldValue;
-  updatedOn?: firebase.firestore.FieldValue;
+  createdOn: FieldValue;
+  updatedOn?: FieldValue;
 }
 
 export interface ProfileNote {
@@ -46,6 +48,6 @@ export interface ProfileNote {
   agentId: string;
   agentEmail: string;
   agentName?: string;
-  createdOn: firebase.firestore.FieldValue;
-  updatedOn: firebase.firestore.FieldValue;
+  createdOn: FieldValue;
+  updatedOn: FieldValue;
 }

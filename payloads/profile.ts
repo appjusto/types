@@ -18,20 +18,9 @@ export interface UpdateEmailPayload extends BasePayload {
 
 export interface VerifyCourierProfilePayload extends BasePayload {}
 
-export interface CreateBusinessProfilePayload extends BasePayload {}
-
-export interface UpdateBusinessSlugPayload extends BasePayload {
-  businessId: string;
-  slug: string;
-}
-
 export interface CreateManagersPayload extends BasePayload {
   key: string;
   managers: NewManagerData[];
-}
-
-export interface VerifyBusinessProfilePayload extends BasePayload {
-  businessId: string;
 }
 
 export interface GetBusinessManagersPayload extends BasePayload {

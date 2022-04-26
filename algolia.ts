@@ -1,4 +1,4 @@
-import firebase from 'firebase';
+import { FieldValue } from 'firebase/firestore';
 import { BusinessSchedule } from '.';
 import {
   BusinessAddress,
@@ -30,7 +30,7 @@ export interface BusinessAlgolia {
   statistics?: BusinessStatistics;
   averageDiscount?: number;
   schedules: BusinessSchedule;
-  createdOn: firebase.firestore.FieldValue;
+  createdOn: FieldValue;
 }
 
 export interface CourierAlgolia {
@@ -39,6 +39,7 @@ export interface CourierAlgolia {
   code?: string;
   email: string;
   cpf?: string;
+  phone?: string | null;
   situation: string;
   status: string;
   courierAddress: {
@@ -50,7 +51,7 @@ export interface CourierAlgolia {
     state?: string;
     _geoloc: LatLng2 | null;
   };
-  createdOn: firebase.firestore.FieldValue;
+  createdOn: FieldValue;
 }
 
 export interface ConsumerAlgolia {
@@ -62,7 +63,7 @@ export interface ConsumerAlgolia {
   code?: string;
   situation: string;
   totalOrders: number;
-  createdOn: firebase.firestore.FieldValue;
+  createdOn: FieldValue;
 }
 
 export interface ProductAlgolia {

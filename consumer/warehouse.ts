@@ -1,11 +1,15 @@
-import firebase from 'firebase';
+import { FieldValue, GeoPoint } from 'firebase/firestore';
 import { ProfileSituation, ProfileTimestamps } from '..';
 
 export type ConsumerWarehouse = {
+  name: string | null;
+  email: string | null;
   situation: ProfileSituation;
   notificationToken: string | null;
-  coordinates: firebase.firestore.GeoPoint | null;
+  appVersion: string | null;
+  platform: string | null;
+  coordinates: GeoPoint | null;
   timestamps: ProfileTimestamps;
-  createdOn: firebase.firestore.FieldValue;
-  updatedOn?: firebase.firestore.FieldValue;
+  createdOn: FieldValue;
+  updatedOn?: FieldValue;
 };

@@ -1,4 +1,4 @@
-import firebase from 'firebase';
+import { FieldValue } from 'firebase/firestore';
 import { OrderType } from '../order';
 import { LatLng } from '../platform';
 
@@ -11,8 +11,9 @@ export interface CourierOrderRequest {
   distanceToOrigin: number;
   distance: number;
   originAddress: string;
+  destination: LatLng;
   destinationAddress: string;
   readyAt: Date | null;
-  createdOn: firebase.firestore.FieldValue;
-  updatedOn?: firebase.firestore.FieldValue;
+  createdOn: FieldValue;
+  updatedOn?: FieldValue;
 }

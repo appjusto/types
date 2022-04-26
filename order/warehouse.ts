@@ -1,3 +1,4 @@
+import { GeoPoint } from 'firebase/firestore';
 import { OrderType } from '.';
 import {
   FareDetails,
@@ -7,6 +8,7 @@ import {
 } from '..';
 
 export type OrderWarehouse = {
+  code: string;
   type: OrderType;
   status: OrderStatus;
   consumer: {
@@ -18,6 +20,7 @@ export type OrderWarehouse = {
   } | null;
   business: {
     id: string;
+    document: string;
   } | null;
   fleet: {
     id: string;
@@ -29,6 +32,8 @@ export type OrderWarehouse = {
     total: number;
   } | null;
   route: {
+    origin: GeoPoint;
+    destination: GeoPoint;
     distance: number;
   } | null;
   timestamps: OrderStatusTimestamps;

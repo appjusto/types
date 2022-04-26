@@ -1,4 +1,4 @@
-import firebase from 'firebase';
+import { FieldValue } from 'firebase/firestore';
 import { NPS } from '..';
 
 export interface ServiceStatistics {
@@ -20,5 +20,5 @@ export interface PlatformStatistics {
   positiveReviews: number;
   negativeReviews: number;
   nps: NPS;
-  createdOn?: firebase.firestore.FieldValue;
+  createdOn?: FieldValue;
 }

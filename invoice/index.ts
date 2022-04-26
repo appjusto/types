@@ -1,4 +1,4 @@
-import firebase from 'firebase';
+import { FieldValue } from 'firebase/firestore';
 import { IuguInvoiceStatus } from '../payment/iugu';
 import { AccountType } from '../payment/tasks';
 
@@ -28,6 +28,6 @@ export interface Invoice {
     LR: string;
     message?: string;
   };
-  createdOn: firebase.firestore.FieldValue;
-  updatedOn?: firebase.firestore.FieldValue;
+  createdOn: FieldValue;
+  updatedOn?: FieldValue;
 }

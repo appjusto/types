@@ -17,6 +17,7 @@ export {
   BusinessAddress,
   BusinessChange,
   BusinessMenuMessage,
+  BusinessPhone,
   BusinessRecommendation,
   BusinessSchedule,
   BusinessStatistics,
@@ -25,6 +26,12 @@ export {
   Cuisine,
   ScheduleObject,
 } from './business';
+export {
+  BusinessProfilePayload,
+  CloneBusinessPayload,
+  CreateBusinessProfilePayload,
+  UpdateBusinessSlugPayload,
+} from './business/payloads';
 export { BusinessWarehouse } from './business/warehouse';
 export {
   ConsumerProfile,
@@ -49,6 +56,13 @@ export { EmailTaskPayload, EmailTaskPayloadFrom } from './emails';
 export { Fleet, FleetDetails, FleetFareParams, FleetSituation } from './fleet';
 export { Invoice, InvoiceFingerprint, InvoiceType } from './invoice';
 export { InvoiceWarehouse } from './invoice/warehouse';
+export { RouteDetails } from './location/directions';
+export {
+  GoogleMapsGeocodePayload,
+  GoogleMapsPlacesAutocompletePayload,
+  GoogleMapsReverseGeocodePayload,
+  QueryGoogleMapsPayload,
+} from './location/payloads';
 export {
   AdminRole,
   ManagerPrivatePlatform,
@@ -59,6 +73,7 @@ export {
 export { Ordering } from './menu';
 export { Category } from './menu/category';
 export { Complement, ComplementGroup } from './menu/complements';
+export { CloneComplementsGroupPayload } from './menu/payloads';
 export { Classification, Product, ProductStatistics } from './menu/product';
 export {
   ChatPushMessageData,
@@ -125,11 +140,11 @@ export {
   FetchReceivablesPayload,
   RequestWithdrawPayload,
 } from './payloads/account';
-export { CloneBusinessPayload } from './payloads/business';
 export { ReleaseCourierPayload } from './payloads/courier';
 export {
   DeletePaymentMethodPayload,
   SavePaymentTokenPayload,
+  SavePaymentTokenResponse,
 } from './payloads/marketplace';
 export {
   CancelOrderPayload,
@@ -157,13 +172,10 @@ export {
   UpdateOrderStatusPayload,
 } from './payloads/order';
 export {
-  CreateBusinessProfilePayload,
   CreateManagersPayload,
   DeleteAccountPayload,
   GetBusinessManagersPayload,
-  UpdateBusinessSlugPayload,
   UpdateEmailPayload,
-  VerifyBusinessProfilePayload,
   VerifyCourierProfilePayload,
 } from './payloads/profile';
 export {

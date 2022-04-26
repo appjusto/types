@@ -1,4 +1,4 @@
-import firebase from 'firebase';
+import { FieldValue } from 'firebase/firestore';
 import { Place } from '..';
 import { LatLng } from '../platform';
 import { ProfileSituation, ProfileTimestamps } from '../profile';
@@ -40,13 +40,24 @@ export type ScheduleObject = {
 };
 export type BusinessSchedule = ScheduleObject[];
 
+export type BusinessPhone = {
+  type: 'owner' | 'manager' | 'desk';
+  number: string;
+  calls: boolean;
+  whatsapp: boolean;
+};
+
 export interface Business {
   code: string;
   type: BusinessType;
   name?: string;
   companyName?: string;
   cnpj?: string;
+  /**
+   * @deprecated
+   */
   phone?: string;
+  phones?: BusinessPhone[];
   managers?: string[]; // emails
   businessAddress?: BusinessAddress;
   status: BusinessStatus;
@@ -70,9 +81,9 @@ export interface Business {
   averageDiscount?: number;
   // metadata
   timestamps: ProfileTimestamps;
-  keepAlive?: firebase.firestore.FieldValue;
-  createdOn: firebase.firestore.FieldValue;
-  updatedOn?: firebase.firestore.FieldValue;
+  keepAlive?: FieldValue;
+  createdOn: FieldValue;
+  updatedOn?: FieldValue;
 }
 
 export interface BusinessRecommendation {
@@ -81,13 +92,13 @@ export interface BusinessRecommendation {
   instagram: string | null;
   phone: string | null;
   owner: string | null;
-  createdOn: firebase.firestore.FieldValue;
+  createdOn: FieldValue;
 }
 
 export interface BusinessChange {
   before: Partial<Business>;
   after: Partial<Business>;
-  timestamp: firebase.firestore.FieldValue;
+  timestamp: FieldValue;
 }
 
 export interface BusinessMenuMessage {

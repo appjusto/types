@@ -1,4 +1,4 @@
-import firebase from 'firebase';
+import { FieldValue } from 'firebase/firestore';
 import {
   IuguMarketplaceAccount,
   IuguMarketplaceAccountAdvanceResponse,
@@ -37,8 +37,8 @@ export interface AccountWithdraw {
   status: 'pending' | 'processing' | 'accepted' | 'rejected';
   data: IuguMarketplaceAccountWithdrawResponse;
   feedback?: string;
-  createdOn: firebase.firestore.FieldValue;
-  updatedOn?: firebase.firestore.FieldValue;
+  createdOn: FieldValue;
+  updatedOn?: FieldValue;
 }
 
 export interface AccountAdvance {
@@ -46,7 +46,7 @@ export interface AccountAdvance {
   accountType: AccountType;
   accountExternalId: string;
   data: IuguMarketplaceAccountAdvanceResponse;
-  createdOn: firebase.firestore.FieldValue;
+  createdOn: FieldValue;
 }
 
 export interface AccountTransfer {
@@ -54,5 +54,5 @@ export interface AccountTransfer {
   accountId: string | null;
   accountExternalId: string;
   data: IuguMarketplaceTransferResponse;
-  createdOn: firebase.firestore.FieldValue;
+  createdOn: FieldValue;
 }
