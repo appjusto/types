@@ -1,14 +1,14 @@
 import { IuguInvoiceStatus } from '.';
 
-export interface InvoiceCreatedPayload {
-  event: 'invoice.created';
-  data: {
-    id: string;
-    account_id: string;
-    status: IuguInvoiceStatus;
-    // subscription_id?: string;
-  };
-}
+// export interface InvoiceCreatedPayload {
+//   event: 'invoice.created';
+//   data: {
+//     id: string;
+//     account_id: string;
+//     status: IuguInvoiceStatus;
+//     // subscription_id?: string;
+//   };
+// }
 
 export interface InvoiceStatusChangedPayload {
   event: 'invoice.status_changed';
@@ -48,7 +48,7 @@ export interface InvoiceReleasedPayload {
 }
 
 export type InvoiceHookPayload =
-  | InvoiceCreatedPayload
+  // | InvoiceCreatedPayload
   | InvoiceStatusChangedPayload
   | InvoicePaymentFailedPayload
   | InvoiceReleasedPayload;

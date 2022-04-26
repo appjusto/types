@@ -28,6 +28,9 @@ export interface Invoice {
     LR: string;
     message?: string;
   };
+  paymentMethod?: string | null;
+  paidAt?: string | null;
+  payerDocument?: string | null;
   createdOn: FieldValue;
   updatedOn?: FieldValue;
 }
