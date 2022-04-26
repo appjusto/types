@@ -5,6 +5,7 @@ import { ProfileSituation, ProfileTimestamps } from '..';
 export type CourierWarehouse = {
   name: string | null;
   email: string | null;
+  phone: string | null;
   situation: ProfileSituation;
   status: CourierStatus;
   notificationToken: string | null;

@@ -30,6 +30,11 @@ export interface BusinessStatistics {
   negativeReviews: number;
 }
 
+export type CookingTimeMode = 'manual' | 'auto';
+export interface BusinessSettings {
+  cookingTimeMode: CookingTimeMode;
+}
+
 export type BusinessType = 'restaurant';
 export type BusinessStatus = 'open' | 'closed';
 
@@ -79,6 +84,7 @@ export interface Business {
   orderPrinting?: boolean;
   slug?: string;
   averageDiscount?: number;
+  settings?: BusinessSettings;
   // metadata
   timestamps: ProfileTimestamps;
   keepAlive?: FieldValue;

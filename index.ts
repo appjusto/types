@@ -20,9 +20,11 @@ export {
   BusinessPhone,
   BusinessRecommendation,
   BusinessSchedule,
+  BusinessSettings,
   BusinessStatistics,
   BusinessStatus,
   BusinessType,
+  CookingTimeMode,
   Cuisine,
   ScheduleObject,
 } from './business';
@@ -30,6 +32,7 @@ export {
   BusinessProfilePayload,
   CloneBusinessPayload,
   CreateBusinessProfilePayload,
+  DeleteBusinessPayload,
   UpdateBusinessSlugPayload,
 } from './business/payloads';
 export { BusinessWarehouse } from './business/warehouse';
@@ -77,12 +80,10 @@ export { CloneComplementsGroupPayload } from './menu/payloads';
 export { Classification, Product, ProductStatistics } from './menu/product';
 export {
   ChatPushMessageData,
-  GeneralPushData,
   NavigateBusinessPushData,
   NotificationTaskPayload,
   OrderMatchPushMessageData,
   OrderUpdatePushData,
-  ProfileUpdatePushData,
   PushMessage,
   PushMessageActionType,
   PushMessageData,
@@ -215,6 +216,10 @@ export {
   UserProfile,
 } from './profile';
 export { ProfileChange, UserProfileChange } from './profile/change';
+export {
+  NotificationChannel,
+  NotificationPreferences,
+} from './profile/notifications';
 export { OrderConsumerReview, Review, ReviewTag, ReviewType } from './review';
 export { NPS } from './review/nps';
 export { OrderReviewWarehouse } from './review/warehouse';
