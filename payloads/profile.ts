@@ -1,5 +1,7 @@
 import { BasePayload } from '.';
 import { NewManagerData } from '..';
+import { NewUserData } from '../permissions';
+import { NewStaffData } from '../staff';
 
 export interface DeleteAccountPayload extends BasePayload {
   accountId?: string;
@@ -19,10 +21,21 @@ export interface UpdateEmailPayload extends BasePayload {
 export interface VerifyCourierProfilePayload extends BasePayload {}
 
 export interface CreateManagersPayload extends BasePayload {
-  key: string;
-  managers: NewManagerData[];
+  type: 'managers' | 'staff';
+  key?: string;
+  /**
+   * @deprecated
+   */
+  managers?: NewManagerData[];
+  /**
+   * @deprecated
+   */
+  staff?: NewStaffData;
+  usersData: NewUserData[];
 }
 
-export interface GetBusinessManagersPayload extends BasePayload {
-  businessId: string;
+export interface GetManagersPayload extends BasePayload {
+  type: 'managers' | 'staff';
+  businessId?: string;
+  staffId?: string;
 }

@@ -175,7 +175,7 @@ export {
 export {
   CreateManagersPayload,
   DeleteAccountPayload,
-  GetBusinessManagersPayload,
+  GetManagersPayload,
   UpdateEmailPayload,
   VerifyCourierProfilePayload,
 } from './payloads/profile';
@@ -194,6 +194,11 @@ export {
   InvoiceTaskHandlerInvoicesExtra,
   InvoiceTaskHandlerTipExtra,
 } from './payment/tasks';
+export {
+  NewUserData,
+  UserPermissionRules,
+  UserPermissions,
+} from './permissions';
 export {
   City,
   Environment,
@@ -223,4 +228,5 @@ export {
 export { OrderConsumerReview, Review, ReviewTag, ReviewType } from './review';
 export { NPS } from './review/nps';
 export { OrderReviewWarehouse } from './review/warehouse';
+export { NewStaffData, StaffProfile } from './staff';
 export { User, UserType } from './users';
