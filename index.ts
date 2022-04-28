@@ -195,6 +195,7 @@ export {
   InvoiceTaskHandlerTipExtra,
 } from './payment/tasks';
 export {
+  CRUD,
   NewUserData,
   UserPermissionRules,
   UserPermissions,
