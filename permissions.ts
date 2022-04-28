@@ -1,4 +1,4 @@
-type CRUD = 'create' | 'read' | 'update' | 'delete';
+type CRUD = 'c' | 'r' | 'u' | 'd';
 
 export type UserPermissionRules = CRUD[];
 
