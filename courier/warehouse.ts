@@ -13,6 +13,10 @@ export type CourierWarehouse = {
   city: string | null;
   state: string | null;
   mode: CourierMode;
+  fleet: {
+    id: string;
+    name: string;
+  };
   appVersion: string | null;
   timestamps: ProfileTimestamps;
   createdOn: FieldValue;

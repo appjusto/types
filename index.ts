@@ -57,6 +57,7 @@ export { CourierOrderRequest } from './courier/requests';
 export { CourierWarehouse } from './courier/warehouse';
 export { EmailTaskPayload, EmailTaskPayloadFrom } from './emails';
 export { Fleet, FleetDetails, FleetFareParams, FleetSituation } from './fleet';
+export { FleetWarehouse } from './fleet/warehouse';
 export { Invoice, InvoiceFingerprint, InvoiceType } from './invoice';
 export { InvoiceWarehouse } from './invoice/warehouse';
 export { RouteDetails } from './location/directions';
