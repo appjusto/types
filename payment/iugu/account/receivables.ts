@@ -10,6 +10,9 @@ export interface IuguMarketplaceAccountReceivableItem {
   commission: string;
   number_of_installments: number;
   installment: number;
+  created_at: string;
+  updated_at: string;
+  advanceable: boolean;
 }
 
 export interface IuguMarketplaceAccountReceivables {
