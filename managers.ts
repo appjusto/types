@@ -16,7 +16,9 @@ export interface NewManagerData {
   role: Role | AdminRole;
 }
 
-export interface ManagerProfile extends UserProfile {}
+export interface ManagerProfile extends UserProfile {
+  lastBusinessId?: string;
+}
 
 export interface ManagerPrivatePlatform {
   claimsUpdated: FieldValue;
