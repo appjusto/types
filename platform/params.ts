@@ -20,6 +20,11 @@ export interface PlatformParams {
   };
   marketplace: {
     maxWithdraws: number;
+    advances: {
+      daysOfWeek: number[];
+      startAt: number;
+      endAt: number;
+    };
   };
   courier: {
     approveAfterVerified: boolean;
