@@ -112,6 +112,7 @@ export {
   OrderLocationEntry,
   OrderLog,
   OrderMatchingLog,
+  OrderPaymentLog,
 } from './order/logs';
 export { OrderMeta } from './order/meta';
 export { Address, Place } from './order/place';

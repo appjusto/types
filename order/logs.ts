@@ -10,6 +10,12 @@ export interface OrderChangeLog {
   after: Partial<Order>;
 }
 
+export interface OrderPaymentLog {
+  type: 'payment';
+  timestamp: FieldValue;
+  info: string[];
+}
+
 export interface OrderInfoLog {
   type: 'info';
   timestamp: FieldValue;
@@ -43,4 +49,5 @@ export type OrderLog =
   | OrderChangeLog
   | OrderInfoLog
   | OrderMatchingLog
-  | OrderCourierLocationLog;
+  | OrderCourierLocationLog
+  | OrderPaymentLog;
