@@ -90,21 +90,11 @@ export {
   PushMessageData,
   PushReceipt,
 } from './messages';
-export {
-  Order,
-  OrderBusiness,
-  OrderChange,
-  OrderRoute,
-  OrderType,
-} from './order';
+export { Order, OrderBusiness, OrderRoute, OrderType } from './order';
 export { ChatMessage, ChatMessageType, ChatMessageUser } from './order/chat';
 export { OrderConsumer } from './order/consumer';
 export { OrderCourier } from './order/courier';
-export {
-  DispatchingState,
-  DispatchingStatus,
-  OrderLocationEntry,
-} from './order/dispatching';
+export { DispatchingState, DispatchingStatus } from './order/dispatching';
 export { Fare, FareDetails } from './order/fare';
 export { OrderFraudPreventionFlags } from './order/fraud';
 export {
@@ -115,6 +105,13 @@ export {
   OrderRejectionType,
 } from './order/issues';
 export { OrderItem, OrderItemComplement } from './order/item';
+export {
+  OrderChangeLog,
+  OrderCourierLocationLog,
+  OrderInfoLog,
+  OrderLog,
+  OrderMatchingLog,
+} from './order/logs';
 export { OrderMeta } from './order/meta';
 export { Address, Place } from './order/place';
 export {

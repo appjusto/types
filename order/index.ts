@@ -63,44 +63,6 @@ export interface Order {
   dispatchingTimestamps: OrderDispatchingTimestamps;
   createdOn: FieldValue;
   updatedOn?: FieldValue;
-  /**
-   * @deprecated
-   */
-  chargedOn?: FieldValue;
-  /**
-   * @deprecated
-   */
-  confirmedOn?: FieldValue;
-  /**
-   * @deprecated
-   */
-  declinedOn?: FieldValue;
-  /**
-   * @deprecated
-   */
-  dispatchingDeclinedOn?: FieldValue;
-  /**
-   * @deprecated
-   */
-  dispatchingStartedOn?: FieldValue;
-  /**
-   * @deprecated
-   */
-  matchingEndedOn?: FieldValue;
-  /**
-   * @deprecated
-   */
-  deliveredOn?: FieldValue;
-  /**
-   * @deprecated
-   */
-  canceledOn?: FieldValue;
-}
-
-export interface OrderChange {
-  before: Partial<Order>;
-  after: Partial<Order>;
-  timestamp: FieldValue;
 }
 
 export interface OrderBusiness {
