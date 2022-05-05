@@ -8,5 +8,7 @@ export interface PlatformAccess {
   minVersions: {
     consumer: string | null;
     courier: string | null;
+    businessWeb: string | null;
+    businessApp: string | null;
   };
 }
