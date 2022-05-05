@@ -71,6 +71,7 @@ export {
   AdminRole,
   ManagerPrivatePlatform,
   ManagerProfile,
+  ManagerWithRole,
   NewManagerData,
   Role,
 } from './managers';

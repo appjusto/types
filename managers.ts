@@ -20,6 +20,14 @@ export interface ManagerProfile extends UserProfile {
   lastBusinessId?: string;
 }
 
+export interface ManagerWithRole {
+  id: string;
+  email: string;
+  role: AdminRole | null;
+  createdOn: string;
+  appVersion?: string;
+}
+
 export interface ManagerPrivatePlatform {
   claimsUpdated: FieldValue;
 }
