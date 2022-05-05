@@ -1,7 +1,7 @@
-import { FieldValue } from 'firebase/firestore';
+import { FieldValue, GeoPoint } from 'firebase/firestore';
 import { Order } from '.';
 import { LatLng } from '../platform';
-import { DispatchingState, DispatchingStatus } from './dispatching';
+import { DispatchingState } from './dispatching';
 
 export interface OrderChangeLog {
   type: 'change';
@@ -26,8 +26,16 @@ export interface OrderCourierLocationLog {
   type: 'courier-location';
   timestamp: FieldValue;
   location: LatLng;
-  dispatchingStatus: DispatchingStatus;
-  dispatchingState: DispatchingState | null;
+  courierId: string;
+}
+
+/**
+ * @deprecated
+ */
+export interface OrderLocationEntry {
+  createdOn: FieldValue;
+  coordinates: GeoPoint;
+  dispatchingState: DispatchingState;
   courierId: string;
 }
 

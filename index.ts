@@ -109,6 +109,7 @@ export {
   OrderChangeLog,
   OrderCourierLocationLog,
   OrderInfoLog,
+  OrderLocationEntry,
   OrderLog,
   OrderMatchingLog,
 } from './order/logs';
