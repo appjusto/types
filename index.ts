@@ -96,6 +96,7 @@ export {
   OrderBusiness,
   OrderChange,
   OrderRoute,
+  OrderStaff,
   OrderType,
 } from './order';
 export { ChatMessage, ChatMessageType, ChatMessageUser } from './order/chat';
