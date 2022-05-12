@@ -17,7 +17,7 @@ export interface NewManagerData {
 }
 
 export interface ManagerProfile extends UserProfile {
-  lastBusinessId?: string;
+  lastBusinessId?: string | null;
 }
 
 export interface ManagerWithRole {
