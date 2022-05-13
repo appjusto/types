@@ -27,6 +27,7 @@ export interface ManagerWithRole {
   role: AdminRole | null;
   createdOn: string;
   appVersion?: string;
+  webAppVersion?: string;
 }
 
 export interface ManagerPrivatePlatform {
