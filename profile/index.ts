@@ -40,6 +40,7 @@ export interface UserProfile {
   // metadata
   appVersion?: string;
   platform?: string;
+  userAgent?: string;
   timestamps: ProfileTimestamps;
   createdOn: FieldValue;
   updatedOn?: FieldValue;

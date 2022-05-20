@@ -19,7 +19,6 @@ export interface NewManagerData {
 export interface ManagerProfile extends UserProfile {
   lastBusinessId?: string | null;
   webAppVersion?: string;
-  userAgent?: string;
 }
 
 export interface ManagerWithRole {
