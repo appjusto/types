@@ -14,6 +14,7 @@ export type IssueType =
   | 'consumer-delivery-problem'
   | 'restaurant-cancel'
   | 'business-profile-invalid'
+  | 'platform-order-cancel'
   | 'agent-order-cancel'
   | 'courier-drops-food-delivery'
   | 'courier-drops-p2p-delivery'
