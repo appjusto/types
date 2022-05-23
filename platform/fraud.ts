@@ -13,6 +13,10 @@ export interface FraudPreventionParams {
   newUser: {
     hoursAfterDelivery: number;
   };
+  manyOrders: {
+    threshold: number;
+    hours: number;
+  };
 }
 
 export interface FlaggedLocation {

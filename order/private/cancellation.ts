@@ -10,7 +10,7 @@ export interface OrderCancellationParams {
 export interface OrderCancellation {
   canceledBy: Flavor;
   canceledById?: string;
-  params: OrderCancellationParams;
+  params?: OrderCancellationParams;
   issue: Issue | null;
   comment: string | null;
   timestamp: FieldValue;

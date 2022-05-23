@@ -17,7 +17,17 @@ export interface NewManagerData {
 }
 
 export interface ManagerProfile extends UserProfile {
-  lastBusinessId?: string;
+  lastBusinessId?: string | null;
+  webAppVersion?: string;
+}
+
+export interface ManagerWithRole {
+  id: string;
+  email: string;
+  role: AdminRole | null;
+  createdOn: string;
+  appVersion?: string;
+  webAppVersion?: string;
 }
 
 export interface ManagerPrivatePlatform {

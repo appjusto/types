@@ -28,6 +28,7 @@ export interface Order {
   consumer: OrderConsumer;
   courier?: OrderCourier | null;
   business?: OrderBusiness | null;
+  staff?: OrderStaff | null;
   items?: OrderItem[];
   additionalInfo?: string | null;
   code?: string;
@@ -69,4 +70,10 @@ export interface OrderBusiness {
   id: string;
   name: string;
   cusine: string;
+}
+
+export interface OrderStaff {
+  id: string;
+  name?: string | null;
+  email: string;
 }

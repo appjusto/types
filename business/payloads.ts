@@ -13,6 +13,7 @@ export interface UpdateBusinessSlugPayload extends BasePayload {
 export interface CloneBusinessPayload extends BasePayload {
   operation: 'clone';
   businessId: string;
+  isFromScratch?: boolean;
 }
 
 export type BusinessProfilePayload =
