@@ -4,13 +4,13 @@ export {
   ConsumerAlgolia,
   CourierAlgolia,
   FlaggedLocationsAlgolia,
-  ProductAlgolia
+  ProductAlgolia,
 } from './algolia';
 export {
   Bank,
   BankAccount,
   BankAccountPersonType,
-  BankAccountType
+  BankAccountType,
 } from './banking';
 export {
   Business,
@@ -26,21 +26,21 @@ export {
   BusinessType,
   CookingTimeMode,
   Cuisine,
-  ScheduleObject
+  ScheduleObject,
 } from './business';
 export {
   BusinessProfilePayload,
   CloneBusinessPayload,
   CreateBusinessProfilePayload,
   DeleteBusinessPayload,
-  UpdateBusinessSlugPayload
+  UpdateBusinessSlugPayload,
 } from './business/payloads';
 export { BusinessWarehouse } from './business/warehouse';
 export {
   ConsumerProfile,
   ConsumerServiceStatistics,
   ConsumerStatistics,
-  PaymentChannel
+  PaymentChannel,
 } from './consumer';
 export { ConsumerWarehouse } from './consumer/warehouse';
 export {
@@ -51,7 +51,7 @@ export {
   CourierProfile,
   CourierServiceStatistics,
   CourierStatistics,
-  CourierStatus
+  CourierStatus,
 } from './courier';
 export { CourierOrderRequest } from './courier/requests';
 export { CourierWarehouse } from './courier/warehouse';
@@ -65,7 +65,7 @@ export {
   GoogleMapsGeocodePayload,
   GoogleMapsPlacesAutocompletePayload,
   GoogleMapsReverseGeocodePayload,
-  QueryGoogleMapsPayload
+  QueryGoogleMapsPayload,
 } from './location/payloads';
 export {
   AdminRole,
@@ -73,7 +73,7 @@ export {
   ManagerProfile,
   ManagerWithRole,
   NewManagerData,
-  Role
+  Role,
 } from './managers';
 export { Ordering } from './menu';
 export { Category } from './menu/category';
@@ -89,14 +89,14 @@ export {
   PushMessage,
   PushMessageActionType,
   PushMessageData,
-  PushReceipt
+  PushReceipt,
 } from './messages';
 export {
   Order,
   OrderBusiness,
   OrderRoute,
   OrderStaff,
-  OrderType
+  OrderType,
 } from './order';
 export { ChatMessage, ChatMessageType, ChatMessageUser } from './order/chat';
 export { OrderConsumer } from './order/consumer';
@@ -109,7 +109,7 @@ export {
   IssueType,
   OrderIssue,
   OrderRejection,
-  OrderRejectionType
+  OrderRejectionType,
 } from './order/issues';
 export { OrderItem, OrderItemComplement } from './order/item';
 export {
@@ -119,24 +119,25 @@ export {
   OrderLocationEntry,
   OrderLog,
   OrderMatchingLog,
-  OrderPaymentLog
+  OrderPaymentLog,
+  OrderStaffLog,
 } from './order/logs';
 export { OrderMeta } from './order/meta';
 export { Address, Place } from './order/place';
 export {
   OrderCancellation,
-  OrderCancellationParams
+  OrderCancellationParams,
 } from './order/private/cancellation';
 export { OrderConfirmation } from './order/private/confirmation';
 export {
   OrderMatching,
-  OrderMatchingRejection
+  OrderMatchingRejection,
 } from './order/private/matching';
 export { OrderPayments } from './order/private/payment';
 export { FoodOrderStatus, OrderStatus, P2POrderStatus } from './order/status';
 export {
   OrderDispatchingTimestamps,
-  OrderStatusTimestamps
+  OrderStatusTimestamps,
 } from './order/timestamps';
 export { OrderWarehouse } from './order/warehouse';
 export { BasePayload, FetchTotalCouriersNearbyPayload } from './payloads';
@@ -146,13 +147,13 @@ export {
   FetchAccountInformationResponse,
   FetchAdvanceSimulationPayload,
   FetchReceivablesPayload,
-  RequestWithdrawPayload
+  RequestWithdrawPayload,
 } from './payloads/account';
 export { ReleaseCourierPayload } from './payloads/courier';
 export {
   DeletePaymentMethodPayload,
   SavePaymentTokenPayload,
-  SavePaymentTokenResponse
+  SavePaymentTokenResponse,
 } from './payloads/marketplace';
 export {
   CancelOrderPayload,
@@ -177,21 +178,21 @@ export {
   TipCourierPayload,
   UpdateOrderPayload,
   UpdateOrderPlacePayload,
-  UpdateOrderStatusPayload
+  UpdateOrderStatusPayload,
 } from './payloads/order';
 export {
   CreateManagersPayload,
   DeleteAccountPayload,
   GetManagersPayload,
   UpdateEmailPayload,
-  VerifyCourierProfilePayload
+  VerifyCourierProfilePayload,
 } from './payloads/profile';
 export {
   AccountAdvance,
   AccountTransfer,
   AccountWithdraw,
   MarketplaceAccountInfo,
-  MarketplaceAccountSituation
+  MarketplaceAccountSituation,
 } from './payment/marketplace';
 export {
   AccountTaskPayload,
@@ -199,13 +200,13 @@ export {
   InvoiceTaskAction,
   InvoiceTaskHandler,
   InvoiceTaskHandlerInvoicesExtra,
-  InvoiceTaskHandlerTipExtra
+  InvoiceTaskHandlerTipExtra,
 } from './payment/tasks';
 export {
   CRUD,
   NewUserData,
   UserPermissionRules,
-  UserPermissions
+  UserPermissions,
 } from './permissions';
 export {
   City,
@@ -214,7 +215,7 @@ export {
   LatLng,
   LatLng2,
   OutsourceAccountType,
-  WithId
+  WithId,
 } from './platform';
 export { PlatformAccess } from './platform/access';
 export { PlatformFees, ServiceFee } from './platform/fees';
@@ -226,16 +227,15 @@ export {
   ProfileNote,
   ProfileSituation,
   ProfileTimestamps,
-  UserProfile
+  UserProfile,
 } from './profile';
 export { ProfileChange, UserProfileChange } from './profile/change';
 export {
   NotificationChannel,
-  NotificationPreferences
+  NotificationPreferences,
 } from './profile/notifications';
 export { OrderConsumerReview, Review, ReviewTag, ReviewType } from './review';
 export { NPS } from './review/nps';
 export { OrderReviewWarehouse } from './review/warehouse';
 export { NewStaffData, StaffProfile } from './staff';
 export { User, UserType } from './users';
-

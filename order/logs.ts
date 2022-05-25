@@ -1,5 +1,5 @@
 import { FieldValue, GeoPoint } from 'firebase/firestore';
-import { Order } from '.';
+import { Order, OrderStaff } from '.';
 import { LatLng } from '../platform';
 import { DispatchingState } from './dispatching';
 
@@ -8,6 +8,13 @@ export interface OrderChangeLog {
   timestamp: FieldValue;
   before: Partial<Order>;
   after: Partial<Order>;
+}
+
+export interface OrderStaffLog {
+  type: 'staff-change';
+  timestamp: FieldValue;
+  before: OrderStaff | null;
+  after: OrderStaff | null;
 }
 
 export interface OrderPaymentLog {

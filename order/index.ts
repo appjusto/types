@@ -38,7 +38,7 @@ export interface Order {
   origin?: Place;
   destination?: Place | null;
   route?: OrderRoute | null;
-  dispatchingState?: DispatchingState;
+  dispatchingState: DispatchingState | null;
   outsourcedBy?: OutsourceAccountType;
   // fare, tip & payment
   fare?: Fare;
