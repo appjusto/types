@@ -28,11 +28,12 @@ export interface PlatformParams {
   };
   courier: {
     approveAfterVerified: boolean;
-    restrictWithdrawTo: string[];
+    advanceableAfterHours: number;
     delayBeforeAdvancing: number; // in seconds
     limits: {
       availableWithoutUpdates: number; // in seconds
     };
+    restrictWithdrawTo: string[];
   };
   business: {
     approveAfterVerified: boolean;
