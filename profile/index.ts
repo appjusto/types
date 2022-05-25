@@ -32,6 +32,10 @@ export interface UserProfile {
   pix?: string;
   onboarded?: boolean;
   coordinates?: GeoPoint;
+  g: {
+    geopoint: GeoPoint;
+    geohash: string;
+  };
   state?: string;
   city?: string;
   isPasswordActive?: boolean;
