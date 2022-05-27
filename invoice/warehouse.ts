@@ -1,7 +1,6 @@
 import { FieldValue } from 'firebase/firestore';
 import { InvoiceType } from '.';
 import { AccountType } from '..';
-import { IuguInvoiceStatus } from '../payment/iugu';
 
 export interface InvoiceWarehouse {
   invoiceType: InvoiceType;
@@ -10,6 +9,7 @@ export interface InvoiceWarehouse {
   commission: number | null;
   accountType: AccountType;
   accountId: string | null;
+  consumerId: string | null;
   status: IuguInvoiceStatus;
   createdOn: FieldValue;
   updatedOn: FieldValue | null;
