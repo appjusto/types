@@ -24,10 +24,14 @@ export interface PlatformParams {
       daysOfWeek: number[];
       startAt: number;
       endAt: number;
+      advanceableAfterHours: number;
     };
   };
   courier: {
     approveAfterVerified: boolean;
+    /**
+     * @deprecated
+     */
     advanceableAfterHours: number;
     delayBeforeAdvancing: number; // in seconds
     limits: {
