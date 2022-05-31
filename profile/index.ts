@@ -42,8 +42,10 @@ export interface UserProfile {
   tags?: string[];
   nps: NPS;
   // metadata
-  appVersion?: string;
   platform?: string;
+  appVersion?: string;
+  appInstallationId?: string | null;
+  appIp?: string | null;
   userAgent?: string;
   timestamps: ProfileTimestamps;
   createdOn: FieldValue;
