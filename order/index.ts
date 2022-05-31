@@ -4,6 +4,7 @@ import {
   OrderStatusTimestamps,
   OutsourceAccountType,
 } from '..';
+import { Fulfillment } from '../business';
 import { OrderConsumer } from './consumer';
 import { OrderCourier } from './courier';
 import { DispatchingState, DispatchingStatus } from './dispatching';
@@ -23,6 +24,7 @@ export interface OrderRoute {
 
 export interface Order {
   type: OrderType;
+  fulfillment?: Fulfillment;
   status: OrderStatus;
   dispatchingStatus: DispatchingStatus;
   consumer: OrderConsumer;
