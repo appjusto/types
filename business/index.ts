@@ -52,6 +52,8 @@ export type BusinessPhone = {
   whatsapp: boolean;
 };
 
+export type Fulfillment = 'delivery' | 'take-away' | 'dine-in';
+
 export interface Business {
   code: string;
   type: BusinessType;
@@ -85,6 +87,7 @@ export interface Business {
   slug?: string;
   averageDiscount?: number;
   settings?: BusinessSettings;
+  fulfillment?: Fulfillment[];
   // metadata
   timestamps: ProfileTimestamps;
   keepAlive?: FieldValue;

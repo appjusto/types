@@ -26,6 +26,7 @@ export {
   BusinessType,
   CookingTimeMode,
   Cuisine,
+  Fulfillment,
   ScheduleObject,
 } from './business';
 export {
