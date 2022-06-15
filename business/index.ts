@@ -1,4 +1,4 @@
-import { FieldValue } from 'firebase/firestore';
+import { FieldValue, GeoPoint } from 'firebase/firestore';
 import { Place } from '..';
 import { LatLng } from '../platform';
 import { ProfileSituation, ProfileTimestamps } from '../profile';
@@ -67,6 +67,11 @@ export interface Business {
   phones?: BusinessPhone[];
   managers?: string[]; // emails
   businessAddress?: BusinessAddress;
+  coordinates?: GeoPoint;
+  g?: {
+    geopoint: GeoPoint;
+    geohash: string;
+  };
   status: BusinessStatus;
   situation: ProfileSituation;
   enabled: boolean;
