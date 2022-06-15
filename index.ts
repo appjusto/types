@@ -56,7 +56,12 @@ export {
 } from './courier';
 export { CourierOrderRequest } from './courier/requests';
 export { CourierWarehouse } from './courier/warehouse';
-export { EmailTaskPayload, EmailTaskPayloadFrom } from './emails';
+export {
+  EmailPayload,
+  EmailTaskPayload,
+  EmailTaskPayloadFrom,
+  OrderFraudEmailPayload,
+} from './emails/payloads';
 export { Fleet, FleetDetails, FleetFareParams, FleetSituation } from './fleet';
 export { FleetWarehouse } from './fleet/warehouse';
 export { Invoice, InvoiceFingerprint, InvoiceType } from './invoice';
