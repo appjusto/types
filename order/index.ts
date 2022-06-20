@@ -54,6 +54,7 @@ export interface Order {
       arrival?: FieldValue;
     };
     destination?: {
+      initialEstimate?: FieldValue;
       estimate?: FieldValue;
       arrival?: FieldValue;
       arrivalLimit?: FieldValue;

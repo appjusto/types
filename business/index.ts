@@ -66,6 +66,7 @@ export interface Business {
   phone?: string;
   phones?: BusinessPhone[];
   managers?: string[]; // emails
+  accountManagerId?: string;
   businessAddress?: BusinessAddress;
   coordinates?: GeoPoint;
   g?: {

@@ -1,5 +1,5 @@
 import { FieldValue } from 'firebase/firestore';
-import { UserProfile } from './profile';
+import { UserProfile } from '../profile';
 
 /**
  * @deprecated

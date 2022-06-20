@@ -1,4 +1,4 @@
-import { AdminRole } from './managers';
+import { AdminRole } from './manager';
 
 export type CRUD = 'c' | 'r' | 'u' | 'd';
 

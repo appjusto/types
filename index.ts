@@ -80,7 +80,8 @@ export {
   ManagerWithRole,
   NewManagerData,
   Role,
-} from './managers';
+} from './manager';
+export { ManagerWarehouse } from './manager/warehouse';
 export { Ordering } from './menu';
 export { Category } from './menu/category';
 export { Complement, ComplementGroup } from './menu/complements';
