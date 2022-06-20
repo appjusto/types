@@ -6,6 +6,7 @@ export type IuguInvoiceStatus =
   | 'paid'
   | 'partially_paid'
   | 'refunded'
+  | 'partially_refunded'
   | 'expired'
   | 'authorized'
   | 'canceled'
