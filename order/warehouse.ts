@@ -15,9 +15,10 @@ export type OrderWarehouse = {
     id: string;
   };
   courier: {
-    id: string;
-    distanceToOrigin: number;
+    id: string | null;
+    distanceToOrigin: number | null;
     phone: string | null;
+    name: string | null;
   } | null;
   business: {
     id: string;
