@@ -23,5 +23,4 @@ export interface ConsumerProfile extends UserProfile {
   statistics: ConsumerStatistics;
   favoritePlaces: Place[];
   paymentChannel?: PaymentChannel;
-  pixKey?: string;
 }
