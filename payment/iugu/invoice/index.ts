@@ -83,6 +83,15 @@ export interface IuguCreateInvoiceResponse {
   notification_url?: string;
   custom_variables?: object[];
   commission_cents: number;
+  pix: {
+    qrcode: string;
+    qrcode_text: string;
+    status: 'qr_code_created';
+    payer_cpf_cnpj: string | null;
+    payer_name: string | null;
+    end_to_end_id: string | null;
+    end_to_end_refund_id: string | null;
+  } | null;
 }
 // capture invoice
 export interface IuguInvoiceCaptureResponse {

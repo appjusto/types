@@ -140,7 +140,13 @@ export {
   OrderMatching,
   OrderMatchingRejection,
 } from './order/private/matching';
-export { OrderPayments } from './order/private/payment';
+export {
+  CreditCardOrderPayments,
+  IuguOrderPayments,
+  OrderPayments,
+  PixOrderPayments,
+  VROrderPayments,
+} from './order/private/payment';
 export { FoodOrderStatus, OrderStatus, P2POrderStatus } from './order/status';
 export {
   OrderDispatchingTimestamps,
@@ -194,6 +200,7 @@ export {
   UpdateEmailPayload,
   VerifyCourierProfilePayload,
 } from './payloads/profile';
+export { PayableWith, PaymentProcessor } from './payment/index';
 export {
   AccountAdvance,
   AccountTransfer,

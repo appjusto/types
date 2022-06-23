@@ -1,4 +1,5 @@
 import { FieldValue } from 'firebase/firestore';
+import { PayableWith } from '../payment';
 import { IuguInvoiceStatus } from '../payment/iugu';
 import { AccountType } from '../payment/tasks';
 
@@ -7,7 +8,12 @@ export interface InvoiceFingerprint {
   nounce: string;
 }
 
-export type InvoiceType = 'products' | 'delivery' | 'platform' | 'tip';
+export type InvoiceType =
+  | 'order'
+  | 'products'
+  | 'delivery'
+  | 'platform'
+  | 'tip';
 
 export interface Invoice {
   invoiceType: InvoiceType;
@@ -29,7 +35,12 @@ export interface Invoice {
     LR: string;
     message?: string;
   };
-  paymentMethod?: string | null;
+  pix: {
+    qrcode: string;
+    qrcodeText: string;
+    status: 'qr_code_created';
+  } | null;
+  paymentMethod: PayableWith;
   paidAt?: string | null;
   payerDocument?: string | null;
   createdOn: FieldValue;

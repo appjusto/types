@@ -5,6 +5,7 @@ import {
   OutsourceAccountType,
 } from '..';
 import { Fulfillment } from '../business';
+import { PayableWith } from '../payment/index';
 import { OrderConsumer } from './consumer';
 import { OrderCourier } from './courier';
 import { DispatchingState, DispatchingStatus } from './dispatching';
@@ -25,6 +26,7 @@ export interface OrderRoute {
 export interface Order {
   type: OrderType;
   fulfillment?: Fulfillment;
+  paymentMethod: PayableWith;
   status: OrderStatus;
   dispatchingStatus: DispatchingStatus;
   consumer: OrderConsumer;
