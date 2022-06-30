@@ -45,6 +45,7 @@ export interface PlatformParams {
     averageCookingTime: number; // in seconds
   };
   consumer: {
+    pixEnabled: boolean;
     approveAfterSubmitted: boolean;
     support: {
       starts: string;

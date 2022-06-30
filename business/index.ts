@@ -1,6 +1,7 @@
 import { FieldValue, GeoPoint } from 'firebase/firestore';
 import { Place } from '..';
 import { Fulfillment, PreparationMode } from '../order';
+import { PayableWith } from '../payment';
 import { LatLng } from '../platform';
 import { ProfileSituation, ProfileTimestamps } from '../profile';
 
@@ -93,7 +94,8 @@ export interface Business {
   averageDiscount?: number;
   settings?: BusinessSettings;
   fulfillment?: Fulfillment[];
-  preparationMode?: PreparationMode[];
+  preparationModes?: PreparationMode[];
+  acceptedPaymentMethods?: PayableWith[];
   // metadata
   timestamps: ProfileTimestamps;
   keepAlive?: FieldValue;
