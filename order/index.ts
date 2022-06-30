@@ -27,12 +27,12 @@ export interface Order {
   type: OrderType;
   paymentMethod: PayableWith;
   fulfillment?: Fulfillment;
-  preparationMode?: PreparationMode;
-  status: OrderStatus;
-  dispatchingStatus: DispatchingStatus;
+  scheduledTo: FieldValue | null;
   consumer: OrderConsumer;
   courier?: OrderCourier | null;
   business?: OrderBusiness | null;
+  status: OrderStatus;
+  dispatchingStatus: DispatchingStatus;
   staff?: OrderStaff | null;
   items?: OrderItem[];
   additionalInfo?: string | null;
