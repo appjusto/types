@@ -1,8 +1,8 @@
-import { BasePayload } from '.';
 import { LatLng, OrderStatus, Place } from '..';
-import { Issue } from '../order/issues';
-import { OrderCancellationParams } from '../order/private/cancellation';
+import { BasePayload } from '../payloads';
 import { OutsourceAccountType, WithId } from '../platform';
+import { Issue } from './issues';
+import { OrderCancellationParams } from './private/cancellation';
 
 export interface OrderPayload extends BasePayload {
   orderId: string;

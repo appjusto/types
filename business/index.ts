@@ -1,5 +1,6 @@
 import { FieldValue, GeoPoint } from 'firebase/firestore';
 import { Place } from '..';
+import { Fulfillment, PreparationMode } from '../order';
 import { LatLng } from '../platform';
 import { ProfileSituation, ProfileTimestamps } from '../profile';
 
@@ -52,8 +53,6 @@ export type BusinessPhone = {
   whatsapp: boolean;
 };
 
-export type Fulfillment = 'delivery' | 'take-away' | 'dine-in';
-
 export interface Business {
   code: string;
   type: BusinessType;
@@ -94,6 +93,7 @@ export interface Business {
   averageDiscount?: number;
   settings?: BusinessSettings;
   fulfillment?: Fulfillment[];
+  preparationMode?: PreparationMode[];
   // metadata
   timestamps: ProfileTimestamps;
   keepAlive?: FieldValue;

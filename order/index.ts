@@ -4,7 +4,7 @@ import {
   OrderStatusTimestamps,
   OutsourceAccountType,
 } from '..';
-import { Fulfillment } from '../business';
+
 import { PayableWith } from '../payment/index';
 import { OrderConsumer } from './consumer';
 import { OrderCourier } from './courier';
@@ -25,8 +25,9 @@ export interface OrderRoute {
 
 export interface Order {
   type: OrderType;
-  fulfillment?: Fulfillment;
   paymentMethod: PayableWith;
+  fulfillment?: Fulfillment;
+  preparationMode?: PreparationMode;
   status: OrderStatus;
   dispatchingStatus: DispatchingStatus;
   consumer: OrderConsumer;
@@ -70,6 +71,9 @@ export interface Order {
   createdOn: FieldValue;
   updatedOn?: FieldValue;
 }
+
+export type Fulfillment = 'delivery' | 'take-away' | 'dine-in';
+export type PreparationMode = 'realtime' | 'scheduled';
 
 export interface OrderBusiness {
   id: string;

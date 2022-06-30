@@ -26,7 +26,6 @@ export {
   BusinessType,
   CookingTimeMode,
   Cuisine,
-  Fulfillment,
   ScheduleObject,
 } from './business';
 export {
@@ -99,11 +98,13 @@ export {
   PushReceipt,
 } from './messages';
 export {
+  Fulfillment,
   Order,
   OrderBusiness,
   OrderRoute,
   OrderStaff,
   OrderType,
+  PreparationMode,
 } from './order';
 export { ChatMessage, ChatMessageType, ChatMessageUser } from './order/chat';
 export { OrderConsumer } from './order/consumer';
@@ -130,6 +131,31 @@ export {
   OrderStaffLog,
 } from './order/logs';
 export { OrderMeta } from './order/meta';
+export {
+  CancelOrderPayload,
+  CompleteDeliveryPayload,
+  DropOrderPayload,
+  GetCancellationInfoPayload,
+  GetCancellationInfoResult,
+  GetOrderQuotesPayload,
+  GetPlaceChangeInfoPayload,
+  GetPlaceChangeInfoResult,
+  MatchingTaskPayload,
+  MatchOrderPayload,
+  NextDispatchingStatePayload,
+  OrderIssuePayload,
+  OrderPayload,
+  OutsourceDeliveryPayload,
+  PlaceOrderPayload,
+  PlaceOrderPayloadPayment,
+  PlaceOrderPayloadPaymentCreditCard,
+  PlaceOrderPayloadPaymentPix,
+  RejectOrderPayload,
+  TipCourierPayload,
+  UpdateOrderPayload,
+  UpdateOrderPlacePayload,
+  UpdateOrderStatusPayload,
+} from './order/payloads';
 export { Address, Place } from './order/place';
 export {
   OrderCancellation,
@@ -168,31 +194,6 @@ export {
   SavePaymentTokenPayload,
   SavePaymentTokenResponse,
 } from './payloads/marketplace';
-export {
-  CancelOrderPayload,
-  CompleteDeliveryPayload,
-  DropOrderPayload,
-  GetCancellationInfoPayload,
-  GetCancellationInfoResult,
-  GetOrderQuotesPayload,
-  GetPlaceChangeInfoPayload,
-  GetPlaceChangeInfoResult,
-  MatchingTaskPayload,
-  MatchOrderPayload,
-  NextDispatchingStatePayload,
-  OrderIssuePayload,
-  OrderPayload,
-  OutsourceDeliveryPayload,
-  PlaceOrderPayload,
-  PlaceOrderPayloadPayment,
-  PlaceOrderPayloadPaymentCreditCard,
-  PlaceOrderPayloadPaymentPix,
-  RejectOrderPayload,
-  TipCourierPayload,
-  UpdateOrderPayload,
-  UpdateOrderPlacePayload,
-  UpdateOrderStatusPayload,
-} from './payloads/order';
 export {
   CreateManagersPayload,
   DeleteAccountPayload,
