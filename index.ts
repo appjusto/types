@@ -233,7 +233,7 @@ export {
   WithId,
 } from './platform';
 export { PlatformAccess } from './platform/access';
-export { PlatformFees, ServiceFee } from './platform/fees';
+export { Fee, PlatformFees } from './platform/fees';
 export { FlaggedLocation, FraudPreventionParams } from './platform/fraud';
 export { InterferenceLog, LoginLog } from './platform/logs';
 export { PlatformManagement, PlatformParams } from './platform/params';
