@@ -47,6 +47,7 @@ export interface CourierProfile extends UserProfile {
   documentValidity?: string;
   bankAccount?: BankAccount;
   company?: CourierCompany;
+  /** @deprecated */
   ongoingOrderId?: string | null; // readonly
 }
 
