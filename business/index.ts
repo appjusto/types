@@ -96,6 +96,7 @@ export interface Business {
   fulfillment?: Fulfillment[];
   preparationModes?: PreparationMode[];
   acceptedPaymentMethods?: PayableWith[];
+  tags?: string[];
   // metadata
   timestamps: ProfileTimestamps;
   keepAlive?: FieldValue;
