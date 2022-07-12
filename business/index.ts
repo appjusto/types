@@ -54,13 +54,6 @@ export type BusinessPhone = {
   whatsapp: boolean;
 };
 
-export type BusinessAccountManager = {
-  id: string | null;
-  email: string | null;
-  name: string | null;
-  updatedOn: FieldValue;
-}
-
 export interface Business {
   code: string;
   type: BusinessType;
@@ -73,7 +66,7 @@ export interface Business {
   phone?: string;
   phones?: BusinessPhone[];
   managers?: string[]; // emails
-  accountManager?: BusinessAccountManager;
+  accountManagerId?: string | null;
   businessAddress?: BusinessAddress;
   coordinates?: GeoPoint;
   g?: {

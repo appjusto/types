@@ -14,7 +14,6 @@ export {
 } from './banking';
 export {
   Business,
-  BusinessAccountManager,
   BusinessAddress,
   BusinessChange,
   BusinessMenuMessage,
