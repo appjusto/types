@@ -66,7 +66,7 @@ export interface Business {
   phone?: string;
   phones?: BusinessPhone[];
   managers?: string[]; // emails
-  accountManagerId?: string;
+  accountManagerId?: string | null;
   businessAddress?: BusinessAddress;
   coordinates?: GeoPoint;
   g?: {
@@ -95,8 +95,12 @@ export interface Business {
   settings?: BusinessSettings;
   fulfillment?: Fulfillment[];
   acceptedPaymentMethods?: PayableWith[];
+<<<<<<< HEAD
   preparationModes?: PreparationMode[];
   // matchingMode: MatchingMode;
+=======
+  tags?: string[];
+>>>>>>> 84a2134529f08861639adf0b887166b0cc8e02d8
   // metadata
   timestamps: ProfileTimestamps;
   keepAlive?: FieldValue;
