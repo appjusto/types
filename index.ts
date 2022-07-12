@@ -260,4 +260,5 @@ export { OrderConsumerReview, Review, ReviewTag, ReviewType } from './review';
 export { NPS } from './review/nps';
 export { OrderReviewWarehouse } from './review/warehouse';
 export { NewStaffData, StaffProfile } from './staff';
+export { UpdateDocumentTaskPayload } from './tasks/update';
 export { User, UserType } from './users';
