@@ -26,6 +26,8 @@ export {
   BusinessType,
   CookingTimeMode,
   Cuisine,
+  // MatchingMode,
+  PreparationMode,
   ScheduleObject,
 } from './business';
 export {
@@ -98,13 +100,13 @@ export {
   PushReceipt,
 } from './messages';
 export {
+  ChargeStrategy,
   Fulfillment,
   Order,
   OrderBusiness,
   OrderRoute,
   OrderStaff,
   OrderType,
-  PreparationMode,
 } from './order';
 export { ChatMessage, ChatMessageType, ChatMessageUser } from './order/chat';
 export { OrderConsumer } from './order/consumer';

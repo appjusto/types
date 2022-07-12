@@ -25,33 +25,24 @@ export interface OrderRoute {
 
 export interface Order {
   type: OrderType;
-  paymentMethod: PayableWith;
-  fulfillment?: Fulfillment;
-  scheduledTo: FieldValue | null;
-  consumer: OrderConsumer;
-  courier?: OrderCourier | null;
-  business?: OrderBusiness | null;
   status: OrderStatus;
-  dispatchingStatus: DispatchingStatus;
-  staff?: OrderStaff | null;
-  items?: OrderItem[];
-  additionalInfo?: string | null;
+  consumer: OrderConsumer;
   code?: string;
-  seq?: string | null;
+  // payment & fulfillment
+  fare?: Fare;
+  paymentMethod?: PayableWith;
+  chargeStrategy: ChargeStrategy;
+  fulfillment?: Fulfillment;
+  scheduledTo?: FieldValue | null;
+  // products
+  business?: OrderBusiness | null;
+  items?: OrderItem[];
   cookingTime?: number | null; // in seconds
   // places & route
   origin?: Place;
   destination?: Place | null;
   route?: OrderRoute | null;
-  dispatchingState: DispatchingState | null;
-  outsourcedBy?: OutsourceAccountType;
-  // fare, tip & payment
-  fare?: Fare;
-  tip?: {
-    value: number; // in cents;
-    /** @deprecated */
-    financialFee?: number;
-  };
+  // estimates
   arrivals?: {
     origin?: {
       estimate?: FieldValue;
@@ -64,17 +55,30 @@ export interface Order {
       arrivalLimit?: FieldValue;
     };
   };
+  // delivery
+  courier?: OrderCourier | null;
+  dispatchingStatus: DispatchingStatus;
+  dispatchingState: DispatchingState | null;
+  dispatchingTimestamps: OrderDispatchingTimestamps;
+  outsourcedBy?: OutsourceAccountType;
+  tip?: {
+    value: number; // in cents;
+    /** @deprecated */
+    financialFee?: number;
+  };
+  // etc
+  additionalInfo?: string | null;
+  staff?: OrderStaff | null;
   issue?: string | null;
   flagged?: boolean;
   // metadata
   timestamps: OrderStatusTimestamps;
-  dispatchingTimestamps: OrderDispatchingTimestamps;
   createdOn: FieldValue;
   updatedOn?: FieldValue;
 }
 
 export type Fulfillment = 'delivery' | 'take-away' | 'dine-in';
-export type PreparationMode = 'realtime' | 'scheduled';
+export type ChargeStrategy = 'single-invoice' | 'separated-invoices';
 
 export interface OrderBusiness {
   id: string;

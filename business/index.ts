@@ -1,6 +1,6 @@
 import { FieldValue, GeoPoint } from 'firebase/firestore';
 import { Place } from '..';
-import { Fulfillment, PreparationMode } from '../order';
+import { Fulfillment } from '../order';
 import { PayableWith } from '../payment';
 import { LatLng } from '../platform';
 import { ProfileSituation, ProfileTimestamps } from '../profile';
@@ -94,14 +94,18 @@ export interface Business {
   averageDiscount?: number;
   settings?: BusinessSettings;
   fulfillment?: Fulfillment[];
-  preparationModes?: PreparationMode[];
   acceptedPaymentMethods?: PayableWith[];
+  preparationModes?: PreparationMode[];
+  // matchingMode: MatchingMode;
   // metadata
   timestamps: ProfileTimestamps;
   keepAlive?: FieldValue;
   createdOn: FieldValue;
   updatedOn?: FieldValue;
 }
+
+export type PreparationMode = 'realtime' | 'scheduled';
+// export type MatchingMode = 'auto' | 'manual';
 
 export interface BusinessRecommendation {
   recommendedBusiness: Place;
