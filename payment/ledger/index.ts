@@ -1,16 +1,25 @@
 import { FieldValue } from 'firebase/firestore';
+import { IuguMarketplaceTransferResponse } from '../iugu';
+import { AccountType } from '../tasks';
 
-export type LedgerEntryType = 'debit' | 'credit';
 export type LedgerEntryOperation = 'delivery';
-export type LedgerEntryStatus = 'pending' | 'canceled' | 'paid';
+export type LedgerEntryStatus = 'pending' | 'canceled' | 'processing' | 'paid';
 
 export interface LedgerEntry {
-  type: LedgerEntryType;
+  orderId: string;
   operation: LedgerEntryOperation;
-  amount: number;
+  value: number;
   status: LedgerEntryStatus;
-  counterpartAccountId: string;
+  from: {
+    accountId: string | null;
+    accountType: AccountType;
+  };
+  to: {
+    accountId: string | null;
+    accountType: AccountType;
+  };
   description?: string;
+  transfer?: IuguMarketplaceTransferResponse;
   createdOn: FieldValue;
   updatedOn?: FieldValue;
 }

@@ -203,6 +203,11 @@ export {
 } from './payloads/profile';
 export { PayableWith, PaymentProcessor } from './payment/index';
 export {
+  LedgerEntry,
+  LedgerEntryOperation,
+  LedgerEntryStatus,
+} from './payment/ledger';
+export {
   AccountAdvance,
   AccountTransfer,
   AccountWithdraw,
