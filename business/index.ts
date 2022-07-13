@@ -96,6 +96,7 @@ export interface Business {
   fulfillment?: Fulfillment[];
   acceptedPaymentMethods?: PayableWith[];
   preparationModes?: PreparationMode[];
+  maxOrdersPerHour?: number;
   // matchingMode: MatchingMode;
   tags?: string[];
   // metadata
