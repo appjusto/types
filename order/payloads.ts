@@ -48,6 +48,7 @@ export interface MatchingTaskPayload extends OrderPayload {
 
 export interface MatchOrderPayload extends OrderPayload {
   courierId?: string;
+  courierCode?: string;
   comment?: string;
   distanceToOrigin?: number;
 }
