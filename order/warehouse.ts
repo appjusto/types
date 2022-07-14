@@ -6,7 +6,6 @@ import {
   OrderStatus,
   OrderStatusTimestamps,
 } from '..';
-import { OrderItem } from './item';
 
 export interface OrderWarehouse {
   code: string;
@@ -47,6 +46,15 @@ export interface OrderWarehouse {
   dispatchingTimestamps: OrderDispatchingTimestamps;
 }
 
-export interface OrderItemWarehouse extends OrderItem {
+export interface OrderItemWarehouse {
   orderId: string;
+  product: {
+    id: string;
+    name: string;
+    price: number; // in cents
+    categoryName: string;
+  };
+  quantity: number;
+  notes: string | null;
+  complements: string | null;
 }
