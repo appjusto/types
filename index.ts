@@ -180,7 +180,7 @@ export {
   OrderDispatchingTimestamps,
   OrderStatusTimestamps,
 } from './order/timestamps';
-export { OrderWarehouse } from './order/warehouse';
+export { OrderItemWarehouse, OrderWarehouse } from './order/warehouse';
 export { BasePayload, FetchTotalCouriersNearbyPayload } from './payloads';
 export {
   AdvanceReceivablesPayload,

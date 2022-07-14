@@ -6,8 +6,9 @@ import {
   OrderStatus,
   OrderStatusTimestamps,
 } from '..';
+import { OrderItem } from './item';
 
-export type OrderWarehouse = {
+export interface OrderWarehouse {
   code: string;
   type: OrderType;
   status: OrderStatus;
@@ -44,4 +45,8 @@ export type OrderWarehouse = {
   issue: string | null;
   timestamps: OrderStatusTimestamps;
   dispatchingTimestamps: OrderDispatchingTimestamps;
-};
+}
+
+export interface OrderItemWarehouse extends OrderItem {
+  orderId: string;
+}
