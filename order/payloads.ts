@@ -8,7 +8,9 @@ export interface OrderPayload extends BasePayload {
   orderId: string;
 }
 
-export interface GetOrderQuotesPayload extends OrderPayload {}
+export interface GetOrderQuotesPayload extends OrderPayload {
+  fleetsIds?: string[];
+}
 
 export type PlaceOrderPayloadPaymentPix = {
   payableWith: 'pix';
