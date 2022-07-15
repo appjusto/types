@@ -4,6 +4,7 @@ import {
   BusinessAddress,
   BusinessStatistics,
   BusinessStatus,
+  PreparationMode,
 } from './business';
 import { ProductStatistics } from './menu/product';
 import { LatLng2 } from './platform';
@@ -25,6 +26,7 @@ export interface BusinessAlgolia {
   description?: string;
   status: BusinessStatus;
   businessAddress?: BusinessAddress;
+  preparationModes?: PreparationMode[];
   cuisine?: string;
   deliveryRange?: number;
   statistics?: BusinessStatistics;
