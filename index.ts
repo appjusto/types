@@ -65,6 +65,7 @@ export {
 } from './emails/payloads';
 export { Fleet, FleetDetails, FleetFareParams, FleetSituation } from './fleet';
 export { FleetWarehouse } from './fleet/warehouse';
+export { Generic } from './generics';
 export { Invoice, InvoiceFingerprint, InvoiceType } from './invoice';
 export { InvoiceWarehouse } from './invoice/warehouse';
 export { RouteDetails } from './location/directions';
@@ -260,5 +261,5 @@ export { OrderConsumerReview, Review, ReviewTag, ReviewType } from './review';
 export { NPS } from './review/nps';
 export { OrderReviewWarehouse } from './review/warehouse';
 export { NewStaffData, StaffProfile } from './staff';
-export { UpdateDocumentTaskPayload } from './tasks/update';
+export { TaskDocument, UpdateDocumentTaskPayload } from './tasks/update';
 export { User, UserType } from './users';
