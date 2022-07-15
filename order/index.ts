@@ -34,6 +34,7 @@ export interface Order {
   chargeStrategy: ChargeStrategy;
   fulfillment?: Fulfillment;
   scheduledTo?: FieldValue | null;
+  confirmedScheduledTo?: FieldValue | null;
   // products
   business?: OrderBusiness | null;
   items?: OrderItem[];
