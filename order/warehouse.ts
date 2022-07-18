@@ -44,6 +44,7 @@ export interface OrderWarehouse {
   issue: string | null;
   timestamps: OrderStatusTimestamps;
   dispatchingTimestamps: OrderDispatchingTimestamps;
+  scheduledTo: FieldValue | null;
 }
 
 export interface OrderItemWarehouse {
