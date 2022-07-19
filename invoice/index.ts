@@ -20,6 +20,7 @@ export interface Invoice {
   orderId: string;
   orderCode: string;
   value: number;
+  processingFee: number;
   commission: number | null;
   consumerId: string;
   customerPaymentMethodId: string;
