@@ -6,6 +6,7 @@ export type BusinessWarehouse = {
   code: string | null;
   name: string | null;
   cnpj: string | null;
+  slug: string | null;
   accountManagerId: string | null;
   situation: ProfileSituation;
   status: BusinessStatus;
