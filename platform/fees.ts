@@ -18,6 +18,7 @@ export interface PlatformFees {
       vr: Fee;
     };
   };
+  iuguFeeDescription?: string;
   /** @deprecated */
   p2p: ServiceFee;
   /** @deprecated */
