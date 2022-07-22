@@ -6,7 +6,6 @@ export interface VROrderPayments {
 export interface PixOrderPayments {
   processor: 'iugu';
   paymentMethod: 'pix';
-  refundKey: string;
 }
 
 export interface CreditCardOrderPayments {
