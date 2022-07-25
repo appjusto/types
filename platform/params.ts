@@ -12,6 +12,7 @@ export interface PlatformParams {
   orders: {
     limits: {
       quote: number; // in seconds
+      confirming: number; // in seconds
       confirmed: number; // in seconds
       declined: number; // in seconds
       dispatching: number; // in seconds
