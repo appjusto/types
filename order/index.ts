@@ -6,6 +6,7 @@ import {
 } from '..';
 
 import { PayableWith } from '../payment/index';
+import { IuguInvoiceStatus } from '../payment/iugu';
 import { OrderConsumer } from './consumer';
 import { OrderCourier } from './courier';
 import { DispatchingState, DispatchingStatus } from './dispatching';
@@ -64,8 +65,8 @@ export interface Order {
   outsourcedBy?: OutsourceAccountType;
   tip?: {
     value: number; // in cents;
-    /** @deprecated */
-    financialFee?: number;
+    processingFee?: number;
+    status?: IuguInvoiceStatus;
   };
   // etc
   additionalInfo?: string | null;

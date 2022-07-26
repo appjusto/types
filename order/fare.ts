@@ -1,4 +1,5 @@
 import { Fleet } from '../fleet';
+import { IuguInvoiceStatus } from '../payment/iugu';
 import { WithId } from '../platform';
 
 export interface Fare {
@@ -11,8 +12,7 @@ export interface Fare {
 
 export interface FareDetails {
   value: number; // in cents
-  /** @deprecated */
-  commission: number; // in cents
-  /** @deprecated */
-  financialFee: number; // in cents
+  processingFee?: number; // in cents
+  commission?: number; // in cents
+  status?: IuguInvoiceStatus;
 }
