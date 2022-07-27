@@ -18,6 +18,14 @@ export interface PlatformParams {
       dispatching: number; // in seconds
       nomatch: number; // in seconds
     };
+    backofficeWarnings: {
+      confirmed: number; // in seconds
+      matching: number; // in seconds
+      goingPickup: number; // in seconds 
+      readyArrivedPickup: number; // in seconds
+      dispatchingArrivedPickup: number; // in seconds
+      goingDestination: number; // in seconds 
+    };
   };
   marketplace: {
     maxWithdraws: number;
