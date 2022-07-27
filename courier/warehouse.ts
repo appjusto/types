@@ -18,6 +18,7 @@ export type CourierWarehouse = {
     name: string;
   };
   appVersion: string | null;
+  appInstallationId: string | null;
   timestamps: ProfileTimestamps;
   createdOn: FieldValue;
   updatedOn?: FieldValue;
