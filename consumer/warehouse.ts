@@ -9,6 +9,7 @@ export type ConsumerWarehouse = {
   notificationToken: string | null;
   notificationPreferences: NotificationPreferences | null;
   appVersion: string | null;
+  appInstallationId: string | null;
   platform: string | null;
   coordinates: GeoPoint | null;
   timestamps: ProfileTimestamps;
