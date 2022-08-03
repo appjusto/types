@@ -15,6 +15,7 @@ export interface ChatMessageUser {
 
 export interface ChatMessage {
   orderId: string;
+  orderCode?: string;
   participantsIds: string[];
   type: ChatMessageType;
   from: ChatMessageUser;
