@@ -233,6 +233,7 @@ export {
 } from './permissions';
 export {
   City,
+  ClientFlavor,
   Environment,
   Flavor,
   LatLng,
@@ -257,6 +258,7 @@ export {
   NotificationChannel,
   NotificationPreferences,
 } from './profile/notifications';
+export { CreatePushCampaignPayload } from './push/payloads';
 export { OrderConsumerReview, Review, ReviewTag, ReviewType } from './review';
 export { NPS } from './review/nps';
 export { OrderReviewWarehouse } from './review/warehouse';

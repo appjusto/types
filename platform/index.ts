@@ -1,9 +1,6 @@
-export type Flavor =
-  | 'courier'
-  | 'consumer'
-  | 'business'
-  | 'backoffice'
-  | 'platform';
+export type ClientFlavor = 'courier' | 'consumer' | 'business';
+
+export type Flavor = ClientFlavor | 'backoffice' | 'platform';
 
 export type OutsourceAccountType = 'business' | 'platform';
 
