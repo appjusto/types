@@ -2,7 +2,7 @@ import { FieldValue } from 'firebase/firestore';
 import { ClientFlavor, LatLng } from '../platform';
 import { NotificationChannel } from '../profile/notifications';
 
-export interface CreatePushCampaignPayload {
+export interface PushCampaign {
   name: string;
   to: ClientFlavor;
   channel: NotificationChannel;
@@ -12,9 +12,10 @@ export interface CreatePushCampaignPayload {
   };
   title: string;
   body: string;
-  status: 'pending' | 'approved' | 'rejected';
+  status: 'pending' | 'submitted' | 'approved' | 'rejected';
   scheduledTo: FieldValue;
   taskName?: string;
+  audience?: number;
   createdOn: FieldValue;
-  updatedOn: FieldValue;
+  updatedOn?: FieldValue;
 }

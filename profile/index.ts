@@ -29,6 +29,7 @@ export interface UserProfile {
   profileIssuesMessage?: string;
   notificationToken?: string | null;
   notificationPreferences?: NotificationPreferences;
+  notificationLastReceivedAt?: FieldValue;
   pix?: string;
   onboarded?: boolean;
   coordinates?: GeoPoint;
