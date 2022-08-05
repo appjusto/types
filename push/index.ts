@@ -12,9 +12,9 @@ export interface PushCampaign {
   };
   title: string;
   body: string;
-  status: 'pending' | 'submitted' | 'approved' | 'rejected';
+  status: 'submitted' | 'approved' | 'rejected';
   scheduledTo: FieldValue;
-  taskName?: string;
+  taskNames?: string[];
   audience?: number;
   createdOn: FieldValue;
   updatedOn?: FieldValue;
