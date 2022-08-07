@@ -73,6 +73,7 @@ export interface Order {
   staff?: OrderStaff | null;
   issue?: string | null;
   flagged?: boolean;
+  flags?: string[];
   // metadata
   timestamps: OrderStatusTimestamps;
   createdOn: FieldValue;
