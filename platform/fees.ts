@@ -19,10 +19,6 @@ export interface PlatformFees {
     };
   };
   iuguFeeDescription?: string;
-  /** @deprecated */
-  p2p: ServiceFee;
-  /** @deprecated */
-  food: ServiceFee;
 }
 
 /** @deprecated */
