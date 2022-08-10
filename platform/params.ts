@@ -9,24 +9,6 @@ export interface PlatformParams {
     averageWaitingTime: number; // in seconds
     minActiveCouriersInFleet: number; // minimum number of couriers that a fleet needs in order to receive an OrderRequest
   };
-  orders: {
-    limits: {
-      quote: number; // in seconds
-      confirming: number; // in seconds
-      confirmed: number; // in seconds
-      declined: number; // in seconds
-      dispatching: number; // in seconds
-      nomatch: number; // in seconds
-    };
-    backofficeWarnings: {
-      confirmed: number; // in seconds
-      matching: number; // in seconds
-      goingPickup: number; // in seconds 
-      readyArrivedPickup: number; // in seconds
-      dispatchingArrivedPickup: number; // in seconds
-      goingDestination: number; // in seconds 
-    };
-  };
   marketplace: {
     maxWithdraws: number;
     advances: {
@@ -59,28 +41,6 @@ export interface PlatformParams {
     support: {
       starts: string;
       ends: string;
-    };
-  };
-}
-
-export interface PlatformManagement {
-  backupsEnabled: boolean;
-  staffTokens: string[];
-  marketplace: {
-    chargeDelay: number;
-  };
-  location: {
-    database: {
-      enabled: boolean;
-    };
-    cache: {
-      enabled: boolean;
-      ttl: number; // minutes
-    };
-  };
-  warehouse: {
-    business: {
-      updateAt: string[];
     };
   };
 }

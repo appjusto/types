@@ -11,6 +11,7 @@ import { OrderConsumer } from './consumer';
 import { OrderCourier } from './courier';
 import { DispatchingState, DispatchingStatus } from './dispatching';
 import { Fare } from './fare';
+import { OrderFlag } from './flags';
 import { OrderItem } from './item';
 import { Place } from './place';
 import { OrderStatus } from './status';
@@ -73,7 +74,7 @@ export interface Order {
   staff?: OrderStaff | null;
   issue?: string | null;
   flagged?: boolean;
-  flags?: string[];
+  flags?: OrderFlag[];
   // metadata
   timestamps: OrderStatusTimestamps;
   createdOn: FieldValue;
