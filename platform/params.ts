@@ -9,6 +9,7 @@ export interface PlatformParams {
     averageWaitingTime: number; // in seconds
     minActiveCouriersInFleet: number; // minimum number of couriers that a fleet needs in order to receive an OrderRequest
   };
+<<<<<<< HEAD
   orders: {
     limits: {
       quote: number; // in seconds
@@ -27,6 +28,8 @@ export interface PlatformParams {
       goingDestination: number; // in seconds
     };
   };
+=======
+>>>>>>> flags
   marketplace: {
     maxWithdraws: number;
     advances: {
@@ -62,6 +65,7 @@ export interface PlatformParams {
     };
   };
 }
+<<<<<<< HEAD
 
 export interface PlatformManagement {
   backupsEnabled: boolean;
@@ -83,3 +87,5 @@ export interface PlatformManagement {
     };
   };
 }
+=======
+>>>>>>> flags

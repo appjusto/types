@@ -114,6 +114,7 @@ export { OrderConsumer } from './order/consumer';
 export { OrderCourier } from './order/courier';
 export { DispatchingState, DispatchingStatus } from './order/dispatching';
 export { Fare, FareDetails } from './order/fare';
+export { OrderFlag } from './order/flags';
 export { OrderFraudPreventionFlags } from './order/fraud';
 export {
   Issue,
@@ -245,7 +246,8 @@ export { PlatformAccess } from './platform/access';
 export { Fee, PlatformFees } from './platform/fees';
 export { FlaggedLocation, FraudPreventionParams } from './platform/fraud';
 export { InterferenceLog, LoginLog } from './platform/logs';
-export { PlatformManagement, PlatformParams } from './platform/params';
+export { PlatformManagement } from './platform/management';
+export { PlatformParams } from './platform/params';
 export { PlatformStatistics, ServiceStatistics } from './platform/statistics';
 export {
   ProfileNote,
