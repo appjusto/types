@@ -7,6 +7,7 @@ export interface CourierOrderRequest {
   situation: 'pending' | 'accepted' | 'viewed' | 'rejected' | 'expired';
   orderId: string;
   fee: number;
+  processingFee: number;
   origin: LatLng;
   distanceToOrigin: number;
   distance: number;
