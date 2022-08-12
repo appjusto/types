@@ -23,5 +23,12 @@ export interface ApplicationCall {
   method: string;
   path: string;
   query: Generic;
+  error?: string;
   services?: ApplicationService[];
+}
+
+export interface QuoteResponse {
+  value: number;
+  distance: number;
+  duration: number;
 }

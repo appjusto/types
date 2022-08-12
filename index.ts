@@ -11,6 +11,7 @@ export {
   ApplicationCall,
   ApplicationService,
   ApplicationToken,
+  QuoteResponse,
 } from './application';
 export {
   Bank,
