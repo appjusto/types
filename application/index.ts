@@ -1,4 +1,5 @@
 import { FieldValue } from 'firebase/firestore';
+import { Generic } from '../generics';
 
 export interface Application {
   name: string;
@@ -13,4 +14,14 @@ export interface Application {
 
 export interface ApplicationToken {
   secret: string;
+}
+
+export type ApplicationService = 'maps:directions';
+
+export interface ApplicationCall {
+  timestamp: FieldValue;
+  method: string;
+  path: string;
+  query: Generic;
+  services?: ApplicationService[];
 }

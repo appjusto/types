@@ -6,7 +6,12 @@ export {
   FlaggedLocationsAlgolia,
   ProductAlgolia,
 } from './algolia';
-export { Application, ApplicationToken } from './application';
+export {
+  Application,
+  ApplicationCall,
+  ApplicationService,
+  ApplicationToken,
+} from './application';
 export {
   Bank,
   BankAccount,
