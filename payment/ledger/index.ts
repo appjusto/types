@@ -13,6 +13,7 @@ export interface LedgerEntry {
   from: {
     accountId: string | null;
     accountType: AccountType;
+    token?: string;
   };
   to: {
     accountId: string | null;
