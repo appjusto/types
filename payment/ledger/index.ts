@@ -2,8 +2,14 @@ import { FieldValue } from 'firebase/firestore';
 import { IuguMarketplaceTransferResponse } from '../iugu';
 import { AccountType } from '../tasks';
 
-export type LedgerEntryOperation = 'delivery';
-export type LedgerEntryStatus = 'pending' | 'canceled' | 'processing' | 'paid';
+export type LedgerEntryOperation = 'delivery' | 'same-owner-accounts';
+export type LedgerEntryStatus =
+  | 'pending'
+  | 'approved'
+  | 'rejected'
+  | 'canceled'
+  | 'processing'
+  | 'paid';
 
 export interface LedgerEntry {
   orderId: string;
@@ -13,7 +19,7 @@ export interface LedgerEntry {
   from: {
     accountId: string | null;
     accountType: AccountType;
-    token?: string;
+    token?: string | null;
   };
   to: {
     accountId: string | null;
@@ -21,6 +27,14 @@ export interface LedgerEntry {
   };
   description?: string;
   transfer?: IuguMarketplaceTransferResponse;
+  createdBy: {
+    id: string;
+    email: string;
+  };
+  updatedBy?: {
+    id: string;
+    email: string;
+  };
   createdOn: FieldValue;
   updatedOn?: FieldValue;
 }
