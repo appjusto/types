@@ -1,7 +1,5 @@
-import { FieldValue } from 'firebase/firestore';
 import { BankAccount } from '../banking';
 import { BusinessAddress } from '../business';
-import { FleetDetails } from '../fleet';
 import { WithId } from '../platform';
 import { UserProfile } from '../profile';
 
@@ -33,13 +31,9 @@ export interface CourierCompany extends BusinessAddress {
   name: string;
 }
 
-export interface CourierFleet extends WithId<FleetDetails> {
-  joinedOn: FieldValue;
-}
-
 export interface CourierProfile extends UserProfile {
   status: CourierStatus;
-  fleet: CourierFleet;
+  fleetsIds: string[];
   mode: CourierMode;
   statistics: CourierStatistics; // readonly
   documentType?: string;
@@ -51,7 +45,6 @@ export interface CourierProfile extends UserProfile {
   ongoingOrderId?: string | null; // readonly
 }
 
-export interface AvailableCourier extends CourierProfile {
-  id: string;
+export interface AvailableCourier extends WithId<CourierProfile> {
   distance: number;
 }

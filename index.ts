@@ -55,7 +55,6 @@ export { ConsumerWarehouse } from './consumer/warehouse';
 export {
   AvailableCourier,
   CourierCompany,
-  CourierFleet,
   CourierMode,
   CourierProfile,
   CourierServiceStatistics,
