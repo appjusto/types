@@ -27,10 +27,12 @@ export interface LedgerEntry {
   };
   description?: string;
   transfer?: IuguMarketplaceTransferResponse;
-  createdBy: {
-    id: string;
-    email: string;
-  };
+  createdBy:
+    | 'platform'
+    | {
+        id: string;
+        email: string;
+      };
   updatedBy?: {
     id: string;
     email: string;
