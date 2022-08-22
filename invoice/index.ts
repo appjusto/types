@@ -1,8 +1,8 @@
 import { FieldValue } from 'firebase/firestore';
+import { FareDetails } from '../order/fare';
 import { PayableWith } from '../payment';
 import { IuguInvoiceStatus } from '../payment/iugu';
 import { AccountType } from '../payment/tasks';
-import { Fee } from '../platform/fees';
 
 export interface InvoiceFingerprint {
   orderId: string;
@@ -21,10 +21,7 @@ export interface Invoice {
   orderId: string;
   orderCode: string;
   value: number;
-  processing: {
-    fee: Fee;
-    value: number;
-  };
+  fare: FareDetails;
   /** @deprecated */
   processingFee: number;
   deliveryCosts?: number;
