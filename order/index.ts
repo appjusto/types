@@ -7,6 +7,7 @@ import {
 
 import { PayableWith } from '../payment/index';
 import { IuguInvoiceStatus } from '../payment/iugu';
+import { Fee } from '../platform/fees';
 import { OrderConsumer } from './consumer';
 import { OrderCourier } from './courier';
 import { DispatchingState, DispatchingStatus } from './dispatching';
@@ -66,7 +67,12 @@ export interface Order {
   outsourcedBy?: OutsourceAccountType;
   tip?: {
     value: number; // in cents;
-    processingFee?: number;
+    /** @deprecated */
+    processingFee?: number; // in cents
+    processing?: {
+      fee: Fee;
+      value: number;
+    };
     status?: IuguInvoiceStatus;
   };
   // etc
