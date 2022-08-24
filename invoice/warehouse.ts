@@ -10,6 +10,7 @@ export interface InvoiceWarehouse {
   value: number;
   fare: FareDetails | null;
   commission: number | null;
+  deliveryCosts: number;
   accountType: AccountType;
   accountId: string | null;
   consumerId: string | null;
