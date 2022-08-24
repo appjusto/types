@@ -32,7 +32,6 @@ export {
   BusinessStatus,
   BusinessType,
   CookingTimeMode,
-  Cuisine,
   // MatchingMode,
   PreparationMode,
   ScheduleObject,
@@ -250,6 +249,7 @@ export {
   WithId,
 } from './platform';
 export { PlatformAccess } from './platform/access';
+export { Cuisine, CuisineMeta } from './platform/cuisine';
 export { Fee, PlatformFees } from './platform/fees';
 export { FlaggedLocation, FraudPreventionParams } from './platform/fraud';
 export { InterferenceLog, LoginLog } from './platform/logs';
