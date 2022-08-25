@@ -19,6 +19,7 @@ export interface InvoiceStatusChangedPayload {
     payment_method: 'iugu_bank_slip' | 'iugu_credit_card' | 'iugu_pix';
     paid_at: string;
     payer_cpf_cnpj: string;
+    paid_cents: number;
     // subscription_id?: string;
   };
 }

@@ -5,13 +5,6 @@ import { PayableWith } from '../payment';
 import { LatLng } from '../platform';
 import { ProfileSituation, ProfileTimestamps } from '../profile';
 
-export interface Cuisine {
-  name: string;
-  imagePath: string;
-  order?: number;
-  enabled?: boolean;
-}
-
 export interface BusinessAddress {
   cep: string;
   address: string;

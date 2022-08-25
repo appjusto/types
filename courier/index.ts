@@ -3,7 +3,11 @@ import { BusinessAddress } from '../business';
 import { WithId } from '../platform';
 import { UserProfile } from '../profile';
 
-export type CourierStatus = 'unavailable' | 'available' | 'dispatching';
+export type CourierStatus =
+  | 'unavailable'
+  | 'available'
+  | 'dispatching'
+  | 'inactive';
 export type CourierMode =
   | 'motorcycle'
   | 'bicycling'
