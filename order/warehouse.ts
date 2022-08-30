@@ -40,7 +40,18 @@ export interface OrderWarehouse {
   } | null;
   cookingTime: number | null;
   tip: number | null;
-  deliveryEstimate: FieldValue | null;
+  arrivals: {
+    origin: {
+      estimate: FieldValue | null;
+      arrival: FieldValue | null;
+    };
+    destination: {
+      initialEstimate: FieldValue | null;
+      estimate: FieldValue | null;
+      arrival: FieldValue | null;
+      arrivalLimit: FieldValue | null;
+    };
+  };
   issue: string | null;
   timestamps: OrderStatusTimestamps;
   dispatchingTimestamps: OrderDispatchingTimestamps;
