@@ -15,6 +15,7 @@ export interface LedgerEntry {
   orderId: string;
   operation: LedgerEntryOperation;
   value: number;
+  processingFee?: number;
   status: LedgerEntryStatus;
   from: {
     accountId: string | null;
