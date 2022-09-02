@@ -40,7 +40,28 @@ export interface IuguMarketplaceAccountAdvanceSimulation {
   total: IuguMarketplaceAdvanceInfo;
 }
 
+export interface IuguMarketplaceAccountAdvanceByAmountSimulation {
+  nearest: {
+    advanceable_amount_cents: number;
+    advancement_fee_cents: number;
+    advanceable_installments: number;
+    simulation_id: string;
+  };
+  farthest: {
+    advanceable_amount_cents: number;
+    advancement_fee_cents: number;
+    advanceable_installments: number;
+    simulation_id: string;
+  };
+}
+
 export interface IuguMarketplaceAccountAdvanceResponse {
   total: IuguMarketplaceAdvanceInfo;
   transactions: IuguMarketplaceAdvanceInfo[];
+}
+
+export interface IuguMarketplaceAccountAdvanceByAmountResponse {
+  result: {
+    advancement_request: string;
+  };
 }

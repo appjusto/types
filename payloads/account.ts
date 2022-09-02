@@ -23,6 +23,15 @@ export interface FetchAdvanceSimulationPayload extends AccountBasePayload {
   ids: number[];
 }
 
+export interface FetchAdvanceByAmountSimulationPayload
+  extends AccountBasePayload {
+  amount: number;
+}
+
 export interface AdvanceReceivablesPayload extends AccountBasePayload {
   ids: number[];
+}
+
+export interface AdvanceReceivablesByAmountPayload extends AccountBasePayload {
+  simulationId: string;
 }

@@ -16,6 +16,8 @@ export interface IuguSuccessResponse {
 export {
   IuguCreateMarketplaceAccount,
   IuguMarketplaceAccount,
+  IuguMarketplaceAccountAdvanceByAmountResponse,
+  IuguMarketplaceAccountAdvanceByAmountSimulation,
   IuguMarketplaceAccountAdvanceResponse,
   IuguMarketplaceAccountAdvanceSimulation,
   IuguMarketPlaceAccountConfigure,

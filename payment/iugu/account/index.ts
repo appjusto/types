@@ -130,6 +130,8 @@ export interface IuguMarketplaceAccount {
 }
 
 export {
+  IuguMarketplaceAccountAdvanceByAmountResponse,
+  IuguMarketplaceAccountAdvanceByAmountSimulation,
   IuguMarketplaceAccountAdvanceResponse,
   IuguMarketplaceAccountAdvanceSimulation,
   IuguMarketplaceAccountReceivableItem,

@@ -191,9 +191,11 @@ export {
 export { OrderItemWarehouse, OrderWarehouse } from './order/warehouse';
 export { BasePayload, FetchTotalCouriersNearbyPayload } from './payloads';
 export {
+  AdvanceReceivablesByAmountPayload,
   AdvanceReceivablesPayload,
   FetchAccountInformationPayload,
   FetchAccountInformationResponse,
+  FetchAdvanceByAmountSimulationPayload,
   FetchAdvanceSimulationPayload,
   FetchReceivablesPayload,
   RequestWithdrawPayload,

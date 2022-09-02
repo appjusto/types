@@ -1,6 +1,7 @@
 import { FieldValue } from 'firebase/firestore';
 import {
   IuguMarketplaceAccount,
+  IuguMarketplaceAccountAdvanceByAmountResponse,
   IuguMarketplaceAccountAdvanceResponse,
   IuguMarketplaceAccountInfo,
   IuguMarketplaceAccountTokens,
@@ -45,7 +46,9 @@ export interface AccountAdvance {
   accountId: string;
   accountType: AccountType;
   accountExternalId: string;
-  data: IuguMarketplaceAccountAdvanceResponse;
+  data:
+    | IuguMarketplaceAccountAdvanceResponse
+    | IuguMarketplaceAccountAdvanceByAmountResponse;
   createdOn: FieldValue;
 }
 
