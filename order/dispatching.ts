@@ -9,6 +9,7 @@ export type DispatchingStatus =
   | 'outsourced';
 
 export type DispatchingState =
+  | 'idle'
   | 'going-pickup'
   | 'arrived-pickup'
   | 'going-destination'

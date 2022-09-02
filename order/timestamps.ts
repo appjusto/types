@@ -17,7 +17,8 @@ export type OrderStatusTimestamps = {
 // status
 export type OrderDispatchingStatusTimestampsKeys =
   | Exclude<DispatchingStatus, 'no-match'>
-  | 'matchingEnded';
+  | 'matchingEnded'
+  | 'firstMatching';
 
 // state
 export type OrderDispatchingStateTimestampsKeys =

@@ -12,10 +12,8 @@ export interface PlatformManagement {
     flags: {
       confirmed: number; // in seconds
       matching: number; // in seconds
-      goingPickup: number; // in seconds
+      arrivedPickup: number; // in seconds
       goingDestination: number; // in seconds
-      dispatchingArrivedPickup: number; // in seconds
-      readyArrivedPickup: number; // in seconds
     };
   };
   marketplace: {

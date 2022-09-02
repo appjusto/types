@@ -2,6 +2,7 @@ export type OrderFlag =
   | 'unsafe'
   | 'waiting-confirmation'
   | 'matching'
-  | 'dispatching'
+  | 'pick-up'
+  | 'delivering'
   | 'issue'
   | 'chat';

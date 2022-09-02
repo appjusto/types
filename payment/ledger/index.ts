@@ -2,7 +2,10 @@ import { FieldValue } from 'firebase/firestore';
 import { IuguMarketplaceTransferResponse } from '../iugu';
 import { AccountType } from '../tasks';
 
-export type LedgerEntryOperation = 'delivery' | 'same-owner-accounts';
+export type LedgerEntryOperation =
+  | 'delivery'
+  | 'same-owner-accounts'
+  | 'others';
 export type LedgerEntryStatus =
   | 'pending'
   | 'approved'
