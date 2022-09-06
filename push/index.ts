@@ -9,7 +9,7 @@ export interface PushCampaign {
   nearby?: {
     coordinates: LatLng;
     radius: number;
-  };
+  } | null;
   title: string;
   body: string;
   status: 'submitted' | 'approved' | 'rejected';
