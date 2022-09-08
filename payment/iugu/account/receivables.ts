@@ -5,7 +5,9 @@ export interface IuguMarketplaceAccountReceivableItem {
   invoice_id: string;
   customer_ref: string;
   total: string;
+  total_cents: number;
   taxes: string;
+  taxes_cents: number;
   client_share: string;
   commission: string;
   number_of_installments: number;
