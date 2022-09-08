@@ -68,6 +68,7 @@ export interface IuguCreateInvoiceResponse {
   updated_at: string;
   ensure_workday_due_date: false;
   total_cents: number;
+  total_paid_cents: number;
   secure_id: string;
   secure_url: string;
   customer_id: string;

@@ -46,6 +46,7 @@ export interface Invoice {
     status: 'qr_code_created';
   } | null;
   paymentMethod: PayableWith;
+  paid?: number;
   paidAt?: string | null;
   payerDocument?: string | null;
   createdOn: FieldValue;
