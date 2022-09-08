@@ -20,5 +20,6 @@ export interface PlatformStatistics {
   positiveReviews: number;
   negativeReviews: number;
   nps: NPS;
+  cuisines: { [k: string]: number };
   createdOn?: FieldValue;
 }

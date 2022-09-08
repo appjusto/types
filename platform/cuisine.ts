@@ -4,7 +4,3 @@ export interface Cuisine {
   order?: number;
   enabled?: boolean;
 }
-
-export interface CuisineMeta {
-  cuisinesSummary: { [k: string]: number };
-}
