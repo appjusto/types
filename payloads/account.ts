@@ -11,6 +11,7 @@ export interface FetchAccountInformationResponse {
   balance: string;
   balance_available_for_withdraw: string;
   receivable_balance: string;
+  advanceable_value: number;
 }
 
 export interface RequestWithdrawPayload extends AccountBasePayload {
