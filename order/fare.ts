@@ -21,4 +21,5 @@ export interface FareDetails {
   };
   commission?: number; // in cents
   status?: IuguInvoiceStatus;
+  paid?: number;
 }
