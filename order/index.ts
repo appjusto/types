@@ -67,6 +67,7 @@ export interface Order {
   outsourcedBy?: OutsourceAccountType;
   tip?: {
     value: number; // in cents;
+    paid?: number;
     /** @deprecated */
     processingFee?: number; // in cents
     processing?: {
