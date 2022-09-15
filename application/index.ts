@@ -1,14 +1,16 @@
 import { FieldValue } from 'firebase/firestore';
 import { Generic } from '../generics';
 
+export interface ApplicationLimits {
+  maxRequestsPerHour: number;
+  maxRequestsPerDay: number;
+  maxRequestsPerMonth: number;
+}
+
 export interface Application {
   name: string;
   secret: string;
-  limits: {
-    maxRequestsPerHour: number;
-    maxRequestsPerDay: number;
-    maxRequestsPerMonth: number;
-  };
+  limits: ApplicationLimits;
   disallowRequestsUntil?: FieldValue;
 }
 

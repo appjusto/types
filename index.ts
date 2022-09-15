@@ -9,6 +9,7 @@ export {
 export {
   Application,
   ApplicationCall,
+  ApplicationLimits,
   ApplicationService,
   ApplicationToken,
   QuoteResponse,
