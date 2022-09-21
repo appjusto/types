@@ -1,6 +1,7 @@
 import { MerchantBasicInfo } from './basic-info';
+import { Service } from './service';
+import { Status } from './status';
 
-export type MerchantStatus = 'AVAILABLE' | 'UNAVAILABLE';
 export type MerchantType = 'RESTAURANT';
 
 export interface Merchant {
@@ -24,10 +25,21 @@ export interface Merchant {
   /**
    * Indicates if the entity is Avaliable or Unavaliable. Only use this type when you must disable the entity due to an unexpected event and you don't know when the service will be re-established (e.g. do not use for holidays).
    */
-  status: MerchantStatus;
+  status: Status;
 
   /**
    * A merchant BasicInfo defines properties such as the merchant name, location address, website, description, telephone number, for a merchant that the merchant Software Service serves. Typically, this data is static.
    */
   basicInfo: MerchantBasicInfo;
+
+  /**
+   * A required entity to implement. Describes food ordering services details for a merchant.
+   */
+
+  services: Service[];
+
+  /**
+   *
+   */
+  menus: Menu[];
 }

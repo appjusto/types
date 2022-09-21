@@ -1,6 +1,7 @@
 import { LatLng } from '../location';
 import { Price } from '../price';
 import { MerchantCategory } from './category';
+import { Image } from './image';
 import { MerchantType } from './index';
 
 export interface MerchantBasicInfo {
@@ -120,33 +121,16 @@ export interface MerchantAddress extends LatLng {
   /**
    * Image to be used as the merchant logo
    */
-  logoImage: MerchantImage;
+  logoImage: Image;
 
   /**
    * Image to be used as the merchant banner (the banner display depends on the client application interface)
    */
-  bannerImage: MerchantImage;
+  bannerImage: Image;
 
   /**
    * Merchant creation date and time.
    * (UTC date-time in ISO timestamp format).
    */
   createdAt: string;
-}
-
-export interface MerchantImage {
-  /**
-   * URL pointing to an image of the merchant logo or banner.
-   * Image requirements:
-   * Hosted on a secure connection (SSL).
-   * File size must be less than 10MB.
-   * Image must be in JPEG, PNG or GIF format.
-   * Both width and height must be between 320px and 1144px.
-   */
-  URL: string;
-
-  /**
-   * CRC-32 of the image file. This field can be used to check for changes in the image file.
-   */
-  'CRC-32'?: string;
 }

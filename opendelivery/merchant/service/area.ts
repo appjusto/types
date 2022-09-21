@@ -1,5 +1,5 @@
-import { LatLng } from '../location';
-import { Price } from '../price';
+import { LatLng } from '../../location';
+import { Price } from '../../price';
 
 export interface ServiceArea {
   /**
