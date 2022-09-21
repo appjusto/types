@@ -26,6 +26,18 @@ export interface OrderRoute {
   issue: string | null;
 }
 
+export interface OrderArrivals {
+  origin?: {
+    estimate?: FieldValue | null;
+    arrival?: FieldValue | null;
+  };
+  destination?: {
+    initialEstimate?: FieldValue | null;
+    estimate?: FieldValue | null;
+    arrival?: FieldValue | null;
+    arrivalLimit?: FieldValue | null;
+  };
+}
 export interface Order {
   type: OrderType;
   status: OrderStatus;
@@ -47,18 +59,7 @@ export interface Order {
   destination?: Place | null;
   route?: OrderRoute | null;
   // estimates
-  arrivals?: {
-    origin?: {
-      estimate?: FieldValue;
-      arrival?: FieldValue;
-    };
-    destination?: {
-      initialEstimate?: FieldValue;
-      estimate?: FieldValue;
-      arrival?: FieldValue;
-      arrivalLimit?: FieldValue;
-    };
-  };
+  arrivals?: OrderArrivals;
   // delivery
   courier?: OrderCourier | null;
   dispatchingStatus: DispatchingStatus;

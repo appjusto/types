@@ -1,5 +1,5 @@
 import { FieldValue, GeoPoint } from 'firebase/firestore';
-import { OrderType } from '.';
+import { OrderArrivals, OrderType } from '.';
 import {
   FareDetails,
   OrderDispatchingTimestamps,
@@ -40,18 +40,7 @@ export interface OrderWarehouse {
   } | null;
   cookingTime: number | null;
   tip: number | null;
-  arrivals: {
-    origin: {
-      estimate: FieldValue | null;
-      arrival: FieldValue | null;
-    };
-    destination: {
-      initialEstimate: FieldValue | null;
-      estimate: FieldValue | null;
-      arrival: FieldValue | null;
-      arrivalLimit: FieldValue | null;
-    };
-  };
+  arrivals: OrderArrivals;
   issue: string | null;
   timestamps: OrderStatusTimestamps;
   dispatchingTimestamps: OrderDispatchingTimestamps;

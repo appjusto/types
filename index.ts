@@ -111,6 +111,7 @@ export {
   ChargeStrategy,
   Fulfillment,
   Order,
+  OrderArrivals,
   OrderBusiness,
   OrderRoute,
   OrderStaff,
