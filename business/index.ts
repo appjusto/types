@@ -16,12 +16,23 @@ export interface BusinessAddress {
   latlng?: LatLng;
 }
 
+export interface BusinessReviews {
+  positiveReviews: number;
+  negativeReviews: number;
+}
+
 export interface BusinessStatistics {
   totalOrders: number;
   averagePreparationTime: number; // in seconds
   averageTicketPrice: number;
   averageWaitingTime: number;
+  /**
+   * @deprecated
+   */
   positiveReviews: number;
+  /**
+   * @deprecated
+   */
   negativeReviews: number;
 }
 
@@ -78,6 +89,7 @@ export interface Business {
   orderAcceptanceTime?: number | null; // in seconds
   deliveryRange?: number; // in meters
   statistics?: BusinessStatistics;
+  reviews?: BusinessReviews;
   onboarding?: string;
   logoExists: boolean;
   coverImageExists: boolean;
