@@ -1,5 +1,5 @@
-import { Image } from '../image';
-import { Status } from '../status';
+import { Image } from '../../image';
+import { Status } from '../../status';
 
 /**
  * A Category is the propertie in which the merchant has to organize its ItemsOffers in order to make it easier for the user to find what he wants to buy. Categories have statuses and accepts Availability entities.
