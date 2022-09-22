@@ -1,4 +1,5 @@
 import { FieldValue } from 'firebase/firestore';
+import { WithId } from '../platform';
 import { UserProfile } from '../profile';
 
 /**
@@ -19,6 +20,10 @@ export interface NewManagerData {
 export interface ManagerProfile extends UserProfile {
   lastBusinessId?: string | null;
   webAppVersion?: string;
+}
+
+export interface ManagerWithMetadata extends WithId<ManagerProfile> {
+  role: AdminRole | null;
 }
 
 export interface ManagerWithRole {

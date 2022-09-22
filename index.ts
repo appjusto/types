@@ -86,6 +86,7 @@ export {
   AdminRole,
   ManagerPrivatePlatform,
   ManagerProfile,
+  ManagerWithMetadata,
   ManagerWithRole,
   NewManagerData,
   Role,
