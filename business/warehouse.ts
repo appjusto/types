@@ -1,5 +1,5 @@
 import { FieldValue, GeoPoint } from 'firebase/firestore';
-import { BusinessPhone, BusinessStatus } from '.';
+import { BusinessPhone, BusinessReviews, BusinessStatus } from '.';
 import { ProfileSituation, ProfileTimestamps } from '..';
 
 export type BusinessWarehouse = {
@@ -20,6 +20,7 @@ export type BusinessWarehouse = {
   city: string | null;
   state: string | null;
   neighborhood: string | null;
+  reviews: BusinessReviews;
   timestamps: ProfileTimestamps;
   createdOn: FieldValue;
   updatedOn: FieldValue | null;
