@@ -1,3 +1,5 @@
+import { Address } from '../address';
+import { LatLng } from '../location';
 import { ServiceTiming } from '../merchant/service/timing';
 import { Price } from '../price';
 import { Customer } from './customer';
@@ -182,14 +184,102 @@ export interface GetBaseOrderDetailsResponse {
    * Customer related information.
    */
   customer: Customer;
+
+  /**
+   * Information for scheduled orders. Required if orderTiming is SCHEDULED.
+   */
+  schedule?: {
+    /**
+     * Date and time for when the order is ready. It can be calculated by the Ordering Application using the average preparation time of the dishes. Default is the same time as order creation time.
+     * (UTC date-time in ISO timestamp format).
+     */
+    scheduledDateTimeStart: string;
+
+    /**
+     * Date and time for when the order is ready. It can be calculated by the Ordering Application using the average preparation time of the dishes. Default is the same time as order creation time.
+     * (UTC date-time in ISO timestamp format).
+     */
+    scheduledDateTimeEnd: string;
+  };
+
+  /**
+   * Extra information, if necessary.
+   */
+  extraInfo?: string;
 }
 
 export interface GetDeliveryOrderDetailsResponse
   extends GetBaseOrderDetailsResponse {
   type: 'DELIVERY';
   delivery: {
-    deliveredBy: string;
+    deliveredBy: 'MERCHANT' | 'MARKETPLACE';
+    /**
+     * The address to which the order will be delivered.
+     */
+    deliveryAddress: OrderAddress;
+
+    /**
+     * Estimated delivery date and time. The same date showed to the customer, in the Ordering Application interface.
+     * (UTC date-time in ISO timestamp format).
+     */
+    estimatedDeliveryDateTime: string;
+
+    /**
+     * Delivery date. The date time that the delivery actually took place.
+     * (UTC date-time in ISO timestamp format).
+     */
+    deliveryDateTime?: string;
   };
 }
 
-export type GetOrderDetailsResponse = GetDeliveryOrderDetailsResponse;
+export interface GetTakeOutOrderDetailsResponse
+  extends GetBaseOrderDetailsResponse {
+  type: 'TAKEOUT';
+  takeout: {
+    mode: 'DEFAULT' | 'PICKUP_AREA';
+
+    /**
+     * Takeout date and time. It can be calculated by the Ordering Application using the average preparation time of the dishes. Default is the same time as order creation time.
+     * (UTC date-time in ISO timestamp format).
+     */
+    takeoutDateTime: string;
+  };
+}
+
+export interface GetIndoorOrderDetailsResponse
+  extends GetBaseOrderDetailsResponse {
+  type: 'INDOOR';
+  takeout: {
+    /**
+     * Indoor mode identifier:
+     * DEFAULT: Used for orders placed in the Ordering Application to be consumed inside the merchant without a specific location.
+     * PLACE: Used for orders placed in the Ordering Application to be consumed inside the merchant at a specific location already specified, such as a table or a counter.
+     */
+    mode: 'DEFAULT' | 'PLACE';
+
+    /**
+     * Date and time for when the order is ready. It can be calculated by the Ordering Application using the average preparation time of the dishes. Default is the same time as order creation time.
+     * (UTC date-time in ISO timestamp format).
+     */
+    indoorDateTime: string;
+
+    /**
+     * Place identifier (Required if mode is PLACE)
+     */
+    place?: string;
+  };
+}
+
+export type GetOrderDetailsResponse =
+  | GetDeliveryOrderDetailsResponse
+  | GetTakeOutOrderDetailsResponse
+  | GetIndoorOrderDetailsResponse;
+
+export interface OrderAddress extends Address {
+  /**
+   * Full Formated Address Text
+   */
+  formattedAddress: string;
+
+  coordinates: LatLng;
+}
