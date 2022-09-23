@@ -254,7 +254,7 @@ export {
   WithId,
 } from './platform';
 export { PlatformAccess } from './platform/access';
-export { Cuisine } from './platform/cuisine';
+export { Cuisine, CuisineName } from './platform/cuisine';
 export { Fee, PlatformFees } from './platform/fees';
 export { FlaggedLocation, FraudPreventionParams } from './platform/fraud';
 export { InterferenceLog, LoginLog } from './platform/logs';
