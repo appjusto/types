@@ -46,6 +46,8 @@ export interface AccountAdvance {
   accountId: string;
   accountType: AccountType;
   accountExternalId: string;
+  amount: number;
+  fee: number;
   data:
     | IuguMarketplaceAccountAdvanceResponse
     | IuguMarketplaceAccountAdvanceByAmountResponse;
