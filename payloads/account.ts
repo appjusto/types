@@ -35,4 +35,6 @@ export interface AdvanceReceivablesPayload extends AccountBasePayload {
 
 export interface AdvanceReceivablesByAmountPayload extends AccountBasePayload {
   simulationId: string;
+  amount: number;
+  fee: number;
 }
