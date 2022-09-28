@@ -13,6 +13,10 @@ export interface FraudPreventionParams {
   newUser: {
     hoursAfterDelivery: number;
   };
+  safeUser: {
+    minimumOrders: number;
+    afterDays: number;
+  };
   manyOrders: {
     threshold: number;
     hours: number;
