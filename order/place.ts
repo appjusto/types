@@ -10,6 +10,10 @@ export interface Address {
 export interface Place {
   address: Address;
   additionalInfo?: string;
+  /**
+   * @deprecated
+   */
   intructions?: string;
+  instructions?: string;
   location?: LatLng | null;
 }

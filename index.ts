@@ -27,6 +27,7 @@ export {
   BusinessMenuMessage,
   BusinessPhone,
   BusinessRecommendation,
+  BusinessReviews,
   BusinessSchedule,
   BusinessSettings,
   BusinessStatistics,

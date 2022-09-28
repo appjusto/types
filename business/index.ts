@@ -10,6 +10,7 @@ export interface BusinessAddress {
   address: string;
   number?: string;
   additional?: string;
+  instructions?: string;
   city: string;
   state: string;
   neighborhood?: string;
