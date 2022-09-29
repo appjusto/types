@@ -214,6 +214,7 @@ export {
   CreateManagersPayload,
   DeleteAccountPayload,
   GetManagersPayload,
+  UndeleteAccountPayload,
   UpdateEmailPayload,
   VerifyCourierProfilePayload,
 } from './payloads/profile';

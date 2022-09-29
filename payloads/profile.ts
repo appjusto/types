@@ -13,6 +13,10 @@ export interface DeleteAccountPayload extends BasePayload {
   ratherUseAnotherApp?: boolean;
 }
 
+export interface UndeleteAccountPayload extends BasePayload {
+  accountId: string;
+}
+
 export interface UpdateEmailPayload extends BasePayload {
   accountId?: string;
   email: string;
