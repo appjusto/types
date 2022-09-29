@@ -1,3 +1,5 @@
+import { ClientFlavor } from '../platform';
+
 export type NotificationChannel =
   | 'profile-update'
   | 'order-update'
@@ -7,3 +9,9 @@ export type NotificationChannel =
   | 'marketing';
 
 export type NotificationPreferences = NotificationChannel[];
+export interface UpdateNotificationPreferencesPayload {
+  flavor: ClientFlavor;
+  id: string;
+  notificationPreferencesToken: string;
+  notificationPreferences: NotificationPreferences;
+}

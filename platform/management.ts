@@ -28,6 +28,10 @@ export interface PlatformManagement {
       ttl: number; // minutes
     };
   };
+  notifications: {
+    minimumHoursInterval: number;
+    consumerMinimumInterval: number;
+  };
   warehouse: {
     business: {
       updateAt: string[];

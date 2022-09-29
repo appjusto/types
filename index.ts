@@ -272,6 +272,7 @@ export { ProfileChange, UserProfileChange } from './profile/change';
 export {
   NotificationChannel,
   NotificationPreferences,
+  UpdateNotificationPreferencesPayload,
 } from './profile/notifications';
 export { PushCampaign } from './push';
 export { OrderConsumerReview, Review, ReviewTag, ReviewType } from './review';
