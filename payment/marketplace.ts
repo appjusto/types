@@ -36,6 +36,7 @@ export interface AccountWithdraw {
   amount: string;
   externalId: string;
   status: 'pending' | 'processing' | 'accepted' | 'rejected';
+  fee: number;
   data: IuguMarketplaceAccountWithdrawResponse;
   feedback?: string;
   createdOn: FieldValue;

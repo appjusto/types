@@ -10,7 +10,7 @@ export interface PlatformParams {
     minActiveCouriersInFleet: number; // minimum number of couriers that a fleet needs in order to receive an OrderRequest
   };
   marketplace: {
-    maxWithdraws: number;
+    minWithdrawValue: number;
     advances: {
       daysOfWeek: number[];
       startAt: number;
