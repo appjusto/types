@@ -6,7 +6,8 @@ export type ManagerWarehouse = {
   email: string | null;
   phone: string | null;
   situation: ProfileSituation;
-  idsOfBusinessesManaged: string[];
+  businessIds: string[];
+  businessRoles: string[];
   notificationToken: string | null;
   coordinates: GeoPoint | null;
   appVersion: string | null;
