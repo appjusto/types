@@ -16,6 +16,7 @@ import { OrderFlag } from './flags';
 import { OrderItem } from './item';
 import { Place } from './place';
 import { OrderStatus } from './status';
+import { OrderTag } from './tags';
 
 export type OrderType = 'p2p' | 'food';
 
@@ -82,6 +83,7 @@ export interface Order {
   staff?: OrderStaff | null;
   issue?: string | null;
   flags?: OrderFlag[];
+  tags?: OrderTag[];
   // metadata
   timestamps: OrderStatusTimestamps;
   createdOn: FieldValue;

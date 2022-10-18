@@ -4,6 +4,7 @@ import { Fulfillment } from '../order';
 import { PayableWith } from '../payment';
 import { LatLng } from '../platform';
 import { ProfileSituation, ProfileTimestamps } from '../profile';
+import { BusinessTag } from './tags';
 
 export interface BusinessAddress {
   cep: string;
@@ -58,8 +59,6 @@ export type BusinessPhone = {
   calls: boolean;
   whatsapp: boolean;
 };
-
-export type BusinessTag = 'motorcycle-only';
 export interface Business {
   code: string;
   type: BusinessType;

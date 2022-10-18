@@ -1,6 +1,7 @@
 import { FieldValue, GeoPoint } from 'firebase/firestore';
 import { Issue, NPS } from '..';
 import { NotificationPreferences } from './notifications';
+import { ProfileTag } from './tags';
 
 export type ProfileSituation =
   | 'pending'
@@ -16,7 +17,6 @@ export type ProfileTimestamps = {
   [K in ProfileSituation]?: FieldValue;
 };
 
-export type ProfileTag = 'safe';
 export interface UserProfile {
   code: string;
   email: string;

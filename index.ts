@@ -32,10 +32,8 @@ export {
   BusinessSettings,
   BusinessStatistics,
   BusinessStatus,
-  BusinessTag,
   BusinessType,
   CookingTimeMode,
-  // MatchingMode,
   PreparationMode,
   ScheduleObject,
 } from './business';
@@ -189,6 +187,7 @@ export {
   VROrderPayments,
 } from './order/private/payment';
 export { FoodOrderStatus, OrderStatus, P2POrderStatus } from './order/status';
+export { OrderTag } from './order/tags';
 export {
   OrderDispatchingTimestamps,
   OrderStatusTimestamps,
@@ -267,7 +266,6 @@ export { PlatformStatistics, ServiceStatistics } from './platform/statistics';
 export {
   ProfileNote,
   ProfileSituation,
-  ProfileTag,
   ProfileTimestamps,
   UserProfile,
 } from './profile';
@@ -277,6 +275,7 @@ export {
   NotificationPreferences,
   UpdateNotificationPreferencesPayload,
 } from './profile/notifications';
+export { ProfileTag } from './profile/tags';
 export { PushCampaign } from './push';
 export { OrderConsumerReview, Review, ReviewTag, ReviewType } from './review';
 export { NPS } from './review/nps';
