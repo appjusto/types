@@ -16,6 +16,7 @@ export type ProfileTimestamps = {
   [K in ProfileSituation]?: FieldValue;
 };
 
+export type ProfileTag = 'safe';
 export interface UserProfile {
   code: string;
   email: string;
@@ -41,7 +42,7 @@ export interface UserProfile {
   state?: string;
   city?: string;
   isPasswordActive?: boolean;
-  tags?: string[];
+  tags?: ProfileTag[];
   nps: NPS;
   // metadata
   platform?: string;

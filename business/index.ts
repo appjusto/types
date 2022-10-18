@@ -59,6 +59,7 @@ export type BusinessPhone = {
   whatsapp: boolean;
 };
 
+export type BusinessTag = 'motorcycle-only';
 export interface Business {
   code: string;
   type: BusinessType;
@@ -105,7 +106,7 @@ export interface Business {
   maxOrdersPerHour?: number;
   minHoursForScheduledOrders?: number;
   // matchingMode: MatchingMode;
-  tags?: string[];
+  tags?: BusinessTag[];
   // metadata
   timestamps: ProfileTimestamps;
   keepAlive?: FieldValue;

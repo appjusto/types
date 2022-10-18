@@ -32,6 +32,7 @@ export {
   BusinessSettings,
   BusinessStatistics,
   BusinessStatus,
+  BusinessTag,
   BusinessType,
   CookingTimeMode,
   // MatchingMode,
@@ -266,6 +267,7 @@ export { PlatformStatistics, ServiceStatistics } from './platform/statistics';
 export {
   ProfileNote,
   ProfileSituation,
+  ProfileTag,
   ProfileTimestamps,
   UserProfile,
 } from './profile';
