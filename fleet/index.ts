@@ -1,4 +1,4 @@
-import { FieldValue } from 'firebase/firestore';
+import { Timestamp } from 'firebase/firestore';
 export type FleetSituation = 'pending' | 'approved' | 'rejected' | 'blocked';
 
 export interface FleetFareParams {
@@ -13,7 +13,7 @@ export interface FleetDetails extends FleetFareParams {
   name: string;
   description: string;
   // metadata
-  createdOn: FieldValue;
+  createdOn: Timestamp;
   createdBy?: string;
 }
 

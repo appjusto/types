@@ -1,4 +1,4 @@
-import { FieldValue } from 'firebase/firestore';
+import { Timestamp } from 'firebase/firestore';
 import { Generic } from '../generics';
 
 export interface TaskDocument {
@@ -7,7 +7,7 @@ export interface TaskDocument {
   startAt: Date | null;
   payload: Generic;
   extra: Generic | null;
-  timestamp: FieldValue;
+  timestamp: Timestamp;
 }
 
 export interface UpdateDocumentTaskPayload {

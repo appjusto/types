@@ -1,4 +1,4 @@
-import { FieldValue } from 'firebase/firestore';
+import { Timestamp } from 'firebase/firestore';
 import { Generic } from '../generics';
 
 export interface ApplicationLimits {
@@ -11,7 +11,7 @@ export interface Application {
   name: string;
   secret: string;
   limits: ApplicationLimits;
-  disallowRequestsUntil?: FieldValue;
+  disallowRequestsUntil?: Timestamp;
 }
 
 export interface ApplicationToken {
@@ -21,7 +21,7 @@ export interface ApplicationToken {
 export type ApplicationService = 'maps:directions';
 
 export interface ApplicationCall {
-  timestamp: FieldValue;
+  timestamp: Timestamp;
   method: string;
   path: string;
   query: Generic;

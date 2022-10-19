@@ -1,4 +1,4 @@
-import { FieldValue } from 'firebase/firestore';
+import { Timestamp } from 'firebase/firestore';
 import { WithId } from '../platform';
 import { UserProfile } from '../profile';
 
@@ -36,5 +36,5 @@ export interface ManagerWithRole {
 }
 
 export interface ManagerPrivatePlatform {
-  claimsUpdated: FieldValue;
+  claimsUpdated: Timestamp;
 }

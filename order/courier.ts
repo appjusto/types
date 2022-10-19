@@ -1,4 +1,4 @@
-import { FieldValue } from 'firebase/firestore';
+import { Timestamp } from 'firebase/firestore';
 import { CourierMode, CourierStatistics } from '../courier';
 import { LatLng } from '../platform';
 
@@ -9,8 +9,8 @@ export interface OrderCourier {
   notificationToken?: string | null;
   location: LatLng;
   distanceToOrigin: number | null;
-  joined: FieldValue;
+  joined: Timestamp;
   mode: CourierMode;
   statistics?: CourierStatistics;
-  updatedOn: FieldValue;
+  updatedOn: Timestamp;
 }

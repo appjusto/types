@@ -1,4 +1,4 @@
-import { FieldValue } from 'firebase/firestore';
+import { Timestamp } from 'firebase/firestore';
 import {
   OrderDispatchingTimestamps,
   OrderStatusTimestamps,
@@ -29,14 +29,14 @@ export interface OrderRoute {
 
 export interface OrderArrivals {
   origin?: {
-    estimate?: FieldValue | null;
-    arrival?: FieldValue | null;
+    estimate?: Timestamp | null;
+    arrival?: Timestamp | null;
   };
   destination?: {
-    initialEstimate?: FieldValue | null;
-    estimate?: FieldValue | null;
-    arrival?: FieldValue | null;
-    arrivalLimit?: FieldValue | null;
+    initialEstimate?: Timestamp | null;
+    estimate?: Timestamp | null;
+    arrival?: Timestamp | null;
+    arrivalLimit?: Timestamp | null;
   };
 }
 export interface Order {
@@ -49,8 +49,8 @@ export interface Order {
   paymentMethod?: PayableWith;
   chargeStrategy: ChargeStrategy;
   fulfillment?: Fulfillment;
-  scheduledTo?: FieldValue | null;
-  confirmedScheduledTo?: FieldValue | null;
+  scheduledTo?: Timestamp | null;
+  confirmedScheduledTo?: Timestamp | null;
   // products
   business?: OrderBusiness | null;
   items?: OrderItem[];
@@ -86,8 +86,8 @@ export interface Order {
   tags?: OrderTag[];
   // metadata
   timestamps: OrderStatusTimestamps;
-  createdOn: FieldValue;
-  updatedOn?: FieldValue;
+  createdOn: Timestamp;
+  updatedOn?: Timestamp;
 }
 
 export type Fulfillment = 'delivery' | 'take-away' | 'dine-in';

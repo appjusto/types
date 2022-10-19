@@ -1,4 +1,4 @@
-import { FieldValue } from 'firebase/firestore';
+import { Timestamp } from 'firebase/firestore';
 import { BankAccount } from '../banking';
 import { BusinessAddress } from '../business';
 import { FleetDetails } from '../fleet';
@@ -38,7 +38,7 @@ export interface CourierCompany extends BusinessAddress {
 }
 
 export interface CourierFleet extends WithId<FleetDetails> {
-  joinedOn: FieldValue;
+  joinedOn: Timestamp;
 }
 
 export interface CourierProfile extends UserProfile {

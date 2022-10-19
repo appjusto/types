@@ -1,4 +1,4 @@
-import { FieldValue } from 'firebase/firestore';
+import { Timestamp } from 'firebase/firestore';
 import { ClientFlavor, LatLng } from '../platform';
 import { NotificationChannel } from '../profile/notifications';
 
@@ -13,9 +13,9 @@ export interface PushCampaign {
   title: string;
   body: string;
   status: 'submitted' | 'approved' | 'rejected';
-  scheduledTo: FieldValue;
+  scheduledTo: Timestamp;
   taskNames?: string[];
   audience?: number;
-  createdOn: FieldValue;
-  updatedOn?: FieldValue;
+  createdOn: Timestamp;
+  updatedOn?: Timestamp;
 }

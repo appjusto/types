@@ -1,4 +1,4 @@
-import { FieldValue } from 'firebase/firestore';
+import { Timestamp } from 'firebase/firestore';
 import { Flavor } from '..';
 
 export type ReviewType = 'positive' | 'negative';
@@ -7,7 +7,7 @@ export interface Review {
   type: ReviewType;
   orderId?: string;
   comment?: string;
-  createdOn?: FieldValue;
+  createdOn?: Timestamp;
 }
 
 export interface OrderConsumerReview {
@@ -31,7 +31,7 @@ export interface OrderConsumerReview {
   };
   nps?: number;
   comment?: string;
-  reviewedOn?: FieldValue;
+  reviewedOn?: Timestamp;
 }
 
 export interface ReviewTag {

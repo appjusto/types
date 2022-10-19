@@ -1,4 +1,4 @@
-import { FieldValue, GeoPoint } from 'firebase/firestore';
+import { GeoPoint, Timestamp } from 'firebase/firestore';
 import { OrderArrivals, OrderType } from '.';
 import {
   FareDetails,
@@ -44,7 +44,7 @@ export interface OrderWarehouse {
   issue: string | null;
   timestamps: OrderStatusTimestamps;
   dispatchingTimestamps: OrderDispatchingTimestamps;
-  scheduledTo: FieldValue | null;
+  scheduledTo: Timestamp | null;
 }
 
 export interface OrderItemWarehouse {

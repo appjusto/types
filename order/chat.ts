@@ -1,4 +1,4 @@
-import { FieldValue } from 'firebase/firestore';
+import { Timestamp } from 'firebase/firestore';
 import { OrderStatus } from '..';
 import { Flavor } from '../platform';
 
@@ -21,7 +21,7 @@ export interface ChatMessage {
   from: ChatMessageUser;
   to: ChatMessageUser;
   message: string;
-  timestamp: FieldValue;
+  timestamp: Timestamp;
   orderStatus?: OrderStatus;
   read?: boolean;
 }

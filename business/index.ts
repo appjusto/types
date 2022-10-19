@@ -1,4 +1,4 @@
-import { FieldValue, GeoPoint } from 'firebase/firestore';
+import { GeoPoint, Timestamp } from 'firebase/firestore';
 import { Place } from '..';
 import { Fulfillment } from '../order';
 import { PayableWith } from '../payment';
@@ -108,9 +108,9 @@ export interface Business {
   tags?: BusinessTag[];
   // metadata
   timestamps: ProfileTimestamps;
-  keepAlive?: FieldValue;
-  createdOn: FieldValue;
-  updatedOn?: FieldValue;
+  keepAlive?: Timestamp;
+  createdOn: Timestamp;
+  updatedOn?: Timestamp;
 }
 
 export type PreparationMode = 'realtime' | 'scheduled';
@@ -122,13 +122,13 @@ export interface BusinessRecommendation {
   instagram: string | null;
   phone: string | null;
   owner: string | null;
-  createdOn: FieldValue;
+  createdOn: Timestamp;
 }
 
 export interface BusinessChange {
   before: Partial<Business>;
   after: Partial<Business>;
-  timestamp: FieldValue;
+  timestamp: Timestamp;
 }
 
 export interface BusinessMenuMessage {

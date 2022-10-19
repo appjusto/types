@@ -1,4 +1,4 @@
-import { FieldValue, GeoPoint } from 'firebase/firestore';
+import { GeoPoint, Timestamp } from 'firebase/firestore';
 import { ProfileSituation, ProfileTimestamps } from '..';
 
 export type ManagerWarehouse = {
@@ -12,6 +12,6 @@ export type ManagerWarehouse = {
   coordinates: GeoPoint | null;
   appVersion: string | null;
   timestamps: ProfileTimestamps;
-  createdOn: FieldValue;
-  updatedOn?: FieldValue;
+  createdOn: Timestamp;
+  updatedOn?: Timestamp;
 };

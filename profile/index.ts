@@ -1,4 +1,4 @@
-import { FieldValue, GeoPoint } from 'firebase/firestore';
+import { GeoPoint, Timestamp } from 'firebase/firestore';
 import { Issue, NPS } from '..';
 import { NotificationPreferences } from './notifications';
 import { ProfileTag } from './tags';
@@ -14,7 +14,7 @@ export type ProfileSituation =
   | 'deleted';
 
 export type ProfileTimestamps = {
-  [K in ProfileSituation]?: FieldValue;
+  [K in ProfileSituation]?: Timestamp;
 };
 
 export interface UserProfile {
@@ -31,11 +31,11 @@ export interface UserProfile {
   notificationToken?: string | null;
   notificationPreferences?: NotificationPreferences;
   notificationPreferencesToken?: string;
-  notificationLastReceivedAt?: FieldValue;
+  notificationLastReceivedAt?: Timestamp;
   pix?: string;
   onboarded?: boolean;
   coordinates?: GeoPoint;
-  g: {
+  g?: {
     geopoint: GeoPoint;
     geohash: string;
   };
@@ -51,8 +51,8 @@ export interface UserProfile {
   appIp?: string | null;
   userAgent?: string;
   timestamps: ProfileTimestamps;
-  createdOn: FieldValue;
-  updatedOn?: FieldValue;
+  createdOn: Timestamp;
+  updatedOn?: Timestamp;
 }
 
 export interface ProfileNote {
@@ -60,6 +60,6 @@ export interface ProfileNote {
   staffId: string;
   staffEmail: string;
   staffName?: string;
-  createdOn: FieldValue;
-  updatedOn: FieldValue;
+  createdOn: Timestamp;
+  updatedOn: Timestamp;
 }

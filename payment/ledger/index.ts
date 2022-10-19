@@ -1,4 +1,4 @@
-import { FieldValue } from 'firebase/firestore';
+import { Timestamp } from 'firebase/firestore';
 import { IuguMarketplaceTransferResponse } from '../iugu';
 import { AccountType } from '../tasks';
 
@@ -41,6 +41,6 @@ export interface LedgerEntry {
     id: string;
     email: string;
   };
-  createdOn: FieldValue;
-  updatedOn?: FieldValue;
+  createdOn: Timestamp;
+  updatedOn?: Timestamp;
 }

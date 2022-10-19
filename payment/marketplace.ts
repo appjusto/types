@@ -1,4 +1,4 @@
-import { FieldValue } from 'firebase/firestore';
+import { Timestamp } from 'firebase/firestore';
 import {
   IuguMarketplaceAccount,
   IuguMarketplaceAccountAdvanceByAmountResponse,
@@ -39,8 +39,8 @@ export interface AccountWithdraw {
   fee: number;
   data: IuguMarketplaceAccountWithdrawResponse;
   feedback?: string;
-  createdOn: FieldValue;
-  updatedOn?: FieldValue;
+  createdOn: Timestamp;
+  updatedOn?: Timestamp;
 }
 
 export interface AccountAdvance {
@@ -52,7 +52,7 @@ export interface AccountAdvance {
   data:
     | IuguMarketplaceAccountAdvanceResponse
     | IuguMarketplaceAccountAdvanceByAmountResponse;
-  createdOn: FieldValue;
+  createdOn: Timestamp;
 }
 
 export interface AccountTransfer {
@@ -60,5 +60,5 @@ export interface AccountTransfer {
   accountId: string | null;
   accountExternalId: string;
   data: IuguMarketplaceTransferResponse;
-  createdOn: FieldValue;
+  createdOn: Timestamp;
 }

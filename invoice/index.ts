@@ -1,4 +1,4 @@
-import { FieldValue } from 'firebase/firestore';
+import { Timestamp } from 'firebase/firestore';
 import { FareDetails } from '../order/fare';
 import { PayableWith } from '../payment';
 import { IuguInvoiceStatus } from '../payment/iugu';
@@ -49,6 +49,6 @@ export interface Invoice {
   paid?: number;
   paidAt?: string | null;
   payerDocument?: string | null;
-  createdOn: FieldValue;
-  updatedOn?: FieldValue;
+  createdOn: Timestamp;
+  updatedOn?: Timestamp;
 }

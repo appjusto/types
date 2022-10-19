@@ -1,4 +1,4 @@
-import { FieldValue, GeoPoint } from 'firebase/firestore';
+import { GeoPoint, Timestamp } from 'firebase/firestore';
 import { ProfileSituation, ProfileTimestamps } from '..';
 import { NotificationPreferences } from '../profile/notifications';
 
@@ -13,6 +13,6 @@ export type ConsumerWarehouse = {
   platform: string | null;
   coordinates: GeoPoint | null;
   timestamps: ProfileTimestamps;
-  createdOn: FieldValue;
-  updatedOn?: FieldValue;
+  createdOn: Timestamp;
+  updatedOn?: Timestamp;
 };

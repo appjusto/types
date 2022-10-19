@@ -1,4 +1,4 @@
-import { FieldValue } from 'firebase/firestore';
+import { Timestamp } from 'firebase/firestore';
 import { UserProfile } from '.';
 import { UserType } from '..';
 
@@ -10,11 +10,11 @@ export interface ProfileChange {
   surname?: string;
   cpf?: string;
   phone?: string;
-  createdOn: FieldValue;
+  createdOn: Timestamp;
 }
 
 export interface UserProfileChange {
   before: Partial<UserProfile>;
   after: Partial<UserProfile>;
-  timestamp: FieldValue;
+  timestamp: Timestamp;
 }

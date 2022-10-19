@@ -1,4 +1,4 @@
-import { FieldValue } from 'firebase/firestore';
+import { Timestamp } from 'firebase/firestore';
 import { WithId } from '../../platform';
 import { Issue } from '../issues';
 
@@ -13,7 +13,7 @@ export interface OrderMatching {
   task: string;
   attempt: number;
   trials: number;
-  startAt: FieldValue;
+  startAt: Timestamp;
   notifiedCouriers: { id: string; name: string }[];
   previouslyNotifiedCouriers: { id: string; name: string }[];
   rejections: OrderMatchingRejection[];

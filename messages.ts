@@ -1,4 +1,4 @@
-import { FieldValue } from 'firebase/firestore';
+import { Timestamp } from 'firebase/firestore';
 import { OrderStatus } from '.';
 import { CourierOrderRequest } from './courier/requests';
 import { ExpoPushMessage } from './external/expo';
@@ -47,7 +47,7 @@ export interface PushMessage {
 
 export interface PushReceipt {
   expoToken: string;
-  createdOn: FieldValue;
+  createdOn: Timestamp;
   verified: boolean;
 }
 

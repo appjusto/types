@@ -1,23 +1,23 @@
-import { FieldValue } from 'firebase/firestore';
+import { Timestamp } from 'firebase/firestore';
 import { Flavor } from '..';
 
 export type UserType = 'consumer' | 'manager' | 'courier';
 
 export interface User {
-  lastSignInRequest: FieldValue;
+  lastSignInRequest: Timestamp;
   lastSignInFlavor?: Flavor;
   id: string | null;
   consumer?: {
-    createdAt: FieldValue;
-    deletedAt?: FieldValue | null;
+    createdAt: Timestamp;
+    deletedAt?: Timestamp | null;
   } | null;
   courier?: {
-    createdAt: FieldValue;
-    deletedAt?: FieldValue | null;
+    createdAt: Timestamp;
+    deletedAt?: Timestamp | null;
   } | null;
   manager?: {
-    createdAt: FieldValue;
-    deletedAt?: FieldValue | null;
+    createdAt: Timestamp;
+    deletedAt?: Timestamp | null;
   } | null;
   cpf?: string;
   phone?: string;

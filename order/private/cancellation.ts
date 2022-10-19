@@ -1,4 +1,4 @@
-import { FieldValue } from 'firebase/firestore';
+import { Timestamp } from 'firebase/firestore';
 import { InvoiceType } from '../../invoice';
 import { Flavor } from '../../platform';
 import { Issue } from '../issues';
@@ -13,5 +13,5 @@ export interface OrderCancellation {
   params?: OrderCancellationParams;
   issue: Issue | null;
   comment: string | null;
-  timestamp: FieldValue;
+  timestamp: Timestamp;
 }

@@ -1,4 +1,4 @@
-import { FieldValue } from 'firebase/firestore';
+import { Timestamp } from 'firebase/firestore';
 import { InvoiceType } from '.';
 import { AccountType } from '..';
 import { FareDetails } from '../order/fare';
@@ -15,6 +15,6 @@ export interface InvoiceWarehouse {
   accountId: string | null;
   consumerId: string | null;
   status: IuguInvoiceStatus;
-  createdOn: FieldValue;
-  updatedOn: FieldValue | null;
+  createdOn: Timestamp;
+  updatedOn: Timestamp | null;
 }

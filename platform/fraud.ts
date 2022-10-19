@@ -1,4 +1,4 @@
-import { FieldValue, GeoPoint } from 'firebase/firestore';
+import { GeoPoint, Timestamp } from 'firebase/firestore';
 import { Address } from '..';
 
 export interface FraudPreventionParams {
@@ -26,5 +26,5 @@ export interface FraudPreventionParams {
 export interface FlaggedLocation {
   coordinates: GeoPoint;
   address: Address;
-  createdOn: FieldValue;
+  createdOn: Timestamp;
 }

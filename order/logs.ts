@@ -1,43 +1,43 @@
-import { FieldValue, GeoPoint } from 'firebase/firestore';
+import { GeoPoint, Timestamp } from 'firebase/firestore';
 import { Order, OrderStaff } from '.';
 import { LatLng } from '../platform';
 import { DispatchingState } from './dispatching';
 
 export interface OrderChangeLog {
   type: 'change';
-  timestamp: FieldValue;
+  timestamp: Timestamp;
   before: Partial<Order>;
   after: Partial<Order>;
 }
 
 export interface OrderStaffLog {
   type: 'staff-change';
-  timestamp: FieldValue;
+  timestamp: Timestamp;
   before: OrderStaff | null;
   after: OrderStaff | null;
 }
 
 export interface OrderPaymentLog {
   type: 'payment';
-  timestamp: FieldValue;
+  timestamp: Timestamp;
   info: string[];
 }
 
 export interface OrderInfoLog {
   type: 'info';
-  timestamp: FieldValue;
+  timestamp: Timestamp;
   info: string[];
 }
 
 export interface OrderMatchingLog {
   type: 'matching';
-  timestamp: FieldValue;
+  timestamp: Timestamp;
   info: string[];
 }
 
 export interface OrderCourierLocationLog {
   type: 'courier-location';
-  timestamp: FieldValue;
+  timestamp: Timestamp;
   location: LatLng;
   courierId: string;
 }
@@ -46,7 +46,7 @@ export interface OrderCourierLocationLog {
  * @deprecated
  */
 export interface OrderLocationEntry {
-  createdOn: FieldValue;
+  createdOn: Timestamp;
   coordinates: GeoPoint;
   dispatchingState: DispatchingState;
   courierId: string;
