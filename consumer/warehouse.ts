@@ -1,5 +1,5 @@
-import { GeoPoint, Timestamp } from 'firebase/firestore';
 import { ProfileSituation, ProfileTimestamps } from '..';
+import { GeoPoint, Timestamp } from '../external/firebase';
 import { NotificationPreferences } from '../profile/notifications';
 
 export type ConsumerWarehouse = {

@@ -1,5 +1,5 @@
-import { Timestamp } from 'firebase/firestore';
 import { ReviewTag, ReviewType } from '.';
+import { Timestamp } from '../external/firebase';
 
 export interface OrderReviewWarehouse {
   orderId: string;

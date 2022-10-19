@@ -1,5 +1,5 @@
-import { GeoPoint, Timestamp } from 'firebase/firestore';
 import { Issue, NPS } from '..';
+import { GeoPoint, Timestamp } from '../external/firebase';
 import { NotificationPreferences } from './notifications';
 import { ProfileTag } from './tags';
 

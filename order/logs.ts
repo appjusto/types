@@ -1,5 +1,5 @@
-import { GeoPoint, Timestamp } from 'firebase/firestore';
 import { Order, OrderStaff } from '.';
+import { GeoPoint, Timestamp } from '../external/firebase';
 import { LatLng } from '../platform';
 import { DispatchingState } from './dispatching';
 

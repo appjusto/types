@@ -1,4 +1,3 @@
-import { GeoPoint, Timestamp } from 'firebase/firestore';
 import { OrderArrivals, OrderType } from '.';
 import {
   FareDetails,
@@ -6,6 +5,7 @@ import {
   OrderStatus,
   OrderStatusTimestamps,
 } from '..';
+import { GeoPoint, Timestamp } from '../external/firebase';
 
 export interface OrderWarehouse {
   code: string;

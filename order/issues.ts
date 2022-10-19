@@ -1,4 +1,4 @@
-import { Timestamp } from 'firebase/firestore';
+import { Timestamp } from '../external/firebase';
 import { Flavor, WithId } from '../platform';
 
 export type OrderRejectionType = 'refuse' | 'cancel';

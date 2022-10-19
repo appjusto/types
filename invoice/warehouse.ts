@@ -1,6 +1,6 @@
-import { Timestamp } from 'firebase/firestore';
 import { InvoiceType } from '.';
 import { AccountType } from '..';
+import { Timestamp } from '../external/firebase';
 import { FareDetails } from '../order/fare';
 import { IuguInvoiceStatus } from '../payment/iugu';
 

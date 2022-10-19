@@ -1,6 +1,6 @@
-import { Timestamp } from 'firebase/firestore';
 import { UserProfile } from '.';
 import { UserType } from '..';
+import { Timestamp } from '../external/firebase';
 
 export interface ProfileChange {
   accountId: string;

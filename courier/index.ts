@@ -1,6 +1,6 @@
-import { Timestamp } from 'firebase/firestore';
 import { BankAccount } from '../banking';
 import { BusinessAddress } from '../business';
+import { Timestamp } from '../external/firebase';
 import { FleetDetails } from '../fleet';
 import { WithId } from '../platform';
 import { UserProfile } from '../profile';

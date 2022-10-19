@@ -1,5 +1,5 @@
-import { Timestamp } from 'firebase/firestore';
 import { OrderStatus } from '..';
+import { Timestamp } from '../external/firebase';
 import { Flavor } from '../platform';
 
 export type ChatMessageType =

@@ -1,4 +1,3 @@
-import { Timestamp } from 'firebase/firestore';
 import { BusinessSchedule } from '.';
 import {
   BusinessAddress,
@@ -6,6 +5,7 @@ import {
   BusinessStatus,
   PreparationMode,
 } from './business';
+import { Timestamp } from './external/firebase';
 import { ProductStatistics } from './menu/product';
 import { LatLng2 } from './platform';
 

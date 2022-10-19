@@ -1,6 +1,6 @@
-import { GeoPoint, Timestamp } from 'firebase/firestore';
 import { BusinessPhone, BusinessReviews, BusinessStatus } from '.';
 import { ProfileSituation, ProfileTimestamps } from '..';
+import { GeoPoint, Timestamp } from '../external/firebase';
 
 export type BusinessWarehouse = {
   code: string | null;

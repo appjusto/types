@@ -1,5 +1,5 @@
-import { Timestamp } from 'firebase/firestore';
 import { DispatchingStatus, OrderStatus } from '..';
+import { Timestamp } from '../external/firebase';
 
 // status timestamps
 

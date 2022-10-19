@@ -1,5 +1,5 @@
-import { Timestamp } from 'firebase/firestore';
 import { Flavor } from '..';
+import { Timestamp } from '../external/firebase';
 
 export type ReviewType = 'positive' | 'negative';
 

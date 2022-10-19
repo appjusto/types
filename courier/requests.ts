@@ -1,4 +1,4 @@
-import { Timestamp } from 'firebase/firestore';
+import { Timestamp } from '../external/firebase';
 import { OrderType } from '../order';
 import { LatLng } from '../platform';
 import { Fee } from '../platform/fees';

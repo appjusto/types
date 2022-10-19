@@ -1,4 +1,4 @@
-import { Timestamp } from 'firebase/firestore';
+import { Timestamp } from '../external/firebase';
 import { FareDetails } from '../order/fare';
 import { PayableWith } from '../payment';
 import { IuguInvoiceStatus } from '../payment/iugu';

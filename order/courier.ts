@@ -1,5 +1,5 @@
-import { Timestamp } from 'firebase/firestore';
 import { CourierMode, CourierStatistics } from '../courier';
+import { Timestamp } from '../external/firebase';
 import { LatLng } from '../platform';
 
 export interface OrderCourier {

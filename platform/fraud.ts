@@ -1,5 +1,5 @@
-import { GeoPoint, Timestamp } from 'firebase/firestore';
 import { Address } from '..';
+import { GeoPoint, Timestamp } from '../external/firebase';
 
 export interface FraudPreventionParams {
   delayBeforeConfirm: number; // in seconds

@@ -1,4 +1,4 @@
-import { Timestamp } from 'firebase/firestore';
+import { Timestamp } from '../../external/firebase';
 import { InvoiceType } from '../../invoice';
 import { Flavor } from '../../platform';
 import { Issue } from '../issues';

@@ -1,7 +1,7 @@
-import { Timestamp } from 'firebase/firestore';
 import { OrderStatus } from '.';
 import { CourierOrderRequest } from './courier/requests';
 import { ExpoPushMessage } from './external/expo';
+import { Timestamp } from './external/firebase';
 import { ChatMessageUser } from './order/chat';
 
 export type PushMessageActionType =

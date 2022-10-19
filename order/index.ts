@@ -1,9 +1,9 @@
-import { Timestamp } from 'firebase/firestore';
 import {
   OrderDispatchingTimestamps,
   OrderStatusTimestamps,
   OutsourceAccountType,
 } from '..';
+import { Timestamp } from '../external/firebase';
 
 import { PayableWith } from '../payment/index';
 import { IuguInvoiceStatus } from '../payment/iugu';

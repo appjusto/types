@@ -1,4 +1,4 @@
-import { Timestamp } from 'firebase/firestore';
+import { Timestamp } from '../external/firebase';
 import { ClientFlavor, LatLng } from '../platform';
 import { NotificationChannel } from '../profile/notifications';
 

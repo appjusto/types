@@ -1,5 +1,5 @@
-import { GeoPoint, Timestamp } from 'firebase/firestore';
 import { Place } from '..';
+import { GeoPoint, Timestamp } from '../external/firebase';
 import { Fulfillment } from '../order';
 import { PayableWith } from '../payment';
 import { LatLng } from '../platform';
