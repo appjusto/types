@@ -44,6 +44,7 @@ export {
   DeleteBusinessPayload,
   UpdateBusinessSlugPayload,
 } from './business/payloads';
+export { BusinessTag } from './business/tags';
 export { BusinessWarehouse } from './business/warehouse';
 export {
   ConsumerProfile,

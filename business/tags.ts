@@ -1,1 +1,4 @@
-export type BusinessTag = 'motorcycle-only';
+export type BusinessTag =
+  | 'can-match-courier'
+  | 'can-outsource'
+  | 'motorcycle-only';
