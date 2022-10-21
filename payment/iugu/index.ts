@@ -33,6 +33,7 @@ export {
   IuguMarketplaceAdvanceInfo,
   IuguMarketplaceTransferRequest,
   IuguMarketplaceTransferResponse,
+  IuguMarketplaceUpdateBankAccount,
 } from './account';
 export {
   IuguAdhocCharge,
