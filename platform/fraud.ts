@@ -27,4 +27,8 @@ export interface FlaggedLocation {
   coordinates: GeoPoint;
   address: Address;
   createdOn: FieldValue;
+  g: {
+    geopoint: GeoPoint;
+    geohash: string;
+  };
 }
