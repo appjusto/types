@@ -1,1 +1,1 @@
-export type ProfileTag = 'safe';
+export type ProfileTag = 'safe' | 'unsafe';
