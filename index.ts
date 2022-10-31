@@ -20,6 +20,7 @@ export {
   BankAccountPersonType,
   BankAccountType,
 } from './banking';
+export { Banner, BannersOrdering, BannerTargetOptions } from './banners';
 export {
   Business,
   BusinessAddress,
