@@ -103,6 +103,7 @@ export interface GetPlaceChangeInfoPayload extends OrderPayload {}
 
 export interface OutsourceDeliveryPayload extends OrderPayload {
   accountType?: OutsourceAccountType;
+  priorityFee?: string;
   comment?: string;
 }
 
