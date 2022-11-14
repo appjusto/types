@@ -12,6 +12,6 @@ export interface OrderCourier {
   joined?: Timestamp;
   mode: CourierMode;
   statistics?: CourierStatistics;
-  outsourcedOrderId?: string;
+  outsourcedOrderId?: string | null;
   updatedOn?: Timestamp;
 }
