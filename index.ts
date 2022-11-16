@@ -97,7 +97,10 @@ export { ManagerWarehouse } from './manager/warehouse';
 export { Ordering } from './menu';
 export { Category } from './menu/category';
 export { Complement, ComplementGroup } from './menu/complements';
-export { CloneComplementsGroupPayload } from './menu/payloads';
+export {
+  CloneComplementsGroupPayload,
+  ImportMenuPayload,
+} from './menu/payloads';
 export { Classification, Product, ProductStatistics } from './menu/product';
 export {
   ChatPushMessageData,

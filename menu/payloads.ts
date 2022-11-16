@@ -5,3 +5,9 @@ export interface CloneComplementsGroupPayload extends BasePayload {
   groupId: string;
   name?: string;
 }
+
+export interface ImportMenuPayload extends BasePayload {
+  url: string;
+  businessId: string;
+  discount: number;
+}
