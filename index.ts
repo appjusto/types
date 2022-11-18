@@ -27,7 +27,6 @@ export {
   BusinessChange,
   BusinessMenuMessage,
   BusinessPhone,
-  BusinessRecommendation,
   BusinessReviews,
   BusinessSchedule,
   BusinessSettings,
@@ -45,6 +44,8 @@ export {
   DeleteBusinessPayload,
   UpdateBusinessSlugPayload,
 } from './business/payloads';
+export { BusinessRecommendation } from './business/recommendation';
+export { BusinessRecommendationWarehouse } from './business/recommendation/warehouse';
 export { BusinessTag } from './business/tags';
 export { BusinessWarehouse } from './business/warehouse';
 export {

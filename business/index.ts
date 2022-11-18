@@ -1,4 +1,3 @@
-import { Place } from '..';
 import { GeoPoint, Timestamp } from '../external/firebase';
 import { Fulfillment } from '../order';
 import { PayableWith } from '../payment';
@@ -115,15 +114,6 @@ export interface Business {
 
 export type PreparationMode = 'realtime' | 'scheduled';
 // export type MatchingMode = 'auto' | 'manual';
-
-export interface BusinessRecommendation {
-  recommendedBusiness: Place;
-  consumerId: string | null;
-  instagram: string | null;
-  phone: string | null;
-  owner: string | null;
-  createdOn: Timestamp;
-}
 
 export interface BusinessChange {
   before: Partial<Business>;
