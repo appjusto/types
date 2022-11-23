@@ -43,7 +43,7 @@ export interface BusinessSettings {
 }
 
 export type BusinessType = 'restaurant';
-export type BusinessStatus = 'open' | 'closed';
+export type BusinessStatus = 'available' | 'unavailable';
 
 export type ScheduleObject = {
   day: string;
