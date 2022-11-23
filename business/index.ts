@@ -107,6 +107,9 @@ export interface Business {
   tags?: BusinessTag[];
   // metadata
   timestamps: ProfileTimestamps;
+  /**
+   * @deprecated
+   */
   keepAlive?: Timestamp;
   createdOn: Timestamp;
   updatedOn?: Timestamp;

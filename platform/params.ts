@@ -32,7 +32,10 @@ export interface PlatformParams {
   };
   business: {
     approveAfterVerified: boolean;
-    keepAliveThreshold: number; // number of seconds to start refusing orders
+    /**
+     * @deprecated
+     */
+    keepAliveThreshold?: number; // number of seconds to start refusing orders
     averageCookingTime: number; // in seconds
   };
   consumer: {
