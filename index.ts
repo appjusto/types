@@ -29,6 +29,8 @@ export {
   BusinessPhone,
   BusinessReviews,
   BusinessSchedule,
+  BusinessService,
+  BusinessServiceName,
   BusinessSettings,
   BusinessStatistics,
   BusinessStatus,

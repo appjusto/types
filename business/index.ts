@@ -2,6 +2,7 @@ import { GeoPoint, Timestamp } from '../external/firebase';
 import { Fulfillment } from '../order';
 import { PayableWith } from '../payment';
 import { LatLng } from '../platform';
+import { Fee } from '../platform/fees';
 import { ProfileSituation, ProfileTimestamps } from '../profile';
 import { BusinessTag } from './tags';
 
@@ -44,6 +45,14 @@ export interface BusinessSettings {
 
 export type BusinessType = 'restaurant';
 export type BusinessStatus = 'open' | 'closed';
+
+export type BusinessServiceName = 'insurance';
+export interface BusinessService {
+  name: BusinessServiceName;
+  fee: Fee;
+  startAt: Timestamp;
+  endAt?: Timestamp;
+}
 
 export type ScheduleObject = {
   day: string;
@@ -105,6 +114,7 @@ export interface Business {
   minHoursForScheduledOrders?: number;
   // matchingMode: MatchingMode;
   tags?: BusinessTag[];
+  services?: BusinessService[];
   // metadata
   timestamps: ProfileTimestamps;
   keepAlive?: Timestamp;
