@@ -14,6 +14,7 @@ export {
   ApplicationToken,
   QuoteResponse,
 } from './application';
+export { Area } from './area';
 export {
   Bank,
   BankAccount,
