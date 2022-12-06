@@ -50,8 +50,11 @@ export type BusinessServiceName = 'insurance';
 export interface BusinessService {
   name: BusinessServiceName;
   fee: Fee;
-  startAt: Timestamp;
-  endAt?: Timestamp;
+  createdBy?: {
+    id: string;
+    email: string;
+  };
+  createdOn?: Timestamp;
 }
 
 export type ScheduleObject = {
