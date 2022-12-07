@@ -54,7 +54,7 @@ export interface BusinessService {
     id: string;
     email: string;
   };
-  createdOn?: Timestamp;
+  createdOn?: number; // in milliseconds due to firebase limitations
 }
 
 export type ScheduleObject = {
