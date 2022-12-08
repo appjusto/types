@@ -1,4 +1,9 @@
-import { BusinessPhone, BusinessReviews, BusinessStatus } from '.';
+import {
+  BusinessPhone,
+  BusinessReviews,
+  BusinessService,
+  BusinessStatus,
+} from '.';
 import { ProfileSituation, ProfileTimestamps } from '..';
 import { GeoPoint, Timestamp } from '../external/firebase';
 
@@ -21,6 +26,7 @@ export type BusinessWarehouse = {
   state: string | null;
   neighborhood: string | null;
   reviews: BusinessReviews;
+  services: BusinessService[];
   timestamps: ProfileTimestamps;
   createdOn: Timestamp;
   updatedOn: Timestamp | null;
