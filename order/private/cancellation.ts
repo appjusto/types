@@ -13,5 +13,6 @@ export interface OrderCancellation {
   params?: OrderCancellationParams;
   issue: Issue | null;
   comment: string | null;
+  businessIndemnity?: boolean;
   timestamp: Timestamp;
 }
