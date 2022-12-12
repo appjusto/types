@@ -5,6 +5,7 @@ import { AccountType } from '../tasks';
 export type LedgerEntryOperation =
   | 'delivery'
   | 'same-owner-accounts'
+  | 'business-insurance'
   | 'others';
 export type LedgerEntryStatus =
   | 'pending'
