@@ -97,6 +97,7 @@ export interface CancelOrderPayload extends OrderPayload {
   params?: OrderCancellationParams;
   cancellation?: WithId<Issue>;
   comment?: string;
+  businessIndemnity?: boolean;
 }
 
 export interface GetPlaceChangeInfoPayload extends OrderPayload {}
