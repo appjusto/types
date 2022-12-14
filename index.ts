@@ -182,6 +182,7 @@ export { Address, Place } from './order/place';
 export {
   OrderCancellation,
   OrderCancellationParams,
+  OrderRefundType,
 } from './order/private/cancellation';
 export { OrderConfirmation } from './order/private/confirmation';
 export {

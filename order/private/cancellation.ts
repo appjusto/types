@@ -1,12 +1,11 @@
 import { Timestamp } from '../../external/firebase';
-import { InvoiceType } from '../../invoice';
 import { Flavor } from '../../platform';
 import { Issue } from '../issues';
 
+export type OrderRefundType = 'service' | 'products' | 'delivery' | 'tip';
 export interface OrderCancellationParams {
-  refund: InvoiceType[];
+  refund: OrderRefundType[];
 }
-
 export interface OrderCancellation {
   canceledBy: Flavor;
   canceledById?: string;
