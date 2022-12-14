@@ -47,7 +47,6 @@ export interface Order {
   // payment & fulfillment
   fare?: Fare;
   paymentMethod?: PayableWith;
-  chargeStrategy: ChargeStrategy;
   fulfillment?: Fulfillment;
   scheduledTo?: Timestamp | null;
   confirmedScheduledTo?: Timestamp | null;
@@ -91,8 +90,6 @@ export interface Order {
 }
 
 export type Fulfillment = 'delivery' | 'take-away' | 'dine-in';
-export type ChargeStrategy = 'single-invoice' | 'separated-invoices';
-
 export interface OrderBusiness {
   id: string;
   name: string;

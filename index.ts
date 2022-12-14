@@ -118,7 +118,6 @@ export {
   PushReceipt,
 } from './messages';
 export {
-  ChargeStrategy,
   Fulfillment,
   Order,
   OrderArrivals,
