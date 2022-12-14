@@ -3,9 +3,16 @@ import { OrderType } from '../order';
 import { LatLng } from '../platform';
 import { Fee } from '../platform/fees';
 
+export type CourierOrderRequestSituation =
+  | 'pending'
+  | 'accepted'
+  | 'viewed'
+  | 'rejected'
+  | 'expired';
+
 export interface CourierOrderRequest {
   type: OrderType;
-  situation: 'pending' | 'accepted' | 'viewed' | 'rejected' | 'expired';
+  situation: CourierOrderRequestSituation;
   courierId: string;
   orderId: string;
   fee: number;

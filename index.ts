@@ -68,7 +68,10 @@ export {
   CourierStatistics,
   CourierStatus,
 } from './courier';
-export { CourierOrderRequest } from './courier/requests';
+export {
+  CourierOrderRequest,
+  CourierOrderRequestSituation,
+} from './courier/requests';
 export { CourierWarehouse } from './courier/warehouse';
 export {
   EmailPayload,
