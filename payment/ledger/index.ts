@@ -43,6 +43,7 @@ export interface LedgerEntry {
     id: string;
     email: string;
   };
+  taskName?: string | null;
   createdOn: Timestamp;
   updatedOn?: Timestamp;
 }
