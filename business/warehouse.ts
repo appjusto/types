@@ -16,6 +16,9 @@ export type BusinessWarehouse = {
   situation: ProfileSituation;
   status: BusinessStatus;
   enabled: boolean;
+  realtime: boolean;
+  scheduled: boolean;
+  deliveryRange: number;
   shouldBeOpen: boolean;
   cuisine: string | null;
   averageCookingTime: number | null;
