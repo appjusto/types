@@ -9,7 +9,9 @@ export interface InvoiceFingerprint {
   nounce: string;
 }
 
-export type InvoiceType = 'products' | 'delivery' | 'food' | 'p2p' | 'tip';
+export type LegacyInvoiceType = 'products' | 'delivery' | 'platform';
+
+export type InvoiceType = LegacyInvoiceType | 'food' | 'p2p' | 'tip';
 
 export interface Invoice {
   invoiceType: InvoiceType;
