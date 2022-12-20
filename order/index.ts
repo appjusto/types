@@ -6,8 +6,6 @@ import {
 import { Timestamp } from '../external/firebase';
 
 import { PayableWith } from '../payment/index';
-import { IuguInvoiceStatus } from '../payment/iugu';
-import { Fee } from '../platform/fees';
 import { OrderConsumer } from './consumer';
 import { OrderCourier } from './courier';
 import { DispatchingState, DispatchingStatus } from './dispatching';
@@ -17,6 +15,7 @@ import { OrderItem } from './item';
 import { Place } from './place';
 import { OrderStatus } from './status';
 import { OrderTag } from './tags';
+import { OrderTip } from './tip';
 
 export type OrderType = 'p2p' | 'food';
 
@@ -66,17 +65,7 @@ export interface Order {
   dispatchingState: DispatchingState | null;
   dispatchingTimestamps: OrderDispatchingTimestamps;
   outsourcedBy?: OutsourceAccountType;
-  tip?: {
-    value: number; // in cents;
-    paid?: number;
-    /** @deprecated */
-    processingFee?: number; // in cents
-    processing?: {
-      fee: Fee;
-      value: number;
-    };
-    status?: IuguInvoiceStatus;
-  };
+  tip?: OrderTip;
   // etc
   additionalInfo?: string | null;
   staff?: OrderStaff | null;

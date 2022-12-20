@@ -204,6 +204,7 @@ export {
   OrderDispatchingTimestamps,
   OrderStatusTimestamps,
 } from './order/timestamps';
+export { OrderTip } from './order/tip';
 export { OrderItemWarehouse, OrderWarehouse } from './order/warehouse';
 export { BasePayload, FetchTotalCouriersNearbyPayload } from './payloads';
 export {
