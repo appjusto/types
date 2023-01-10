@@ -1,4 +1,4 @@
-export {
+export type {
   AlgoliaConfig,
   BusinessAlgolia,
   ConsumerAlgolia,
@@ -6,7 +6,7 @@ export {
   FlaggedLocationsAlgolia,
   ProductAlgolia,
 } from './algolia';
-export {
+export type {
   Application,
   ApplicationCall,
   ApplicationLimits,
@@ -14,15 +14,15 @@ export {
   ApplicationToken,
   QuoteResponse,
 } from './application';
-export { Area } from './area';
-export {
+export type { Area } from './area';
+export type {
   Bank,
   BankAccount,
   BankAccountPersonType,
   BankAccountType,
 } from './banking';
-export { Banner, BannersOrdering, BannerTargetOptions } from './banners';
-export {
+export type { Banner, BannersOrdering, BannerTargetOptions } from './banners';
+export type {
   Business,
   BusinessAddress,
   BusinessChange,
@@ -40,25 +40,25 @@ export {
   PreparationMode,
   ScheduleObject,
 } from './business';
-export {
+export type {
   BusinessProfilePayload,
   CloneBusinessPayload,
   CreateBusinessProfilePayload,
   DeleteBusinessPayload,
   UpdateBusinessSlugPayload,
 } from './business/payloads';
-export { BusinessRecommendation } from './business/recommendation';
-export { BusinessRecommendationWarehouse } from './business/recommendation/warehouse';
-export { BusinessTag } from './business/tags';
-export { BusinessWarehouse } from './business/warehouse';
-export {
+export type { BusinessRecommendation } from './business/recommendation';
+export type { BusinessRecommendationWarehouse } from './business/recommendation/warehouse';
+export type { BusinessTag } from './business/tags';
+export type { BusinessWarehouse } from './business/warehouse';
+export type {
   ConsumerProfile,
   ConsumerServiceStatistics,
   ConsumerStatistics,
   PaymentChannel,
 } from './consumer';
-export { ConsumerWarehouse } from './consumer/warehouse';
-export {
+export type { ConsumerWarehouse } from './consumer/warehouse';
+export type {
   AvailableCourier,
   CourierCompany,
   CourierFleet,
@@ -68,30 +68,35 @@ export {
   CourierStatistics,
   CourierStatus,
 } from './courier';
-export {
+export type {
   CourierOrderRequest,
   CourierOrderRequestSituation,
 } from './courier/requests';
-export { CourierWarehouse } from './courier/warehouse';
-export {
+export type { CourierWarehouse } from './courier/warehouse';
+export type {
   EmailPayload,
   EmailTaskPayload,
   EmailTaskPayloadFrom,
   OrderFraudEmailPayload,
 } from './emails/payloads';
-export { Fleet, FleetDetails, FleetFareParams, FleetSituation } from './fleet';
-export { FleetWarehouse } from './fleet/warehouse';
-export { Generic } from './generics';
-export { Invoice, InvoiceFingerprint, InvoiceType } from './invoice';
-export { InvoiceWarehouse } from './invoice/warehouse';
-export { RouteDetails } from './location/directions';
-export {
+export type {
+  Fleet,
+  FleetDetails,
+  FleetFareParams,
+  FleetSituation,
+} from './fleet';
+export type { FleetWarehouse } from './fleet/warehouse';
+export type { Generic } from './generics';
+export type { Invoice, InvoiceFingerprint, InvoiceType } from './invoice';
+export type { InvoiceWarehouse } from './invoice/warehouse';
+export type { RouteDetails } from './location/directions';
+export type {
   GoogleMapsGeocodePayload,
   GoogleMapsPlacesAutocompletePayload,
   GoogleMapsReverseGeocodePayload,
   QueryGoogleMapsPayload,
 } from './location/payloads';
-export {
+export type {
   AdminRole,
   ManagerPrivatePlatform,
   ManagerProfile,
@@ -100,16 +105,20 @@ export {
   NewManagerData,
   Role,
 } from './manager';
-export { ManagerWarehouse } from './manager/warehouse';
-export { Ordering } from './menu';
-export { Category } from './menu/category';
-export { Complement, ComplementGroup } from './menu/complements';
-export {
+export type { ManagerWarehouse } from './manager/warehouse';
+export type { Ordering } from './menu';
+export type { Category } from './menu/category';
+export type { Complement, ComplementGroup } from './menu/complements';
+export type {
   CloneComplementsGroupPayload,
   ImportMenuPayload,
 } from './menu/payloads';
-export { Classification, Product, ProductStatistics } from './menu/product';
-export {
+export type {
+  Classification,
+  Product,
+  ProductStatistics,
+} from './menu/product';
+export type {
   ChatPushMessageData,
   NavigateBusinessPushData,
   NotificationTaskPayload,
@@ -120,7 +129,7 @@ export {
   PushMessageData,
   PushReceipt,
 } from './messages';
-export {
+export type {
   Fulfillment,
   Order,
   OrderArrivals,
@@ -129,22 +138,26 @@ export {
   OrderStaff,
   OrderType,
 } from './order';
-export { ChatMessage, ChatMessageType, ChatMessageUser } from './order/chat';
-export { OrderConsumer } from './order/consumer';
-export { OrderCourier } from './order/courier';
-export { DispatchingState, DispatchingStatus } from './order/dispatching';
-export { Fare, FareDetails } from './order/fare';
-export { OrderFlag } from './order/flags';
-export { OrderFraudPreventionFlags } from './order/fraud';
-export {
+export type {
+  ChatMessage,
+  ChatMessageType,
+  ChatMessageUser,
+} from './order/chat';
+export type { OrderConsumer } from './order/consumer';
+export type { OrderCourier } from './order/courier';
+export type { DispatchingState, DispatchingStatus } from './order/dispatching';
+export type { Fare, FareDetails } from './order/fare';
+export type { OrderFlag } from './order/flags';
+export type { OrderFraudPreventionFlags } from './order/fraud';
+export type {
   Issue,
   IssueType,
   OrderIssue,
   OrderRejection,
   OrderRejectionType,
 } from './order/issues';
-export { OrderItem, OrderItemComplement } from './order/item';
-export {
+export type { OrderItem, OrderItemComplement } from './order/item';
+export type {
   OrderChangeLog,
   OrderCourierLocationLog,
   OrderInfoLog,
@@ -154,8 +167,8 @@ export {
   OrderPaymentLog,
   OrderStaffLog,
 } from './order/logs';
-export { OrderMeta } from './order/meta';
-export {
+export type { OrderMeta } from './order/meta';
+export type {
   CancelOrderPayload,
   CompleteDeliveryPayload,
   DropOrderPayload,
@@ -180,34 +193,38 @@ export {
   UpdateOrderPlacePayload,
   UpdateOrderStatusPayload,
 } from './order/payloads';
-export { Address, Place } from './order/place';
-export {
+export type { Address, Place } from './order/place';
+export type {
   OrderCancellation,
   OrderCancellationParams,
   OrderRefundType,
 } from './order/private/cancellation';
-export { OrderConfirmation } from './order/private/confirmation';
-export {
+export type { OrderConfirmation } from './order/private/confirmation';
+export type {
   OrderMatching,
   OrderMatchingRejection,
 } from './order/private/matching';
-export {
+export type {
   CreditCardOrderPayments,
   IuguOrderPayments,
   OrderPayments,
   PixOrderPayments,
   VROrderPayments,
 } from './order/private/payment';
-export { FoodOrderStatus, OrderStatus, P2POrderStatus } from './order/status';
-export { OrderTag } from './order/tags';
-export {
+export type {
+  FoodOrderStatus,
+  OrderStatus,
+  P2POrderStatus,
+} from './order/status';
+export type { OrderTag } from './order/tags';
+export type {
   OrderDispatchingTimestamps,
   OrderStatusTimestamps,
 } from './order/timestamps';
-export { OrderTip } from './order/tip';
-export { OrderItemWarehouse, OrderWarehouse } from './order/warehouse';
-export { BasePayload, FetchTotalCouriersNearbyPayload } from './payloads';
-export {
+export type { OrderTip } from './order/tip';
+export type { OrderItemWarehouse, OrderWarehouse } from './order/warehouse';
+export type { BasePayload, FetchTotalCouriersNearbyPayload } from './payloads';
+export type {
   AdvanceReceivablesByAmountPayload,
   AdvanceReceivablesPayload,
   FetchAccountInformationPayload,
@@ -217,13 +234,13 @@ export {
   FetchReceivablesPayload,
   RequestWithdrawPayload,
 } from './payloads/account';
-export { ReleaseCourierPayload } from './payloads/courier';
-export {
+export type { ReleaseCourierPayload } from './payloads/courier';
+export type {
   DeletePaymentMethodPayload,
   SavePaymentTokenPayload,
   SavePaymentTokenResponse,
 } from './payloads/marketplace';
-export {
+export type {
   CreateManagersPayload,
   DeleteAccountPayload,
   GetManagersPayload,
@@ -231,20 +248,20 @@ export {
   UpdateEmailPayload,
   VerifyCourierProfilePayload,
 } from './payloads/profile';
-export { PayableWith, PaymentProcessor } from './payment/index';
-export {
+export type { PayableWith, PaymentProcessor } from './payment/index';
+export type {
   LedgerEntry,
   LedgerEntryOperation,
   LedgerEntryStatus,
 } from './payment/ledger';
-export {
+export type {
   AccountAdvance,
   AccountTransfer,
   AccountWithdraw,
   MarketplaceAccountInfo,
   MarketplaceAccountSituation,
 } from './payment/marketplace';
-export {
+export type {
   AccountTaskPayload,
   AccountType,
   InvoiceTaskAction,
@@ -252,13 +269,13 @@ export {
   InvoiceTaskHandlerInvoicesExtra,
   InvoiceTaskHandlerTipExtra,
 } from './payment/tasks';
-export {
+export type {
   CRUD,
   NewUserData,
   UserPermissionRules,
   UserPermissions,
 } from './permissions';
-export {
+export type {
   City,
   ClientFlavor,
   Environment,
@@ -268,31 +285,39 @@ export {
   OutsourceAccountType,
   WithId,
 } from './platform';
-export { PlatformAccess } from './platform/access';
-export { Cuisine, CuisineName } from './platform/cuisine';
-export { Fee, PlatformFees } from './platform/fees';
-export { FlaggedLocation, FraudPreventionParams } from './platform/fraud';
-export { InterferenceLog, LoginLog } from './platform/logs';
-export { PlatformManagement } from './platform/management';
-export { PlatformParams } from './platform/params';
-export { PlatformStatistics, ServiceStatistics } from './platform/statistics';
-export {
+export type { PlatformAccess } from './platform/access';
+export type { Cuisine, CuisineName } from './platform/cuisine';
+export type { Fee, PlatformFees } from './platform/fees';
+export type { FlaggedLocation, FraudPreventionParams } from './platform/fraud';
+export type { InterferenceLog, LoginLog } from './platform/logs';
+export type { PlatformManagement } from './platform/management';
+export type { PlatformParams } from './platform/params';
+export type {
+  PlatformStatistics,
+  ServiceStatistics,
+} from './platform/statistics';
+export type {
   ProfileNote,
   ProfileSituation,
   ProfileTimestamps,
   UserProfile,
 } from './profile';
-export { ProfileChange, UserProfileChange } from './profile/change';
-export {
+export type { ProfileChange, UserProfileChange } from './profile/change';
+export type {
   NotificationChannel,
   NotificationPreferences,
   UpdateNotificationPreferencesPayload,
 } from './profile/notifications';
-export { ProfileTag } from './profile/tags';
-export { PushCampaign } from './push';
-export { OrderConsumerReview, Review, ReviewTag, ReviewType } from './review';
-export { NPS } from './review/nps';
-export { OrderReviewWarehouse } from './review/warehouse';
-export { NewStaffData, StaffProfile } from './staff';
-export { TaskDocument, UpdateDocumentTaskPayload } from './tasks/update';
-export { User, UserType } from './users';
+export type { ProfileTag } from './profile/tags';
+export type { PushCampaign } from './push';
+export type {
+  OrderConsumerReview,
+  Review,
+  ReviewTag,
+  ReviewType,
+} from './review';
+export type { NPS } from './review/nps';
+export type { OrderReviewWarehouse } from './review/warehouse';
+export type { NewStaffData, StaffProfile } from './staff';
+export type { TaskDocument, UpdateDocumentTaskPayload } from './tasks/update';
+export type { User, UserType } from './users';
