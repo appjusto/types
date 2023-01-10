@@ -137,7 +137,7 @@ export interface IuguMarketplaceAccount {
   };
 }
 
-export {
+export type {
   IuguMarketplaceAccountAdvanceByAmountResponse,
   IuguMarketplaceAccountAdvanceByAmountSimulation,
   IuguMarketplaceAccountAdvanceResponse,
@@ -146,11 +146,11 @@ export {
   IuguMarketplaceAccountReceivables,
   IuguMarketplaceAdvanceInfo,
 } from './receivables';
-export {
+export type {
   IuguMarketplaceTransferRequest,
   IuguMarketplaceTransferResponse,
 } from './transfer';
-export {
+export type {
   IuguMarketplaceAccountWithdrawRequest,
   IuguMarketplaceAccountWithdrawResponse,
 } from './withdraw';
