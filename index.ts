@@ -254,6 +254,7 @@ export type {
   LedgerEntryOperation,
   LedgerEntryStatus,
 } from './payment/ledger';
+export type { LedgerEntryWarehouse } from './payment/ledger/warehouse';
 export type {
   AccountAdvance,
   AccountTransfer,
