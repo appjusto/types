@@ -17,9 +17,9 @@ export interface LedgerEntryWarehouse {
     accountId: string | null;
     accountType: AccountType;
   };
-  description?: string;
+  description: string | null;
   createdBy: string;
-  updatedBy?: string;
+  updatedBy: string | null;
   createdOn: Timestamp;
-  updatedOn?: Timestamp;
+  updatedOn: Timestamp | null;
 }
