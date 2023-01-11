@@ -4,7 +4,7 @@ import { AccountType } from '../tasks';
 
 export interface LedgerEntryWarehouse {
   orderId: string;
-  operation: LedgerEntryOperation;
+  ledgerOperation: LedgerEntryOperation;
   value: number;
   processingFee: number;
   status: LedgerEntryStatus;
