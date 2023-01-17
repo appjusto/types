@@ -1,6 +1,6 @@
 {
   "name": "@appjusto/types",
-  "version": "12.5.4",
+  "version": "13.0.0",
   "description": "",
   "main": "lib/index.js",
   "directories": {
