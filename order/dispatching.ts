@@ -3,8 +3,6 @@ export type DispatchingStatus =
   | 'scheduled'
   | 'matching'
   | 'no-match'
-  | 'matched'
-  | 'declined'
   | 'confirmed'
   | 'outsourced';
 

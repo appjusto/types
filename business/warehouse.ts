@@ -11,6 +11,9 @@ export type BusinessWarehouse = {
   situation: ProfileSituation;
   status: BusinessStatus;
   enabled: boolean;
+  realtime: boolean;
+  scheduled: boolean;
+  deliveryRange: number;
   shouldBeOpen: boolean;
   cuisine: string | null;
   averageCookingTime: number | null;
@@ -21,6 +24,7 @@ export type BusinessWarehouse = {
   state: string | null;
   neighborhood: string | null;
   reviews: BusinessReviews;
+  hasInsurance: boolean;
   timestamps: ProfileTimestamps;
   createdOn: Timestamp;
   updatedOn: Timestamp | null;

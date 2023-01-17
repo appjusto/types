@@ -13,7 +13,7 @@ export interface IuguSuccessResponse {
   success: boolean;
 }
 
-export {
+export type {
   IuguCreateMarketplaceAccount,
   IuguMarketplaceAccount,
   IuguMarketplaceAccountAdvanceByAmountResponse,
@@ -35,15 +35,15 @@ export {
   IuguMarketplaceTransferResponse,
   IuguMarketplaceUpdateBankAccount,
 } from './account';
-export {
+export type {
   IuguAdhocCharge,
   IuguChargeItem,
   IuguChargeResponse,
   IuguCreateCharge,
   IuguInvoiceCharge,
 } from './charge';
-export { IuguCreateCustomerRequest, IuguCustomer } from './customer';
-export {
+export type { IuguCreateCustomerRequest, IuguCustomer } from './customer';
+export type {
   IuguCommissions,
   IuguCreateInvoiceRequest,
   IuguCreateInvoiceResponse,
@@ -54,7 +54,7 @@ export {
   IuguPayableWith,
   IuguSplit,
 } from './invoice';
-export {
+export type {
   IuguCreateCustomerPaymentMethod,
   IuguCreatePaymentToken,
   IuguCreatePaymentTokenData,

@@ -4,7 +4,9 @@ import { AccountType } from '../tasks';
 
 export type LedgerEntryOperation =
   | 'delivery'
+  | 'tip'
   | 'same-owner-accounts'
+  | 'business-insurance'
   | 'others';
 export type LedgerEntryStatus =
   | 'pending'
@@ -41,6 +43,7 @@ export interface LedgerEntry {
     id: string;
     email: string;
   };
+  taskName?: string | null;
   createdOn: Timestamp;
   updatedOn?: Timestamp;
 }

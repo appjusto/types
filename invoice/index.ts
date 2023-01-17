@@ -9,12 +9,9 @@ export interface InvoiceFingerprint {
   nounce: string;
 }
 
-export type InvoiceType =
-  | 'order'
-  | 'products'
-  | 'delivery'
-  | 'platform'
-  | 'tip';
+export type LegacyInvoiceType = 'products' | 'delivery' | 'platform';
+
+export type InvoiceType = LegacyInvoiceType | 'food' | 'p2p' | 'tip';
 
 export interface Invoice {
   invoiceType: InvoiceType;

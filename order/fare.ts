@@ -20,6 +20,7 @@ export interface FareDetails {
     value: number;
   };
   commission?: number; // in cents
+  insurance?: number; // in cents
   status?: IuguInvoiceStatus;
   paid?: number;
 }
