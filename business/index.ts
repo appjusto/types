@@ -120,9 +120,6 @@ export interface Business {
   services?: BusinessService[];
   // metadata
   timestamps: ProfileTimestamps;
-  /**
-   * @deprecated
-   */
   keepAlive?: Timestamp;
   createdOn: Timestamp;
   updatedOn?: Timestamp;
