@@ -47,6 +47,7 @@ export type {
   DeleteBusinessPayload,
   UpdateBusinessSlugPayload,
 } from './business/payloads';
+export type { BusinessProfile } from './business/public';
 export type { BusinessRecommendation } from './business/recommendation';
 export type { BusinessRecommendationWarehouse } from './business/recommendation/warehouse';
 export type { BusinessTag } from './business/tags';
