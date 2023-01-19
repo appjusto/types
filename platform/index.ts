@@ -24,3 +24,7 @@ export interface LatLng2 {
 export type WithId<T extends object> = T & {
   id: string;
 };
+
+export type WithDistance<T extends object> = T & {
+  distance: number;
+};
