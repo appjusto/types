@@ -13,9 +13,9 @@ export interface Fare {
 
 export interface FareDetails {
   grossValue: number;
-  netValue: number;
+  netValue?: number;
   /** @deprecated */
-  value: number; // in cents
+  value?: number; // in cents
   paid?: number; // in cents
   processing?: {
     fee: Fee;
