@@ -10,7 +10,10 @@ export interface PlatformFees {
     food: Fee;
     p2p: Fee;
   };
-  insurance: Fee;
+  insurance: {
+    business: Fee;
+    courier: Fee;
+  };
   processing: {
     iugu: {
       [k in IuguPayableWith]: Fee;
