@@ -12,15 +12,16 @@ export interface Fare {
 }
 
 export interface FareDetails {
-  value: number; // in cents
+  grossValue: number;
+  netValue: number;
   /** @deprecated */
-  processingFee?: number; // in cents
+  value: number; // in cents
+  paid?: number; // in cents
   processing?: {
     fee: Fee;
-    value: number;
+    value: number; // in cents
   };
   commission?: number; // in cents
   insurance?: number; // in cents
   status?: IuguInvoiceStatus;
-  paid?: number;
 }
