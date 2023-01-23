@@ -15,6 +15,7 @@ export interface OrderFee {
     geopoint: GeoPoint;
     geohash: string;
   };
+  radius?: number;
   // meta
   createdAt: Timestamp;
   updatedAt: Timestamp;
