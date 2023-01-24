@@ -46,7 +46,7 @@ export interface BusinessSettings {
 export type BusinessType = 'restaurant';
 export type BusinessStatus = 'available' | 'unavailable';
 
-export type BusinessServiceName = 'insurance';
+export type BusinessServiceName = 'insurance' | 'logistics';
 export interface BusinessService {
   name: BusinessServiceName;
   fee: Fee;
@@ -115,6 +115,7 @@ export interface Business {
   preparationModes?: PreparationMode[];
   maxOrdersPerHour?: number;
   minHoursForScheduledOrders?: number;
+  fleetsIdsAllowed?: string[]; // ids of fleets allowed
   // matchingMode: MatchingMode;
   tags?: BusinessTag[];
   services?: BusinessService[];

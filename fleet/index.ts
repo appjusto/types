@@ -9,12 +9,18 @@ export interface FleetFareParams {
   maxDistanceToOrigin: number; // (in meters) maximum distance to the pickup place
 }
 
+export type FleetType = 'public' | 'private';
+
 export interface FleetDetails extends FleetFareParams {
+  type: FleetType;
   name: string;
   description: string;
   // metadata
   createdOn: Timestamp;
-  createdBy?: string;
+  createdBy?: {
+    flavor: 'courier' | 'business';
+    id: string;
+  };
 }
 
 export interface Fleet extends FleetDetails {
