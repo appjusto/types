@@ -27,7 +27,7 @@ export type PlaceOrderPayloadPayment =
   | PlaceOrderPayloadPaymentCreditCard;
 
 export interface PlaceOrderPayload extends OrderPayload {
-  fleetId: string;
+  fleetId?: string;
   invoiceWithCPF: boolean;
   coordinates?: LatLng;
   additionalInfo?: string;
