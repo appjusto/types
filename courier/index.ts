@@ -10,6 +10,7 @@ export type CourierStatus =
   | 'available'
   | 'dispatching'
   | 'inactive';
+
 export type CourierMode =
   | 'motorcycle'
   | 'bicycling'
@@ -37,13 +38,16 @@ export interface CourierCompany extends BusinessAddress {
   name: string;
 }
 
+/** @deprecated */
 export interface CourierFleet extends WithId<FleetDetails> {
   joinedOn: Timestamp;
 }
 
 export interface CourierProfile extends UserProfile {
   status: CourierStatus;
+  /** @deprecated */
   fleet: CourierFleet;
+  fleetsIds: string[];
   mode: CourierMode;
   statistics: CourierStatistics; // readonly
   documentType?: string;
