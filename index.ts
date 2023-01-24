@@ -148,7 +148,6 @@ export type { OrderConsumer } from './order/consumer';
 export type { OrderCourier } from './order/courier';
 export type { DispatchingState, DispatchingStatus } from './order/dispatching';
 export type { Fare, FareDetails } from './order/fare';
-export type { OrderFee, OrderFeePaidBy, OrderFeeType } from './order/fees';
 export type { OrderFlag } from './order/flags';
 export type { OrderFraudPreventionFlags } from './order/fraud';
 export type {
