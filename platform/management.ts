@@ -7,6 +7,7 @@ export interface PlatformManagement {
       confirmed: number; // in seconds
       declined: number; // in seconds
       dispatching: number; // in seconds
+      readyAsTakeAway: number; // in seconds
       nomatch: number; // in seconds
     };
     flags: {
