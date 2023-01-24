@@ -20,6 +20,7 @@ export interface CourierOrderRequest {
     fee: Fee;
     value: number;
   };
+  netValue: number;
   origin: LatLng;
   distanceToOrigin: number;
   distance: number;

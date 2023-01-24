@@ -14,6 +14,7 @@ export interface PlatformFees {
     business: Fee;
     courier: Fee;
   };
+  highDemand: boolean;
   processing: {
     iugu: {
       [k in IuguPayableWith]: Fee;
