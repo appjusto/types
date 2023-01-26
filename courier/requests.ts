@@ -13,6 +13,8 @@ export type CourierOrderRequestSituation =
 export interface CourierOrderRequest {
   type: OrderType;
   situation: CourierOrderRequestSituation;
+  fleetId: string;
+  fleetName: string;
   courierId: string;
   orderId: string;
   fee: number;
