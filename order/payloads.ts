@@ -28,10 +28,11 @@ export type PlaceOrderPayloadPayment =
 
 export interface PlaceOrderPayload extends OrderPayload {
   fleetId?: string;
-  invoiceWithCPF: boolean;
+  payment: PlaceOrderPayloadPayment;
   coordinates?: LatLng;
   additionalInfo?: string;
-  payment: PlaceOrderPayloadPayment;
+  highDemandFee?: number;
+  invoiceWithCPF?: boolean;
   wantToShareData?: boolean;
 }
 
