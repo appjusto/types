@@ -23,6 +23,7 @@ export interface UserProfile {
   situation: ProfileSituation;
   name?: string;
   surname?: string;
+  birthday?: string;
   cpf?: string;
   phone?: string | null;
   countryCode?: string;
