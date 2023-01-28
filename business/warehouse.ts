@@ -14,7 +14,6 @@ export type BusinessWarehouse = {
   realtime: boolean;
   scheduled: boolean;
   deliveryRange: number;
-  shouldBeOpen: boolean;
   cuisine: string | null;
   averageCookingTime: number | null;
   averageDiscount: number | null;
