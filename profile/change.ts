@@ -10,6 +10,7 @@ export interface ProfileChange {
   surname?: string;
   cpf?: string;
   phone?: string;
+  birthday?: string;
   createdOn: Timestamp;
 }
 
