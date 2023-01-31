@@ -1,5 +1,6 @@
 import { Timestamp } from '../external/firebase';
 import { OrderType } from '../order';
+import { Issue } from '../order/issues';
 import { LatLng } from '../platform';
 import { Fee } from '../platform/fees';
 
@@ -8,6 +9,7 @@ export type CourierOrderRequestSituation =
   | 'accepted'
   | 'viewed'
   | 'rejected'
+  | 'dropped'
   | 'expired';
 
 export interface CourierOrderRequest {
@@ -22,6 +24,8 @@ export interface CourierOrderRequest {
     fee: Fee;
     value: number;
   };
+  rejectionIssue?: Issue | null;
+  rejectionComment?: string | null;
   netValue: number;
   locationFee: number;
   origin: LatLng;
