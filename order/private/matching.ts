@@ -14,11 +14,4 @@ export interface OrderMatching {
   attempt: number;
   trials: number;
   startAt: Timestamp;
-  notifiedCouriers: { id: string; name: string }[];
-  previouslyNotifiedCouriers: { id: string; name: string }[];
-  rejections: OrderMatchingRejection[];
-  /**
-   * @deprecated
-   */
-  logs: string[];
 }
