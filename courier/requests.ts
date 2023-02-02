@@ -18,6 +18,7 @@ export interface CourierOrderRequest {
   fleetId: string;
   fleetName: string;
   courierId: string;
+  courierName: string;
   orderId: string;
   fee: number;
   processing: {
