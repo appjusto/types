@@ -11,6 +11,8 @@ export interface InvoiceWarehouse {
   fare: FareDetails | null;
   commission: number | null;
   deliveryCosts: number;
+  accountExternalId: string | null;
+  externalId: string | null;
   accountType: AccountType;
   accountId: string | null;
   consumerId: string | null;
