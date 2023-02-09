@@ -13,6 +13,7 @@ export interface PlatformFees {
   insurance: {
     business: Fee;
     courier: Fee;
+    courierEnabled: boolean;
   };
   highDemand: boolean;
   processing: {
