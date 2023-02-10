@@ -16,15 +16,16 @@ export interface AlgoliaConfig {
 export interface BusinessAlgolia {
   objectID: string;
   _geoloc: LatLng2 | null;
+  situation: string;
   enabled: boolean;
+  status: BusinessStatus;
+  opened: boolean;
   name?: string;
   code?: string;
   cnpj?: string;
   managerEmail?: string;
-  situation: string;
   onboarding?: string;
   description?: string;
-  status: BusinessStatus;
   businessAddress?: BusinessAddress;
   preparationModes?: PreparationMode[];
   cuisine?: string;
