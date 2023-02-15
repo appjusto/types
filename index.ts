@@ -171,6 +171,7 @@ export type {
   OrderStaffLog,
 } from './order/logs';
 export type { OrderMeta } from './order/meta';
+export type { OutsourceDeliveryPayload } from './order/outsource/payloads';
 export type {
   CancelOrderPayload,
   CompleteDeliveryPayload,
@@ -185,7 +186,6 @@ export type {
   NextDispatchingStatePayload,
   OrderIssuePayload,
   OrderPayload,
-  OutsourceDeliveryPayload,
   PlaceOrderPayload,
   PlaceOrderPayloadPayment,
   PlaceOrderPayloadPaymentCreditCard,

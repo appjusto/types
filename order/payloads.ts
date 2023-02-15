@@ -1,6 +1,6 @@
 import { LatLng, OrderStatus, Place } from '..';
 import { BasePayload } from '../payloads';
-import { OutsourceAccountType, WithId } from '../platform';
+import { WithId } from '../platform';
 import { Issue } from './issues';
 import { OrderCancellationParams } from './private/cancellation';
 
@@ -102,14 +102,6 @@ export interface CancelOrderPayload extends OrderPayload {
 }
 
 export interface GetPlaceChangeInfoPayload extends OrderPayload {}
-
-export interface OutsourceDeliveryPayload extends OrderPayload {
-  accountType?: OutsourceAccountType;
-  isAuto?: boolean;
-  priorityFee?: string;
-  comment?: string;
-}
-
 export interface UpdateOrderStatusPayload extends OrderPayload {
   newStatus: OrderStatus;
   currentStatus?: OrderStatus;
