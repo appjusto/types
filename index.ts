@@ -82,6 +82,7 @@ export type {
 } from './emails/payloads';
 export type { IzaPeriod, IzaPeriodStatus, IzaPerson } from './external/iza';
 export type { IzaTaskPayload } from './external/iza/payloads';
+export { LalamoveTaskPayload } from './external/lalamove/payloads';
 export type {
   Fleet,
   FleetDetails,
