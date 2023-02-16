@@ -1,5 +1,6 @@
 export interface LalamoveBaseTaskPayload {
   orderId: string;
+  startAt?: Date;
 }
 
 export interface LalamoveCreateQuotationTaskPayload
