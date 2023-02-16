@@ -1,4 +1,5 @@
 import { Timestamp } from '../firebase';
+import { IDriver } from './models';
 import { IOrder } from './order';
 import { IQuotation } from './quotation';
 
@@ -14,5 +15,6 @@ export interface LalamoveQuotation {
 export interface LalamoveOrder {
   orderId: string;
   order: IOrder;
+  driver?: IDriver;
   createdAt: Timestamp;
 }

@@ -39,3 +39,21 @@ export interface PriceBreakdown {
   total: string;
   currency: string;
 }
+
+export interface Contact {
+  name: string;
+  phone: string;
+}
+
+export interface Coordinates {
+  lat: string;
+  lng: string;
+}
+export interface IDriver {
+  id: string;
+  contact: Contact;
+  plateNumber: string;
+  photo: string;
+  coordinates: Coordinates;
+  updatedAt: Date;
+}
