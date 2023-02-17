@@ -4,8 +4,11 @@ export interface IzaApiPerson {
   birthed_at: string; // '1970-02-01'
   email?: string;
   main_cell_phone?: string;
+  address?: string[];
+  contracts?: string | null;
+  has_password?: boolean;
+  id?: string;
 }
-
 export interface IzaApiContract {
   doc: string;
 }
