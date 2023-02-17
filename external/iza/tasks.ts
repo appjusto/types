@@ -7,9 +7,6 @@ export interface IzaBaseTaskPayload {
 
 export interface IzaStartTaskPayload extends IzaBaseTaskPayload {
   action: 'start';
-  doc: string;
-  birthday: string;
-  name: string;
 }
 
 export interface IzaFinishTaskPayload extends IzaBaseTaskPayload {
