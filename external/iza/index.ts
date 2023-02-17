@@ -1,8 +1,9 @@
 import { Timestamp } from '../firebase';
+import { IzaApiPerson } from './payloads';
 
 export interface IzaPerson {
   courierId: string;
-  doc: string;
+  person: IzaApiPerson;
 }
 
 export type IzaPeriodStatus = 'started' | 'finished' | 'canceled';
