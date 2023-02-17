@@ -10,9 +10,13 @@ export interface IzaApiContract {
   doc: string;
 }
 
-export interface IzaApiPeriod {
-  started_at?: string;
-  finished_at?: string;
+export interface IzaApiCreatePeriod {
+  doc: string;
+  started_at: string;
+}
+
+export interface IzaApiUpdatePeriod {
+  finished_at: string;
 }
 
 export interface IzaApiCreatePeriodResult {

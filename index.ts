@@ -83,10 +83,11 @@ export type {
 export type { IzaPeriod, IzaPeriodStatus, IzaPerson } from './external/iza';
 export type {
   IzaApiContract,
+  IzaApiCreatePeriod,
   IzaApiCreatePeriodResult,
   IzaApiGeolocation,
-  IzaApiPeriod,
   IzaApiPerson,
+  IzaApiUpdatePeriod,
 } from './external/iza/payloads';
 export type {
   IzaBaseTaskPayload,
