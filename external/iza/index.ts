@@ -26,5 +26,5 @@ export interface IzaPeriod {
   courierId: string;
   externalId: string;
   startedAt: Timestamp;
-  finishedAt?: Timestamp;
+  updatedAt?: Timestamp;
 }
