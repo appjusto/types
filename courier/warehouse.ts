@@ -1,5 +1,12 @@
 import { CourierMode, CourierStatus } from '.';
-import { ProfileSituation, ProfileTimestamps } from '..';
+import {
+  CourierOrderRequestSituation,
+  Issue,
+  LatLng,
+  OrderType,
+  ProfileSituation,
+  ProfileTimestamps,
+} from '..';
 import { GeoPoint, Timestamp } from '../external/firebase';
 
 export type CourierWarehouse = {
@@ -21,3 +28,27 @@ export type CourierWarehouse = {
   createdOn: Timestamp;
   updatedOn?: Timestamp;
 };
+
+export interface CourierRequestWarehouse {
+  type: OrderType;
+  situation: CourierOrderRequestSituation;
+  fleetId: string;
+  fleetName: string;
+  courierId: string;
+  courierName: string;
+  orderId: string;
+  netValue: number;
+  locationFee: number;
+  viewed?: boolean;
+  rejectionIssue?: Issue | null;
+  rejectionComment?: string | null;
+  origin: LatLng;
+  distanceToOrigin: number;
+  distance: number;
+  originAddress: string;
+  destination: LatLng;
+  destinationAddress: string;
+  readyAt: Date | null;
+  createdAt: Timestamp;
+  updatedAt: Timestamp | null;
+}

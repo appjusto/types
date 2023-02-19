@@ -73,7 +73,10 @@ export type {
   CourierOrderRequest,
   CourierOrderRequestSituation,
 } from './courier/requests';
-export type { CourierWarehouse } from './courier/warehouse';
+export type {
+  CourierRequestWarehouse,
+  CourierWarehouse,
+} from './courier/warehouse';
 export type {
   EmailPayload,
   EmailTaskPayload,
