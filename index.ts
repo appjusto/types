@@ -330,6 +330,7 @@ export type {
   UpdateNotificationPreferencesPayload,
 } from './profile/notifications';
 export type { ProfileTag } from './profile/tags';
+export type { ProfileNoteWarehouse } from './profile/warehouse';
 export type { PushCampaign } from './push';
 export type {
   OrderConsumerReview,
