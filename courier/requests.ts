@@ -25,7 +25,7 @@ export interface CourierOrderRequest {
     fee: Fee;
     value: number;
   };
-  viewed?: boolean;
+  viewed: boolean | null;
   rejectionIssue?: Issue | null;
   rejectionComment?: string | null;
   netValue: number;
