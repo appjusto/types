@@ -17,6 +17,9 @@ export interface PlatformManagement {
       goingDestination: number; // in seconds
     };
   };
+  delivery: {
+    autoOutsource: boolean;
+  };
   marketplace: {
     chargeDelay: number;
   };
