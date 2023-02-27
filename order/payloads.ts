@@ -31,7 +31,6 @@ export interface PlaceOrderPayload extends OrderPayload {
   payment: PlaceOrderPayloadPayment;
   coordinates?: LatLng;
   additionalInfo?: string;
-  highDemandFee?: number;
   invoiceWithCPF?: boolean;
   wantToShareData?: boolean;
 }
