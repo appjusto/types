@@ -32,6 +32,7 @@ export interface CourierOrderRequest {
   locationFee: number;
   origin: LatLng;
   distanceToOrigin: number;
+  distanceToOriginWhenAccepted?: number;
   distance: number;
   originAddress: string;
   destination: LatLng;
