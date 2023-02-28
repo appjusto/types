@@ -22,5 +22,6 @@ export interface FareDetails {
   commission?: number; // in cents
   insurance?: number; // in cents
   locationFee?: number; // in cents
+  priorityFee?: number; // in cents
   status?: IuguInvoiceStatus;
 }
