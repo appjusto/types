@@ -43,6 +43,7 @@ export interface CourierRequestWarehouse {
   rejectionComment?: string | null;
   origin: GeoPoint;
   distanceToOrigin: number;
+  distanceToOriginWhenAccepted?: number;
   distance: number;
   originAddress: string;
   destination: GeoPoint;
