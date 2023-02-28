@@ -2,7 +2,6 @@ import { CourierMode, CourierStatus } from '.';
 import {
   CourierOrderRequestSituation,
   Issue,
-  LatLng,
   OrderType,
   ProfileSituation,
   ProfileTimestamps,
@@ -42,11 +41,11 @@ export interface CourierRequestWarehouse {
   viewed?: boolean;
   rejectionIssue?: Issue | null;
   rejectionComment?: string | null;
-  origin: LatLng;
+  origin: GeoPoint;
   distanceToOrigin: number;
   distance: number;
   originAddress: string;
-  destination: LatLng;
+  destination: GeoPoint;
   destinationAddress: string;
   readyAt: Date | null;
   createdAt: Timestamp;
