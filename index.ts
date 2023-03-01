@@ -100,6 +100,11 @@ export type {
   IzaTaskPayload,
   IzaUpdateLocationTaskPayload,
 } from './external/iza/tasks';
+export type {
+  LalamoveEventType,
+  LalamoveOrderStatus,
+  LalamoveOrderUpdatePayload,
+} from './external/lalamove/hooks';
 export type { LalamoveTaskPayload } from './external/lalamove/payloads';
 export type {
   Fleet,
