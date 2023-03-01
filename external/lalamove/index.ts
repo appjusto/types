@@ -15,6 +15,6 @@ export interface LalamoveQuotation {
 export interface LalamoveOrder {
   orderId: string;
   order: IOrder;
-  driver?: IDriver;
+  driver?: IDriver | null;
   createdAt: Timestamp;
 }
