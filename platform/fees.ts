@@ -15,6 +15,7 @@ export interface PlatformFees {
     courier: Fee;
     courierEnabled: boolean;
   };
+  logistics: Fee;
   highDemand: boolean;
   processing: {
     iugu: {
