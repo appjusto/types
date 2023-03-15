@@ -7,7 +7,7 @@ export interface Area {
   city: string;
   state: string;
   neighborhood?: string;
-  insurance?: Fee;
+  insurance?: Fee | null;
   logistics?: AreaLogistics;
   createdAt: Timestamp;
   updatedAt?: Timestamp;
