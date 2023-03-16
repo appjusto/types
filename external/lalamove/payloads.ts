@@ -32,4 +32,5 @@ export type LalamoveTaskPayload =
   | LalamoveCreateQuotationTaskPayload
   | LalamoveCreateOrderTaskPayload
   | LalamoveFetchCourierInfoTaskPayload
-  | LalamoveAddPriorityFeePayload;
+  | LalamoveAddPriorityFeePayload
+  | LalamoveHandleHookPayload;
