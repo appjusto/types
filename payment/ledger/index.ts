@@ -7,7 +7,10 @@ export type LedgerEntryOperation =
   | 'tip'
   | 'same-owner-accounts'
   | 'business-insurance'
-  | 'others';
+  | 'others'
+  | 'credit'
+  | 'debit';
+
 export type LedgerEntryStatus =
   | 'pending'
   | 'approved'
@@ -29,7 +32,8 @@ export interface LedgerEntry {
   };
   to: {
     accountId: string | null;
-    accountType: AccountType;
+    phoneNumber?: string;
+    accountType: AccountType | 'consumer';
   };
   description?: string;
   transfer?: IuguMarketplaceTransferResponse;
