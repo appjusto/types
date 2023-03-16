@@ -13,7 +13,7 @@ export interface PlatformManagement {
     flags: {
       confirmed: number; // in seconds
       matching: number; // in seconds
-      matchingLevel2: number; // in seconds
+      outsource: number; // in seconds
       arrivedPickup: number; // in seconds
       goingDestination: number; // in seconds
     };

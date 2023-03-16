@@ -2,7 +2,7 @@ export type OrderFlag =
   | 'unsafe'
   | 'waiting-confirmation'
   | 'matching'
-  | 'matching-level-2'
+  | 'outsource'
   | 'pick-up'
   | 'delivering'
   | 'issue'
