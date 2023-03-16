@@ -83,7 +83,12 @@ export type {
   EmailTaskPayloadFrom,
   OrderFraudEmailPayload,
 } from './emails/payloads';
-export type { IzaPeriod, IzaPeriodStatus, IzaPerson } from './external/iza';
+export type {
+  IzaContract,
+  IzaPeriod,
+  IzaPeriodStatus,
+  IzaPerson,
+} from './external/iza';
 export type {
   IzaApiContract,
   IzaApiCreatePeriod,
