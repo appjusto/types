@@ -282,6 +282,8 @@ export type {
   VerifyCourierProfilePayload,
 } from './payloads/profile';
 export type { PayableWith, PaymentProcessor } from './payment/index';
+export type { TransferOptions } from './payment/iugu/transfer';
+export type { TransferTaskPayload } from './payment/iugu/transfer/tasks';
 export type {
   LedgerEntry,
   LedgerEntryOperation,
