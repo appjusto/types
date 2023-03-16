@@ -1,4 +1,5 @@
 import { LatLng2 } from '../../platform';
+import { LalamoveOrderStatus } from './status';
 
 export type LalamoveEventType =
   | 'ORDER_STATUS_CHANGED'
@@ -6,17 +7,6 @@ export type LalamoveEventType =
   | 'ORDER_AMOUNT_CHANGED'
   | 'ORDER_REPLACED'
   | 'WALLET_BALANCE_CHANGED';
-
-export type LalamoveOrderStatus =
-  | 'ASSIGNING_DRIVER'
-  | 'DRIVER_ASSIGNED'
-  | 'ON_GOING'
-  | 'PICKED_UP'
-  | 'COMPLETED'
-  | 'EXPIRED'
-  | 'CANCELED'
-  | 'REJECTED';
-
 export interface LalamoveOrderUpdatePayload {
   apiKey: string;
   timestamp: number;

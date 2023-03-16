@@ -100,12 +100,13 @@ export type {
   IzaTaskPayload,
   IzaUpdateLocationTaskPayload,
 } from './external/iza/tasks';
+export type { LalamoveOrder, LalamoveQuotation } from './external/lalamove';
 export type {
   LalamoveEventType,
-  LalamoveOrderStatus,
   LalamoveOrderUpdatePayload,
 } from './external/lalamove/hooks';
 export type { LalamoveTaskPayload } from './external/lalamove/payloads';
+export type { LalamoveOrderStatus } from './external/lalamove/status';
 export type {
   Fleet,
   FleetDetails,
