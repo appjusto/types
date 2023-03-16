@@ -18,6 +18,10 @@ export interface LalamoveFetchCourierInfoTaskPayload
   action: 'fetch-courier-info';
 }
 
+export interface LalamoveAddPriorityFEePayload extends LalamoveBaseTaskPayload {
+  action: 'add-priority-fee';
+}
+
 export type LalamoveTaskPayload =
   | LalamoveCreateQuotationTaskPayload
   | LalamoveCreateOrderTaskPayload
