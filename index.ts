@@ -283,12 +283,12 @@ export type {
 } from './payloads/profile';
 export type { PayableWith, PaymentProcessor } from './payment/index';
 export type { TransferOptions } from './payment/iugu/transfer';
-export type { TransferTaskPayload } from './payment/iugu/transfer/tasks';
 export type {
   LedgerEntry,
   LedgerEntryOperation,
   LedgerEntryStatus,
 } from './payment/ledger';
+export type { LedgerTaskPayload } from './payment/ledger/tasks';
 export type { LedgerEntryWarehouse } from './payment/ledger/warehouse';
 export type {
   AccountAdvance,
