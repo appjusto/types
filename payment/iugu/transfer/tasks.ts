@@ -1,5 +1,5 @@
 import { TransferOptions } from '.';
 
 export interface TransferTaskPayload {
-  payload: TransferOptions;
+  options: TransferOptions;
 }
