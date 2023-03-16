@@ -1,3 +1,5 @@
+import { LalamoveOrderUpdatePayload } from './hooks';
+
 export interface LalamoveBaseTaskPayload {
   orderId: string;
   startAt?: Date;
@@ -18,12 +20,16 @@ export interface LalamoveFetchCourierInfoTaskPayload
   action: 'fetch-courier-info';
 }
 
-export interface LalamoveAddPriorityFEePayload extends LalamoveBaseTaskPayload {
+export interface LalamoveAddPriorityFeePayload extends LalamoveBaseTaskPayload {
   action: 'add-priority-fee';
+}
+export interface LalamoveHandleHookPayload extends LalamoveBaseTaskPayload {
+  action: 'handle-hook';
+  payload: LalamoveOrderUpdatePayload;
 }
 
 export type LalamoveTaskPayload =
   | LalamoveCreateQuotationTaskPayload
   | LalamoveCreateOrderTaskPayload
   | LalamoveFetchCourierInfoTaskPayload
-  | LalamoveAddPriorityFEePayload;
+  | LalamoveAddPriorityFeePayload;
