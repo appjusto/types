@@ -25,4 +25,5 @@ export interface LalamoveAddPriorityFEePayload extends LalamoveBaseTaskPayload {
 export type LalamoveTaskPayload =
   | LalamoveCreateQuotationTaskPayload
   | LalamoveCreateOrderTaskPayload
-  | LalamoveFetchCourierInfoTaskPayload;
+  | LalamoveFetchCourierInfoTaskPayload
+  | LalamoveAddPriorityFEePayload;
