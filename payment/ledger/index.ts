@@ -7,9 +7,8 @@ export type LedgerEntryOperation =
   | 'tip'
   | 'same-owner-accounts'
   | 'business-insurance'
-  | 'others'
-  | 'credit'
-  | 'debit';
+  | 'outsource-credit'
+  | 'others';
 
 export type LedgerEntryStatus =
   | 'pending'
@@ -20,7 +19,7 @@ export type LedgerEntryStatus =
   | 'paid';
 
 export interface LedgerEntry {
-  orderId: string;
+  orderId?: string;
   operation: LedgerEntryOperation;
   value: number;
   processingFee?: number;
