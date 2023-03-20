@@ -8,9 +8,10 @@ export interface OrderCourier {
   phone?: string;
   notificationToken?: string | null;
   location?: LatLng;
-  distanceToOrigin: number | null;
+  distanceToOrigin?: number | null;
   joined?: Timestamp;
-  mode: CourierMode;
+  mode?: CourierMode;
+  insured?: boolean;
   statistics?: CourierStatistics;
   updatedOn?: Timestamp;
 }
