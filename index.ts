@@ -14,7 +14,7 @@ export type {
   ApplicationToken,
   QuoteResponse,
 } from './application';
-export type { Area } from './area';
+export type { Area, AreaLogistics } from './area';
 export type {
   Bank,
   BankAccount,
