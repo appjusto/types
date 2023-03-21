@@ -1,4 +1,4 @@
-import { BusinessSchedule } from '.';
+import { BusinessSchedule, BusinessTag } from '.';
 import {
   BusinessAddress,
   BusinessStatistics,
@@ -28,6 +28,7 @@ export interface BusinessAlgolia {
   description?: string;
   businessAddress?: BusinessAddress;
   preparationModes?: PreparationMode[];
+  tags?: BusinessTag[];
   cuisine?: string;
   deliveryRange?: number;
   statistics?: BusinessStatistics;
