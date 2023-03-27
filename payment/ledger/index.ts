@@ -8,6 +8,7 @@ export type LedgerEntryOperation =
   | 'same-owner-accounts'
   | 'business-insurance'
   | 'outsource-credit'
+  | 'balance-adjustment'
   | 'others';
 
 export type LedgerEntryStatus =
