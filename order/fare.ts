@@ -1,6 +1,6 @@
 import { Fleet } from '../fleet';
 import { IuguInvoiceStatus } from '../payment/iugu';
-import { WithId } from '../platform';
+import { OutsourceAccountType, WithId } from '../platform';
 import { Fee } from '../platform/fees';
 
 export interface Fare {
@@ -23,5 +23,6 @@ export interface FareDetails {
   insurance?: number; // in cents
   locationFee?: number; // in cents
   priorityFee?: number; // in cents
+  payee?: OutsourceAccountType;
   status?: IuguInvoiceStatus;
 }
