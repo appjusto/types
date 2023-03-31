@@ -83,6 +83,9 @@ export interface OrderBusiness {
   id: string;
   name: string;
   cusine: string;
+  city?: string;
+  state?: string;
+  cep?: string;
 }
 
 export interface OrderStaff {
