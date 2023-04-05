@@ -3,7 +3,6 @@ import { FareDetails } from '../order/fare';
 import { PayableWith } from '../payment';
 import { IuguInvoiceStatus } from '../payment/iugu';
 import { AccountType } from '../payment/tasks';
-import { OutsourceAccountType } from '../platform';
 
 export interface InvoiceFingerprint {
   orderId: string;
@@ -21,7 +20,7 @@ export interface Invoice {
   value: number;
   fare: FareDetails;
   deliveryCosts?: number;
-  deliveryPayee?: OutsourceAccountType | null;
+  deliveryFare?: FareDetails;
   commission: number | null;
   consumerId: string;
   customerPaymentMethodId: string;
