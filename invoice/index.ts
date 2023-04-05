@@ -20,7 +20,7 @@ export interface Invoice {
   value: number;
   fare: FareDetails;
   deliveryCosts?: number;
-  deliveryFare?: FareDetails;
+  deliveryFare?: FareDetails | null;
   commission: number | null;
   consumerId: string;
   customerPaymentMethodId: string;
