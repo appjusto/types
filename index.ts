@@ -21,7 +21,7 @@ export type {
   BankAccountPersonType,
   BankAccountType,
 } from './banking';
-export type { Banner, BannersOrdering, BannerTargetOptions } from './banners';
+export type { Banner, BannerTargetOptions, BannersOrdering } from './banners';
 export type {
   Business,
   BusinessAddress,
@@ -211,8 +211,8 @@ export type {
   GetOrderQuotesPayload,
   GetPlaceChangeInfoPayload,
   GetPlaceChangeInfoResult,
-  MatchingTaskPayload,
   MatchOrderPayload,
+  MatchingTaskPayload,
   NextDispatchingStatePayload,
   OrderIssuePayload,
   OrderPayload,
@@ -222,8 +222,6 @@ export type {
   PlaceOrderPayloadPaymentPix,
   RejectOrderPayload,
   TipCourierPayload,
-  UpdateOrderPayload,
-  UpdateOrderPlacePayload,
   UpdateOrderStatusPayload,
 } from './order/payloads';
 export type { Address, Place } from './order/place';
@@ -249,6 +247,11 @@ export type {
   OrderStatus,
   P2POrderStatus,
 } from './order/status';
+export type {
+  UpdateOrderFareCourierPayeePayload,
+  UpdateOrderPayload,
+  UpdateOrderPlacePayload,
+} from './order/status/update';
 export type { OrderTag } from './order/tags';
 export type {
   OrderDispatchingTimestamps,
