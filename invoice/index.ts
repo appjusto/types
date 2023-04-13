@@ -19,9 +19,8 @@ export interface Invoice {
   orderCode: string;
   value: number;
   fare: FareDetails;
-  /** @deprecated */
-  processingFee: number;
   deliveryCosts?: number;
+  deliveryFare?: FareDetails | null;
   commission: number | null;
   consumerId: string;
   customerPaymentMethodId: string;

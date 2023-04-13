@@ -28,9 +28,15 @@ export interface LalamoveHandleHookPayload extends LalamoveBaseTaskPayload {
   payload: LalamoveOrderUpdatePayload;
 }
 
+export interface LalamoveCancelOrderTaskPayload
+  extends LalamoveBaseTaskPayload {
+  action: 'cancel-order';
+}
+
 export type LalamoveTaskPayload =
   | LalamoveCreateQuotationTaskPayload
   | LalamoveCreateOrderTaskPayload
   | LalamoveFetchCourierInfoTaskPayload
   | LalamoveAddPriorityFeePayload
-  | LalamoveHandleHookPayload;
+  | LalamoveHandleHookPayload
+  | LalamoveCancelOrderTaskPayload;

@@ -1,4 +1,4 @@
-import { LatLng, OrderStatus, Place } from '..';
+import { LatLng, OrderStatus } from '..';
 import { BasePayload } from '../payloads';
 import { WithId } from '../platform';
 import { Issue } from './issues';
@@ -33,15 +33,6 @@ export interface PlaceOrderPayload extends OrderPayload {
   additionalInfo?: string;
   invoiceWithCPF?: boolean;
   wantToShareData?: boolean;
-}
-
-export interface UpdateOrderPayload extends OrderPayload {
-  payment: PlaceOrderPayloadPayment;
-}
-
-export interface UpdateOrderPlacePayload extends OrderPayload {
-  destination: Place;
-  acknowledgedCosts: number;
 }
 
 export interface MatchingTaskPayload extends OrderPayload {
