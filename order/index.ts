@@ -64,6 +64,7 @@ export interface Order {
   dispatchingStatus: DispatchingStatus;
   dispatchingState: DispatchingState | null;
   dispatchingTimestamps: OrderDispatchingTimestamps;
+  /** @deprecated */
   outsourcedBy?: OutsourceAccountType;
   tip?: OrderTip;
   // etc
