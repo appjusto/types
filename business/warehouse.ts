@@ -27,4 +27,5 @@ export type BusinessWarehouse = {
   timestamps: ProfileTimestamps;
   createdOn: Timestamp;
   updatedOn: Timestamp | null;
+  keepAlive: Timestamp | null;
 };
