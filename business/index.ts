@@ -50,10 +50,12 @@ export type BusinessServiceName = 'insurance' | 'logistics';
 export interface BusinessService {
   name: BusinessServiceName;
   fee: Fee;
-  createdBy?: {
-    id: string;
-    email: string;
-  };
+  createdBy?:
+    | 'platform'
+    | {
+        id: string;
+        email: string;
+      };
   createdOn?: number; // in milliseconds due to firebase limitations
 }
 
