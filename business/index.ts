@@ -41,6 +41,7 @@ export interface BusinessStatistics {
 export type CookingTimeMode = 'manual' | 'auto';
 export interface BusinessSettings {
   cookingTimeMode: CookingTimeMode;
+  acknowledgeInsurance?: boolean;
 }
 
 export type BusinessType = 'restaurant';
