@@ -24,7 +24,9 @@ export type BusinessWarehouse = {
   neighborhood: string | null;
   reviews: BusinessReviews;
   hasInsurance: boolean;
+  hasLogistics: boolean;
   timestamps: ProfileTimestamps;
   createdOn: Timestamp;
   updatedOn: Timestamp | null;
+  keepAlive: Timestamp | null;
 };

@@ -1,6 +1,5 @@
 export type {
   AlgoliaConfig,
-  BusinessAlgolia,
   ConsumerAlgolia,
   CourierAlgolia,
   FlaggedLocationsAlgolia,
@@ -40,6 +39,7 @@ export type {
   PreparationMode,
   ScheduleObject,
 } from './business';
+export type { BusinessAlgolia } from './business/algolia';
 export type {
   BusinessProfilePayload,
   CloneBusinessPayload,

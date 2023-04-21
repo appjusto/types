@@ -1,10 +1,4 @@
-import { BusinessSchedule, BusinessTag } from '.';
-import {
-  BusinessAddress,
-  BusinessStatistics,
-  BusinessStatus,
-  PreparationMode,
-} from './business';
+import { BusinessStatistics } from './business';
 import { Timestamp } from './external/firebase';
 import { ProductStatistics } from './menu/product';
 import { LatLng2 } from './platform';
@@ -13,30 +7,6 @@ export interface AlgoliaConfig {
   appId: string;
   apiKey: string;
 }
-export interface BusinessAlgolia {
-  objectID: string;
-  _geoloc: LatLng2 | null;
-  situation: string;
-  enabled: boolean;
-  status: BusinessStatus;
-  opened: boolean;
-  name?: string;
-  code?: string;
-  cnpj?: string;
-  managerEmail?: string;
-  onboarding?: string;
-  description?: string;
-  businessAddress?: BusinessAddress;
-  preparationModes?: PreparationMode[];
-  tags?: BusinessTag[];
-  cuisine?: string;
-  deliveryRange?: number;
-  statistics?: BusinessStatistics;
-  averageDiscount?: number;
-  schedules: BusinessSchedule;
-  createdOn: Timestamp;
-}
-
 export interface CourierAlgolia {
   objectID: string;
   name?: string;
