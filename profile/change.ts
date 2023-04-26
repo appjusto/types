@@ -11,6 +11,7 @@ export interface ProfileChange {
   cpf?: string;
   phone?: string;
   birthday?: string;
+  images?: boolean;
   createdOn: Timestamp;
 }
 
