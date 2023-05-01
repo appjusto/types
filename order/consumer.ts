@@ -8,7 +8,6 @@ export interface OrderConsumer {
   phone?: string;
   notificationToken?: string | null;
   invoiceWithCPF?: boolean;
-  wantToShareData?: boolean;
   coordinates?: LatLng | null;
   appInstallationId?: string | null;
 }
