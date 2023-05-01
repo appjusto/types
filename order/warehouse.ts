@@ -13,6 +13,7 @@ export interface OrderWarehouse {
   status: OrderStatus;
   consumer: {
     id: string;
+    name: string | null;
     email: string | null;
     phone: string | null;
     cpf: string | null;
