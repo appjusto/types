@@ -1,4 +1,4 @@
-import { FieldValue } from 'firebase/firestore';
+import { Timestamp } from '../external/firebase';
 import { ClientFlavor } from '../platform';
 
 export interface BannersOrdering {
@@ -20,7 +20,7 @@ export interface Banner {
   webImageType?: string;
   mobileImageType?: string;
   enabled: boolean;
-  createdOn: FieldValue;
-  updatedOn: FieldValue;
+  createdOn: Timestamp;
+  updatedOn: Timestamp;
   images?: (string | null)[];
 }
