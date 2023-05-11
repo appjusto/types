@@ -12,6 +12,7 @@ export type CourierWarehouse = {
   name: string | null;
   email: string | null;
   phone: string | null;
+  cpf: string | null;
   birthday: string | null;
   situation: ProfileSituation;
   status: CourierStatus;
