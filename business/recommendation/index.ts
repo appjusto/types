@@ -4,8 +4,6 @@ import { Flavor } from '../../platform';
 
 export interface BusinessRecommendation {
   recommendedBusiness: Place;
-  /** @deprecated */
-  consumerId: string | null;
   flavor: Flavor;
   userId: string | null;
   instagram: string | null;
