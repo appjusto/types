@@ -25,6 +25,7 @@ export type BusinessWarehouse = {
   reviews: BusinessReviews;
   hasInsurance: boolean;
   hasLogistics: boolean;
+  appjustoOnly: boolean;
   timestamps: ProfileTimestamps;
   createdOn: Timestamp;
   updatedOn: Timestamp | null;
