@@ -83,6 +83,7 @@ export type {
   EmailTaskPayloadFrom,
   OrderFraudEmailPayload,
 } from './emails/payloads';
+export { HubsterStore, HubsterStoreStatus } from './external/hubster';
 export type {
   IzaContract,
   IzaPeriod,
