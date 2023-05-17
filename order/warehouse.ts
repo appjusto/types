@@ -1,9 +1,11 @@
 import { OrderArrivals, OrderType } from '.';
 import {
+  ExternalComponent,
   FareDetails,
   OrderDispatchingTimestamps,
   OrderStatus,
   OrderStatusTimestamps,
+  PlatformAdminComponent,
 } from '..';
 import { GeoPoint, Timestamp } from '../external/firebase';
 
@@ -49,6 +51,7 @@ export interface OrderWarehouse {
   timestamps: OrderStatusTimestamps;
   dispatchingTimestamps: OrderDispatchingTimestamps;
   scheduledTo: Timestamp | null;
+  acceptedFrom?: 'backoffice' | PlatformAdminComponent | ExternalComponent;
 }
 
 export interface OrderItemWarehouse {
