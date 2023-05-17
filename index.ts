@@ -327,6 +327,11 @@ export type {
   WithId,
 } from './platform';
 export type { PlatformAccess } from './platform/access';
+export type {
+  ExternalComponent,
+  PlatformAdminComponent,
+  PlatformComponent,
+} from './platform/components';
 export type { Cuisine, CuisineName } from './platform/cuisine';
 export type { Fee, PlatformFees } from './platform/fees';
 export type { FlaggedLocation, FraudPreventionParams } from './platform/fraud';

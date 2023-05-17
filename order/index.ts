@@ -6,6 +6,10 @@ import {
 import { Timestamp } from '../external/firebase';
 
 import { PayableWith } from '../payment/index';
+import {
+  ExternalComponent,
+  PlatformAdminComponent,
+} from '../platform/components';
 import { OrderConsumer } from './consumer';
 import { OrderCourier } from './courier';
 import { DispatchingState, DispatchingStatus } from './dispatching';
@@ -74,6 +78,7 @@ export interface Order {
   flags?: OrderFlag[];
   tags?: OrderTag[];
   // metadata
+  acceptedFrom?: 'backoffice' | PlatformAdminComponent | ExternalComponent;
   timestamps: OrderStatusTimestamps;
   createdOn: Timestamp;
   updatedOn?: Timestamp;
