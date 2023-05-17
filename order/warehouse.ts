@@ -51,7 +51,11 @@ export interface OrderWarehouse {
   timestamps: OrderStatusTimestamps;
   dispatchingTimestamps: OrderDispatchingTimestamps;
   scheduledTo: Timestamp | null;
-  acceptedFrom?: 'backoffice' | PlatformAdminComponent | ExternalComponent;
+  acceptedFrom?:
+    | 'backoffice'
+    | PlatformAdminComponent
+    | ExternalComponent
+    | null;
 }
 
 export interface OrderItemWarehouse {
