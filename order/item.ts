@@ -17,12 +17,10 @@ export interface OrderItemComplement {
   name: string;
   price: number;
   quantity: number;
-  /**
-   * @deprecated
-   */
-  groupName: string;
+  externalId?: string;
   group: {
     id: string;
     name: string;
+    externalId?: string;
   };
 }
