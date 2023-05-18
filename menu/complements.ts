@@ -6,6 +6,7 @@ export interface ComplementGroup {
   minimum: number;
   maximum: number;
   enabled?: boolean;
+  externalId?: string;
   // transient
   items?: WithId<Complement>[];
 }
