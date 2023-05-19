@@ -23,6 +23,7 @@ export interface PlatformManagement {
   };
   marketplace: {
     chargeDelay: number;
+    version?: string;
   };
   location: {
     database: {
