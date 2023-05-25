@@ -285,7 +285,14 @@ export type {
   UpdateEmailPayload,
   VerifyCourierProfilePayload,
 } from './payloads/profile';
-export type { PayableWith, PaymentProcessor } from './payment/index';
+export type {
+  PayableWith,
+  Payment,
+  PaymentPart,
+  PaymentProcessor,
+  PaymentService,
+  PaymentStatus,
+} from './payment/index';
 export type { TransferOptions } from './payment/iugu/transfer';
 export type {
   LedgerEntry,
