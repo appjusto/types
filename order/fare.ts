@@ -22,8 +22,9 @@ export interface FareDetails {
   };
   extras?: [
     {
+      id: string;
       value: number;
-      type: LedgerEntryOperation;
+      operation: LedgerEntryOperation;
     }
   ];
   commission?: number; // in cents
