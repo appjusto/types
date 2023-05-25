@@ -1,5 +1,6 @@
 import { Fleet } from '../fleet';
 import { IuguInvoiceStatus } from '../payment/iugu';
+import { LedgerEntryOperation } from '../payment/ledger';
 import { OutsourceAccountType, WithId } from '../platform';
 import { Fee } from '../platform/fees';
 
@@ -19,10 +20,15 @@ export interface FareDetails {
     fee: Fee;
     value: number; // in cents
   };
+  extras?: [
+    {
+      value: number;
+      type: LedgerEntryOperation;
+    }
+  ];
   commission?: number; // in cents
   insurance?: number; // in cents
   locationFee?: number; // in cents
-  priorityFee?: number; // in cents
   payee?: OutsourceAccountType;
   status?: IuguInvoiceStatus;
 }
