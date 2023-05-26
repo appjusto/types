@@ -1,4 +1,4 @@
-import { IuguPayableWith } from '../invoice';
+import { IuguPayableWith } from '../api/invoice';
 
 export interface IuguCustomer {
   accountId: string;

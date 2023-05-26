@@ -292,6 +292,7 @@ export type {
   PaymentService,
   PaymentStatus,
 } from './payment/index';
+export type { TransferOptions } from './payment/iugu/api/transfer';
 export type { IuguCustomer } from './payment/iugu/customer';
 export {
   DeleteIuguCard,
@@ -299,7 +300,6 @@ export {
   SaveIuguCard,
   SaveIuguCardResponse,
 } from './payment/iugu/customer/card';
-export type { TransferOptions } from './payment/iugu/transfer';
 export type {
   LedgerEntry,
   LedgerEntryOperation,

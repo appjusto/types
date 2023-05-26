@@ -1,6 +1,6 @@
 import { Timestamp } from '../../../external/firebase';
 import { BasePayload } from '../../../payloads';
-import { IuguCustomerPaymentMethod } from '../methods';
+import { IuguCustomerPaymentMethod } from '../api/methods';
 
 export interface IuguCard {
   accountId: string;

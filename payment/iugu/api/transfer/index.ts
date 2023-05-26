@@ -1,4 +1,4 @@
-import { AccountType } from '../../tasks';
+import { AccountType } from '../../../tasks';
 
 export interface TransferOptions {
   from: {
