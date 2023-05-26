@@ -15,12 +15,12 @@ export interface IuguSuccessResponse {
 
 export type {
   IuguCreateMarketplaceAccount,
+  IuguMarketPlaceAccountConfigure,
   IuguMarketplaceAccount,
   IuguMarketplaceAccountAdvanceByAmountResponse,
   IuguMarketplaceAccountAdvanceByAmountSimulation,
   IuguMarketplaceAccountAdvanceResponse,
   IuguMarketplaceAccountAdvanceSimulation,
-  IuguMarketPlaceAccountConfigure,
   IuguMarketplaceAccountInfo,
   IuguMarketplaceAccountReceivableItem,
   IuguMarketplaceAccountReceivables,
@@ -42,7 +42,11 @@ export type {
   IuguCreateCharge,
   IuguInvoiceCharge,
 } from './charge';
-export type { IuguCreateCustomerRequest, IuguCustomer } from './customer';
+export type { IuguCustomer } from './customer';
+export type {
+  IuguCustomer as IuguApiCustomer,
+  IuguCreateCustomerRequest,
+} from './customer/api';
 export type {
   IuguCommissions,
   IuguCreateInvoiceRequest,

@@ -56,7 +56,6 @@ export type {
   ConsumerProfile,
   ConsumerServiceStatistics,
   ConsumerStatistics,
-  PaymentChannel,
 } from './consumer';
 export type { ConsumerWarehouse } from './consumer/warehouse';
 export type {
@@ -293,7 +292,12 @@ export type {
   PaymentService,
   PaymentStatus,
 } from './payment/index';
-export { SaveIuguCard } from './payment/iugu/customer/card';
+export type { IuguCustomer } from './payment/iugu/customer';
+export {
+  IuguCard,
+  SaveIuguCard,
+  SaveIuguCardResponse,
+} from './payment/iugu/customer/card';
 export type { TransferOptions } from './payment/iugu/transfer';
 export type {
   LedgerEntry,

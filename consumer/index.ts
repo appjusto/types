@@ -1,13 +1,5 @@
 import { Place } from '../order/place';
-import { IuguCustomerPaymentMethod, IuguPayableWith } from '../payment/iugu';
 import { UserProfile } from '../profile';
-
-export interface PaymentChannel {
-  id: string;
-  methods?: IuguCustomerPaymentMethod[];
-  mostRecentPaymentMethod: IuguPayableWith;
-  mostRecentPaymentMethodId: string;
-}
 
 export interface ConsumerServiceStatistics {
   totalOrders: number;
@@ -23,5 +15,4 @@ export interface ConsumerStatistics {
 export interface ConsumerProfile extends UserProfile {
   statistics: ConsumerStatistics;
   favoritePlaces: Place[];
-  paymentChannel?: PaymentChannel;
 }
