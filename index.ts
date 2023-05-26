@@ -294,6 +294,7 @@ export type {
 } from './payment/index';
 export type { IuguCustomer } from './payment/iugu/customer';
 export {
+  DeleteIuguCard,
   IuguCard,
   SaveIuguCard,
   SaveIuguCardResponse,
