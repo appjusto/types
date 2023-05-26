@@ -13,8 +13,8 @@ export interface SaveIuguCard extends BasePayload {
   cardTokenId: string;
   cardHash: string;
 }
-export interface SaveIuguCardResponse extends BasePayload {
-  cardTokenId: string;
+export interface SaveIuguCardResponse {
+  id: string;
 }
 export interface DeleteIuguCard extends BasePayload {
   id: string;
