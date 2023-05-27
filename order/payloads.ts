@@ -19,7 +19,8 @@ export type PlaceOrderPayloadPaymentPix = {
 
 export type PlaceOrderPayloadPaymentCreditCard = {
   payableWith: 'credit_card';
-  paymentMethodId: string;
+  paymentMethodId?: string;
+  cardId?: string;
 };
 
 export type PlaceOrderPayloadPayment =

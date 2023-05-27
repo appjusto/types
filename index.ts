@@ -284,6 +284,7 @@ export type {
   UpdateEmailPayload,
   VerifyCourierProfilePayload,
 } from './payloads/profile';
+export type { Card } from './payment/card';
 export type {
   PayableWith,
   Payment,

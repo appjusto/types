@@ -1,14 +1,10 @@
-import { Timestamp } from '../../../external/firebase';
 import { BasePayload } from '../../../payloads';
+import { Card } from '../../card';
 import { IuguCustomerPaymentMethod } from '../api/methods';
 
-export interface IuguCard {
-  accountId: string;
-  accountType: 'consumer';
+export interface IuguCard extends Card {
+  processor: 'iugu';
   token: IuguCustomerPaymentMethod | null;
-  cardHash: string;
-  createdAt: Timestamp;
-  updatedAt?: Timestamp;
 }
 export interface SaveIuguCard extends BasePayload {
   cardTokenId: string;

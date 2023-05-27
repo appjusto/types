@@ -11,7 +11,8 @@ export interface PixOrderPayments {
 export interface CreditCardOrderPayments {
   processor: 'iugu';
   paymentMethod: 'credit_card';
-  customerPaymentMethodId: string;
+  customerPaymentMethodId?: string;
+  cardId?: string;
 }
 
 export type IuguOrderPayments = PixOrderPayments | CreditCardOrderPayments;
