@@ -7,4 +7,5 @@ export interface Card {
   cardHash: string;
   createdAt: Timestamp;
   updatedAt?: Timestamp;
+  status: 'enabled' | 'disabled';
 }
