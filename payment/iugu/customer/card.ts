@@ -5,7 +5,7 @@ import { IuguCustomerPaymentMethod } from '../api/methods';
 export interface IuguCard {
   accountId: string;
   accountType: 'consumer';
-  token: IuguCustomerPaymentMethod;
+  token: IuguCustomerPaymentMethod | null;
   cardHash: string;
   createdAt: Timestamp;
   updatedAt?: Timestamp;
