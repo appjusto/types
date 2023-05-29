@@ -46,11 +46,14 @@ export interface Payment {
   to: {
     accountType: PaymentPart;
     accountId: string | null;
+    accountName: string | null;
   };
   status: PaymentStatus;
   error?: {
     message: string;
-    details?: object;
+    details?: {
+      LR?: string | null;
+    };
   };
   createdAt: Timestamp;
   updatedAt?: Timestamp;

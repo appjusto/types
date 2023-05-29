@@ -15,6 +15,7 @@ export interface IuguPayment extends Payment {
   to: {
     accountType: PaymentPart;
     accountId: string | null;
+    accountName: string | null;
     accountToken?: string | null;
   };
   // result: Invoice;
