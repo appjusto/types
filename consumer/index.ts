@@ -1,4 +1,5 @@
 import { Place } from '../order/place';
+import { PayableWith } from '../payment';
 import { IuguCustomerPaymentMethod, IuguPayableWith } from '../payment/iugu';
 import { UserProfile } from '../profile';
 
@@ -24,6 +25,8 @@ export interface ConsumerStatistics {
 export interface ConsumerProfile extends UserProfile {
   statistics: ConsumerStatistics;
   favoritePlaces: Place[];
+  defaultPaymentMethod?: PayableWith;
+  defaultPaymentMethodId?: string;
   /** @deprecated */
   paymentChannel?: PaymentChannel;
 }
