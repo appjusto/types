@@ -293,6 +293,7 @@ export type {
   PaymentService,
   PaymentStatus,
 } from './payment/index';
+export type { IuguPayment } from './payment/iugu';
 export type { TransferOptions } from './payment/iugu/api/transfer';
 export type { IuguCustomer } from './payment/iugu/customer';
 export {
