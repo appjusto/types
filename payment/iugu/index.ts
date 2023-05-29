@@ -1,3 +1,25 @@
+import { Payment, PaymentPart } from '..';
+import { IuguPayableWith } from './api/invoice';
+
+export interface IuguPayment extends Payment {
+  processor: 'iugu';
+  method: IuguPayableWith;
+  // payer
+  cardTokenId?: string | null;
+  pix?: {
+    qrcode: string;
+    qrcodeText: string;
+    status: 'qr_code_created';
+  } | null;
+  // payee
+  to: {
+    accountType: PaymentPart;
+    accountId: string | null;
+    accountToken?: string | null;
+  };
+  // result: Invoice;
+}
+
 export interface IuguQueryResponse<T> {
   totalItems: number;
   items: T[];
