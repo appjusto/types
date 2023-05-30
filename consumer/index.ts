@@ -26,7 +26,7 @@ export interface ConsumerProfile extends UserProfile {
   statistics: ConsumerStatistics;
   favoritePlaces: Place[];
   defaultPaymentMethod?: PayableWith;
-  defaultPaymentMethodId?: string;
+  defaultPaymentMethodId?: string | null;
   /** @deprecated */
   paymentChannel?: PaymentChannel;
 }
