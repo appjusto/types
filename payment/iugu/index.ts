@@ -21,6 +21,20 @@ export interface IuguPayment extends Payment {
   // result: Invoice;
 }
 
+export interface PixOrderPayments {
+  processor: 'iugu';
+  paymentMethod: 'pix';
+}
+
+export interface CreditCardOrderPayments {
+  processor: 'iugu';
+  paymentMethod: 'credit_card';
+  customerPaymentMethodId?: string;
+  cardId?: string;
+}
+
+export type IuguOrderPayments = PixOrderPayments | CreditCardOrderPayments;
+
 export interface IuguQueryResponse<T> {
   totalItems: number;
   items: T[];

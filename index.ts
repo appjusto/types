@@ -236,13 +236,6 @@ export type {
   OrderMatchingRejection,
 } from './order/private/matching';
 export type {
-  CreditCardOrderPayments,
-  IuguOrderPayments,
-  OrderPayments,
-  PixOrderPayments,
-  VROrderPayments,
-} from './order/private/payment';
-export type {
   FoodOrderStatus,
   OrderStatus,
   P2POrderStatus,
@@ -286,6 +279,7 @@ export type {
 } from './payloads/profile';
 export type { Card } from './payment/card';
 export type {
+  OrderPayments,
   PayableWith,
   Payment,
   PaymentPart,
@@ -293,7 +287,12 @@ export type {
   PaymentService,
   PaymentStatus,
 } from './payment/index';
-export type { IuguPayment } from './payment/iugu';
+export type {
+  CreditCardOrderPayments,
+  IuguOrderPayments,
+  IuguPayment,
+  PixOrderPayments,
+} from './payment/iugu';
 export type { TransferOptions } from './payment/iugu/api/transfer';
 export type { IuguCustomer } from './payment/iugu/customer';
 export {
@@ -324,7 +323,7 @@ export type {
   InvoiceTaskHandlerInvoicesExtra,
   InvoiceTaskHandlerTipExtra,
 } from './payment/tasks';
-export type { VRPayment } from './payment/vr';
+export type { VROrderPayments, VRPayment } from './payment/vr';
 export type { VRCard } from './payment/vr/card';
 export type {
   CRUD,

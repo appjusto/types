@@ -17,4 +17,5 @@ export interface VRPayment extends Payment {
 export interface VROrderPayments {
   processor: 'vr';
   paymentMethod: 'vr';
+  cardId: string;
 }

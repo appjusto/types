@@ -1,6 +1,7 @@
-import { OrderType } from '..';
+import { OrderType, VROrderPayments } from '..';
 import { Timestamp } from '../external/firebase';
 import { Fee } from '../platform/fees';
+import { IuguOrderPayments } from './iugu';
 
 export type PaymentPart = 'courier' | 'consumer' | 'business' | 'platform';
 
@@ -58,3 +59,5 @@ export interface Payment {
   createdAt: Timestamp;
   updatedAt?: Timestamp;
 }
+
+export type OrderPayments = VROrderPayments | IuguOrderPayments;
