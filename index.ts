@@ -324,6 +324,8 @@ export type {
   InvoiceTaskHandlerInvoicesExtra,
   InvoiceTaskHandlerTipExtra,
 } from './payment/tasks';
+export type { VRPayment } from './payment/vr';
+export type { VRCard } from './payment/vr/card';
 export type {
   CRUD,
   NewUserData,
