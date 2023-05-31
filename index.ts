@@ -220,6 +220,7 @@ export type {
   PlaceOrderPayloadPayment,
   PlaceOrderPayloadPaymentCreditCard,
   PlaceOrderPayloadPaymentPix,
+  PlaceOrderPayloadPaymentVR,
   RejectOrderPayload,
   TipCourierPayload,
   UpdateOrderStatusPayload,

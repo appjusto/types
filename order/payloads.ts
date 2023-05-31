@@ -14,7 +14,6 @@ export interface GetOrderQuotesPayload extends OrderPayload {
 
 export type PlaceOrderPayloadPaymentPix = {
   payableWith: 'pix';
-  key: string;
 };
 
 export type PlaceOrderPayloadPaymentCreditCard = {
@@ -23,9 +22,15 @@ export type PlaceOrderPayloadPaymentCreditCard = {
   cardId?: string;
 };
 
+export type PlaceOrderPayloadPaymentVR = {
+  payableWith: 'vr';
+  cardId: string;
+};
+
 export type PlaceOrderPayloadPayment =
   | PlaceOrderPayloadPaymentPix
-  | PlaceOrderPayloadPaymentCreditCard;
+  | PlaceOrderPayloadPaymentCreditCard
+  | PlaceOrderPayloadPaymentVR;
 
 export interface PlaceOrderPayload extends OrderPayload {
   fleetId?: string;
