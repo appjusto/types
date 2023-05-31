@@ -1,4 +1,4 @@
-import { Payment, PaymentPart } from '..';
+import { OrderPayments, Payment, PaymentPart } from '..';
 import { CreateVRPaymentResult } from './api/types';
 
 export interface VRPayment extends Payment {
@@ -14,7 +14,7 @@ export interface VRPayment extends Payment {
   };
   // result: Invoice;
 }
-export interface VROrderPayments {
+export interface VROrderPayments extends OrderPayments {
   processor: 'vr';
   paymentMethod: 'vr';
   cardId: string;
