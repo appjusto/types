@@ -4,14 +4,13 @@ import { CreateVRPaymentResult } from './api/types';
 export interface VRPayment extends Payment {
   processor: 'vr';
   method: 'vr';
-  affiliateId: number;
   result: CreateVRPaymentResult | null;
   // payee
   to: {
     accountType: PaymentPart;
     accountId: string | null;
     accountName: string | null;
-    affiliateId: string | null;
+    affiliateId?: number;
   };
   // result: Invoice;
 }
