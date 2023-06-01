@@ -61,5 +61,5 @@ export interface Payment {
 
 export interface OrderPayments {
   processor: string;
-  paymentMethod: string;
+  paymentMethod: PayableWith;
 }

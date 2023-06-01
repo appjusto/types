@@ -280,6 +280,11 @@ export type {
 } from './payloads/profile';
 export type { Card } from './payment/card';
 export type {
+  DeleteCardPayload,
+  SaveCardPayload,
+  SaveCardResponse,
+} from './payment/card/payloads';
+export type {
   OrderPayments,
   PayableWith,
   Payment,
@@ -295,13 +300,9 @@ export type {
   PixOrderPayments,
 } from './payment/iugu';
 export type { TransferOptions } from './payment/iugu/api/transfer';
+export { IuguCard } from './payment/iugu/card';
+export type { SaveIuguCardPayload } from './payment/iugu/card/payloads';
 export type { IuguCustomer } from './payment/iugu/customer';
-export {
-  DeleteIuguCard,
-  IuguCard,
-  SaveIuguCard,
-  SaveIuguCardResponse,
-} from './payment/iugu/customer/card';
 export type {
   LedgerEntry,
   LedgerEntryOperation,
@@ -326,6 +327,7 @@ export type {
 } from './payment/tasks';
 export type { VROrderPayments, VRPayment } from './payment/vr';
 export type { VRCard } from './payment/vr/card';
+export type { SaveVRCardPayload } from './payment/vr/card/payloads';
 export type { VRStore } from './payment/vr/store';
 export type {
   CRUD,
