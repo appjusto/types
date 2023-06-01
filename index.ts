@@ -3,7 +3,7 @@ export type {
   ConsumerAlgolia,
   CourierAlgolia,
   FlaggedLocationsAlgolia,
-  ProductAlgolia,
+  ProductAlgolia
 } from './algolia';
 export type {
   Application,
@@ -11,14 +11,14 @@ export type {
   ApplicationLimits,
   ApplicationService,
   ApplicationToken,
-  QuoteResponse,
+  QuoteResponse
 } from './application';
 export type { Area, AreaLogistics } from './area';
 export type {
   Bank,
   BankAccount,
   BankAccountPersonType,
-  BankAccountType,
+  BankAccountType
 } from './banking';
 export type { Banner, BannerTargetOptions, BannersOrdering } from './banners';
 export type {
@@ -37,7 +37,7 @@ export type {
   BusinessType,
   CookingTimeMode,
   PreparationMode,
-  ScheduleObject,
+  ScheduleObject
 } from './business';
 export type { BusinessAlgolia } from './business/algolia';
 export type {
@@ -45,7 +45,7 @@ export type {
   CloneBusinessPayload,
   CreateBusinessProfilePayload,
   DeleteBusinessPayload,
-  UpdateBusinessSlugPayload,
+  UpdateBusinessSlugPayload
 } from './business/payloads';
 export type { BusinessProfile } from './business/profile';
 export type { BusinessRecommendation } from './business/recommendation';
@@ -55,7 +55,7 @@ export type { BusinessWarehouse } from './business/warehouse';
 export type {
   ConsumerProfile,
   ConsumerServiceStatistics,
-  ConsumerStatistics,
+  ConsumerStatistics
 } from './consumer';
 export type { ConsumerWarehouse } from './consumer/warehouse';
 export type {
@@ -66,28 +66,28 @@ export type {
   CourierProfile,
   CourierServiceStatistics,
   CourierStatistics,
-  CourierStatus,
+  CourierStatus
 } from './courier';
 export type {
   CourierOrderRequest,
-  CourierOrderRequestSituation,
+  CourierOrderRequestSituation
 } from './courier/requests';
 export type {
   CourierRequestWarehouse,
-  CourierWarehouse,
+  CourierWarehouse
 } from './courier/warehouse';
 export type {
   EmailPayload,
   EmailTaskPayload,
   EmailTaskPayloadFrom,
-  OrderFraudEmailPayload,
+  OrderFraudEmailPayload
 } from './emails/payloads';
 export { HubsterStore, HubsterStoreStatus } from './external/hubster';
 export type {
   IzaContract,
   IzaPeriod,
   IzaPeriodStatus,
-  IzaPerson,
+  IzaPerson
 } from './external/iza';
 export type {
   IzaApiContract,
@@ -95,7 +95,7 @@ export type {
   IzaApiCreatePeriodResult,
   IzaApiGeolocation,
   IzaApiPerson,
-  IzaApiUpdatePeriod,
+  IzaApiUpdatePeriod
 } from './external/iza/payloads';
 export type {
   IzaBaseTaskPayload,
@@ -103,12 +103,12 @@ export type {
   IzaFinishTaskPayload,
   IzaStartTaskPayload,
   IzaTaskPayload,
-  IzaUpdateLocationTaskPayload,
+  IzaUpdateLocationTaskPayload
 } from './external/iza/tasks';
 export type { LalamoveOrder, LalamoveQuotation } from './external/lalamove';
 export type {
   LalamoveEventType,
-  LalamoveOrderUpdatePayload,
+  LalamoveOrderUpdatePayload
 } from './external/lalamove/hooks';
 export type { LalamoveTaskPayload } from './external/lalamove/payloads';
 export type { LalamoveOrderStatus } from './external/lalamove/status';
@@ -116,7 +116,7 @@ export type {
   Fleet,
   FleetDetails,
   FleetFareParams,
-  FleetSituation,
+  FleetSituation
 } from './fleet';
 export type { FleetWarehouse } from './fleet/warehouse';
 export type { Generic } from './generics';
@@ -127,7 +127,7 @@ export type {
   GoogleMapsGeocodePayload,
   GoogleMapsPlacesAutocompletePayload,
   GoogleMapsReverseGeocodePayload,
-  QueryGoogleMapsPayload,
+  QueryGoogleMapsPayload
 } from './location/payloads';
 export type {
   AdminRole,
@@ -136,7 +136,7 @@ export type {
   ManagerWithMetadata,
   ManagerWithRole,
   NewManagerData,
-  Role,
+  Role
 } from './manager';
 export type { ManagerWarehouse } from './manager/warehouse';
 export type { Ordering } from './menu';
@@ -144,12 +144,12 @@ export type { Category } from './menu/category';
 export type { Complement, ComplementGroup } from './menu/complements';
 export type {
   CloneComplementsGroupPayload,
-  ImportMenuPayload,
+  ImportMenuPayload
 } from './menu/payloads';
 export type {
   Classification,
   Product,
-  ProductStatistics,
+  ProductStatistics
 } from './menu/product';
 export type {
   ChatPushMessageData,
@@ -160,7 +160,7 @@ export type {
   PushMessage,
   PushMessageActionType,
   PushMessageData,
-  PushReceipt,
+  PushReceipt
 } from './messages';
 export type {
   Fulfillment,
@@ -169,12 +169,12 @@ export type {
   OrderBusiness,
   OrderRoute,
   OrderStaff,
-  OrderType,
+  OrderType
 } from './order';
 export type {
   ChatMessage,
   ChatMessageType,
-  ChatMessageUser,
+  ChatMessageUser
 } from './order/chat';
 export type { OrderConsumer } from './order/consumer';
 export type { OrderCourier } from './order/courier';
@@ -187,7 +187,7 @@ export type {
   IssueType,
   OrderIssue,
   OrderRejection,
-  OrderRejectionType,
+  OrderRejectionType
 } from './order/issues';
 export type { OrderItem, OrderItemComplement } from './order/item';
 export type {
@@ -198,7 +198,7 @@ export type {
   OrderLog,
   OrderMatchingLog,
   OrderPaymentLog,
-  OrderStaffLog,
+  OrderStaffLog
 } from './order/logs';
 export type { OrderMeta } from './order/meta';
 export type { OutsourceDeliveryPayload } from './order/outsource/payloads';
@@ -223,33 +223,33 @@ export type {
   PlaceOrderPayloadPaymentVR,
   RejectOrderPayload,
   TipCourierPayload,
-  UpdateOrderStatusPayload,
+  UpdateOrderStatusPayload
 } from './order/payloads';
 export type { Address, Place } from './order/place';
 export type {
   OrderCancellation,
   OrderCancellationParams,
-  OrderRefundType,
+  OrderRefundType
 } from './order/private/cancellation';
 export type { OrderConfirmation } from './order/private/confirmation';
 export type {
   OrderMatching,
-  OrderMatchingRejection,
+  OrderMatchingRejection
 } from './order/private/matching';
 export type {
   FoodOrderStatus,
   OrderStatus,
-  P2POrderStatus,
+  P2POrderStatus
 } from './order/status';
 export type {
   UpdateOrderFareCourierPayeePayload,
   UpdateOrderPayload,
-  UpdateOrderPlacePayload,
+  UpdateOrderPlacePayload
 } from './order/status/update';
 export type { OrderTag } from './order/tags';
 export type {
   OrderDispatchingTimestamps,
-  OrderStatusTimestamps,
+  OrderStatusTimestamps
 } from './order/timestamps';
 export type { OrderTip } from './order/tip';
 export type { OrderItemWarehouse, OrderWarehouse } from './order/warehouse';
@@ -262,13 +262,13 @@ export type {
   FetchAdvanceByAmountSimulationPayload,
   FetchAdvanceSimulationPayload,
   FetchReceivablesPayload,
-  RequestWithdrawPayload,
+  RequestWithdrawPayload
 } from './payloads/account';
 export type { ReleaseCourierPayload } from './payloads/courier';
 export type {
   DeletePaymentMethodPayload,
   SavePaymentTokenPayload,
-  SavePaymentTokenResponse,
+  SavePaymentTokenResponse
 } from './payloads/marketplace';
 export type {
   CreateManagersPayload,
@@ -276,28 +276,27 @@ export type {
   GetManagersPayload,
   UndeleteAccountPayload,
   UpdateEmailPayload,
-  VerifyCourierProfilePayload,
+  VerifyCourierProfilePayload
 } from './payloads/profile';
 export type { Card } from './payment/card';
 export type {
   DeleteCardPayload,
   SaveCardPayload,
-  SaveCardResponse,
+  SaveCardResponse
 } from './payment/card/payloads';
 export type {
-  OrderPayments,
-  PayableWith,
+  OrderPayments, PayableWith,
   Payment,
   PaymentPart,
   PaymentProcessor,
   PaymentService,
-  PaymentStatus,
+  PaymentStatus
 } from './payment/index';
 export type {
   CreditCardOrderPayments,
   IuguOrderPayments,
   IuguPayment,
-  PixOrderPayments,
+  PixOrderPayments
 } from './payment/iugu';
 export type { TransferOptions } from './payment/iugu/api/transfer';
 export { IuguCard } from './payment/iugu/card';
@@ -306,7 +305,7 @@ export type { IuguCustomer } from './payment/iugu/customer';
 export type {
   LedgerEntry,
   LedgerEntryOperation,
-  LedgerEntryStatus,
+  LedgerEntryStatus
 } from './payment/ledger';
 export type { LedgerTaskPayload } from './payment/ledger/tasks';
 export type { LedgerEntryWarehouse } from './payment/ledger/warehouse';
@@ -315,7 +314,7 @@ export type {
   AccountTransfer,
   AccountWithdraw,
   MarketplaceAccountInfo,
-  MarketplaceAccountSituation,
+  MarketplaceAccountSituation
 } from './payment/marketplace';
 export type {
   AccountTaskPayload,
@@ -323,7 +322,7 @@ export type {
   InvoiceTaskAction,
   InvoiceTaskHandler,
   InvoiceTaskHandlerInvoicesExtra,
-  InvoiceTaskHandlerTipExtra,
+  InvoiceTaskHandlerTipExtra
 } from './payment/tasks';
 export type { VROrderPayments, VRPayment } from './payment/vr';
 export type { VRCard } from './payment/vr/card';
@@ -333,7 +332,7 @@ export type {
   CRUD,
   NewUserData,
   UserPermissionRules,
-  UserPermissions,
+  UserPermissions
 } from './permissions';
 export type {
   City,
@@ -344,13 +343,13 @@ export type {
   LatLng2,
   OutsourceAccountType,
   WithDistance,
-  WithId,
+  WithId
 } from './platform';
 export type { PlatformAccess } from './platform/access';
 export type {
   ExternalComponent,
   PlatformAdminComponent,
-  PlatformComponent,
+  PlatformComponent
 } from './platform/components';
 export type { Cuisine, CuisineName } from './platform/cuisine';
 export type { Fee, PlatformFees } from './platform/fees';
@@ -360,19 +359,19 @@ export type { PlatformManagement } from './platform/management';
 export type { PlatformParams } from './platform/params';
 export type {
   PlatformStatistics,
-  ServiceStatistics,
+  ServiceStatistics
 } from './platform/statistics';
 export type {
   ProfileNote,
   ProfileSituation,
   ProfileTimestamps,
-  UserProfile,
+  UserProfile
 } from './profile';
 export type { ProfileChange, UserProfileChange } from './profile/change';
 export type {
   NotificationChannel,
   NotificationPreferences,
-  UpdateNotificationPreferencesPayload,
+  UpdateNotificationPreferencesPayload
 } from './profile/notifications';
 export type { ProfileTag } from './profile/tags';
 export type { ProfileNoteWarehouse } from './profile/warehouse';
@@ -381,10 +380,11 @@ export type {
   OrderConsumerReview,
   Review,
   ReviewTag,
-  ReviewType,
+  ReviewType
 } from './review';
 export type { NPS } from './review/nps';
 export type { OrderReviewWarehouse } from './review/warehouse';
 export type { NewStaffData, StaffProfile } from './staff';
 export type { TaskDocument, UpdateDocumentTaskPayload } from './tasks/update';
 export type { User, UserType } from './users';
+
