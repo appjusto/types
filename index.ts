@@ -286,6 +286,12 @@ export type {
 } from './payloads/profile';
 export type { Card } from './payment/card';
 export type {
+  DeleteCardPayload,
+  SaveCardPayload,
+  SaveCardResponse,
+  SaveIuguCardPayload,
+} from './payment/card/payloads';
+export type {
   PayableWith,
   Payment,
   PaymentPart,
