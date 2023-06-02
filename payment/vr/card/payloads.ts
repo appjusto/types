@@ -7,5 +7,5 @@ export interface SaveVRCardPayload extends SaveCardPayload {
   month: number;
   year: number;
   cvv: string;
-  cardHash: string;
+  hash?: string;
 }
