@@ -18,7 +18,7 @@ export interface Product {
    * @deprecated
    */
   imageExists?: boolean;
-  imageUrl?: string;
+  imageUrls?: string[];
   price: number;
   externalId?: string;
   enabled: boolean;

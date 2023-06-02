@@ -18,7 +18,7 @@ export interface Complement {
    * @deprecated
    */
   imageExists?: boolean;
-  imageUrl?: string;
+  imageUrls?: string[];
   price: number;
   maximum?: number;
   enabled?: boolean;
