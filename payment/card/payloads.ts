@@ -5,12 +5,6 @@ export interface SaveCardPayload extends BasePayload {
   processor: PaymentProcessor;
 }
 
-export interface SaveIuguCardPayload extends SaveCardPayload {
-  processor: 'iugu';
-  cardTokenId: string;
-  cardHash: string;
-}
-
 export interface SaveCardResponse {
   id: string;
 }

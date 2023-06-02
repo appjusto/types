@@ -58,3 +58,8 @@ export interface Payment {
   createdAt: Timestamp;
   updatedAt?: Timestamp;
 }
+
+export interface OrderPayments {
+  processor: string;
+  paymentMethod: PayableWith;
+}

@@ -1,4 +1,4 @@
-import { Payment, PaymentPart } from '..';
+import { OrderPayments, Payment, PaymentPart } from '..';
 import { IuguPayableWith } from './api/invoice';
 
 export interface IuguPayment extends Payment {
@@ -20,6 +20,20 @@ export interface IuguPayment extends Payment {
   };
   // result: Invoice;
 }
+
+export interface PixOrderPayments extends OrderPayments {
+  processor: 'iugu';
+  paymentMethod: 'pix';
+}
+
+export interface CreditCardOrderPayments extends OrderPayments {
+  processor: 'iugu';
+  paymentMethod: 'credit_card';
+  customerPaymentMethodId?: string;
+  cardId?: string;
+}
+
+export type IuguOrderPayments = PixOrderPayments | CreditCardOrderPayments;
 
 export interface IuguQueryResponse<T> {
   totalItems: number;
