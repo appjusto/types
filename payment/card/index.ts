@@ -4,7 +4,7 @@ export interface Card {
   processor: string;
   accountId: string;
   accountType: 'consumer';
-  cardHash: string;
+  hash?: string | null;
   createdAt: Timestamp;
   updatedAt?: Timestamp;
   status: 'enabled' | 'disabled';
