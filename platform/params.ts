@@ -1,3 +1,5 @@
+import { PayableWith } from '../payment';
+
 export interface PlatformParams {
   matching: {
     maxDistance: number; // in meters
@@ -38,12 +40,9 @@ export interface PlatformParams {
     keepAliveThreshold?: number; // number of seconds to start refusing orders
     averageCookingTime: number; // in seconds
   };
-  payments: {
-    credit: boolean;
-    pix: boolean;
-    vr: boolean;
-  };
+  acceptedPaymentMethods: PayableWith[];
   consumer: {
+    /** @deprecated */
     pixEnabled: boolean;
     approveAfterSubmitted: boolean;
     support: {
