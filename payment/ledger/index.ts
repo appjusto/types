@@ -5,6 +5,7 @@ import { AccountType } from '../tasks';
 export type LedgerEntryOperation =
   | 'delivery'
   | 'tip'
+  | 'commission'
   | 'same-owner-accounts'
   | 'business-insurance'
   | 'outsource-credit'
