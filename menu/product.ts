@@ -14,7 +14,11 @@ export interface ProductStatistics {
 export interface Product {
   name: string;
   description?: string;
+  /**
+   * @deprecated
+   */
   imageExists?: boolean;
+  imageUrls?: string[];
   price: number;
   externalId?: string;
   enabled: boolean;

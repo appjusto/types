@@ -12,9 +12,13 @@ export interface ComplementGroup {
 }
 
 export interface Complement {
-  imageExists?: boolean;
   name: string;
   description?: string;
+  /**
+   * @deprecated
+   */
+  imageExists?: boolean;
+  imageUrls?: string[];
   price: number;
   maximum?: number;
   enabled?: boolean;
