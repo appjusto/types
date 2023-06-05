@@ -38,6 +38,11 @@ export interface PlatformParams {
     keepAliveThreshold?: number; // number of seconds to start refusing orders
     averageCookingTime: number; // in seconds
   };
+  payments: {
+    credit: boolean;
+    pix: boolean;
+    vr: boolean;
+  };
   consumer: {
     pixEnabled: boolean;
     approveAfterSubmitted: boolean;
