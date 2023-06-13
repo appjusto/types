@@ -1,11 +1,10 @@
 export type HubsterStoreStatus = 'available' | 'unavailable';
 
+export type HubsterStoreMenuSource = 'appjusto' | 'hubster';
+
 export interface HubsterStore {
   businessId: string;
   storeId: string;
   status: HubsterStoreStatus;
-  menu?: {
-    source: 'appjusto' | 'hubster';
-    sync: boolean;
-  };
+  menuSource?: HubsterStoreMenuSource;
 }
