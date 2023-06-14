@@ -1,4 +1,4 @@
-import { LatLng, OrderStatus } from '..';
+import { LatLng, OrderStatus, PayableWith, VRPayableWith } from '..';
 import { BasePayload } from '../payloads';
 import { WithId } from '../platform';
 import { Issue } from './issues';
@@ -10,6 +10,7 @@ export interface OrderPayload extends BasePayload {
 
 export interface GetOrderQuotesPayload extends OrderPayload {
   fleetsIds?: string[];
+  paymentMethod?: PayableWith;
 }
 
 export type PlaceOrderPayloadPaymentPix = {
@@ -23,7 +24,7 @@ export type PlaceOrderPayloadPaymentCreditCard = {
 };
 
 export type PlaceOrderPayloadPaymentVR = {
-  payableWith: 'vr';
+  payableWith: VRPayableWith;
   cardId: string;
 };
 

@@ -322,6 +322,10 @@ export type {
   MarketplaceAccountSituation,
 } from './payment/marketplace';
 export type {
+  RefundPaymentPayload,
+  UpdatePaymentPayload,
+} from './payment/payloads';
+export type {
   AccountTaskPayload,
   AccountType,
   InvoiceTaskAction,
@@ -330,7 +334,7 @@ export type {
   InvoiceTaskHandlerTipExtra,
 } from './payment/tasks';
 export type { VROrderPayments, VRPayment } from './payment/vr';
-export type { VRCard } from './payment/vr/card';
+export type { VRCard, VRPayableWith } from './payment/vr/card';
 export type { SaveVRCardPayload } from './payment/vr/card/payloads';
 export type { VRStore } from './payment/vr/store';
 export type {

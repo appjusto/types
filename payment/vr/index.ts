@@ -1,9 +1,10 @@
 import { OrderPayments, Payment, PaymentPart } from '..';
 import { CreateVRPaymentResult } from './api/types';
+import { VRPayableWith } from './card';
 
 export interface VRPayment extends Payment {
   processor: 'vr';
-  method: 'vr';
+  method: VRPayableWith;
   result: CreateVRPaymentResult | null;
   // payee
   to: {
@@ -16,6 +17,6 @@ export interface VRPayment extends Payment {
 }
 export interface VROrderPayments extends OrderPayments {
   processor: 'vr';
-  paymentMethod: 'vr';
+  paymentMethod: VRPayableWith;
   cardId: string;
 }
