@@ -329,8 +329,8 @@ export type {
   InvoiceTaskHandlerInvoicesExtra,
   InvoiceTaskHandlerTipExtra,
 } from './payment/tasks';
-export type { VROrderPayments, VRPayableWith, VRPayment } from './payment/vr';
-export type { VRCard } from './payment/vr/card';
+export type { VROrderPayments, VRPayment } from './payment/vr';
+export type { VRCard, VRPayableWith } from './payment/vr/card';
 export type { SaveVRCardPayload } from './payment/vr/card/payloads';
 export type { VRStore } from './payment/vr/store';
 export type {

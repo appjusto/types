@@ -1,8 +1,9 @@
 import { Card } from '../../card';
 
+export type VRPayableWith = 'vr-alimentação' | 'vr-refeição';
 export interface VRCard extends Card {
   processor: 'vr';
-  type: 'alimentação' | 'refeição';
+  type: VRPayableWith;
   token: {
     id: string;
     data: {
