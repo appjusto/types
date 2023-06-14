@@ -1,5 +1,6 @@
 import { LatLng, OrderStatus, PayableWith } from '..';
 import { BasePayload } from '../payloads';
+import { VRPayableWith } from '../payment/vr';
 import { WithId } from '../platform';
 import { Issue } from './issues';
 import { OrderCancellationParams } from './private/cancellation';
@@ -24,7 +25,7 @@ export type PlaceOrderPayloadPaymentCreditCard = {
 };
 
 export type PlaceOrderPayloadPaymentVR = {
-  payableWith: 'vr';
+  payableWith: VRPayableWith;
   cardId: string;
 };
 

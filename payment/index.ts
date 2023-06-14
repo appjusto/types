@@ -1,6 +1,8 @@
 import { OrderType } from '..';
 import { Timestamp } from '../external/firebase';
 import { Fee } from '../platform/fees';
+import { IuguPayableWith } from './iugu';
+import { VRPayableWith } from './vr';
 
 export type PaymentPart = 'courier' | 'consumer' | 'business' | 'platform';
 
@@ -20,7 +22,7 @@ export type PaymentStatus =
   | 'unauthorized';
 
 export type PaymentProcessor = 'iugu' | 'vr' | 'appjusto';
-export type PayableWith = 'credit_card' | 'pix' | 'vr' | 'credits';
+export type PayableWith = IuguPayableWith | VRPayableWith | 'credits';
 export type PaymentService = 'food' | 'p2p' | 'tip';
 export interface Payment {
   service: PaymentService;
