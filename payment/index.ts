@@ -2,7 +2,7 @@ import { OrderType } from '..';
 import { Timestamp } from '../external/firebase';
 import { Fee } from '../platform/fees';
 import { IuguPayableWith } from './iugu';
-import { VRPayableWith } from './vr';
+import { VRPayableWith } from './vr/card';
 
 export type PaymentPart = 'courier' | 'consumer' | 'business' | 'platform';
 

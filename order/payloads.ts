@@ -1,6 +1,5 @@
-import { LatLng, OrderStatus, PayableWith } from '..';
+import { LatLng, OrderStatus, PayableWith, VRPayableWith } from '..';
 import { BasePayload } from '../payloads';
-import { VRPayableWith } from '../payment/vr';
 import { WithId } from '../platform';
 import { Issue } from './issues';
 import { OrderCancellationParams } from './private/cancellation';
