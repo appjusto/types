@@ -15,23 +15,31 @@ export interface GetOrderQuotesPayload extends OrderPayload {
 
 export type PlaceOrderPayloadPaymentPix = {
   payableWith: 'pix';
+  useCredits?: boolean;
 };
 
 export type PlaceOrderPayloadPaymentCreditCard = {
   payableWith: 'credit_card';
   paymentMethodId?: string;
   cardId?: string;
+  useCredits?: boolean;
 };
 
 export type PlaceOrderPayloadPaymentVR = {
   payableWith: VRPayableWith;
   cardId: string;
+  useCredits?: boolean;
+};
+
+export type PlaceOrderPayloadPaymentCredits = {
+  payableWith: 'credits';
 };
 
 export type PlaceOrderPayloadPayment =
   | PlaceOrderPayloadPaymentPix
   | PlaceOrderPayloadPaymentCreditCard
-  | PlaceOrderPayloadPaymentVR;
+  | PlaceOrderPayloadPaymentVR
+  | PlaceOrderPayloadPaymentCredits;
 
 export interface PlaceOrderPayload extends OrderPayload {
   fleetId?: string;

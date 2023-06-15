@@ -9,6 +9,8 @@ export type LedgerEntryOperation =
   | 'same-owner-accounts'
   | 'business-insurance'
   | 'outsource-credit'
+  | 'refund-credit'
+  | 'marketing-credit'
   | 'balance-adjustment'
   | 'others';
 
