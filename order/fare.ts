@@ -10,6 +10,7 @@ export interface Fare {
   business: FareDetails | null;
   platform: FareDetails | null;
   total: number;
+  credits?: number;
 }
 
 export interface FareDetails {
@@ -30,6 +31,7 @@ export interface FareDetails {
   commission?: number; // in cents
   insurance?: number; // in cents
   locationFee?: number; // in cents
+  credits?: number;
   payee?: OutsourceAccountType;
   status?: IuguInvoiceStatus;
 }
