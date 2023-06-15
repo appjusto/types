@@ -11,6 +11,7 @@ export interface OrderPayload extends BasePayload {
 export interface GetOrderQuotesPayload extends OrderPayload {
   fleetsIds?: string[];
   paymentMethod?: PayableWith;
+  useCredits?: boolean;
 }
 
 export type PlaceOrderPayloadPaymentPix = {
