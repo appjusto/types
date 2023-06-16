@@ -3,16 +3,22 @@ import { IuguMarketplaceTransferResponse } from '../iugu';
 import { AccountType } from '../tasks';
 
 export type LedgerEntryOperation =
-  | 'delivery'
-  | 'tip'
-  | 'commission'
-  | 'same-owner-accounts'
-  | 'business-insurance'
-  | 'outsource-credit'
-  | 'refund-credit'
-  | 'marketing-credit'
-  | 'balance-adjustment'
-  | 'others';
+  // para entregadores
+  | 'delivery' // entrega para entregadores
+  | 'tip' // caixinha para entregadores
+  | 'outsource-credit' // crédito para entregadores fora da rede
+  // para consumidores
+  | 'refund-credit' // crédito para consumidores em caso de reembolso parcial cuja fatura precisou ser cobrada integralmente
+  | 'marketing-credit' // crédito de marketing para consumidores
+  // para restaurantes
+  | 'business-insurance' // pagamento de cobertura em caso de extravios, etc.
+  | 'business-credit' // repasse de crédito de consumidores para restaurantes
+  // para appjusto
+  | 'commission' // para cobrar comissão de pedidos pagos por VR;
+  // geral
+  | 'balance-adjustment' // ajuste de erros de conciliação
+  | 'same-owner-accounts' // transferência entre subcontas
+  | 'others'; // outros casos de uso
 
 export type LedgerEntryStatus =
   | 'pending'

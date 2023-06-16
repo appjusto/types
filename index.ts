@@ -336,7 +336,7 @@ export type {
 export type { VROrderPayments, VRPayment } from './payment/vr';
 export type { VRCard, VRPayableWith } from './payment/vr/card';
 export type { SaveVRCardPayload } from './payment/vr/card/payloads';
-export type { VRStore } from './payment/vr/store';
+export type { VRStore, VRStoreStatus } from './payment/vr/store';
 export type {
   CRUD,
   NewUserData,
