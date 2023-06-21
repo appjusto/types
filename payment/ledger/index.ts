@@ -16,6 +16,7 @@ export type LedgerEntryOperation =
   // para appjusto
   | 'commission' // para cobrar comissão de pedidos pagos por VR;
   // geral
+  | 'services-debit' // serviços extras como flyers
   | 'balance-adjustment' // ajuste de erros de conciliação
   | 'same-owner-accounts' // transferência entre subcontas
   | 'others'; // outros casos de uso
