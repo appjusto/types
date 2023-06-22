@@ -8,7 +8,7 @@ export type LedgerEntryOperation =
   | 'tip' // caixinha para entregadores
   | 'outsource-credit' // crédito para entregadores fora da rede
   // para consumidores
-  | 'refund-credit' // crédito para consumidores em caso de reembolso parcial cuja fatura precisou ser cobrada integralmente
+  | 'refund-credit' // crédito para consumidores em caso de reembolso parcial
   | 'marketing-credit' // crédito de marketing para consumidores
   // para restaurantes
   | 'business-insurance' // pagamento de cobertura em caso de extravios, etc.
