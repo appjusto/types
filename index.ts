@@ -52,6 +52,7 @@ export type { BusinessRecommendation } from './business/recommendation';
 export type { BusinessRecommendationWarehouse } from './business/recommendation/warehouse';
 export type { BusinessTag } from './business/tags';
 export type { BusinessWarehouse } from './business/warehouse';
+export type { Complaint } from './complaints';
 export type {
   ConsumerProfile,
   ConsumerServiceStatistics,
