@@ -12,5 +12,5 @@ export interface Complaint {
   status: 'pending' | 'investigating' | 'upheld' | 'inconclusive';
   createdBy: string;
   createdAt: Timestamp;
-  updatedAt: Timestamp;
+  updatedAt?: Timestamp;
 }
