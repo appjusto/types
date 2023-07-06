@@ -7,7 +7,7 @@ export interface Complaint {
   date: string;
   description: string;
   flavor: Flavor;
-  orderId?: string;
+  orderId?: string | null;
   staff?: OrderStaff | null;
   createdBy: string;
   createdAt: Timestamp;
