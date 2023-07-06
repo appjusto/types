@@ -9,6 +9,8 @@ export interface Complaint {
   flavor: Flavor;
   orderId?: string | null;
   staff?: OrderStaff | null;
+  status: 'pending' | 'investigating' | 'upheld' | 'inconclusive';
   createdBy: string;
   createdAt: Timestamp;
+  updatedAt: Timestamp;
 }
