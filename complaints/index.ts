@@ -12,12 +12,17 @@ export interface Complaint {
   place: string;
   date: string;
   description: string;
-  flavor: Flavor;
   contactBy: 'whatsapp' | 'e-mail';
   orderId?: string | null;
+  code?: string | null;
   staff?: OrderStaff | null;
   status: ComplaintStatus;
-  createdBy: string;
+  conclusion?: string;
+  createdBy: {
+    id: string;
+    flavor: Flavor;
+    name?: string;
+  };
   createdAt: Timestamp;
   updatedAt?: Timestamp;
 }
