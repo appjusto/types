@@ -3,4 +3,9 @@ export type BusinessTag =
   | 'can-match-courier'
   | 'can-outsource'
   | 'motorcycle-only'
-  | 'appjusto-only';
+  | 'appjusto-only'
+  | 'investor'
+  | 'cultural-fit'
+  | 'in-person-onboarding'
+  | 'link-on-social'
+  | 'ads';
