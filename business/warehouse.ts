@@ -26,6 +26,11 @@ export type BusinessWarehouse = {
   hasInsurance: boolean;
   hasLogistics: boolean;
   appjustoOnly: boolean;
+  investor: boolean;
+  culturalFit: boolean;
+  inPersonOnboarding: boolean;
+  linkOnSocial: boolean;
+  ads: boolean;
   timestamps: ProfileTimestamps;
   createdOn: Timestamp;
   updatedOn: Timestamp | null;
