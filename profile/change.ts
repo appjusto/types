@@ -1,5 +1,5 @@
 import { UserProfile } from '.';
-import { CourierCompany, UserType } from '..';
+import { BankAccount, CourierCompany, UserType } from '..';
 import { Timestamp } from '../external/firebase';
 
 export interface ProfileChange {
@@ -13,6 +13,7 @@ export interface ProfileChange {
   birthday?: string;
   images?: boolean;
   company?: Partial<CourierCompany>;
+  bankAccount?: Partial<BankAccount>;
   createdOn: Timestamp;
 }
 
