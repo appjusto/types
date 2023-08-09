@@ -6,4 +6,5 @@ export type OrderFlag =
   | 'pick-up'
   | 'delivering'
   | 'issue'
+  | 'inactivity'
   | 'chat';
