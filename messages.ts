@@ -31,6 +31,12 @@ export interface NavigateBusinessPushData {
   action: 'navigate-business';
   businessId: string;
 }
+
+export interface NavigatePushData {
+  action: 'navigate';
+  url: string;
+}
+
 export type PushMessageData =
   | OrderMatchPushMessageData
   | OrderUpdatePushData

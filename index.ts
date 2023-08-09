@@ -159,6 +159,7 @@ export type {
 export type {
   ChatPushMessageData,
   NavigateBusinessPushData,
+  NavigatePushData,
   NotificationTaskPayload,
   OrderMatchPushMessageData,
   OrderUpdatePushData,
