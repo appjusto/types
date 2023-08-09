@@ -41,7 +41,8 @@ export type PushMessageData =
   | OrderMatchPushMessageData
   | OrderUpdatePushData
   | ChatPushMessageData
-  | NavigateBusinessPushData;
+  | NavigateBusinessPushData
+  | NavigatePushData;
 
 export interface PushMessage {
   id: string;
