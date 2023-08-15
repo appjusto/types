@@ -8,7 +8,8 @@ export type PushMessageActionType =
   | 'order-request'
   | 'order-chat'
   | 'order-update'
-  | 'navigate-business';
+  | 'navigate-business'
+  | 'navigate';
 
 export interface OrderMatchPushMessageData extends CourierOrderRequest {
   action: 'order-request';

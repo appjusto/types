@@ -3,6 +3,7 @@ import { ClientFlavor } from '../platform';
 export type NotificationChannel =
   | 'profile-update'
   | 'order-update'
+  | 'order-request'
   | 'order-chat'
   | 'status'
   | 'general'
