@@ -16,6 +16,7 @@ export interface BusinessAlgolia {
   status: BusinessStatus;
   opened: boolean;
   name?: string;
+  slug?: string;
   code?: string;
   cnpj?: string;
   managerEmail?: string;
