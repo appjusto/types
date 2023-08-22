@@ -127,6 +127,7 @@ export type { FleetWarehouse } from './fleet/warehouse';
 export type { Generic } from './generics';
 export type { Invoice, InvoiceFingerprint, InvoiceType } from './invoice';
 export type { InvoiceWarehouse } from './invoice/warehouse';
+export type { Incident } from './issue';
 export type { RouteDetails } from './location/directions';
 export type {
   GoogleMapsGeocodePayload,

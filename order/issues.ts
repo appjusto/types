@@ -41,11 +41,11 @@ export type IssueType =
   | 'consumer-profile-invalid';
 
 export interface Issue {
-  id?: string;
-  order?: number;
+  id: string;
   type: IssueType;
   title: string;
-  priority?: number;
+  priority: number;
+  order?: number;
 }
 
 export interface OrderIssue {
