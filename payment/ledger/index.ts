@@ -9,6 +9,7 @@ export type LedgerEntryOperation =
   | 'outsource-credit' // crédito para entregadores fora da rede
   // para consumidores
   | 'refund-credit' // crédito para consumidores em caso de reembolso parcial
+  | 'delivery-credit' // crédito para consumidores em caso de diferença de delivery
   | 'marketing-credit' // crédito de marketing para consumidores
   // para restaurantes
   | 'business-insurance' // pagamento de cobertura em caso de extravios, etc.
@@ -31,7 +32,7 @@ export type LedgerEntryStatus =
   | 'paid';
 
 export interface LedgerEntry {
-  orderId?: string;
+  orderId?: string | null;
   operation: LedgerEntryOperation;
   value: number;
   processingFee?: number;
