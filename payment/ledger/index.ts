@@ -33,6 +33,7 @@ export type LedgerEntryStatus =
 
 export interface LedgerEntry {
   orderId?: string | null;
+  orderCode?: string | null;
   operation: LedgerEntryOperation;
   value: number;
   processingFee?: number;
