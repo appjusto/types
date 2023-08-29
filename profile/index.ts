@@ -48,6 +48,7 @@ export interface UserProfile {
   // metadata
   platform?: string;
   appVersion?: string;
+  webAppVersion?: string;
   appInstallationId?: string | null;
   appIp?: string | null;
   userAgent?: string;
