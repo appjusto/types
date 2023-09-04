@@ -29,13 +29,14 @@ export interface MarketplaceAccountInfo {
   issues?: string[];
 }
 
+export type WithdrawStatus = 'pending' | 'processing' | 'accepted' | 'rejected';
 export interface AccountWithdraw {
   accountId: string;
   accountType: AccountType;
   accountExternalId: string;
   amount: string;
   externalId: string;
-  status: 'pending' | 'processing' | 'accepted' | 'rejected';
+  status: WithdrawStatus;
   fee: number;
   data: IuguMarketplaceAccountWithdrawResponse;
   feedback?: string;
