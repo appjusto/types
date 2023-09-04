@@ -18,6 +18,7 @@ export interface IuguMarketplaceAccountWithdrawResponse {
   created_at: string;
   custom_variables: IuguCustomVariable[];
   feedback: string;
+  paying_at: string;
   id: string;
   reference: string;
   status: 'pending';
