@@ -323,6 +323,7 @@ export type {
   AccountWithdraw,
   MarketplaceAccountInfo,
   MarketplaceAccountSituation,
+  WithdrawStatus,
 } from './payment/marketplace';
 export type {
   RefundPaymentPayload,
