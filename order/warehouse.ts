@@ -19,6 +19,7 @@ export interface OrderWarehouse {
     email: string | null;
     phone: string | null;
     cpf: string | null;
+    totalOrders: number | null;
   };
   courier: {
     id: string | null;
