@@ -11,6 +11,7 @@ export type ConsumerWarehouse = {
   acceptsStatusNotification: boolean;
   appVersion: string | null;
   appInstallationId: string | null;
+  totalOrders: number | null;
   platform: string | null;
   coordinates: GeoPoint | null;
   timestamps: ProfileTimestamps;
