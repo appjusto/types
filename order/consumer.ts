@@ -10,4 +10,5 @@ export interface OrderConsumer {
   invoiceWithCPF?: boolean;
   coordinates?: LatLng | null;
   appInstallationId?: string | null;
+  totalOrders?: number;
 }

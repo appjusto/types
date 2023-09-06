@@ -24,6 +24,7 @@ export type CourierWarehouse = {
   fleetsIds: string;
   appVersion: string | null;
   appInstallationId: string | null;
+  totalOrders: number | null;
   timestamps: ProfileTimestamps;
   createdOn: Timestamp;
   updatedOn?: Timestamp;
