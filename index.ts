@@ -135,6 +135,7 @@ export type {
   GoogleMapsReverseGeocodePayload,
   QueryGoogleMapsPayload,
 } from './location/payloads';
+export type { LocationUpdate, RNBGGeolocation } from './location/update';
 export type {
   AdminRole,
   ManagerPrivatePlatform,
