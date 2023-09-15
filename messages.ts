@@ -14,6 +14,7 @@ export type PushMessageActionType =
 export interface OrderMatchPushMessageData extends CourierOrderRequest {
   action: 'order-request';
   orderId: string;
+  url: string;
 }
 
 export interface OrderUpdatePushData {
