@@ -6,6 +6,7 @@ import {
 import { Timestamp } from '../external/firebase';
 
 import { PayableWith } from '../payment/index';
+import { Place } from '../place';
 import {
   ExternalComponent,
   PlatformAdminComponent,
@@ -16,7 +17,6 @@ import { DispatchingState, DispatchingStatus } from './dispatching';
 import { Fare } from './fare';
 import { OrderFlag } from './flags';
 import { OrderItem } from './item';
-import { Place } from './place';
 import { OrderStatus } from './status';
 import { OrderTag } from './tags';
 import { OrderTip } from './tip';

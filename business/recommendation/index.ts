@@ -1,5 +1,5 @@
 import { Timestamp } from '../../external/firebase';
-import { Place } from '../../order/place';
+import { Place } from '../../place';
 import { Flavor } from '../../platform';
 
 export interface BusinessRecommendation {

@@ -1,6 +1,6 @@
-import { Place } from '../order/place';
 import { PayableWith } from '../payment';
 import { IuguCustomerPaymentMethod, IuguPayableWith } from '../payment/iugu';
+import { Place } from '../place';
 import { UserProfile } from '../profile';
 
 /** @deprecated */

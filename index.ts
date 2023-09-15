@@ -233,7 +233,6 @@ export type {
   TipCourierPayload,
   UpdateOrderStatusPayload,
 } from './order/payloads';
-export type { Address, Place } from './order/place';
 export type {
   OrderCancellation,
   OrderCancellationParams,
@@ -348,6 +347,7 @@ export type {
   UserPermissionRules,
   UserPermissions,
 } from './permissions';
+export type { Address, Place } from './place';
 export type {
   City,
   ClientFlavor,

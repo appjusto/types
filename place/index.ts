@@ -10,10 +10,8 @@ export interface Address {
 export interface Place {
   address: Address;
   additionalInfo?: string;
-  /**
-   * @deprecated
-   */
-  intructions?: string;
   instructions?: string;
+  name?: string;
+  geohash?: string | null;
   location?: LatLng | null;
 }
