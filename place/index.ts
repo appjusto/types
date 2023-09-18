@@ -1,3 +1,4 @@
+import { Timestamp } from '../external/firebase';
 import { LatLng } from '../platform';
 
 export interface Address {
@@ -15,4 +16,6 @@ export interface Place {
   name?: string;
   geohash?: string | null;
   location?: LatLng | null;
+  createdAt: Timestamp;
+  updatedAt: Timestamp;
 }
