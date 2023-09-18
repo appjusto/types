@@ -8,6 +8,7 @@ export interface Address {
 }
 
 export interface Place {
+  accountId?: string;
   address: Address;
   additionalInfo?: string;
   instructions?: string;
