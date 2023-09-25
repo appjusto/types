@@ -30,6 +30,7 @@ export type BusinessWarehouse = {
   culturalFit: boolean;
   inPersonOnboarding: boolean;
   linkOnSocial: boolean;
+  acceptsVR: boolean;
   ads: boolean;
   timestamps: ProfileTimestamps;
   createdOn: Timestamp;
