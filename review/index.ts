@@ -1,4 +1,4 @@
-import { Flavor } from '..';
+import { ClientFlavor, Flavor } from '..';
 import { Timestamp } from '../external/firebase';
 
 export type ReviewType = 'positive' | 'negative';
@@ -10,20 +10,11 @@ export interface Review {
   createdOn?: Timestamp;
 }
 
-export interface OrderConsumerReview {
+export interface OrderReview {
   orderId: string;
-  consumer: {
+  createdBy?: {
     id: string;
-  };
-  courier?: {
-    id: string | null;
-    rating: ReviewType;
-    tags?: ReviewTag[] | null;
-  };
-  business?: {
-    id: string | null;
-    rating: ReviewType;
-    tags?: ReviewTag[] | null;
+    flavor: ClientFlavor;
   };
   platform?: {
     rating: ReviewType;
@@ -32,6 +23,37 @@ export interface OrderConsumerReview {
   nps?: number;
   comment?: string;
   reviewedOn?: Timestamp;
+}
+export interface OrderConsumerReview extends OrderReview {
+  /**
+   * @deprecated
+   */
+  consumer: {
+    id: string;
+  };
+  business?: {
+    id: string | null;
+    rating: ReviewType;
+    tags?: ReviewTag[] | null;
+  };
+  courier?: {
+    id: string | null;
+    rating: ReviewType;
+    tags?: ReviewTag[] | null;
+  };
+}
+
+export interface OrderCourierReview extends OrderReview {
+  business?: {
+    id: string | null;
+    rating: ReviewType;
+    tags?: ReviewTag[] | null;
+  };
+  consumer?: {
+    id: string | null;
+    rating: ReviewType;
+    tags?: ReviewTag[] | null;
+  };
 }
 
 export interface ReviewTag {

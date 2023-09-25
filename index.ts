@@ -392,6 +392,8 @@ export type { ProfileNoteWarehouse } from './profile/warehouse';
 export type { PushCampaign } from './push';
 export type {
   OrderConsumerReview,
+  OrderCourierReview,
+  OrderReview,
   Review,
   ReviewTag,
   ReviewType,
