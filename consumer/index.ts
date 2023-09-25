@@ -20,6 +20,8 @@ export interface ConsumerStatistics {
   totalOrders: number;
   food: ConsumerServiceStatistics;
   p2p: ConsumerServiceStatistics;
+  positiveReviews?: number;
+  negativeReviews?: number;
 }
 
 export interface ConsumerProfile extends UserProfile {
