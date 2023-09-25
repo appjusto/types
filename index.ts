@@ -390,14 +390,7 @@ export type {
 export type { ProfileTag } from './profile/tags';
 export type { ProfileNoteWarehouse } from './profile/warehouse';
 export type { PushCampaign } from './push';
-export type {
-  OrderConsumerReview,
-  OrderCourierReview,
-  OrderReview,
-  Review,
-  ReviewTag,
-  ReviewType,
-} from './review';
+export type { OrderReview, Review, ReviewTag, ReviewType } from './review';
 export type { NPS } from './review/nps';
 export type { OrderReviewWarehouse } from './review/warehouse';
 export type { NewStaffData, StaffProfile } from './staff';

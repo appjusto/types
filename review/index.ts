@@ -16,20 +16,16 @@ export interface OrderReview {
     id: string;
     flavor: ClientFlavor;
   };
-  platform?: {
-    rating: ReviewType;
-    tags?: ReviewTag[] | null;
-  };
-  nps?: number;
-  comment?: string;
-  reviewedOn?: Timestamp;
-}
-export interface OrderConsumerReview extends OrderReview {
   /**
    * @deprecated
    */
   consumer: {
     id: string;
+  };
+  consumerReview?: {
+    id: string | null;
+    rating: ReviewType;
+    tags?: ReviewTag[] | null;
   };
   business?: {
     id: string | null;
@@ -41,19 +37,13 @@ export interface OrderConsumerReview extends OrderReview {
     rating: ReviewType;
     tags?: ReviewTag[] | null;
   };
-}
-
-export interface OrderCourierReview extends OrderReview {
-  business?: {
-    id: string | null;
+  platform?: {
     rating: ReviewType;
     tags?: ReviewTag[] | null;
   };
-  consumer?: {
-    id: string | null;
-    rating: ReviewType;
-    tags?: ReviewTag[] | null;
-  };
+  nps?: number;
+  comment?: string;
+  reviewedOn?: Timestamp;
 }
 
 export interface ReviewTag {
