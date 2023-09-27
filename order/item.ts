@@ -6,6 +6,7 @@ export interface OrderItem {
     price: number; // in cents
     categoryName: string;
     externalId?: string;
+    imageUrl?: string | null;
   };
   quantity: number;
   notes?: string;
