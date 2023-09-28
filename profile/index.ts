@@ -33,7 +33,12 @@ export interface UserProfile {
   notificationPreferences?: NotificationPreferences;
   notificationPreferencesToken?: string;
   notificationLastReceivedAt?: Timestamp;
-  installReferrer?: object | null;
+  installReferrer?: {
+    utm_campaign: string;
+    utm_medium: string;
+    utm_source: string;
+    updatedAt?: Timestamp;
+  } | null;
   pix?: string;
   onboarded?: boolean;
   coordinates?: GeoPoint;
