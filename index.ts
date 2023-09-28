@@ -392,7 +392,6 @@ export type { ProfileNoteWarehouse } from './profile/warehouse';
 export type { PushCampaign } from './push';
 export type { OrderReview, Review, ReviewTag, ReviewType } from './review';
 export type { NPS } from './review/nps';
-export type { OrderReviewWarehouse } from './review/warehouse';
 export type { NewStaffData, StaffProfile } from './staff';
 export type { TaskDocument, UpdateDocumentTaskPayload } from './tasks/update';
 export type { User, UserType } from './users';
