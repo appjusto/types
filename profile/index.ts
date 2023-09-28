@@ -33,6 +33,7 @@ export interface UserProfile {
   notificationPreferences?: NotificationPreferences;
   notificationPreferencesToken?: string;
   notificationLastReceivedAt?: Timestamp;
+  installReferrer?: object | null;
   pix?: string;
   onboarded?: boolean;
   coordinates?: GeoPoint;
