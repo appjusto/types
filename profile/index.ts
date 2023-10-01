@@ -38,6 +38,7 @@ export interface UserProfile {
     utm_medium?: string;
     utm_source?: string;
     updatedAt?: Timestamp;
+    installedAt?: Timestamp | null;
   } | null;
   pix?: string;
   onboarded?: boolean;
