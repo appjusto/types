@@ -22,6 +22,7 @@ export interface User {
   cpf?: string;
   phone?: string;
   appInstallationId?: string;
+  accessCode?: string;
   blocked?: boolean;
   comment?: string;
 }

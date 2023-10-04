@@ -5,11 +5,6 @@ import { Timestamp } from '../external/firebase';
 
 export type OrderStatusTimestamps = {
   [K in OrderStatus]?: Timestamp;
-} & {
-  /** @deprecated */
-  dispatchingDeclined?: Timestamp;
-  /** @deprecated */
-  matchingEnded?: Timestamp;
 };
 
 // dispatching timestamps

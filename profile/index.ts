@@ -15,6 +15,8 @@ export type ProfileSituation =
 
 export type ProfileTimestamps = {
   [K in ProfileSituation]?: Timestamp;
+} & {
+  firstApproved?: Timestamp;
 };
 
 export interface UserProfile {
@@ -33,13 +35,6 @@ export interface UserProfile {
   notificationPreferences?: NotificationPreferences;
   notificationPreferencesToken?: string;
   notificationLastReceivedAt?: Timestamp;
-  installReferrer?: {
-    utm_campaign?: string;
-    utm_medium?: string;
-    utm_source?: string;
-    updatedAt?: Timestamp;
-    installedAt?: Timestamp | null;
-  } | null;
   pix?: string;
   onboarded?: boolean;
   coordinates?: GeoPoint;
@@ -57,6 +52,13 @@ export interface UserProfile {
   appVersion?: string;
   webAppVersion?: string;
   appInstallationId?: string | null;
+  installReferrer?: {
+    utm_campaign?: string;
+    utm_medium?: string;
+    utm_source?: string;
+    updatedAt?: Timestamp;
+    installedAt?: Timestamp | null;
+  } | null;
   appIp?: string | null;
   userAgent?: string;
   timestamps: ProfileTimestamps;
