@@ -28,14 +28,6 @@ export interface BusinessStatistics {
   averagePreparationTime: number; // in seconds
   averageTicketPrice: number;
   averageWaitingTime: number;
-  /**
-   * @deprecated
-   */
-  positiveReviews: number;
-  /**
-   * @deprecated
-   */
-  negativeReviews: number;
 }
 
 export type CookingTimeMode = 'manual' | 'auto';
@@ -106,6 +98,7 @@ export interface Business {
   deliveryRange?: number; // in meters
   statistics?: BusinessStatistics;
   reviews?: BusinessReviews;
+  reviewsByCouriers?: BusinessReviews;
   onboarding?: string;
   logoExists: boolean;
   coverImageExists: boolean;
