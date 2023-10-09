@@ -23,6 +23,7 @@ export type BusinessWarehouse = {
   state: string | null;
   neighborhood: string | null;
   reviews: BusinessReviews;
+  reviewsByCouriers: BusinessReviews;
   hasInsurance: boolean;
   hasLogistics: boolean;
   appjustoOnly: boolean;
