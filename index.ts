@@ -83,7 +83,7 @@ export type {
   EmailTaskPayloadFrom,
   OrderFraudEmailPayload,
 } from './emails/payloads';
-export {
+export type {
   HubsterStore,
   HubsterStoreMenuSource,
   HubsterStoreStatus,
@@ -307,7 +307,7 @@ export type {
   PixOrderPayments,
 } from './payment/iugu';
 export type { TransferOptions } from './payment/iugu/api/transfer';
-export { IuguCard } from './payment/iugu/card';
+export type { IuguCard } from './payment/iugu/card';
 export type { SaveIuguCardPayload } from './payment/iugu/card/payloads';
 export type { IuguCustomer } from './payment/iugu/customer';
 export type {
