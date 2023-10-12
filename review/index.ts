@@ -42,6 +42,7 @@ export interface OrderReview {
     tags?: ReviewTag[] | null;
   };
   nps?: number;
+  npsVersion?: '10';
   comment?: string;
   reviewedOn?: Timestamp;
 }
