@@ -1,1 +1,1 @@
-export type ProfileTag = 'safe' | 'unsafe' | 'staff' | 'investor';
+export type ProfileTag = 'safe' | 'unsafe' | 'staff' | 'investor' | 'RPO';

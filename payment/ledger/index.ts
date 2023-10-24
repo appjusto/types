@@ -10,7 +10,6 @@ export type LedgerEntryOperation =
   // para consumidores
   | 'refund-credit' // crédito para consumidores em caso de reembolso parcial
   | 'delivery-credit' // crédito para consumidores em caso de diferença de delivery
-  | 'marketing-credit' // crédito de marketing para consumidores
   // para restaurantes
   | 'business-insurance' // pagamento de cobertura em caso de extravios, etc.
   | 'business-credit' // repasse de crédito de consumidores para restaurantes
@@ -18,6 +17,7 @@ export type LedgerEntryOperation =
   | 'commission' // para cobrar comissão de pedidos pagos por VR;
   | 'business-refund-debit' // para cobrar créditos que foram dados para os consumidores em reembolsos parciais
   // geral
+  | 'marketing-credit' // crédito de marketing para consumidores e entregadores
   | 'services-debit' // serviços extras como flyers
   | 'balance-adjustment' // ajuste de erros de conciliação
   | 'same-owner-accounts' // transferência entre subcontas
