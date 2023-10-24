@@ -68,9 +68,9 @@ export interface UserProfile {
 
 export interface ProfileNote {
   note: string;
-  staffId: string;
-  staffEmail: string;
+  staffId?: string;
+  staffEmail?: string;
   staffName?: string;
   createdOn: Timestamp;
-  updatedOn: Timestamp;
+  updatedOn?: Timestamp;
 }
