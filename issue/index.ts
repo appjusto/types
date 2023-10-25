@@ -8,7 +8,7 @@ export interface Incident {
     id: string;
     flavor: ClientFlavor;
   };
-  orderId?: string;
+  orderId?: string | null;
   comment?: string | null;
   createdAt?: Timestamp;
 }
