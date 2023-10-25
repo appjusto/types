@@ -69,6 +69,7 @@ export type {
   CourierStatistics,
   CourierStatus,
 } from './courier';
+export type { CourierCosts } from './courier/costs';
 export type {
   CourierOrderRequest,
   CourierOrderRequestSituation,
