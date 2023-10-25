@@ -1,4 +1,4 @@
-import { LatLng } from '..';
+import { InstallReferrer, LatLng } from '..';
 
 export interface OrderConsumer {
   id: string;
@@ -10,5 +10,6 @@ export interface OrderConsumer {
   invoiceWithCPF?: boolean;
   coordinates?: LatLng | null;
   appInstallationId?: string | null;
+  installReferrer?: InstallReferrer | null;
   totalOrders?: number;
 }

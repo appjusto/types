@@ -1,4 +1,4 @@
-import { ProfileSituation, ProfileTimestamps } from '..';
+import { InstallReferrer, ProfileSituation, ProfileTimestamps } from '..';
 import { GeoPoint, Timestamp } from '../external/firebase';
 
 export type ConsumerWarehouse = {
@@ -14,6 +14,7 @@ export type ConsumerWarehouse = {
   totalOrders: number | null;
   platform: string | null;
   coordinates: GeoPoint | null;
+  installReferrer?: InstallReferrer | null;
   timestamps: ProfileTimestamps;
   createdOn: Timestamp;
   updatedOn?: Timestamp;

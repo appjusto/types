@@ -19,6 +19,13 @@ export type ProfileTimestamps = {
   firstApproved?: Timestamp;
 };
 
+export interface InstallReferrer {
+  utm_campaign?: string;
+  utm_medium?: string;
+  utm_source?: string;
+  updatedAt?: Timestamp;
+  installedAt?: Timestamp | null;
+}
 export interface UserProfile {
   code: string;
   email: string;
@@ -52,13 +59,7 @@ export interface UserProfile {
   appVersion?: string;
   webAppVersion?: string;
   appInstallationId?: string | null;
-  installReferrer?: {
-    utm_campaign?: string;
-    utm_medium?: string;
-    utm_source?: string;
-    updatedAt?: Timestamp;
-    installedAt?: Timestamp | null;
-  } | null;
+  installReferrer?: InstallReferrer | null;
   appIp?: string | null;
   userAgent?: string;
   timestamps: ProfileTimestamps;

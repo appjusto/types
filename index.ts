@@ -376,6 +376,7 @@ export type {
   ServiceStatistics,
 } from './platform/statistics';
 export type {
+  InstallReferrer,
   ProfileNote,
   ProfileSituation,
   ProfileTimestamps,

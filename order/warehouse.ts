@@ -2,6 +2,7 @@ import { OrderArrivals, OrderType } from '.';
 import {
   ExternalComponent,
   FareDetails,
+  InstallReferrer,
   OrderDispatchingTimestamps,
   OrderStatus,
   OrderStatusTimestamps,
@@ -20,6 +21,7 @@ export interface OrderWarehouse {
     phone: string | null;
     cpf: string | null;
     totalOrders: number | null;
+    installReferrer?: InstallReferrer | null;
   };
   courier: {
     id: string | null;
