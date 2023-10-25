@@ -1,3 +1,5 @@
+import { Timestamp } from '../external/firebase';
+
 export interface CourierCosts {
   ordersPerDay: number;
   hoursPerDay: number;
@@ -21,4 +23,5 @@ export interface CourierCosts {
   otherCostsPerDay: number;
   otherCostsPerYear: number;
   email: string;
+  updatedAt: Timestamp;
 }
