@@ -8,4 +8,6 @@ export type BusinessTag =
   | 'cultural-fit'
   | 'in-person-onboarding'
   | 'link-on-social'
-  | 'ads';
+  | 'ads'
+  | 'consumer-home'
+  | 'dispatch-by-courier';
