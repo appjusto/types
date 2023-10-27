@@ -5,7 +5,8 @@ import { Flavor } from '../platform';
 export type ChatMessageType =
   | 'business-consumer'
   | 'business-courier'
-  | 'consumer-courier';
+  | 'consumer-courier'
+  | 'available-couriers';
 
 export interface ChatMessageUser {
   agent: Flavor;
@@ -14,12 +15,12 @@ export interface ChatMessageUser {
 }
 
 export interface ChatMessage {
-  orderId: string;
+  orderId?: string;
   orderCode?: string;
-  participantsIds: string[];
+  participantsIds?: string[];
   type: ChatMessageType;
   from: ChatMessageUser;
-  to: ChatMessageUser;
+  to?: ChatMessageUser;
   message: string;
   timestamp: Timestamp;
   orderStatus?: OrderStatus;
