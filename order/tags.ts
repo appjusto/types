@@ -1,1 +1,1 @@
-export type OrderTag = 'motorcycle-only';
+export type OrderTag = 'motorcycle-only' | 'dispatch-by-courier';
