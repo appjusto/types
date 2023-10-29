@@ -33,6 +33,7 @@ export interface UserProfile {
   name?: string;
   surname?: string;
   birthday?: string;
+  about?: string;
   cpf?: string;
   phone?: string | null;
   countryCode?: string;
