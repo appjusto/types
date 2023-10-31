@@ -1,4 +1,5 @@
-import { GeoPoint, Timestamp } from '../external/firebase';
+import { GeolocatedDocument } from '.';
+import { Timestamp } from '../external/firebase';
 import { ClientFlavor } from '../platform';
 
 export interface RNBGGeolocation {
@@ -26,12 +27,7 @@ export interface RNBGGeolocation {
   extras: {};
 }
 
-export interface LocationUpdate {
-  coordinates?: GeoPoint;
-  g?: {
-    geopoint: GeoPoint;
-    geohash: string;
-  };
+export interface LocationUpdate extends GeolocatedDocument {
   flavor: ClientFlavor;
   accountId: string | null;
   orderId: string | null;

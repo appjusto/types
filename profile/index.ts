@@ -1,5 +1,6 @@
 import { Issue, NPS } from '..';
-import { GeoPoint, Timestamp } from '../external/firebase';
+import { Timestamp } from '../external/firebase';
+import { GeolocatedDocument } from '../location';
 import { NotificationPreferences } from './notifications';
 import { ProfileTag } from './tags';
 
@@ -26,7 +27,7 @@ export interface InstallReferrer {
   updatedAt?: Timestamp;
   installedAt?: Timestamp | null;
 }
-export interface UserProfile {
+export interface UserProfile extends GeolocatedDocument {
   code: string;
   email: string;
   situation: ProfileSituation;
@@ -45,11 +46,6 @@ export interface UserProfile {
   notificationLastReceivedAt?: Timestamp;
   pix?: string;
   onboarded?: boolean;
-  coordinates?: GeoPoint;
-  g?: {
-    geopoint: GeoPoint;
-    geohash: string;
-  };
   state?: string;
   city?: string;
   isPasswordActive?: boolean;
