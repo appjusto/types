@@ -10,7 +10,7 @@ export type ChatMessageType =
 
 export interface ChatMessageUser {
   agent: Flavor;
-  id: string;
+  id?: string;
   name?: string;
 }
 
