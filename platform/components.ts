@@ -1,4 +1,5 @@
 export type PlatformAdminComponent =
+  | 'orders-web'
   | 'admin-web'
   | 'admin-desktop'
   | 'admin-mobile';
