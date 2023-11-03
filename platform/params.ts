@@ -10,6 +10,7 @@ export interface PlatformParams {
     bicyclingDurationFactor: number; // multipler used to calculate duration for byciling
     averageWaitingTime: number; // in seconds
     minActiveCouriersInFleet: number; // minimum number of couriers that a fleet needs in order to receive an OrderRequest
+    strategy?: 'v1' | 'v2';
   };
   marketplace: {
     minWithdrawValue: number;
