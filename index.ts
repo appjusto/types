@@ -142,6 +142,7 @@ export type {
   AdminRole,
   ManagerPrivatePlatform,
   ManagerProfile,
+  ManagerRoles,
   ManagerWithMetadata,
   ManagerWithRole,
   NewManagerData,
