@@ -1,5 +1,6 @@
 import { OrderStatus } from '..';
 import { Timestamp } from '../external/firebase';
+import { GeolocatedDocument } from '../location';
 import { Flavor } from '../platform';
 
 export type ChatMessageType =
@@ -10,11 +11,11 @@ export type ChatMessageType =
 
 export interface ChatMessageUser {
   agent: Flavor;
-  id: string;
+  id?: string;
   name?: string;
 }
 
-export interface ChatMessage {
+export interface ChatMessage extends GeolocatedDocument {
   orderId?: string;
   orderCode?: string;
   participantsIds?: string[];

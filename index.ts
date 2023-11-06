@@ -129,6 +129,7 @@ export type { Generic } from './generics';
 export type { Invoice, InvoiceFingerprint, InvoiceType } from './invoice';
 export type { InvoiceWarehouse } from './invoice/warehouse';
 export type { Incident } from './issue';
+export type { GeolocatedDocument } from './location';
 export type { RouteDetails } from './location/directions';
 export type {
   GoogleMapsGeocodePayload,
@@ -141,6 +142,7 @@ export type {
   AdminRole,
   ManagerPrivatePlatform,
   ManagerProfile,
+  ManagerRoles,
   ManagerWithMetadata,
   ManagerWithRole,
   NewManagerData,

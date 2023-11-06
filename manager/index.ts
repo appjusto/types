@@ -17,7 +17,12 @@ export interface NewManagerData {
   role: Role | AdminRole;
 }
 
+export type ManagerRoles = {
+  [k: string]: AdminRole;
+};
+
 export interface ManagerProfile extends UserProfile {
+  roles?: ManagerRoles;
   lastBusinessId?: string | null;
   webAppVersion?: string;
   desktopAppVersion?: string;

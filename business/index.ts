@@ -1,4 +1,5 @@
-import { GeoPoint, Timestamp } from '../external/firebase';
+import { Timestamp } from '../external/firebase';
+import { GeolocatedDocument } from '../location';
 import { Fulfillment } from '../order';
 import { PayableWith } from '../payment';
 import { LatLng } from '../platform';
@@ -65,7 +66,7 @@ export type BusinessPhone = {
   calls: boolean;
   whatsapp: boolean;
 };
-export interface Business {
+export interface Business extends GeolocatedDocument {
   code: string;
   type: BusinessType;
   name?: string;
@@ -80,11 +81,6 @@ export interface Business {
   accountManagerId?: string | null;
   customerSuccessId?: string | null;
   businessAddress?: BusinessAddress;
-  coordinates?: GeoPoint;
-  g?: {
-    geopoint: GeoPoint;
-    geohash: string;
-  };
   status: BusinessStatus;
   situation: ProfileSituation;
   enabled: boolean;

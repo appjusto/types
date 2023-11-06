@@ -1,4 +1,5 @@
 import { Timestamp } from '../external/firebase';
+import { RouteDetails } from '../location/directions';
 import { OrderType } from '../order';
 import { Issue } from '../order/issues';
 import { LatLng } from '../platform';
@@ -32,6 +33,7 @@ export interface CourierOrderRequest {
   locationFee: number;
   origin: LatLng;
   routePolylineToOrigin?: string;
+  route?: RouteDetails;
   distanceToOrigin: number;
   distanceToOriginWhenAccepted?: number;
   distance: number;
