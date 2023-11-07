@@ -34,6 +34,7 @@ export interface ChatPublicMessage extends GeolocatedDocument {
   from: {
     agent: Flavor;
     id?: string;
+    name?: string;
   };
   message: string;
   timestamp: Timestamp;
