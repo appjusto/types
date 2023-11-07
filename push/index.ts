@@ -16,6 +16,7 @@ export interface PushCampaign {
   scheduledTo: Timestamp;
   taskNames?: string[];
   audience?: number;
+  url?: string;
   createdOn: Timestamp;
   updatedOn?: Timestamp;
 }
