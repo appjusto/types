@@ -186,6 +186,7 @@ export type {
   ChatMessage,
   ChatMessageType,
   ChatMessageUser,
+  ChatPublicMessage,
 } from './order/chat';
 export type { OrderConsumer } from './order/consumer';
 export type { OrderCourier } from './order/courier';

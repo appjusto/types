@@ -6,24 +6,31 @@ import { Flavor } from '../platform';
 export type ChatMessageType =
   | 'business-consumer'
   | 'business-courier'
-  | 'consumer-courier'
-  | 'available-couriers';
+  | 'consumer-courier';
 
 export interface ChatMessageUser {
   agent: Flavor;
-  id?: string;
+  id: string;
   name?: string;
 }
 
 export interface ChatMessage extends GeolocatedDocument {
-  orderId?: string;
+  orderId: string;
   orderCode?: string;
-  participantsIds?: string[];
+  participantsIds: string[];
   type: ChatMessageType;
   from: ChatMessageUser;
-  to?: ChatMessageUser;
+  to: ChatMessageUser;
   message: string;
   timestamp: Timestamp;
   orderStatus?: OrderStatus;
   read?: boolean;
+}
+
+export interface ChatPublicMessage extends GeolocatedDocument {
+  type: 'available-couriers';
+  from: {
+    agent: Flavor;
+    id?: string;
+  };
 }
