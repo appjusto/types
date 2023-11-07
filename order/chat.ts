@@ -27,8 +27,10 @@ export interface ChatMessage extends GeolocatedDocument {
   read?: boolean;
 }
 
+export type ChatPublicMessageType = 'available-couriers';
+
 export interface ChatPublicMessage extends GeolocatedDocument {
-  type: 'available-couriers';
+  type: ChatPublicMessageType;
   from: {
     agent: Flavor;
     id?: string;
