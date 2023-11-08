@@ -20,6 +20,7 @@ export interface OrderMatchPushMessageData extends CourierOrderRequest {
 export interface OrderUpdatePushData {
   action: 'order-update';
   orderId: string;
+  url: string;
 }
 
 export interface ChatPushMessageData {
@@ -27,11 +28,13 @@ export interface ChatPushMessageData {
   orderId: string;
   orderStatus: OrderStatus;
   from: ChatMessageUser;
+  url: string;
 }
 
 export interface NavigateBusinessPushData {
   action: 'navigate-business';
   businessId: string;
+  url: string;
 }
 
 export interface NavigatePushData {
