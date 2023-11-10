@@ -173,6 +173,7 @@ export type {
   PushMessageData,
   PushReceipt,
 } from './messages';
+
 export type {
   Fulfillment,
   Order,
@@ -290,6 +291,24 @@ export type {
   UpdateEmailPayload,
   VerifyCourierProfilePayload,
 } from './payloads/profile';
+export type {
+  BraspagPayment as AleloPayment,
+  BraspagOrderPayments,
+  BraspagPayableWith,
+} from './payment/braspag';
+export type { AleloCard, AleloPayableWith } from './payment/braspag/alelo/card';
+export type {
+  AleloStore,
+  AleloStoreStatus,
+} from './payment/braspag/alelo/store';
+export type {
+  TicketCard,
+  TicketPayableWith,
+} from './payment/braspag/ticket/card';
+export type {
+  TicketStore,
+  TicketStoreStatus,
+} from './payment/braspag/ticket/store';
 export type { Card } from './payment/card';
 export type {
   DeleteCardPayload,
