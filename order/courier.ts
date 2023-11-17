@@ -5,6 +5,7 @@ import { LatLng } from '../platform';
 export interface OrderCourier {
   id?: string;
   name?: string;
+  about?: string;
   phone?: string;
   notificationToken?: string | null;
   location?: LatLng;
