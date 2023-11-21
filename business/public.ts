@@ -1,7 +1,7 @@
 import { Business } from '.';
 import { Timestamp } from '../external/firebase';
 
-export type BusinessProfile = Pick<
+export type PublicBusiness = Pick<
   Business,
   | 'acceptedPaymentMethods'
   | 'averageDiscount'
@@ -11,13 +11,12 @@ export type BusinessProfile = Pick<
   | 'cuisine'
   | 'deliveryRange'
   | 'description'
-  | 'enabled'
   | 'fulfillment'
   | 'g'
   | 'name'
   | 'preparationModes'
   | 'schedules'
   | 'slug'
-  | 'status'
   | 'services'
+  | 'tags'
 > & { createdAt: Timestamp; updatedAt: Timestamp | null };
