@@ -8,5 +8,5 @@ export interface Card {
   hash?: string | null;
   createdAt: Timestamp;
   updatedAt?: Timestamp;
-  status: 'enabled' | 'disabled';
+  status: 'enabled' | 'disabled' | 'blocked';
 }
