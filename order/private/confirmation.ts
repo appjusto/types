@@ -3,4 +3,5 @@ export interface OrderConfirmation {
   handshakeResponse?: string | null;
   deliveredTo?: string | null;
   comment?: string | null;
+  completedBy?: string;
 }
