@@ -11,7 +11,7 @@ export interface Address {
 export interface Place {
   accountId?: string;
   address: Address;
-  additionalInfo?: string;
+  additionalInfo?: string | null;
   instructions?: string;
   name?: string;
   geohash?: string | null;
