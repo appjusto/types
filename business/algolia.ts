@@ -4,7 +4,13 @@ import {
   BusinessStatus,
   PreparationMode,
 } from '.';
-import { BusinessReviews, BusinessSchedule, BusinessTag } from '..';
+import {
+  BusinessReviews,
+  BusinessSchedule,
+  BusinessTag,
+  Fulfillment,
+  PayableWith,
+} from '..';
 import { Timestamp } from '../external/firebase';
 import { LatLng2 } from '../platform';
 
@@ -23,6 +29,8 @@ export interface BusinessAlgolia {
   onboarding?: string;
   description?: string;
   businessAddress?: BusinessAddress;
+  fulfillment?: Fulfillment[];
+  acceptedPaymentMethods?: PayableWith[];
   preparationModes?: PreparationMode[];
   tags?: BusinessTag[];
   cuisine?: string;
