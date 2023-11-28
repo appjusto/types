@@ -5,6 +5,7 @@ export type PublicBusiness = Pick<
   Business,
   | 'acceptedPaymentMethods'
   | 'averageDiscount'
+  | 'averageCookingTime'
   | 'businessAddress'
   | 'coordinates'
   | 'cnpj'
@@ -14,6 +15,7 @@ export type PublicBusiness = Pick<
   | 'fulfillment'
   | 'g'
   | 'name'
+  | 'reviews'
   | 'preparationModes'
   | 'schedules'
   | 'slug'
