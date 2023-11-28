@@ -45,8 +45,6 @@ export interface CourierFleet extends WithId<FleetDetails> {
 
 export interface CourierProfile extends UserProfile {
   status: CourierStatus;
-  /** @deprecated */
-  fleet?: CourierFleet;
   fleetsIds: string[];
   mode: CourierMode;
   statistics: CourierStatistics; // readonly
