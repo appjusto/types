@@ -14,11 +14,13 @@ export type PublicBusiness = Pick<
   | 'description'
   | 'fulfillment'
   | 'g'
+  | 'minHoursForScheduledOrders'
   | 'name'
   | 'reviews'
   | 'preparationModes'
   | 'schedules'
   | 'slug'
+  | 'status'
   | 'services'
   | 'tags'
 > & { createdAt: Timestamp; updatedAt: Timestamp | null };
