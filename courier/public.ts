@@ -6,5 +6,4 @@ export type PublicCourier = Pick<
   'about' | 'code' | 'fleetsIds' | 'mode' | 'statistics' | 'name'
 > & {
   createdAt: Timestamp;
-  updatedAt: Timestamp | null;
 };
