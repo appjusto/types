@@ -52,7 +52,6 @@ export interface UserProfile extends GeolocatedDocument {
   tags?: ProfileTag[];
   nps: NPS;
   // metadata
-  isAnonymous?: boolean;
   platform?: string;
   appVersion?: string;
   webAppVersion?: string;
