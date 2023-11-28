@@ -3,14 +3,7 @@ import { Timestamp } from '../external/firebase';
 
 export type PublicCourier = Pick<
   CourierProfile,
-  | 'about'
-  | 'code'
-  | 'fleetsIds'
-  | 'mode'
-  | 'situation'
-  | 'statistics'
-  | 'name'
-  | 'surname'
+  'about' | 'code' | 'fleetsIds' | 'mode' | 'statistics' | 'name'
 > & {
   createdAt: Timestamp;
   updatedAt: Timestamp | null;
