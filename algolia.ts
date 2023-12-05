@@ -49,6 +49,7 @@ export interface ProductAlgolia {
   enabled: boolean;
   price: number;
   statistics: ProductStatistics;
+  imageUrl?: string | null;
   business: {
     id: string;
     name: string;
