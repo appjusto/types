@@ -10,4 +10,6 @@ export type BusinessTag =
   | 'link-on-social'
   | 'ads'
   | 'consumer-home'
+  | 'consumer-home-mousse'
+  | 'consumer-home-vr'
   | 'dispatch-by-courier';
