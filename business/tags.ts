@@ -11,5 +11,4 @@ export type BusinessTag =
   | 'ads'
   | 'consumer-home'
   | 'consumer-home-mousse'
-  | 'consumer-home-vr'
   | 'dispatch-by-courier';
