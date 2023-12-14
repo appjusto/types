@@ -7,6 +7,13 @@ export interface FleetFareParams {
   additionalPerKmAfterThreshold: number; // (in cents) fee charged every km after distanceThreshold
   maxDistance: number; // (in meters) maximum trip distance
   maxDistanceToOrigin: number; // (in meters) maximum distance to the pickup place
+  predefined?: [
+    {
+      minDistance: number;
+      maxDistance: number;
+      fee: number;
+    }
+  ];
 }
 
 export type FleetType = 'public' | 'private';

@@ -266,7 +266,11 @@ export type {
 } from './order/timestamps';
 export type { OrderTip } from './order/tip';
 export type { OrderItemWarehouse, OrderWarehouse } from './order/warehouse';
-export type { BasePayload, FetchTotalCouriersNearbyPayload } from './payloads';
+export type {
+  BasePayload,
+  BasePayloadMeta,
+  FetchTotalCouriersNearbyPayload,
+} from './payloads';
 export type {
   AdvanceReceivablesByAmountPayload,
   AdvanceReceivablesPayload,
