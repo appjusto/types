@@ -15,8 +15,10 @@ export interface PlatformAccess {
   };
   minVersions: {
     consumer: string | null;
+    consumerWeb: string | null;
     courier: string | null;
     businessWeb: string | null;
     businessApp: string | null;
+    ordersWeb: string | null;
   };
 }
