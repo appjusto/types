@@ -59,7 +59,7 @@ export interface Order {
   cookingTime?: number | null; // in seconds
   // places & route
   origin?: Place;
-  destination?: Place | null;
+  destination?: (Place & { id?: string }) | null;
   route?: OrderRoute | null;
   // estimates
   arrivals?: OrderArrivals;
