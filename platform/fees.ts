@@ -16,6 +16,10 @@ export interface PlatformFees {
     courierEnabled: boolean;
   };
   logistics: Fee;
+  subscription: {
+    ordersThreshold: number;
+    value: number;
+  };
   highDemand: boolean;
   processing: {
     iugu: {
