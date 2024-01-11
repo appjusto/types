@@ -13,6 +13,7 @@ export type LedgerEntryOperation =
   // para restaurantes
   | 'business-insurance' // pagamento de cobertura em caso de extravios, etc.
   | 'business-credit' // repasse de crédito de consumidores para restaurantes
+  | 'business-subscription' // mensalidade
   // para appjusto
   | 'commission' // para cobrar comissão de pedidos pagos por VR;
   | 'business-refund-debit' // para cobrar créditos que foram dados para os consumidores em reembolsos parciais
