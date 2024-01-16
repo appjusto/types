@@ -78,6 +78,7 @@ export interface Order {
   flags?: OrderFlag[];
   tags?: OrderTag[];
   // metadata
+  placedFrom?: 'mobile' | 'web';
   acceptedFrom?: 'backoffice' | PlatformAdminComponent | ExternalComponent;
   timestamps: OrderStatusTimestamps;
   createdOn: Timestamp;
