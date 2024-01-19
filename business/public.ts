@@ -23,4 +23,5 @@ export type PublicBusiness = Pick<
   | 'status'
   | 'services'
   | 'tags'
+  | 'phone'
 > & { createdAt: Timestamp; updatedAt: Timestamp | null };
