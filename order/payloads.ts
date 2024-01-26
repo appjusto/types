@@ -1,4 +1,10 @@
-import { LatLng, OrderStatus, PayableWith, VRPayableWith } from '..';
+import {
+  BusinessPayableWith,
+  LatLng,
+  OrderStatus,
+  PayableWith,
+  VRPayableWith,
+} from '..';
 import { BasePayload } from '../payloads';
 import { WithId } from '../platform';
 import { Issue } from './issues';
@@ -29,6 +35,11 @@ export type PlaceOrderPayloadPaymentCreditCard = {
 export type PlaceOrderPayloadPaymentVR = {
   payableWith: VRPayableWith;
   cardId: string;
+  useCredits?: boolean;
+};
+
+export type PlaceOrderPayloadPaymentHandledByBusiness = {
+  payableWith: BusinessPayableWith;
   useCredits?: boolean;
 };
 

@@ -233,6 +233,7 @@ export type {
   PlaceOrderPayload,
   PlaceOrderPayloadPayment,
   PlaceOrderPayloadPaymentCreditCard,
+  PlaceOrderPayloadPaymentHandledByBusiness,
   PlaceOrderPayloadPaymentPix,
   PlaceOrderPayloadPaymentVR,
   RejectOrderPayload,
