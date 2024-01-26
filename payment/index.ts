@@ -22,7 +22,15 @@ export type PaymentStatus =
   | 'unauthorized';
 
 export type PaymentProcessor = 'iugu' | 'vr' | 'appjusto';
-export type PayableWith = IuguPayableWith | VRPayableWith | 'credits';
+export type BusinessPayableWith =
+  | 'cash'
+  | 'business-debit-card'
+  | 'business-credit-card';
+export type PayableWith =
+  | IuguPayableWith
+  | VRPayableWith
+  | BusinessPayableWith
+  | 'credits';
 export type PaymentService = 'food' | 'p2p' | 'tip';
 export interface Payment {
   service: PaymentService;

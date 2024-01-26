@@ -302,6 +302,7 @@ export type {
   SaveCardResponse,
 } from './payment/card/payloads';
 export type {
+  BusinessPayableWith,
   OrderPayments,
   PayableWith,
   Payment,
