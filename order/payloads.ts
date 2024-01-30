@@ -51,7 +51,8 @@ export type PlaceOrderPayloadPayment =
   | PlaceOrderPayloadPaymentPix
   | PlaceOrderPayloadPaymentCreditCard
   | PlaceOrderPayloadPaymentVR
-  | PlaceOrderPayloadPaymentCredits;
+  | PlaceOrderPayloadPaymentCredits
+  | PlaceOrderPayloadPaymentHandledByBusiness;
 
 export interface PlaceOrderPayload extends OrderPayload {
   fleetId?: string;
