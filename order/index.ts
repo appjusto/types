@@ -50,6 +50,7 @@ export interface Order {
   // payment & fulfillment
   fare?: Fare;
   paymentMethod?: PayableWith;
+  paymentInfo?: string;
   fulfillment?: Fulfillment;
   scheduledTo?: Timestamp | null;
   confirmedScheduledTo?: Timestamp | null;
