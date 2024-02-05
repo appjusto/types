@@ -32,6 +32,7 @@ export type BusinessWarehouse = {
   inPersonOnboarding: boolean;
   linkOnSocial: boolean;
   acceptsVR: boolean;
+  acceptsDirectPayment: boolean;
   ads: boolean;
   timestamps: ProfileTimestamps;
   createdOn: Timestamp;
