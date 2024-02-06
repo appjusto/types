@@ -1,6 +1,7 @@
 export type OrderFlag =
   | 'unsafe'
   | 'waiting-confirmation'
+  | 'notify-consumer'
   | 'matching'
   | 'outsource'
   | 'pick-up'

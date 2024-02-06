@@ -12,6 +12,7 @@ export interface PlatformManagement {
     };
     flags: {
       confirmed: number; // in seconds
+      notifyConsumer: number; // in seconds
       matching: number; // in seconds
       outsource: number; // in seconds
       arrivedPickup: number; // in seconds
