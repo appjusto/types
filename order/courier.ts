@@ -14,5 +14,6 @@ export interface OrderCourier {
   mode?: CourierMode;
   insured?: boolean;
   statistics?: CourierStatistics;
+  shareLink?: string;
   updatedOn?: Timestamp;
 }
