@@ -26,6 +26,9 @@ export interface PlatformManagement {
     chargeDelay: number;
     version?: string;
   };
+  businesses: {
+    callToConfirm: number;
+  };
   location: {
     database: {
       enabled: boolean;
