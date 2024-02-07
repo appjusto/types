@@ -27,7 +27,7 @@ export interface PlatformManagement {
     version?: string;
   };
   businesses: {
-    callToConfirm: number;
+    callToConfirm: boolean;
   };
   location: {
     database: {
