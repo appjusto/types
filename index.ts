@@ -220,6 +220,7 @@ export type {
   CancelOrderPayload,
   CompleteDeliveryPayload,
   DropOrderPayload,
+  FetchSharedOrderPayload,
   GetCancellationInfoPayload,
   GetCancellationInfoResult,
   GetOrderQuotesPayload,
@@ -250,6 +251,7 @@ export type {
   OrderMatching,
   OrderMatchingRejection,
 } from './order/private/matching';
+export type { SharedOrder } from './order/shared';
 export type {
   FoodOrderStatus,
   OrderStatus,
