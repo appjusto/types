@@ -124,3 +124,7 @@ export interface UpdateOrderStatusPayload extends OrderPayload {
   newStatus: OrderStatus;
   currentStatus?: OrderStatus;
 }
+
+export interface FetchSharedOrderPayload extends OrderPayload {
+  shareToken: string;
+}
