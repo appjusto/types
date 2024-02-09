@@ -1,10 +1,11 @@
-import { DispatchingStatus, FareDetails, OrderRoute, OrderType } from '..';
+import { FareDetails, OrderRoute, OrderType } from '..';
 import { Timestamp } from '../external/firebase';
 import { FleetType } from '../fleet';
 
 export interface Matching {
   type: OrderType;
-  status: DispatchingStatus;
+  scheduledTo?: Timestamp | null;
+  status: 'matchable' | 'unmatchable';
   fleet: {
     id: string;
     type: FleetType;
