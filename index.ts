@@ -150,6 +150,7 @@ export type {
   Role,
 } from './manager';
 export type { ManagerWarehouse } from './manager/warehouse';
+export type { Matching } from './matching';
 export type { Ordering } from './menu';
 export type { Category } from './menu/category';
 export type { Complement, ComplementGroup } from './menu/complements';

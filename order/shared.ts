@@ -14,6 +14,7 @@ export type SharedOrder = Pick<
   | 'origin'
   | 'destination'
   | 'route'
+  | 'fare'
   | 'arrivals'
   | 'courier'
   | 'dispatchingStatus'
