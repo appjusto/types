@@ -53,6 +53,7 @@ export type {
   IuguMarketplaceAccountAdvanceResponse,
   IuguMarketplaceAccountAdvanceSimulation,
   IuguMarketplaceAccountInfo,
+  IuguMarketplaceAccountPixOutRequest,
   IuguMarketplaceAccountReceivableItem,
   IuguMarketplaceAccountReceivables,
   IuguMarketplaceAccountTokens,
@@ -65,6 +66,7 @@ export type {
   IuguMarketplaceTransferRequest,
   IuguMarketplaceTransferResponse,
   IuguMarketplaceUpdateBankAccount,
+  PixKeyType,
 } from './api/account';
 export type {
   IuguAdhocCharge,
