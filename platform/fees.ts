@@ -24,7 +24,7 @@ export interface PlatformFees {
   processing: {
     iugu: {
       [k in IuguPayableWith]: Fee;
-    } & { withdraw: number };
+    } & { withdraw: number; instantWithdraw: number };
     vr: {
       vr: Fee;
     };

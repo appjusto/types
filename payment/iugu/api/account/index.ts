@@ -151,6 +151,8 @@ export type {
   IuguMarketplaceTransferResponse,
 } from './transfer';
 export type {
+  IuguMarketplaceAccountPixOutRequest,
   IuguMarketplaceAccountWithdrawRequest,
   IuguMarketplaceAccountWithdrawResponse,
+  PixKeyType,
 } from './withdraw';

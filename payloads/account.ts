@@ -16,6 +16,7 @@ export interface FetchAccountInformationResponse {
 
 export interface RequestWithdrawPayload extends AccountBasePayload {
   amount: number;
+  instant?: boolean;
 }
 
 export interface FetchReceivablesPayload extends AccountBasePayload {}
