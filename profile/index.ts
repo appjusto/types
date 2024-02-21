@@ -1,7 +1,7 @@
 import { Issue, NPS } from '..';
 import { Timestamp } from '../external/firebase';
 import { GeolocatedDocument } from '../location';
-import { PixKeyType } from '../payment/iugu/api/account';
+import { PixReceiver } from '../payment/iugu/api/account/withdraw';
 import { NotificationPreferences } from './notifications';
 import { ProfileTag } from './tags';
 
@@ -45,12 +45,7 @@ export interface UserProfile extends GeolocatedDocument {
   notificationPreferences?: NotificationPreferences;
   notificationPreferencesToken?: string;
   notificationLastReceivedAt?: Timestamp;
-  pix?: {
-    fullname: string;
-    document: string;
-    type: PixKeyType;
-    key: string;
-  };
+  pix?: PixReceiver;
   onboarded?: boolean;
   state?: string;
   city?: string;

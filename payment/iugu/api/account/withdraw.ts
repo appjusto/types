@@ -26,6 +26,13 @@ export interface IuguMarketplaceAccountWithdrawResponse {
 
 export type PixKeyType = 'cpf' | 'cnpj' | 'email' | 'phone' | 'evp';
 
+export interface PixReceiver {
+  fullname: string;
+  document: string;
+  type: PixKeyType;
+  key: string;
+}
+
 export interface IuguMarketplaceAccountPixOutRequest {
   api_token: string;
   transfer_type: 'pix';

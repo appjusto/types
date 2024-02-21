@@ -9,6 +9,10 @@ import {
   IuguMarketplaceAccountWithdrawResponse,
   IuguMarketplaceTransferResponse,
 } from './iugu';
+import {
+  IuguMarketplaceAccountPixOutResponse,
+  PixReceiver,
+} from './iugu/api/account/withdraw';
 import { AccountType } from './tasks';
 
 export type MarketplaceAccountSituation =
@@ -30,7 +34,9 @@ export interface MarketplaceAccountInfo {
 }
 
 export type WithdrawStatus = 'pending' | 'processing' | 'accepted' | 'rejected';
-export interface AccountWithdraw {
+
+export type AccountWithdraw = AccountDefaultWithdraw | AccountPixWithdraw;
+export interface AccountDefaultWithdraw {
   accountId: string;
   accountType: AccountType;
   accountExternalId: string;
@@ -38,7 +44,24 @@ export interface AccountWithdraw {
   externalId: string;
   status: WithdrawStatus;
   fee: number;
+  type?: 'default';
   data: IuguMarketplaceAccountWithdrawResponse;
+  feedback?: string;
+  createdOn: Timestamp;
+  updatedOn?: Timestamp;
+}
+
+export interface AccountPixWithdraw {
+  accountId?: string;
+  accountType?: AccountType;
+  accountExternalId?: string;
+  receiver: PixReceiver;
+  amount: number;
+  externalId: string;
+  status: WithdrawStatus;
+  fee: number;
+  type: 'pix';
+  data: IuguMarketplaceAccountPixOutResponse;
   feedback?: string;
   createdOn: Timestamp;
   updatedOn?: Timestamp;
