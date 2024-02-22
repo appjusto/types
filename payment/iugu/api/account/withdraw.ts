@@ -31,6 +31,7 @@ export interface PixReceiver {
   document: string;
   type: PixKeyType;
   key: string;
+  enabled: boolean;
 }
 
 export interface IuguMarketplaceAccountPixOutRequest {
