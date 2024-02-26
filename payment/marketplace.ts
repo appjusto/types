@@ -56,7 +56,7 @@ export interface AccountPixWithdraw {
   accountType?: AccountType;
   accountExternalId?: string;
   receiver: PixReceiver;
-  amount: number;
+  amount: string;
   externalId: string;
   status: WithdrawStatus;
   fee: number;
