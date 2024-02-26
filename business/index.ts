@@ -109,6 +109,7 @@ export interface Business extends GeolocatedDocument {
   maxOrdersPerHour?: number;
   minHoursForScheduledOrders?: number;
   fleetsIdsAllowed?: string[]; // ids of fleets allowed
+  availableAt?: Timestamp | null;
   // matchingMode: MatchingMode;
   tags?: BusinessTag[];
   services?: BusinessService[];
