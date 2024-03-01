@@ -2,6 +2,7 @@ import {
   OrderDispatchingTimestamps,
   OrderStatusTimestamps,
   OutsourceAccountType,
+  WithId,
 } from '..';
 import { Timestamp } from '../external/firebase';
 
@@ -59,8 +60,9 @@ export interface Order {
   items?: OrderItem[];
   cookingTime?: number | null; // in seconds
   // places & route
-  origin?: Place;
+  origin?: Place & { id?: string };
   destination?: (Place & { id?: string }) | null;
+  stops?: WithId<Place>[];
   route?: OrderRoute | null;
   // estimates
   arrivals?: OrderArrivals;
