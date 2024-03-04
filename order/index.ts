@@ -80,7 +80,7 @@ export interface Order {
   tags?: OrderTag[];
   // metadata
   shareToken?: string;
-  placedFrom?: 'mobile' | 'web';
+  placedFrom?: 'mobile' | 'web' | 'web-direct';
   acceptedFrom?: 'backoffice' | PlatformAdminComponent | ExternalComponent;
   timestamps: OrderStatusTimestamps;
   createdOn: Timestamp;
