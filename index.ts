@@ -59,6 +59,7 @@ export type {
   ConsumerStatistics,
 } from './consumer';
 export type { ConsumerWarehouse } from './consumer/warehouse';
+export type { Coupon, CouponType, CouponUsagePolicy } from './coupon';
 export type {
   AvailableCourier,
   CourierCompany,
