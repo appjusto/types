@@ -1,4 +1,9 @@
-import { Coupon, OrderDispatchingTimestamps, OrderStatusTimestamps } from '..';
+import {
+  Coupon,
+  OrderDispatchingTimestamps,
+  OrderStatusTimestamps,
+  WithId,
+} from '..';
 import { Timestamp } from '../external/firebase';
 
 import { PayableWith } from '../payment/index';
@@ -67,7 +72,7 @@ export interface Order {
   dispatchingTimestamps: OrderDispatchingTimestamps;
   tip?: OrderTip;
   // etc
-  coupon?: (Coupon & { id?: string }) | null;
+  coupon?: WithId<Coupon> | null;
   additionalInfo?: string | null;
   staff?: OrderStaff | null;
   issue?: string | null;

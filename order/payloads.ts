@@ -128,3 +128,7 @@ export interface UpdateOrderStatusPayload extends OrderPayload {
 export interface FetchSharedOrderPayload extends OrderPayload {
   shareToken: string;
 }
+
+export interface UpdateOrderCouponPayload extends OrderPayload {
+  code: string;
+}

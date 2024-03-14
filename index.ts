@@ -241,6 +241,7 @@ export type {
   PlaceOrderPayloadPaymentVR,
   RejectOrderPayload,
   TipCourierPayload,
+  UpdateOrderCouponPayload,
   UpdateOrderStatusPayload,
 } from './order/payloads';
 export type {
