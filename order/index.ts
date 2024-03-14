@@ -1,7 +1,8 @@
 import {
+  Coupon,
   OrderDispatchingTimestamps,
   OrderStatusTimestamps,
-  OutsourceAccountType,
+  WithId,
 } from '..';
 import { Timestamp } from '../external/firebase';
 
@@ -69,10 +70,9 @@ export interface Order {
   dispatchingStatus: DispatchingStatus;
   dispatchingState: DispatchingState | null;
   dispatchingTimestamps: OrderDispatchingTimestamps;
-  /** @deprecated */
-  outsourcedBy?: OutsourceAccountType;
   tip?: OrderTip;
   // etc
+  coupon?: WithId<Coupon>;
   additionalInfo?: string | null;
   staff?: OrderStaff | null;
   issue?: string | null;
