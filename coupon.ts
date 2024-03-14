@@ -5,7 +5,8 @@ export type CouponType =
   | 'delivery-free'
   | 'delivery-discount'
   | 'food-discount'
-  | 'platform-discount'; // backoffice
+  | 'platform-discount' // backoffice
+  | 'referral';
 
 export type CouponUsagePolicy = 'once' | 'new-customers' | 'renewable' | 'none';
 
