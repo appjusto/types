@@ -17,6 +17,7 @@ export type LedgerEntryOperation =
   // para appjusto
   | 'commission' // para cobrar comissão de pedidos pagos por VR;
   | 'business-refund-debit' // para cobrar créditos que foram dados para os consumidores em reembolsos parciais
+  | 'business-coupon' // repasse de coupon de consumidores
   // geral
   | 'marketing-credit' // crédito de marketing para consumidores e entregadores
   | 'services-debit' // serviços extras como flyers
