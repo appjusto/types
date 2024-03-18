@@ -405,6 +405,7 @@ export type {
   NotificationPreferences,
   UpdateNotificationPreferencesPayload,
 } from './profile/notifications';
+export type { UpdateCodePayload } from './profile/payloads';
 export type { ProfileTag } from './profile/tags';
 export type { ProfileNoteWarehouse } from './profile/warehouse';
 export type { PushCampaign } from './push';
