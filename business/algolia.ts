@@ -21,7 +21,7 @@ export interface BusinessAlgolia {
   enabled: boolean;
   status: BusinessStatus;
   opened: boolean;
-  averageCookingTime: string;
+  averageCookingTime: number;
   name?: string;
   slug?: string;
   code?: string;
