@@ -20,6 +20,7 @@ export type LedgerEntryOperation =
   | 'business-coupon' // repasse de coupon de consumidores
   // geral
   | 'marketing-credit' // crédito de marketing para consumidores e entregadores
+  | 'finders-fee' // crédito de comissão para consumidores e entregadores
   | 'services-debit' // serviços extras como flyers
   | 'balance-adjustment' // ajuste de erros de conciliação
   | 'same-owner-accounts' // transferência entre subcontas
@@ -66,4 +67,5 @@ export interface LedgerEntry {
   taskName?: string | null;
   createdOn: Timestamp;
   updatedOn?: Timestamp;
+  approvedOn?: Timestamp;
 }
