@@ -9,9 +9,10 @@ export interface Fare {
   courier: FareDetails | null;
   business: FareDetails | null;
   platform: FareDetails | null;
-  total: number;
+  findersFee?: number;
   credits?: number;
   discount?: number;
+  total: number;
 }
 
 export interface FareDetails {

@@ -62,6 +62,7 @@ export interface PlaceOrderPayload extends OrderPayload {
   additionalInfo?: string;
   invoiceWithCPF?: boolean;
   wantToShareData?: boolean;
+  findersFee?: number;
 }
 
 export interface MatchingTaskPayload extends OrderPayload {
