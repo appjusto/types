@@ -5,7 +5,7 @@ import { OutsourceAccountType, WithId } from '../platform';
 import { Fee } from '../platform/fees';
 
 export interface Fare {
-  fleet: WithId<Fleet> | null;
+  fleet: (WithId<Fleet> & { courierId?: string }) | null;
   courier: FareDetails | null;
   business: FareDetails | null;
   platform: FareDetails | null;

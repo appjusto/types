@@ -56,6 +56,7 @@ export type PlaceOrderPayloadPayment =
 
 export interface PlaceOrderPayload extends OrderPayload {
   fleetId?: string;
+  courierId?: string;
   payment: PlaceOrderPayloadPayment;
   coordinates?: LatLng;
   additionalInfo?: string;
