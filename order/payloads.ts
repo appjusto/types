@@ -18,6 +18,7 @@ export interface GetOrderQuotesPayload extends OrderPayload {
   fleetsIds?: string[];
   paymentMethod?: PayableWith;
   useCredits?: boolean;
+  findersFee?: number;
 }
 
 export type PlaceOrderPayloadPaymentPix = {
