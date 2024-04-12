@@ -24,7 +24,8 @@ export type PublicBusiness = Pick<
   | 'services'
   | 'tags'
 > & {
-  phone?: string;
+  phone?: string | null;
+  whatsapp?: string | null;
   createdAt: Timestamp;
   updatedAt: Timestamp | null;
 };
