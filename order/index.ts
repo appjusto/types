@@ -60,7 +60,7 @@ export interface Order {
   items?: OrderItem[];
   cookingTime?: number | null; // in seconds
   // places & route
-  origin?: Place;
+  origin?: Place & { id?: string };
   destination?: (Place & { id?: string }) | null;
   route?: OrderRoute | null;
   // estimates
