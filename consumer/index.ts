@@ -1,3 +1,4 @@
+import { Timestamp } from '../external/firebase';
 import { PayableWith } from '../payment';
 import { IuguCustomerPaymentMethod, IuguPayableWith } from '../payment/iugu';
 import { Place } from '../place';
@@ -22,6 +23,7 @@ export interface ConsumerStatistics {
   p2p: ConsumerServiceStatistics;
   positiveReviews?: number;
   negativeReviews?: number;
+  updatedAt?: Timestamp;
 }
 
 export interface ConsumerProfile extends UserProfile {
