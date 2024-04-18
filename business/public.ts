@@ -21,11 +21,11 @@ export type PublicBusiness = Pick<
   | 'schedules'
   | 'slug'
   | 'status'
-  | 'services'
   | 'tags'
 > & {
   phone?: string | null;
   whatsapp?: string | null;
+  logistics: boolean;
   createdAt: Timestamp;
   updatedAt: Timestamp | null;
 };
