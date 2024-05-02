@@ -22,6 +22,7 @@ export interface PlatformManagement {
   delivery: {
     autoOutsource: boolean;
     autoSafe: boolean;
+    maxAtOnce: number;
   };
   marketplace: {
     chargeDelay: number;
