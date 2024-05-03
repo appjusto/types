@@ -29,4 +29,5 @@ export interface Product {
   availability?: BusinessSchedule;
   // transient
   complementsGroups?: WithId<ComplementGroup>[];
+  minimumPrice?: number;
 }
