@@ -1,5 +1,6 @@
 import { OrderArrivals, OrderType } from '.';
 import {
+  Coupon,
   ExternalComponent,
   FareDetails,
   InstallReferrer,
@@ -7,6 +8,7 @@ import {
   OrderStatus,
   OrderStatusTimestamps,
   PlatformAdminComponent,
+  WithId,
 } from '..';
 import { GeoPoint, Timestamp } from '../external/firebase';
 
@@ -36,6 +38,7 @@ export interface OrderWarehouse {
   fleet: {
     id: string;
   };
+  coupon?: WithId<Coupon> | null;
   fare: {
     business: FareDetails | null;
     courier: FareDetails | null;
