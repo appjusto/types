@@ -23,6 +23,7 @@ export interface PlatformManagement {
     autoOutsource: boolean;
     autoSafe: boolean;
     maxAtOnce: number;
+    maxDistanceBetweenOrders: number;
   };
   marketplace: {
     chargeDelay: number;
