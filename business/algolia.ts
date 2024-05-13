@@ -37,6 +37,7 @@ export interface BusinessAlgolia {
   cuisine?: string;
   deliveryRange?: number;
   statistics?: BusinessStatistics;
+  coupons?: boolean;
   averageDiscount?: number;
   schedules: BusinessSchedule;
   reviews?: BusinessReviews;
