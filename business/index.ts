@@ -77,6 +77,7 @@ export interface Business extends GeolocatedDocument {
    */
   phone?: string;
   phones?: BusinessPhone[];
+  referral?: string;
   managers?: string[]; // emails
   accountManagerId?: string | null;
   customerSuccessId?: string | null;
