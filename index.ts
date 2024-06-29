@@ -354,6 +354,7 @@ export type {
   InvoiceTaskHandlerInvoicesExtra,
   InvoiceTaskHandlerTipExtra,
 } from './payment/tasks';
+export type { GetTicketBalanceResult } from './payment/ticket/callables';
 export type { VROrderPayments, VRPayment } from './payment/vr';
 export type { VRCard, VRPayableWith } from './payment/vr/card';
 export type { SaveVRCardPayload } from './payment/vr/card/payloads';

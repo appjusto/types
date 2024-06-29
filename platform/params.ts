@@ -51,4 +51,9 @@ export interface PlatformParams {
       ends: string;
     };
   };
+  ticket: {
+    clientId: string;
+    authenticationURL: string;
+    authenticationRedirectURL: string;
+  };
 }
