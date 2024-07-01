@@ -1,1 +1,1 @@
-export type TicketPayableWith = 'ticker-refeição';
+export type TicketPayableWith = 'ticket-refeição';
