@@ -238,6 +238,7 @@ export type {
   PlaceOrderPayloadPaymentCreditCard,
   PlaceOrderPayloadPaymentHandledByBusiness,
   PlaceOrderPayloadPaymentPix,
+  PlaceOrderPayloadPaymentTicket,
   PlaceOrderPayloadPaymentVR,
   RejectOrderPayload,
   TipCourierPayload,
@@ -355,6 +356,7 @@ export type {
   InvoiceTaskHandlerTipExtra,
 } from './payment/tasks';
 export type { GetTicketBalanceResult } from './payment/ticket/callables';
+export type { TicketPayableWith } from './payment/ticket/payable';
 export type { VROrderPayments, VRPayment } from './payment/vr';
 export type { VRCard, VRPayableWith } from './payment/vr/card';
 export type { SaveVRCardPayload } from './payment/vr/card/payloads';

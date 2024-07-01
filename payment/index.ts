@@ -1,4 +1,4 @@
-import { OrderType } from '..';
+import { OrderType, TicketPayableWith } from '..';
 import { Timestamp } from '../external/firebase';
 import { Fee } from '../platform/fees';
 import { IuguPayableWith } from './iugu';
@@ -29,6 +29,7 @@ export type BusinessPayableWith =
 export type PayableWith =
   | IuguPayableWith
   | VRPayableWith
+  | TicketPayableWith
   | BusinessPayableWith
   | 'credits';
 export type PaymentService = 'food' | 'p2p' | 'tip';

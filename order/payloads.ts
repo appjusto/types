@@ -3,6 +3,7 @@ import {
   LatLng,
   OrderStatus,
   PayableWith,
+  TicketPayableWith,
   VRPayableWith,
 } from '..';
 import { BasePayload } from '../payloads';
@@ -39,6 +40,11 @@ export type PlaceOrderPayloadPaymentVR = {
   useCredits?: boolean;
 };
 
+export type PlaceOrderPayloadPaymentTicket = {
+  payableWith: TicketPayableWith;
+  useCredits?: boolean;
+};
+
 export type PlaceOrderPayloadPaymentHandledByBusiness = {
   payableWith: BusinessPayableWith;
   useCredits?: boolean;
@@ -52,6 +58,7 @@ export type PlaceOrderPayloadPayment =
   | PlaceOrderPayloadPaymentPix
   | PlaceOrderPayloadPaymentCreditCard
   | PlaceOrderPayloadPaymentVR
+  | PlaceOrderPayloadPaymentTicket
   | PlaceOrderPayloadPaymentCredits
   | PlaceOrderPayloadPaymentHandledByBusiness;
 
