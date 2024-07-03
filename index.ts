@@ -358,6 +358,7 @@ export type {
 export type { TicketOrderPayments, TicketPayment } from './payment/ticket';
 export type {
   CreateTicketPaymentResult,
+  TicketErrorCode,
   TicketPaymentStatus,
   TicketRequestError,
   TicketRequestResult,
