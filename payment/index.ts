@@ -1,7 +1,8 @@
-import { OrderType, TicketPayableWith } from '..';
+import { OrderType } from '..';
 import { Timestamp } from '../external/firebase';
 import { Fee } from '../platform/fees';
 import { IuguPayableWith } from './iugu';
+import { TicketPayableWith } from './ticket/payable';
 import { VRPayableWith } from './vr/card';
 
 export type PaymentPart = 'courier' | 'consumer' | 'business' | 'platform';
