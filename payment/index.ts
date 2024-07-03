@@ -22,7 +22,12 @@ export type PaymentStatus =
   | 'chargeback'
   | 'unauthorized';
 
-export type PaymentProcessor = 'iugu' | 'vr' | 'appjusto' | 'business';
+export type PaymentProcessor =
+  | 'iugu'
+  | 'vr'
+  | 'ticket'
+  | 'appjusto'
+  | 'business';
 export type BusinessPayableWith =
   | 'cash'
   | 'business-debit-card'
