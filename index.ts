@@ -355,6 +355,13 @@ export type {
   InvoiceTaskHandlerInvoicesExtra,
   InvoiceTaskHandlerTipExtra,
 } from './payment/tasks';
+export type { TicketOrderPayments, TicketPayment } from './payment/ticket';
+export type {
+  CreateTicketPaymentResult,
+  TicketPaymentStatus,
+  TicketRequestError,
+  TicketRequestResult,
+} from './payment/ticket/api';
 export type { GetTicketBalanceResult } from './payment/ticket/callables';
 export type { TicketPayableWith } from './payment/ticket/payable';
 export type { VROrderPayments, VRPayment } from './payment/vr';
