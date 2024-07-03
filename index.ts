@@ -365,6 +365,7 @@ export type {
 } from './payment/ticket/api';
 export type { GetTicketBalanceResult } from './payment/ticket/callables';
 export type { TicketPayableWith } from './payment/ticket/payable';
+export type { TicketStore, TicketStoreStatus } from './payment/ticket/store';
 export type { VROrderPayments, VRPayment } from './payment/vr';
 export type { VRCard, VRPayableWith } from './payment/vr/card';
 export type { SaveVRCardPayload } from './payment/vr/card/payloads';
