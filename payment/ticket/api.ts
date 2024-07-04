@@ -24,8 +24,33 @@ export interface CreateTicketPaymentResult extends TicketRequestResult {
     mid: string;
     authorization_id: string;
     authorized_amount: number;
+    status: TicketPaymentStatus;
+  };
+}
+
+export interface CaptureTicketPaymentResult extends TicketRequestResult {
+  data: {
+    mid: string;
     capture_id: string;
     capture_amount: number;
+    status: TicketPaymentStatus;
+  };
+}
+
+export interface CancelTicketPaymentResult extends TicketRequestResult {
+  data: {
+    mid: string;
+    cancel_id: string;
+    cancelled_amount: number;
+    status: TicketPaymentStatus;
+  };
+}
+
+export interface RefundTicketPaymentResult extends TicketRequestResult {
+  data: {
+    mid: string;
+    refund_id: string;
+    refunded_amount: number;
     status: TicketPaymentStatus;
   };
 }

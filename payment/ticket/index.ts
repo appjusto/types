@@ -1,11 +1,19 @@
 import { OrderPayments, Payment, PaymentPart } from '..';
-import { CreateTicketPaymentResult } from './api';
+import {
+  CancelTicketPaymentResult,
+  CaptureTicketPaymentResult,
+  CreateTicketPaymentResult,
+  RefundTicketPaymentResult,
+} from './api';
 import { TicketPayableWith } from './payable';
 
 export interface TicketPayment extends Payment {
   processor: 'ticket';
   method: TicketPayableWith;
-  result: CreateTicketPaymentResult | null;
+  authorization: CreateTicketPaymentResult | null;
+  capture?: CaptureTicketPaymentResult | null;
+  cancellation?: CancelTicketPaymentResult | null;
+  refund?: RefundTicketPaymentResult | null;
   // payee
   to: {
     accountType: PaymentPart;
