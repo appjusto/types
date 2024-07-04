@@ -357,7 +357,10 @@ export type {
 } from './payment/tasks';
 export type { TicketOrderPayments, TicketPayment } from './payment/ticket';
 export type {
+  CancelTicketPaymentResult,
+  CaptureTicketPaymentResult,
   CreateTicketPaymentResult,
+  RefundTicketPaymentResult,
   TicketErrorCode,
   TicketPaymentStatus,
   TicketRequestError,
