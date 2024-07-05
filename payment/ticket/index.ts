@@ -7,6 +7,8 @@ import {
 } from './api';
 import { TicketPayableWith } from './payable';
 
+export type TicketProduct = 'TAE' | 'TRE' | 'TF' | 'TKE';
+
 export interface TicketPayment extends Payment {
   processor: 'ticket';
   method: TicketPayableWith;
