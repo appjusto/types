@@ -14,6 +14,7 @@ export interface TicketStore {
       }[]
     | null;
   status: TicketStoreStatus;
+  enablementGUID?: string;
   createdAt: Timestamp;
   updatedAt: Timestamp | null;
 }
